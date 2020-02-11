@@ -1,0 +1,45 @@
+title: 4Phycs
+description: my ideas and notes, and useful stuff.
+baseurl: "/notetheme"
+url: "4phycs.github.io"
+repository: dinhanhthi/notetheme
+paginate: 28
+
+banner: "/assets/res/banner.png"   # site banner (load when someone share your page url)
+favicon: "/assets/res/favicon.png" # site's favicon (e' la faccia di Thi che appare da parte ai commenti)
+
+# MatJek specific configurations
+user: 
+  name: "Paolo Avogadro"
+  email: "paolo.avogadro@gmail.com"
+#  website: "math2it.com"
+  avatar: "/assets/res/user.png"
+  github: "4Phycs"
+google_tracking_id: ""
+google_site_verification: ""
+disqus_shortname: this-site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title
+
+navigation:
+  GitHub: https://github.com/4phycs
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vecchi                 # dove metto le vecchie pagine
+sass:
+  style: compressed
+
+  future: true

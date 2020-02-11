@@ -1,0 +1,59 @@
+bundle init         (la prima volta) 
+bundle add jekyll   (la prima volta)   https://jekyllrb.com/tutorials/using-jekyll-with-bundler/
+
+bundle install
+bundle exec jekyll serve
+
+
+
+http://127.0.0.1:4000/summer/    l'indirizzo di dove viene il sito
+http://127.0.0.1:4000/admin      l'indirizzo di dove viene admin
+
+
+Se aggiungo una dir (e metto un front matter come per esempio quello di about) si aggiunge in alto a destra ma anche in basso.
+
+I file html vengono chiamati in cascata, ovvero uno include un'altro e cosi' via. In questo modo ci sono degli oggetti che sono usati spesso
+come per esempio il nome del sito che sono associati ad  un oggtto
+
+Ho convertito index.html in index.md e da qui ho trovato alcuni nomi di variaili che vengono chiamati.
+
+
+nel front matter:
+
+layout:  spiega al costruttore del sito dove andare a prendere come fare il layout, la struttura della pagina
+title:   e' come appare il link nella pagina visubile 
+ref:     e' il
+
+=======================
+se metto layout 
+page.html viene una pagina normale
+
+
+
+===================  assets/icons =============================
+qui ci sono varie versioni del logo in varie forme e risoluzioni,
+mi domando se vengano generate automaticamente
+
+===================  _config.yml  =============================
+
+navigation:    mette i link in alto  a destra, dopo le cartelle 
+
+
+               occhio che sono link, ULTERIORI che partono dalla homage del sito,
+               ho messo www.google.com, e mi parte da 
+
+
+titolo font size.
+
+Se faccio inspect, mi dice che si trova in metbar-title.
+Se guardo il file non viene specificata la dimensione del font,
+ma c'e' un include che forse fa un override, anche perche' se metto manualmente un valore
+non me lo prende. Lo prende da qualche altra parte
+
+
+
+
+
+
+
+

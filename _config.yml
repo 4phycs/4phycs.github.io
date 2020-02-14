@@ -1,8 +1,8 @@
 title: 4Phycs
 description: my ideas and notes, and useful stuff.
-baseurl: "/notetheme"
+baseurl: ""
 url: "4phycs.github.io"
-repository: dinhanhthi/notetheme
+repository: 
 paginate: 28
 
 banner: "/assets/res/banner.png"   # site banner (load when someone share your page url)

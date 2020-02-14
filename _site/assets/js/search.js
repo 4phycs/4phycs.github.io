@@ -66,7 +66,7 @@
 					contentPreview = getPreview(query, item.content, 170),
 					titlePreview = getPreview(query, item.title);
 
-				resultsHTML += "<li style='list-style-type:none;'><a class='search-result-title' href='/notetheme" + item.url.trim() + "'>" + titlePreview + "</a><p style='font-size:smaller;'>" + contentPreview + "</p></li>";
+				resultsHTML += "<li style='list-style-type:none;'><a class='search-result-title' href='" + item.url.trim() + "'>" + titlePreview + "</a><p style='font-size:smaller;'>" + contentPreview + "</p></li>";
 			});
 
 			searchResultsEl.innerHTML = resultsHTML;

@@ -2,7 +2,7 @@ title: 4Phycs
 description: my ideas and notes, and useful stuff.
 baseurl: ""
 url: "4phycs.github.io"
-repository: dinhanhthi/notetheme
+repository:
 paginate: 28
 
 banner: "/assets/res/banner.png"   # site banner (load when someone share your page url)
@@ -11,8 +11,7 @@ favicon: "/assets/res/favicon.png" # site's favicon (e' la faccia di Thi che app
 # MatJek specific configurations
 user: 
   name: "Paolo Avogadro"
-  email: "paolo.avogadro@gmail.com"
-#  website: "math2it.com"
+  email: "paolo.avogadro@gmail.com
   avatar: "/assets/res/user.png"
   github: "4Phycs"
 google_tracking_id: ""

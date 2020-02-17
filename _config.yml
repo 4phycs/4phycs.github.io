@@ -17,7 +17,15 @@ user:
   github: "4Phycs"
 google_tracking_id: ""
 google_site_verification: ""
-disqus_shortname: this-site
+
+
+plugins:
+  - jekyll-analytics
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: UA-158698892-1      # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
 
 # Build settings
 markdown: kramdown

@@ -6,8 +6,8 @@ css: ["contact.css"]
 
 `Hello world`, my name is `Paolo`. 
 
-## [CV](https://github.com/4phycs/CV-pdf)
-
+[CV](https://github.com/4phycs/CV-pdf)
+====
 
 I am a researcher of computer and data science.
 I working actively on time series, in particular I am developing new concepts and algorithms for `anomaly detection`, I have developed new KPI in this respect

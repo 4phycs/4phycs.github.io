@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-16T19:56:06+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Tutorial di C++ per utenti C</title><link href="http://localhost:4000/Cpp" rel="alternate" type="text/html" title="Tutorial di C++ per utenti C" /><published>2020-02-16T00:00:00+01:00</published><updated>2020-02-16T00:00:00+01:00</updated><id>http://localhost:4000/Cpp</id><content type="html" xml:base="http://localhost:4000/Cpp">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-17T18:45:00+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Tutorial di C++ per utenti C</title><link href="http://localhost:4000/Cpp" rel="alternate" type="text/html" title="Tutorial di C++ per utenti C" /><published>2020-02-16T00:00:00+01:00</published><updated>2020-02-16T00:00:00+01:00</updated><id>http://localhost:4000/Cpp</id><content type="html" xml:base="http://localhost:4000/Cpp">&lt;hr /&gt;
 &lt;ul&gt;
   &lt;li&gt;Autore:  Eric Brasseur&lt;/li&gt;
   &lt;li&gt;Traduzione in italiano di Paolo Avogadro&lt;/li&gt;
@@ -29,11 +29,12 @@ librerie correttamente bisogna aggiungere la seguente linea di comandi:
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; output:  0932039
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; output:  0.932039
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Qualche consiglio per chi ha poca esperienza:\
-Per compilare questo programma, prima va scritto (o copiato) in un
+&lt;p&gt;Qualche consiglio per chi ha poca esperienza:&lt;/p&gt;
+
+&lt;p&gt;Per compilare questo programma, prima va scritto (o copiato) in un
 editor di testo (gedit, kwrite, kate, kedit, vi, emacs, nano, pico,
 mcedit, Notepad…), il file va salvato e e chiamato, per esempio
 &lt;em&gt;test01.cpp&lt;/em&gt; (se si e’ proprio dei principianti sarebbe utile mettere il
@@ -314,16 +315,18 @@ variabile.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Se sei abituato ai puntatori e vuoi assolutamente sapere cosa succede,
-semplicemente pensalo in questo modo:\
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double &amp;amp;b  = a&lt;/code&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double *b= &amp;amp;a&lt;/code&gt; e tutti i successivi b sono
+semplicemente pensalo in questo modo:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double &amp;amp;b  = a&lt;/code&gt; =&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double *b= &amp;amp;a&lt;/code&gt; e tutti i successivi b sono
 rimpiazzati da *b\
 Se si e’ creata una referenza da una variabile ad un altra, questo non
 puo’ poi essere modificato nel seguito del codice per collegare la
 variabile ad una nuova variabile. Per esempio non e’ possibile scrivere,
 poche linee dopo, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;b=c&lt;/code&gt; ed aspettarci che ora b sia c. Non funziona. La
 dichiarazione iniziale definisce una volta per tutte b. La b e a sono
-&lt;em&gt;sposate&lt;/em&gt; per sempre e nulla le separera’.\
-Le &lt;span&gt;&lt;strong&gt;referenze&lt;/strong&gt;&lt;/span&gt; possono essere usate per consentire ad una
+&lt;em&gt;sposate&lt;/em&gt; per sempre e nulla le separera’.&lt;/p&gt;
+
+&lt;p&gt;Le &lt;span&gt;&lt;strong&gt;referenze&lt;/strong&gt;&lt;/span&gt; possono essere usate per consentire ad una
 funzione di modificare una variabile chiamante:&lt;/p&gt;
 
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -469,8 +472,9 @@ m: 11
 interagire con essi, le &lt;span&gt;&lt;strong&gt;referenze&lt;/strong&gt;&lt;/span&gt; possono essere utili
 per in pratica fare un “un-pointer” delle variabili. Attenzione che
 questo tipo di azione puo’ essere considerata una “bad practice” e puo’
-creare problemi. Vedasi l’esempio:\
-&lt;a href=&quot;https://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers&quot;&gt;https://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers&lt;/a&gt;&lt;/p&gt;
+creare problemi. Vedasi l’esempio:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers&quot;&gt;https://www.embedded.com/electronics-blogs/programming-pointers/4023307/References-vs-Pointers&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
@@ -725,10 +729,11 @@ base per lavorare con nuovi tipi di parametri:&lt;/p&gt;
 
 &lt;p&gt;Oltre all’operatore di moltiplicazione (*), in C++ ci sono altri 43
 operatori di base di cui si puo’ fare overload, tra cui ci sono
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+=, ++&lt;/code&gt;, l’array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;, e cosi’ via…\
-Tramite un overload, l’operatore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; normalmente impiegato per lo
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+=, ++&lt;/code&gt;, l’array &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;, e cosi’ via…&lt;/p&gt;
+
+&lt;p&gt;Tramite un overload, l’operatore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; normalmente impiegato per lo
 shifting binario di interi, puo’ portare all’output di uno stream (per
-esempio &lt;span&gt;&lt;strong&gt;cout &amp;lt;&amp;lt;&lt;/strong&gt;&lt;/span&gt;. E’ possibile fare ulteriori overload
+esempio &lt;span&gt;&lt;strong&gt;cout «&lt;/strong&gt;&lt;/span&gt;. E’ possibile fare ulteriori overload
 dell’operatore &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt;, per l’output di nuovi tipi, come i vettori:&lt;/p&gt;
 
 &lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1466,8 +1471,9 @@ caratteri. Se si fa la copia dell’oggetto &lt;span&gt;&lt;strong&gt;persona&lt
 scrivendo &lt;span&gt;&lt;strong&gt;p=r&lt;/strong&gt;&lt;/span&gt; diventa necessario che qualche funzione
 si incarichi di produrre una copia corretta da &lt;span&gt;&lt;strong&gt;p&lt;/strong&gt;&lt;/span&gt; a
 &lt;span&gt;&lt;strong&gt;r&lt;/strong&gt;&lt;/span&gt;. Altrimenti, &lt;span&gt;&lt;strong&gt;p.nome&lt;/strong&gt;&lt;/span&gt; puntera’ alla
-stessa stringa di &lt;span&gt;&lt;strong&gt;r.nome&lt;/strong&gt;&lt;/span&gt;.\
-Inoltre la precedente stringa puntata da &lt;span&gt;&lt;strong&gt;p.nome&lt;/strong&gt;&lt;/span&gt; e’
+stessa stringa di &lt;span&gt;&lt;strong&gt;r.nome&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Inoltre la precedente stringa puntata da &lt;span&gt;&lt;strong&gt;p.nome&lt;/strong&gt;&lt;/span&gt; e’
 persa e diventa un o zombi di memoria. Il risultato sarebbe
 catastrofico, un disastro di puntatori e dati persi. I metodi che
 risolvono questo tipo di problemi sono:&lt;/p&gt;
@@ -1766,7 +1772,7 @@ all’interno dell’esegubile &lt;span&gt;&lt;strong&gt;test20&lt;/strong&gt;&l
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;g++ main.cpp vettore.o -o test20 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;L’eseguibile (su macchine tipo Unix) viene fatto “girare” con``&lt;/p&gt;
+&lt;p&gt;L’eseguibile (su macchine tipo Unix) viene fatto “girare” con:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ./test20
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1777,7 +1783,7 @@ all’interno dell’esegubile &lt;span&gt;&lt;strong&gt;test20&lt;/strong&gt;&l
   &lt;li&gt;
     &lt;p&gt;Il codice sorgente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vettore.cpp&lt;/code&gt; deve essere compilato solo una
 volta. Questo fa risparmiare molto tempo nei progetti grandi (fare
-il ”linking`` del file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vettore.o&lt;/code&gt; nell’eseguibile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test20&lt;/code&gt; e’
+il “linking” del file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vettore.o&lt;/code&gt; nell’eseguibile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test20&lt;/code&gt; e’
 molto veloce).&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
@@ -1789,7 +1795,7 @@ comprensione piena di questi problemi).&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Si noti che e’ possibile compilare anche il file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.cpp&lt;/code&gt; in un file
-di tipo ”object`` e poi linkarlo con &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vettore.o&lt;/code&gt;:&lt;/p&gt;
+di tipo “object” e poi linkarlo con &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vettore.o&lt;/code&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; g++ -c main.cpp
  
@@ -1798,8 +1804,8 @@ di tipo ”object`` e poi linkarlo con &lt;code class=&quot;language-plaintext h
 
 &lt;h2 id=&quot;makefile&quot;&gt;MAKEFILE&lt;/h2&gt;
 
-&lt;p&gt;Qui viene fatta una digressione rispetto all’argomento ”differenze tra C
-e C++``. Se si vuole apparire come &lt;em&gt;veri&lt;/em&gt; programmatori, si dovrebbe
+&lt;p&gt;Qui viene fatta una digressione rispetto all’argomento “differenze tra C
+e C++”. Se si vuole apparire come &lt;em&gt;veri&lt;/em&gt; programmatori, si dovrebbe
 condensare i comandi qui sopra in un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; e compilare usando il
 comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt;. Il contenuto del file sotto e’ una versione super
 semplificata di un tale Makefile. Prova a copiarlo in un file chiamato
@@ -1825,7 +1831,7 @@ questo comando:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;make test20
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt; fara’ un ”parse`` (legge i comandi parola per
+&lt;p&gt;Il comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt; fara’ un “parse” (legge i comandi parola per
 parola) attraverso il &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; e capira’ quello che deve essere fatto.
 All’inizio, viene detto che:&lt;/p&gt;
 
@@ -1851,7 +1857,7 @@ aggiornata di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;La versione di seguito del &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; e’ piu’ vicina allo ”standard``
+&lt;p&gt;La versione di seguito del &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Makefile&lt;/code&gt; e’ piu’ vicina allo “standard”
 Makefile:&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;all: test20
@@ -2490,7 +2496,7 @@ dichiarare il metodo come &lt;span&gt;&lt;strong&gt;virtuale&lt;/strong&gt;&lt;/
 classe di base.&lt;/p&gt;
 
 &lt;p&gt;Se perlomeno uno dei metodi della classe di base e’ virtuale, allora un
-”header`` di 4 byte viene aggiunto ad ogni istanza della classe.
+“header” di 4 byte viene aggiunto ad ogni istanza della classe.
 Questo consente al programma di determinare a cosa punti un vettore (4
 byte e’ probabilmente specifico del compilatore usato, su una macchina a
 64 bit forse sono 8 byte).&lt;/p&gt;
@@ -2739,11 +2745,11 @@ state progettate in modo generico per la classe
 classe di base, chiamata &lt;span&gt;&lt;strong&gt;cuttlefish&lt;/strong&gt;&lt;/span&gt;, che ha dei metodi
 e delle funzioni molto interessanti? E’ forse necessario scegliere tra
 &lt;span&gt;&lt;strong&gt;octopus&lt;/strong&gt;&lt;/span&gt; e &lt;span&gt;&lt;strong&gt;cuttlefish&lt;/strong&gt;&lt;/span&gt; quando si vuole
-derivare una classe?`` No chiaramente no!. Una classe derivata puo’
+derivare una classe?” No chiaramente no!. Una classe derivata puo’
 essere derivata sia da &lt;span&gt;&lt;strong&gt;octopus&lt;/strong&gt;&lt;/span&gt; che da
 &lt;span&gt;&lt;strong&gt;cuttlefish&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
 
-&lt;p&gt;Questo e’ &lt;span&gt;&lt;strong&gt;POLIMORFISMO&lt;/strong&gt;&lt;/span&gt;\
+&lt;p&gt;Questo e’ &lt;span&gt;&lt;strong&gt;POLIMORFISMO&lt;/strong&gt;&lt;/span&gt;
 La classe derivata, semplicemente, deve definire sia metodi necessari
 per &lt;span&gt;&lt;strong&gt;octopus&lt;/strong&gt;&lt;/span&gt; che per &lt;span&gt;&lt;strong&gt;cuttlefish&lt;/strong&gt;&lt;/span&gt;:&lt;/p&gt;
 
@@ -2805,7 +2811,7 @@ della funzione all’interno della definizione di classe, con davanti la
 keyword: &lt;span&gt;&lt;strong&gt;friend&lt;/strong&gt;&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;E’ considerata una buona pratica di programmazione il fatto di fare
-”encapsulation`` per tutte le variabili di una classe. Questo
+“encapsulation” per tutte le variabili di una classe. Questo
 comportamento puo’ sembrare strano se si e’ abituati agli
 &lt;span&gt;&lt;strong&gt;struct&lt;/strong&gt;&lt;/span&gt;, in C. In effetti uno &lt;span&gt;&lt;strong&gt;struct&lt;/strong&gt;&lt;/span&gt; ha
 senso solo se e’ possibile accedere a tutti i dati al suo interno. In
@@ -2925,7 +2931,7 @@ viene richiesto questo comportamento? Ci sono molte ragioni. Una di
 queste e’ che in questo modo si consente di cambiare il modo in cui i
 dati sono rappresentati all’interno della classe. Un’altra ragione e’
 che quasto consente ai dati all’interno della classe di essere
-”cross-dependent``. Supponiamo che x e y debbano sempre avere lo
+“cross-dependent”. Supponiamo che x e y debbano sempre avere lo
 stesso segno, altrimenti questo causi dei problemi… Se fosse
 consentito accedere ai dati della classe direttamente, sarebbe possibile
 e semplice imporre per esempio che x sia positivo e negativo.
@@ -3204,16 +3210,21 @@ Onword Press
 
 &lt;p&gt;Altre referenze:&lt;/p&gt;
 
-&lt;p&gt;&lt;span&gt;&lt;strong&gt;accu:&lt;/strong&gt;&lt;/span&gt;&lt;a href=&quot;www.accu.org/bookreviews/public/reviews/0hr/index.htm&quot;&gt;www.accu.org/bookreviews/public/reviews/0hr/index.htm&lt;/a&gt;\
-CoderSource.net: &lt;a href=&quot;www.codersource.net/&quot;&gt;www.codersource.net/&lt;/a&gt;\
-C++ Guide:
-&lt;a href=&quot;google-styleguide.googlecode.com/svn/trunk/cppguide.xml&quot;&gt;google-styleguide.googlecode.com/svn/trunk/cppguide.xml&lt;/a&gt;\
-C++ Reference:
-&lt;a href=&quot;fresh2refresh.com/c/c-language-history&quot;&gt;fresh2refresh.com/c/c-language-history&lt;/a&gt;\
-A similar tutorial for Ada is available at
-&lt;a href=&quot;www.adahome.com/Ammo/cpp2ada.html&quot;&gt;www.adahome.com/Ammo/cpp2ada.html&lt;/a&gt;\
-A Haskell tutorial by a C programmer:
-&lt;a href=&quot;learnyouahaskell.com&quot;&gt;learnyouahaskell.com&lt;/a&gt;\&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;strong&gt;accu:&lt;/strong&gt;&lt;/span&gt;&lt;a href=&quot;www.accu.org/bookreviews/public/reviews/0hr/index.htm&quot;&gt;www.accu.org/bookreviews/public/reviews/0hr/index.htm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;CoderSource.net: &lt;a href=&quot;www.codersource.net/&quot;&gt;www.codersource.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;C++ Guide:
+&lt;a href=&quot;google-styleguide.googlecode.com/svn/trunk/cppguide.xml&quot;&gt;google-styleguide.googlecode.com/svn/trunk/cppguide.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;C++ Reference:
+&lt;a href=&quot;fresh2refresh.com/c/c-language-history&quot;&gt;fresh2refresh.com/c/c-language-history&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A similar tutorial for Ada is available at
+&lt;a href=&quot;www.adahome.com/Ammo/cpp2ada.html&quot;&gt;www.adahome.com/Ammo/cpp2ada.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A Haskell tutorial by a C programmer:
+&lt;a href=&quot;learnyouahaskell.com&quot;&gt;learnyouahaskell.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Desidero ringraziare Didier Bizzarri, Toni Ronkko,
 Fr&lt;span&gt;é&lt;/span&gt;d&lt;span&gt;é&lt;/span&gt;ric Cloth, Jack Lam, Morten Brix

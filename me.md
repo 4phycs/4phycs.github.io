@@ -10,7 +10,7 @@ Here is my [CV](https://github.com/4phycs/CV-pdf).
 
 I am a researcher of computer and data science.
 I am very interested in time series, in particular I am developing new concepts and algorithms for `anomaly detection`, like a new indicator
-which extend the concept of *discord*, for online analysis. 
+which extends the concept of *discord*, for online analysis. 
 
 I am the assistant professor for the course of `Parallel Computing` at the department of computer science 
 (Dipartimento di Informatica Sistemtistica e Comunicazione, [DISCO](https://www.disco.unimib.it/it)) at [University of Milan-Bicocca](http://www.unimib.it), 

@@ -15,7 +15,7 @@ which extends the concept of *discord*, for online analysis.
 I am the assistant professor for the course of `Parallel Computing` at the department of computer science 
 (Dipartimento di Informatica Sistemtistica e Comunicazione, [DISCO](https://www.disco.unimib.it/it)) at [University of Milan-Bicocca](http://www.unimib.it), 
  since 2015.
-I introduce the students to MPI, OpenMP, CUDA and the theory behind Map Reduce.  The languages of these lessons is C/C++ and some Python 
+I introduce the students to MPI, OpenMP, CUDA and the theory behind Map Reduce.  The languages of these lessons are C/C++ and some Python 
 (but in any case my first love is FORTRAN).
 
 I am part of the team which has been developing the [Pollicina project](https://www.progettopollicina.eu/)
@@ -34,7 +34,7 @@ I like math.
 
 If you like math check the [Mathologer](https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg).
 
-I like learning languages, like English, Spanish, Japanese and French.
+I like learning languages: English, Spanish, Japanese and French.
 
 
 

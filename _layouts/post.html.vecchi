@@ -47,9 +47,11 @@ js: ["post.js"]
       {% endfor %}
     </div>
     {% include related-posts.html %}
-    
-    {% if page.comment %}
-       {% include comments.html %}      
+    {% include search_form.html %} 
+    {% include comments.html %}      
+
+    {% if site.disqus_shortname and page.comment %}
+      {% include disqus.html %}
     {% endif %}
   </div>
 </main>

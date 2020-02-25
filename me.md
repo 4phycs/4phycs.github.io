@@ -4,14 +4,13 @@ title: Who am I?
 css: ["contact.css"]
 ---
 
-`Hello world`, my name is `Paolo`   (  **[CV]({{ site.baseurl }}/assets/PA47_22gen2020.pdf)**).
+`Hello world`, my name is `Paolo`   (**[CV]({{ site.baseurl }}/assets/PA47_22gen2020.pdf)**).
 
 I am a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). 
 My main focus is now on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
 our last publication (accepted on the 22nd of February 2020) defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
-unsupervised `machine learning`). We are also about to publish a novel very fast algorithm
-in the same direction.
+unsupervised `machine learning`). We are also about to publish a novel very fast algorithm on the same topic.
 
 I am the assistant professor for the course of `Parallel Computing` at the 
 department of computer science 
@@ -37,7 +36,7 @@ If you like math check the [Mathologer](https://www.youtube.com/channel/UC1_uAIS
 
 I like learning new languages: English, Spanish, Japanese and French.
 
-According to my wife (who has a lot editing experience for scientific journals), I, 
+According to my wife (who has a lot of editing experience for academic journals), I, 
 have the tendency, to,
 put, comas, in, random positions.
 

@@ -145,6 +145,21 @@
 				
 					
 					
+					"random-access": {
+						"id": "random-access",
+						"title": "Random numbers towards Philosophy",
+						"categories": "English",
+						"url": " /random_access",
+						"content": "Random numbers and algorithms:\nI was once browsing a math newsgroup, at a certain point I found a tricky \nquestion which made me think a bit.\n\nThe question sounded like this:\n\n  consider all the possible numbers (Real \nor Rational, there is no big difference) between 0 and 1.\n  Now please extract a random number among them.\n  (within 3 seconds I thought: 0.4324), done?\n\n\nAt this point the person highlighted the following strange thing:\nIf a set contains infinite numbers, \neach of them has ZERO probability. How could you extract a number?\n\nThat made me think.\n\nThis is one of the typical paradoxes based on the fact that you are told by\nsombody to do something, you think that you have done it, but in reality \nit is not true. It is generally called false choice when used by \nmagicians or mentalists. For example they make you choose freely a card,\nbut in reality your choice is guided… In this case I think it was a genuine question.\n\nHow do you pick a random number?\nLet’s suppose that a human brain contains a natural mechanism which allows\n you to  select digits randomly (like those random number generators based\n on quantum mechanics). \nLet’s also suppose that a brain can think of 100 digits per second.\nIt took me 3 seconds to answer, so at most I had the time for thinking at a number\nwith 300 digits: a lot! (well my brain is surely much slower…).\n\nUnfortunatelly, as long as the number of digits is finite, it means that \nthe mechanism for picking random number works on a finite set of numbers (and not\non an infinite set as it appeared from the question).\nSo we can say that at least one of them has a probability different from zero.\n\nAnother way to see the same thing is to think that, even if I had \nthe “possibiliy” to choose among an infinite set of numbers, for most of them\nthe probability was zero. However I don’t like very much this last \ninterpretation. I can use it for the sake of math modelling what is going\non but…. there are no infinities in real life.\n\nInfinities\n\nWell, this should be explained with a bit more of detail since in every\ncourse of undergrad physics one deals with all sort of infinities.\n\nThe potential of a point charge diverges at the center. Every time an integral\n is carried out we are dividing an interval in an infinite set of “points” and so on\nand so forth.\nThe models requiring infinties are in fact very pervasive, but curiously enough\npeople tend to forget that no infinite quantity has ever been measured.\n\nThe reason for this is essentially the same one that prevents a person to pick \na number from an infinite set. In order to measure an infinite quantity,\nwhich needs to be described with an infinite set of digits, one person needs\ntoo much time: infinite.\n\nEpistemology\n\nSince I am walking in the kingdom of phylosophy, please let me walk a bit further.\n\nThe practical “feasability” of an action should always be taken into account.\nSometimes people have the tendency to think too much “theoretically”.\nIf something is theoretically feasible, than it is as if we have already done it.\n\nThis is clearly not true. If an action requires too much time to be completed \nit might become practically impossible. The same happens if the action requires too \nmany resources. The different paths taken which might lead to a result should also be taken into\naccount.\n\nOne of the most popular definitinos of science (due to Karl Popper), suggests\nthat a statement is scientific if it is possible to disprove it.\nIt is a very compact definition which grasps a lot of what is science, and that\nis probably the reason of its popularity.\n\nI notice however one of it limits with the following example.\nThere is at least a mushroom in Norway, underneath which lives a gnome.\nIt is enough to look under a mushroom to check, and the number of mushrooms\nin Norway is clearly finite. In this respect there is a clear method to disprove\nthe sentence, and somebody might think that for this reason it becomes “scientific”.\nNonetheless the practical feasibility of checking all of the mushrooms, is \nessentially zero. According to my opinion\nthe scientific value of the sentence is essentially zero too.\n\nIn general, I belive that an adjustment of this definition of science should\nuse weights for the sentences. The more “feasible” it is to disprove the \nsentence, the more scientific it becomes.\n\nAn even better way to see science should include not only partial disproofs, but \nalso partial proofs and hints. Think of Cosmology for example, it is a science\nwhich deals with the whole universe (and even more…) we can easily say that \nmost of the cosmological theories, including the more accepted ones can hardly\nbe disproved.\n\nI am aware that this modified definition of science has limits (for example\nis very difficult to decide the weight which defines to which extent an action\nis feasible), nonetheless I think that it\n\nP.S.:\nPeople who have seen an analog tester, might claim that when you measure the\nresistence there is a scale with an  sign on it.\nThis is a bit misleading, it simply means that the resistence under observation\nexceeds the max range measurable by the tester.\n\nP.P.S:\nIn any case I think that, at present, no definition of science completely satisfies.\nMany of them carry a lot of meaning, for example Thomas Kuhn’s ideas are very interesting."
+					}
+					
+				
+			
+		
+			
+				
+					,
+					
 					"cpp": {
 						"id": "cpp",
 						"title": "Tutorial di C++ per utenti C",
@@ -165,7 +180,7 @@
 						"title": "OpenMp, Calcolo Parallelo, UNIMIB, a.a. 2018-2019",
 						"categories": "italiano",
 						"url": " /OpenMP-18-19",
-						"content": "Ecco le diapositive\n per OpenMP per il corso di Calcolo Parallelo presso il DISCo,\nall’Universita’ di Milano Bicocca. In questa repo ci sono sia la versione estesa (1.3Mb circa)\nin cui le diapositive appaiono un pezzo per volta e la versione handout\nche porta via meno spazio (780kb circa)\n\nOpenMP: contesto\n\ngrossolanamente parlando, OpenMP si rivolge a chi ha delle CPU multicore.\nI vari core condividono la memoria (shared memory) e comunicano tramite essa.\n\nOpenMP: perche’?\nSupponiamo che si abbia un ciclo for (C/C++) o un do loop (Fortran).\nCon una aggiunta di 3-4 righe al codice, OpenMP puo’ ridistribuire il calcolo\ndel ciclo tra i vari core. Smplice. Pulito. L’ideale per un fisico alle prime armi\nche debba velocizzare un codice senza dover impazzire a leggere centinaia di pagine di spiegazioni.\n\nOpenMP: attenzione.\n\nNonostante possa essere usato in modo molto semplice all’inizio, puo’ essere \ningannevole. Non e’ difficile cadere in condizioni di race-condition, ovvero\nquando i core accedono, leggono e (sovra) scrivono lo stesso oggetto."
+						"content": "Ecco le diapositive, mentre qui ci sono i \nfile\n per OpenMP per il corso di Calcolo Parallelo presso il DISCo,\nall’Universita’ di Milano Bicocca (a.a. 2018-2019).\n\nOpenMP: contesto:\n\ngrossolanamente parlando, OpenMP si rivolge a chi ha delle CPU multicore.\nI vari core condividono la memoria (shared memory) e comunicano tramite essa.\n\nOpenMP: perche’?\nSupponiamo che si abbia un ciclo for (C/C++) o un do loop (Fortran).\nCon una aggiunta di 3-4 righe al codice, OpenMP puo’ ridistribuire il calcolo\ndel ciclo tra i vari core. Smplice. Pulito. L’ideale per un fisico alle prime armi\nche debba velocizzare un codice senza dover impazzire a leggere centinaia di pagine di spiegazioni.\n\nOpenMP: attenzione.\n\nNonostante possa essere usato in modo molto semplice all’inizio, puo’ essere \ningannevole. Non e’ difficile cadere in condizioni di race-condition, ovvero\nquando i core accedono, leggono e (sovra) scrivono lo stesso oggetto. A causa\ndi una race-condition il risultato del calcolo non e’ deterministico:\ndipende dall’ordine di accesso dei core alla risorsa!"
 					}
 					
 				
@@ -180,7 +195,7 @@
 						"title": "MPI, Calcolo Parallelo, UNIMIB, a.a. 2018-2019",
 						"categories": "italiano",
 						"url": " /MPI-18-19",
-						"content": "Cliccando qui si possono scaricare \nle diapositive per MPI per il corso di Calcolo Parallelo presso il DISCo \ndurante l’anno accademico 2018/2019 all’Universita’ di Milano Bicocca.\n\nA chi e’ rivolto MPI?\n\nGrossolanamente parlando chi ha un cluster e vuole fare dei calcoli paralleli.\nIn partica ci si aspetta che le varie unita’ di calcolo abbiano risorse separate\ne per questo motivo debbano comunicare informazioni durante un calcolo parallelo.\nNon e’ un caso che questo standard si chiami infatti Message Passing Interface.\n\nLa curva di apprendimento e’ un po’ piu’ ripida, all’inizio, rispetto a OpenMP.\n\nIl punto di partenza che deve essere tenuto bene a mente e’ che ogni unita’\ndi calcolo, in linea di principio, esegue TUTTO il codice che abbiamo scritto.\nPer questo motivo si devono usare delle condizioni if/then abbinate a degli\nidentificativi della macchina stessa (forniti da MPI tramite apposite API) per suddividere un calcolo\ntra le varie unita’ di processazione."
+						"content": "In questa pagina ci sono i link del materiale per MPI per il corso di Calcolo Parallelo presso il DISCo \nusato durante l’anno accademico 2018/2019 all’Universita’ di Milano Bicocca.\n\nCliccando qui si possono scaricare\nle diapositive, mentre i file \nda usare durante il corso sono qui.\n\nA chi e’ rivolto MPI?\n\nGrossolanamente parlando chi ha un cluster e vuole fare dei calcoli paralleli.\nIn partica ci si aspetta che le varie unita’ di calcolo abbiano risorse separate\ne per questo motivo debbano comunicare informazioni durante un calcolo parallelo.\nNon e’ un caso che questo standard si chiami infatti Message Passing Interface.\n\nLa curva di apprendimento e’ un po’ piu’ ripida, all’inizio, rispetto a \nOpenMP.\n\nIl punto di partenza che deve essere tenuto bene a mente e’ che ogni unita’\ndi calcolo, in linea di principio, esegue TUTTO il codice che abbiamo scritto.\nPer questo motivo si devono usare delle condizioni if/then abbinate a degli\nidentificativi della macchina stessa (forniti da MPI tramite apposite API) per suddividere un calcolo\ntra le varie unita’ di processazione."
 					}
 					
 				
@@ -195,22 +210,7 @@
 						"title": "CUDA, Calcolo Parallelo, UNIMIB DISCo 2018-2019",
 						"categories": "italiano",
 						"url": " /Cuda-18-19",
-						"content": "Ecco le diapositive\n per Cuda per il corso di Calcolo Parallelo presso il DISCo,\nall’Universita’ di Milano Bicocca sono a questo (usate nell’anno accademico 2018-2019)\n\nLa versione handout delle dispense e’ piu’ corta e non ci sono gli \neffetti per fare comparire i punti delle liste uno per volta.\n\nA chi si rivolge CUDA? a chi ha una scheda grafica NVIDIA!\n\nQuesto approccio e’ una specie di versione piu’ complessa rispetto a OpenMP.\nIl punto chiave da comprendere quando si vogliono velocizzare \ndei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).\n\nBisogna capire bene come si relazionano le strutture fisiche (CUDA core,\nStreaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).\n\nUna buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una\ncurva di apprendimento all’inizio piu’ ripida rispetto ad openMP (e probabilmente anche di MPI)."
-					}
-					
-				
-			
-		
-			
-				
-					,
-					
-					"categorie": {
-						"id": "categorie",
-						"title": "Prova slug italiano",
-						"categories": "italiano",
-						"url": " /categorie",
-						"content": "aggiungo qualche linea di testo"
+						"content": "Ecco le diapositive di Cuda per il corso di Calcolo Parallelo \n(2018-2019) presso il DISCo, all’Universita’ degli Studi di Milano-Bicocca.\n\nLa versione handout\n delle dispense e’ piu’ corta e non ci sono gli \neffetti per fare comparire i punti delle liste uno per volta.\n\nA chi si rivolge CUDA? a chi ha una scheda grafica NVIDIA!\n\nQuesto approccio e’ una specie di versione piu’ complessa rispetto a OpenMP.\nIl punto chiave da comprendere quando si vogliono velocizzare \ndei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).\n\nBisogna capire bene come si relazionano le strutture fisiche (CUDA core,\nStreaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).\n\nUna buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una\ncurva di apprendimento all’inizio piu’ ripida rispetto ad openMP (e probabilmente anche di MPI)."
 					}
 					
 				
@@ -329,6 +329,16 @@
 </script>
 
 <script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
 
 </body>
 </html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Random numbers towards Philosophy | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Random numbers towards Philosophy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Random numbers and algorithms: I was once browsing a math newsgroup, at a certain point I found a tricky question which made me think a bit." />
+<meta property="og:description" content="Random numbers and algorithms: I was once browsing a math newsgroup, at a certain point I found a tricky question which made me think a bit." />
+<link rel="canonical" href="http://localhost:4000/random_access" />
+<meta property="og:url" content="http://localhost:4000/random_access" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-24T00:00:00+01:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/random_access"},"description":"Random numbers and algorithms: I was once browsing a math newsgroup, at a certain point I found a tricky question which made me think a bit.","@type":"BlogPosting","url":"http://localhost:4000/random_access","headline":"Random numbers towards Philosophy","dateModified":"2020-02-24T00:00:00+01:00","datePublished":"2020-02-24T00:00:00+01:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Categories</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<ul id="slide-out" class="side-nav fixed">
+  <li>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </li>
+  <li style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="Search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </li>
+  <div id="nav-bar">
+    <li><a class="waves-effect" href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a class="waves-effect" href="/categories"><i class="material-icons">sort</i>Categories</a></li>
+    <li><a class="waves-effect" href="/tags"><i class="material-icons">loyalty</i>Tags</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="/me"><i class="material-icons">person</i>Me</a></li>
+    <li><a class="waves-effect" href="/about"><i class="material-icons">info</i>About</a></li>
+    <li><a class="waves-effect" href="/contact"><i class="material-icons">perm_contact_calendar</i>Contact</a></li>
+  </div>
+</ul>
+
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Random numbers towards Philosophy</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">24/02/2020</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#english">English</a>.
+          
+        
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="random-numbers-and-algorithms">Random numbers and algorithms:</h1>
+<p>I was once browsing a math newsgroup, at a certain point I found a tricky 
+question which made me think a bit.</p>
+
+<p>The question sounded like this:</p>
+<ul>
+  <li>consider all the possible numbers (Real 
+or Rational, there is no big difference) between 0 and 1.</li>
+  <li>Now please extract a random number among them.</li>
+  <li>(within 3 seconds I thought: 0.4324), done?</li>
+</ul>
+
+<p>At this point the person highlighted the following strange thing:
+If a set contains infinite numbers, 
+each of them has <strong>ZERO</strong> probability. How could you extract a number?</p>
+
+<p>That made me think.</p>
+
+<p>This is one of the typical paradoxes based on the fact that you are told by
+sombody to do something, you think that you have done it, but in reality 
+it is not true. It is generally called <strong>false choice</strong> when used by 
+magicians or mentalists. For example they make you choose <strong>freely</strong> a card,
+but in reality your choice is guided… In this case I think it was a genuine question.</p>
+
+<p><code class="language-plaintext highlighter-rouge">How do you pick a random number</code>?
+Let’s suppose that a human brain contains a natural mechanism which allows
+ you to  <em>select</em> digits randomly (like those random number generators based
+ on quantum mechanics). 
+Let’s also suppose that a brain can think of 100 digits per second.
+It took me 3 seconds to answer, so at most I had the time for thinking at a number
+with 300 digits: a lot! (well my brain is surely much slower…).</p>
+
+<p>Unfortunatelly, as long as the number of digits is finite, it means that 
+the mechanism for picking random number works on a finite set of numbers (and not
+on an infinite set as it appeared from the question).
+So we can say that at least one of them has a probability different from zero.</p>
+
+<p>Another way to see the same thing is to think that, even if I had 
+the “possibiliy” to choose among an infinite set of numbers, for most of them
+the probability was zero. However I don’t like very much this last 
+interpretation. I can use it for the sake of math modelling what is going
+on but…. <code class="language-plaintext highlighter-rouge">there are no infinities in real life</code>.</p>
+
+<h1 id="infinities">Infinities</h1>
+
+<p>Well, this should be explained with a bit more of detail since in every
+course of undergrad physics one deals with all sort of infinities.</p>
+
+<p>The potential of a point charge diverges at the center. Every time an integral
+ is carried out we are dividing an interval in an infinite set of “points” and so on
+and so forth.
+The models requiring infinties are in fact very pervasive, but curiously enough
+people tend to forget that <code class="language-plaintext highlighter-rouge">no infinite quantity has ever been measured</code>.</p>
+
+<p>The reason for this is essentially the same one that prevents a person to pick 
+a number from an infinite set. In order to measure an infinite quantity,
+which needs to be described with an infinite set of digits, one person needs
+too much time: infinite.</p>
+
+<h1 id="epistemology">Epistemology</h1>
+
+<p>Since I am walking in the kingdom of phylosophy, please let me walk a bit further.</p>
+
+<p>The practical “feasability” of an action should always be taken into account.
+Sometimes people have the tendency to think too much “theoretically”.
+If something is theoretically feasible, than it is as if we have already done it.</p>
+
+<p>This is clearly not true. If an action requires too much time to be completed 
+it might become practically impossible. The same happens if the action requires too 
+many resources. The different paths taken which might lead to a result should also be taken into
+account.</p>
+
+<p>One of the most popular definitinos of science (due to <code class="language-plaintext highlighter-rouge">Karl Popper</code>), suggests
+that a statement is scientific if it is possible to disprove it.
+It is a very compact definition which grasps a lot of what is science, and that
+is probably the reason of its popularity.</p>
+
+<p>I notice however one of it limits with the following example.
+<code class="language-plaintext highlighter-rouge">There is at least a mushroom in Norway, underneath which lives a gnome</code>.
+It is enough to look under a mushroom to check, and the number of mushrooms
+in Norway is clearly finite. In this respect there is a clear method to disprove
+the sentence, and somebody might think that for this reason it becomes “scientific”.
+Nonetheless the practical feasibility of checking all of the mushrooms, is 
+essentially zero. According to my opinion
+the scientific value of the sentence is essentially zero too.</p>
+
+<p>In general, I belive that an adjustment of this definition of science should
+use weights for the sentences. The more “feasible” it is to disprove the 
+sentence, the more scientific it becomes.</p>
+
+<p>An even better way to see science should include not only partial disproofs, but 
+also partial proofs and hints. Think of Cosmology for example, it is a science
+which deals with the whole universe (and even more…) we can easily say that 
+most of the cosmological theories, including the more accepted ones can hardly
+be disproved.</p>
+
+<p>I am aware that this modified definition of science has limits (for example
+is very difficult to decide the weight which defines to which extent an action
+is feasible), nonetheless I think that it</p>
+
+<p>P.S.:
+People who have seen an analog tester, might claim that when you measure the
+resistence there is a scale with an <script type="math/tex">\infty</script> sign on it.
+This is a bit misleading, it simply means that the resistence under observation
+exceeds the max range measurable by the tester.</p>
+
+<p>P.P.S:
+In any case I think that, at present, no definition of science completely satisfies.
+Many of them carry a lot of meaning, for example Thomas Kuhn’s ideas are very interesting.</p>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#statistics"><div class="chip z-depth-1">statistics</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#math"><div class="chip z-depth-1">math</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#philosophy"><div class="chip z-depth-1">philosophy</div></a>
+      
+    </div>
+    <style type="text/css">
+.related-posts{
+  border: 3px dotted #2e87e7;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 10px 0 10px;
+}
+.related-posts span{
+  font-size: 130%;
+  font-weight: 500;
+  color: #2e87e7;
+}
+.related-posts ul{
+  margin-top: 5px!important;
+}
+.thi-icon{
+  float: left;
+  line-height: inherit;
+  margin-right: 5px;
+  margin-left: 2px;
+  color: #2e87e7;
+}
+</style>
+
+<div class="related-posts">
+  <i class="material-icons thi-icon">grade</i><span>May you like PA?</span>
+  
+  <ul>
+    
+    
+      
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+        
+
+        
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Cpp">
+                Tutorial di C++ per utenti C
+            </a>
+            <small>16 Feb 2020</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/OpenMP-18-19">
+                OpenMp, Calcolo Parallelo, UNIMIB, a.a. 2018-2019
+            </a>
+            <small>09 Feb 2020</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/MPI-18-19">
+                MPI, Calcolo Parallelo, UNIMIB, a.a. 2018-2019
+            </a>
+            <small>09 Feb 2020</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Cuda-18-19">
+                CUDA, Calcolo Parallelo, UNIMIB DISCo 2018-2019
+            </a>
+            <small>09 Feb 2020</small>
+          </li>
+        
+      
+    
+  </ul>
+</div>
+
+    <form action="/search" method="get">
+	<input type="search" name="q"  placeholder="Type what you wanna search..." autofocus>
+	<input type="submit" value="Search" style="display: none;">
+</form>
+
+    
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue darken-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2020 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

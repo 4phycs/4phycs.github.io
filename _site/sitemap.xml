@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/categorie</loc>
-<lastmod>2020-01-19T00:00:00+01:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/Cuda-18-19</loc>
 <lastmod>2020-02-09T00:00:00+01:00</lastmod>
 </url>
@@ -19,6 +15,10 @@
 <url>
 <loc>http://localhost:4000/Cpp</loc>
 <lastmod>2020-02-16T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/random_access</loc>
+<lastmod>2020-02-24T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about</loc>
@@ -47,6 +47,22 @@
 <url>
 <loc>http://localhost:4000/assets/PA47_22gen2020.pdf</loc>
 <lastmod>2020-02-23T22:30:49+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/cuda_35.pdf</loc>
+<lastmod>2020-02-19T11:37:37+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/cuda_35_handout.pdf</loc>
+<lastmod>2020-02-19T11:37:37+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/mpi_63_handout-pages-deleted.pdf</loc>
+<lastmod>2020-02-24T18:30:14+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/openMP_29-pages-deleted.pdf</loc>
+<lastmod>2020-02-24T18:29:37+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/trad30.pdf</loc>

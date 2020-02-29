@@ -3,7 +3,6 @@ title: Random numbers towards Philosophy
 categories: English
 tags: [statistics, math, philosophy]
 maths: 1
-comments_id: 5
 bigimg: 
 ---
 

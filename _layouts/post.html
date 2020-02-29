@@ -48,8 +48,15 @@ js: ["post.js"]
     </div>
     {% include related-posts.html %}
 
-    {% if page.comments_id %}
-       {% include comments.html %}      
-    {% endif %}
+
+<script src="https://utteranc.es/client.js"
+        repo="[4phycs.github.io]"
+        issue-term="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
   </div>
 </main>

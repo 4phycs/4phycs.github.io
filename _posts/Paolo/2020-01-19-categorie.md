@@ -3,7 +3,7 @@ title: Prova slug italiano
 categories: italiano
 tags: [Paolo, theme]
 maths: 1
-comment: 1
+comments_id: 5
 bigimg:
 ---
 

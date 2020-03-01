@@ -257,9 +257,10 @@
 
 
     		
-			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+			<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
 <script>
-const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/11/comments'; // ?client_id=&client_secret=
+
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/11/comments';
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -281,7 +282,7 @@ request.onload = function() {
 
 function createCommentEl( response ) {
 	let user = document.createElement( 'a' );
-	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.setAttribute( 'href', response.user.url );
 	user.classList.add( 'user' );
 
 	let userAvatar = document.createElement( 'img' );
@@ -298,6 +299,7 @@ function createCommentEl( response ) {
 	let commentContents = document.createElement( 'div' );
 	commentContents.classList.add( 'comment-content' );
 	commentContents.innerHTML = response.body;
+
 	// Progressive enhancement.
 	if ( window.showdown ) {
 		let converter = new showdown.Converter();
@@ -309,22 +311,27 @@ function createCommentEl( response ) {
 	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
 	comment.setAttribute( 'data-user-url', response.user.url );
 
+	let commentDivider = document.createElement( 'hr' );
+
 	comment.appendChild( user );
 	comment.appendChild( commentContents );
 	comment.appendChild( commentLink );
+	comment.appendChild( commentDivider );
 
 	return comment;
 }
 request.send();
 </script>
 
-<hr>
-
 <div class="github-comments">
-	<h2>Comments</h2>
-	<ul id="gh-comments-list"></ul>
-	<p id="leave-a-comment">Join the discussion(11) for this article on <a href="https://github.com/4phycs/4phycs.github.io/issues/11">this ticket</a>. Comments appear on this page instantly.</p>
+    <!-- Adapted from https://aristath.github.io/blog/static-site-comments-using-github-issues-api -->
+    <h2>Comments</h2>
+    <ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/11">this ticket</a>
+	</div>
 </div>
+<hr>
 
 		
  

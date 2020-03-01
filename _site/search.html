@@ -180,7 +180,7 @@
 						"title": "OpenMp, Calcolo Parallelo, UNIMIB, a.a. 2018-2019",
 						"categories": "italiano",
 						"url": " /OpenMP-18-19",
-						"content": "Ecco le diapositive, mentre qui ci sono i \nfile\n per OpenMP per il corso di Calcolo Parallelo presso il DISCo,\nall’Universita’ di Milano Bicocca (a.a. 2018-2019).\n\nOpenMP: contesto:\n\ngrossolanamente parlando, OpenMP si rivolge a chi ha delle CPU multicore.\nI vari core condividono la memoria (shared memory) e comunicano tramite essa.\n\nOpenMP: perche’?\nSupponiamo che si abbia un ciclo for (C/C++) o un do loop (Fortran).\nCon una aggiunta di 3-4 righe al codice, OpenMP puo’ ridistribuire il calcolo\ndel ciclo tra i vari core. Smplice. Pulito. L’ideale per un fisico alle prime armi\nche debba velocizzare un codice senza dover impazzire a leggere centinaia di pagine di spiegazioni.\n\nOpenMP: attenzione.\n\nNonostante possa essere usato in modo molto semplice all’inizio, puo’ essere \ningannevole. Non e’ difficile cadere in condizioni di race-condition, ovvero\nquando i core accedono, leggono e (sovra) scrivono lo stesso oggetto. A causa\ndi una race-condition il risultato del calcolo non e’ deterministico:\ndipende dall’ordine di accesso dei core alla risorsa!"
+						"content": "Ecco le diapositive, mentre qui ci sono i \nfile\n per OpenMP per il corso di Calcolo Parallelo presso il DISCo,\nall’Universita’ di Milano Bicocca (a.a. 2018-2019). \nCi possono essere alcuni richiami a  MPI\n(che viene presentato prima di OpenMP).\n\nOpenMP: contesto:\n\ngrossolanamente parlando, OpenMP si rivolge a chi ha delle CPU multicore.\nI vari core condividono la memoria (shared memory) e comunicano tramite essa.\n\nOpenMP: perche’?\nSupponiamo che si abbia un ciclo for (C/C++) o un do loop (Fortran).\nCon una aggiunta di 3-4 righe al codice, OpenMP puo’ ridistribuire il calcolo\ndel ciclo tra i vari core. Smplice. Pulito. L’ideale per un fisico alle prime armi\nche debba velocizzare un codice senza dover impazzire a leggere centinaia di pagine di spiegazioni.\n\nOpenMP: attenzione.\n\nNonostante possa essere usato in modo molto semplice all’inizio, puo’ essere \ningannevole. Non e’ difficile cadere in condizioni di race-condition, ovvero\nquando i core accedono, leggono e (sovra) scrivono lo stesso oggetto. A causa\ndi una race-condition il risultato del calcolo non e’ deterministico:\ndipende dall’ordine di accesso dei core alla risorsa!"
 					}
 					
 				
@@ -210,7 +210,7 @@
 						"title": "CUDA, Calcolo Parallelo, UNIMIB DISCo 2018-2019",
 						"categories": "italiano",
 						"url": " /Cuda-18-19",
-						"content": "Ecco le diapositive di Cuda per il corso di Calcolo Parallelo \n(2018-2019) presso il DISCo, all’Universita’ degli Studi di Milano-Bicocca.\n\nLa versione handout\n delle dispense e’ piu’ corta e non ci sono gli \neffetti per fare comparire i punti delle liste uno per volta.\n\nA chi si rivolge CUDA? a chi ha una scheda grafica NVIDIA!\n\nQuesto approccio e’ una specie di versione piu’ complessa rispetto a OpenMP.\nIl punto chiave da comprendere quando si vogliono velocizzare \ndei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).\n\nBisogna capire bene come si relazionano le strutture fisiche (CUDA core,\nStreaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).\n\nUna buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una\ncurva di apprendimento all’inizio piu’ ripida rispetto ad openMP (e probabilmente anche di MPI)."
+						"content": "Ecco le diapositive di Cuda per il corso di Calcolo Parallelo \n(2018-2019) presso il DISCo, all’Universita’ degli Studi di Milano-Bicocca.\nPossono esserci richiami a  MPI\n e CUDA.\n\nLa versione handout\n delle dispense e’ piu’ corta e non ci sono gli \neffetti per fare comparire i punti delle liste uno per volta.\n\nA chi si rivolge CUDA? a chi ha una scheda grafica NVIDIA!\n\nQuesto approccio e’ una specie di versione piu’ complessa rispetto a OpenMP.\nIl punto chiave da comprendere quando si vogliono velocizzare \ndei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).\n\nBisogna capire bene come si relazionano le strutture fisiche (CUDA core,\nStreaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).\n\nUna buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una\ncurva di apprendimento all’inizio piu’ ripida rispetto ad openMP (e probabilmente anche di MPI)."
 					}
 					
 				
@@ -234,7 +234,6 @@
 	};
 </script>
 
-			
 		</div>
 	</div>
 </main>

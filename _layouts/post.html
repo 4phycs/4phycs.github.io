@@ -48,16 +48,9 @@ js: ["post.js"]
     </div>
     {% include related-posts.html %}
 
-<section class="post-full-comments">
-  {{!-- Enable comments / https://github.com/utterance/utterances --}}
-<script src="https://utteranc.es/client.js"
-        repo="4phycs/4phycs.github.io"
-        issue-term="title"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-</section>
+		{% if page.comments_id %}
+			{% include comments.html %}
+		{% endif %}
 
   </div>
 </main>

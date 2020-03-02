@@ -30,12 +30,6 @@ function createCommentEl( response ) {
 	userAvatar.classList.add( 'avatar' );
 	userAvatar.setAttribute( 'src', response.user.avatar_url );
 
-       .userAvatar img, img.avatar { 
-            max-width: 40px;
-            max-height: 40px;
-        }
-
-
 	user.appendChild( userAvatar );
 
 	let commentLink = document.createElement( 'a' );

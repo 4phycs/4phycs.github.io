@@ -20,6 +20,16 @@ request.onload = function() {
 	}
 };
 
+<style>
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+</style>
+
+
 function createCommentEl( response ) {
 	let user = document.createElement( 'a' );
 	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
@@ -64,6 +74,5 @@ request.send();
 <div class="github-comments">
 	<h2>Comments</h2>
 	<ul id="gh-comments-list"></ul>
-	<p id="no-comments-found">No comments found for this article. Comments posted before 2019-09-15 are no longer available due to a system migration since I no longer use Disqus for comments.</p>
-	<p id="leave-a-comment">Join the discussion for this1 article on <a href="https://github.com/4phycs/4phycs.github.io/issues/{{ page.comments_id }}">this ticket</a>. Comments appear on this page instantly.</p>
+	<p id="leave-a-comment">Join the discussion for this2 article on <a href="https://github.com/4phycs/4phycs.github.io/issues/{{ page.comments_id }}" class="avata"r>this ticket</a>. Comments appear on this page instantly.</p>
 </div>

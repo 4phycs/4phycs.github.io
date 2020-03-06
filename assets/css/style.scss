@@ -2,7 +2,14 @@
 ---
 
 @import"_includes/_resetPA";
+@import "_includes/_header";
+@import "_includes/_footer";
+@import "_includes/_content";
+@import "_includes/_socials";
+@import "_includes/_syntax";
+@import "_includes/_blog";
 @import"_includes/_comments";
+
 
 #gh-comments-list a.user,
 #gh-comments-list a.comment-url {

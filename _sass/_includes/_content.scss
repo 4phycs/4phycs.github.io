@@ -12,9 +12,9 @@
 
 	h1 {
 
-		@include mq(tabletp) {
-			white-space: pre-line;
-		}
+//		@include mq(tabletp) {
+//			white-space: pre-line;
+//		}
 	}
 
 	p {
@@ -28,9 +28,9 @@
 	padding: 1.5rem 1rem;
 	min-height: 100vh;
 
-	@include mq(tabletl) {
-		padding: 1.5rem 3rem;
-	}
+//	@include mq(tabletl) {
+//		padding: 1.5rem 3rem;
+//	}
 
 	h1,
 	h2,

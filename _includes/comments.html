@@ -27,7 +27,7 @@ function createCommentEl( response ) {
 	user.classList.add( 'user' );
 
 	let userAvatar = document.createElement( 'img' );
-	userAvatar.classList.add( 'avatar' ){:.w-32 .no-border};   // PA ho aggiunto {:.w-300 .no-border}
+	userAvatar.classList.add( 'avatar' );
 	userAvatar.setAttribute( 'src', response.user.avatar_url );
 
 	user.appendChild( userAvatar );

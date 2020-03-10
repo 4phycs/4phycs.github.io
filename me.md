@@ -8,7 +8,7 @@ css: ["contact.css"]
 
 I am a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). 
 My main focus is now on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
-our last publication (accepted on the 22nd of February 2020) defined a new 
+our **[last publication](https://rdcu.be/b2K1c)** defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
 unsupervised `machine learning`). We are also about to publish a novel very fast algorithm on the same topic.
 

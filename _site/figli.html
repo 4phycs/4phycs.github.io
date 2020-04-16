@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Probabilita&#39; figli e misura | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Probabilita’ figli e misura" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Il Problema" />
+<meta property="og:description" content="Il Problema" />
+<link rel="canonical" href="http://localhost:4000/figli" />
+<meta property="og:url" content="http://localhost:4000/figli" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-16T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/figli"},"description":"Il Problema","@type":"BlogPosting","url":"http://localhost:4000/figli","headline":"Probabilita’ figli e misura","dateModified":"2020-04-16T00:00:00+02:00","datePublished":"2020-04-16T00:00:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Categories</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#il-problema">Il Problema</a>
+    <ol>
+      <li><a href="#probabilita">Probabilita’</a></li>
+    </ol>
+  </li>
+  <li><a href="#popolazione-a">Popolazione A</a></li>
+  <li><a href="#popolazione-b">Popolazione B</a></li>
+  <li><a href="#paradosso">Paradosso</a></li>
+  <li><a href="#soluzione-a-cosa-corrispondono-le-probabilita-13-e--12">Soluzione: a cosa corrispondono le probabilita’ 1/3 e  1/2?</a>
+    <ol>
+      <li><a href="#popolazione-c">Popolazione C</a></li>
+      <li><a href="#popolazione-d">Popolazione D</a></li>
+    </ol>
+  </li>
+  <li><a href="#quando-succede">Quando succede?</a></li>
+  <li><a href="#conclusioni">Conclusioni</a></li>
+</ol>
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Probabilita' figli e misura</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">16/04/2020</span>,
+        in
+        
+          
+          
+        
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="il-problema">Il Problema</h1>
+
+<p>Mi sono imbattuto in questo interessante e “semplice” problema di statistica 
+(sarebbe meglio dire dalla semplice formulazione).
+Questo mio post e’ in pratica una riassunto di questo bel <strong><a href="https://www.youtube.com/watch?v=ElB350w8iJo">video</a></strong>
+ di Zach Star, a cui aggiungo qualche considerazione personale.</p>
+
+<p>Un’<strong>osservazione</strong>: e’ molto importante la definizione della domanda che verra’ posta,
+perche’ ci sono vari dettagli che possono sfuggire.</p>
+
+<p>Vedremo inoltre una cosa molto interessante, <strong>non e’ sufficiente</strong> pensare in termini di <strong>popolazioni</strong>, 
+ma e’ necessario pensare anche in termini di <strong>come</strong> queste popolazioni vengono <strong>misurate</strong>.</p>
+
+<p class="thi-tip"><i class="material-icons mat-icon">info</i>Supponiamo di incontrare una persona in un bar, Tizio per gli amici. Durante una conversazione, 
+Tizio ci dice che ha 2 figli (senza specificarne il sesso), a questo punto decide in darci 
+due informazioni aggiuntive, una dopo l’altra:
+</p>
+
+<p class="thi-tip"><i class="material-icons mat-icon">info</i>1. <code class="language-plaintext highlighter-rouge">almeno</code> uno di questi figli e’ <code class="language-plaintext highlighter-rouge">femmina</code> </p>
+
+<p class="thi-tip"><i class="material-icons mat-icon">info</i>2. la propria figlia si chiama <code class="language-plaintext highlighter-rouge">Jane</code> (come la morosa di Tarzan).</p>
+
+<p class="thi-warning"><i class="material-icons mat-icon">error</i>
+Domanda 1: quando il nostro interlocutore ci ha detto di avere almeno una
+figlia femmina quale probabilita’ esiste che anche il secondo figlio sia una femmina? </p>
+
+<p class="thi-warning"><i class="material-icons mat-icon">error</i>
+Domanda 2: quando aggiunge che la propria figlia si chiama Jane, la probabilita’ che il secondo figlio sia femmina cambia?
+</p>
+
+<h2 id="probabilita">Probabilita’</h2>
+<p>Prima di procedere bisogna dare una definizione operativa di <code class="language-plaintext highlighter-rouge">probabilita'</code>. In questo caso ne prendiamo una ragionevole e
+semplice (di tipo frequentista). Supponiamo che la situazione appena descritta si ripeta molte volte:
+ incontro molti padri che mi dicono: ho due figli di cui almeno una figlia femmina. A questo punto aggiungo la famiglia appena
+conocsciuta sul taccuino; in seguito annoto sul anche il sesso del secondo figlio.
+Quando ho una popolazione abbastanza grande (migliaia di casi), conto il numero di famiglie totali e conto quante di esse
+ hanno 2 femmine. La <code class="language-plaintext highlighter-rouge">probabilita'</code> sara’ il rapporto tra le famiglie con 2 femmine sul totale delle famiglie
+annotate.</p>
+
+<p>Il tutto va ripetuto anche nel caso in cui il genitore ci dice di avere 2 figli, di cui almeno una femmina di nome Jane
+, segnandoci la famiglia e il sesso del secondo figlio. La probabilita’ sara’ anche in questo caso il numero dei casi
+ favorevoli rispetto ai totali.</p>
+
+<p><strong>Attenzione</strong>: teniamo 2 conti separati per i due casi (potremmo usare due taccuini separati).</p>
+
+<h1 id="popolazione-a">Popolazione A</h1>
+
+<div class="col s12">
+
+  <p><img src="/images/posts/popA.jpg" alt="" /></p>
+
+</div>
+
+<p>A questo punto il bravo statistico comincia a costruire un modello in cui ci sono tutti gli oggetti possibili (meglio se
+questi sono equiprobabili, cosi’ basta contarli).
+In questo caso parliamo di popolazioni e di <em>famiglie equiprobabili</em>.</p>
+
+<p>Le combinazioni di famiglie equiprobabili sono le seguenti (M=maschio, F=femmia):</p>
+<ul>
+  <li>MM    (primogenito= maschio, secondogenito= maschio)</li>
+  <li>MF    (primogenito= maschio, secondogenito= femmina)</li>
+  <li>FM    (primogenito= femmina, secondogenito= maschio)</li>
+  <li>FF    (primogenito= femmina, secondogenito= femmina)</li>
+</ul>
+
+<p>Questo perche’ possiamo considerare che all’incirca ci sia il 50% di probabilita’ di avere un figlio
+maschio e altrettanto di avere una femmina (inoltre il sesso del secondo figlio non e’ influenzato dal sesso del
+ primo figlio, resta il 50%)</p>
+
+<p>L’insieme delle famiglie che comprende <strong>almeno</strong> una figlia femmina e’ un sottoinsieme del totale.
+Chiamiamo questo sottoinsieme  <strong>popolazione A</strong>, restano  solo i casi:</p>
+<ul>
+  <li>MF</li>
+  <li>FM</li>
+  <li>FF</li>
+</ul>
+
+<p>Ognuna di questi tipi di famiglie ha la stessa probabilita’ dell’altra.
+Data questa popolazione (2 figli, di cui almeno una femmina),possiamo dire che solo in 1/3 dei casi la seconda figlia sara’ femmina.<br />
+Si noti che questo risultato e’ <strong>indipendente dal nome</strong> dei ragazzi.</p>
+
+<h1 id="popolazione-b">Popolazione B</h1>
+
+<div class="col s12">
+
+  <p><img src="/images/posts/popB.jpg" alt="" /></p>
+
+</div>
+
+<p>Cerchiamo ora la popolazione di famiglie per cui si ha almeno una figlia femmina di nome <strong>Jane</strong>. Questa popolazione, sara’ 
+un sottoinsieme della popolazione A.</p>
+
+<p>Per facilitarci le idee, assegnamo delle quantita’ alle popolazioni. Per esempio ci sono 100 000 famiglie MF, 100 000 FM  e 100 000 FF.
+Supponiamo che la frazione di ragazze chiamate Jane sia 1/100.</p>
+
+<p>Vediamo qual’e’ ora la popolazione di riferimento (<strong>popolazione B</strong>):</p>
+
+<ul>
+  <li>si passa da 100 000 famiglie MF  $\rightarrow$  1000 famiglie del tipo MJ  (dove J sta per Jane)</li>
+  <li>si passa da 100 000 famiglie FM  $\rightarrow$  1000 famiglie del tipo JM</li>
+  <li>dalle 100 000 famiglie FF $\rightarrow$ si passa a famiglie del tipo JF  e FJ, quindi in totale 2000 famiglie
+ con 2 femmine hanno una ragazza chiamate Jane.</li>
+</ul>
+
+<p>(nel grafico sono state sottolineate in verde le famiglie che contribuiscono alla popolazione totale)
+In questo caso quindi la popolazione totale comprende 4000 famiglie che corrispondono alle caratteristiche: 
+2 figli di cui una femmina di nome Jane (supponiamo inoltre che i due figli non possano avere lo stesso nome).
+A differenza del caso precednte 1/2 delle famiglie comprendera’ una seconda figlia femmina.</p>
+
+<h1 id="paradosso">Paradosso</h1>
+
+<p><strong>Un momento</strong>:</p>
+<ul>
+  <li>se conosco il <code class="language-plaintext highlighter-rouge">nome della ragazza</code> questo <code class="language-plaintext highlighter-rouge">cambia</code> in modo consistente la <code class="language-plaintext highlighter-rouge">probabilita'</code> che l’altro figlio 
+sia una femmina: si passa da 1/3 a 1/2.</li>
+  <li>Il cambio e’ <code class="language-plaintext highlighter-rouge">indipendente</code> dal nome della ragazza!</li>
+  <li>quando Tizio mi aveva detto di avere una figlia, io <code class="language-plaintext highlighter-rouge">sapevo gia'</code> che questa doveva avere un nome… solo non sapevo
+quale!</li>
+</ul>
+
+<p>Queste tre condizioni sembrano in qualche modo contradditorie. Se il passaggio da 1/3 ad un 1/2 e’ indipendente dal nome,
+dato che io sapevo gia’ che la ragazza aveva un nome, come e’ possibile che il fatto che mi venga comunicato cambi 
+le probabilita? La probabilita’ o e’ indipendente dal nome, o dipende!</p>
+
+<h1 id="soluzione-a-cosa-corrispondono-le-probabilita-13-e--12">Soluzione: a cosa corrispondono le probabilita’ 1/3 e  1/2?</h1>
+
+<p>Il problema e’ molto semplice: le probabilita’ 1/3 e 1/2 non corrispondono al problema iniziale!
+Queste probabilita’ sono corrette se si campionano le popolazioni in un modo <strong>differente</strong> rispetto a quello enunciato
+dal problema. Vediamo ora un modo per ottenere quelle probabilita’.
+Prendiamo un <code class="language-plaintext highlighter-rouge">campione rappresentativo</code> di genitori con 2 figli e mettiamolo in uno stadio. 
+ A questo punto si chiede a tutti quelli con 2 figli maschi di uscire.</p>
+
+<ul>
+  <li>Si chiede a quelli con due figlie femmine di alzare la mano. E si ottiene 1/3 del totale dei presenti.</li>
+</ul>
+
+<p>Se invece, facciamo uscire dallo stadio tutti i genitori, <strong>tranne</strong> quelli che hanno almeno un figlio femmina chiamato Jane,
+ e a questo punto chiediamo loro di alzare la mano se hanno anche una seconda figlia femmina, 
+otterremo che circa 1/2 dei presenti alzera’ la mano.</p>
+
+<p>Ora inserisco una piccola digressione.
+Esiste un interessante teorema che indica che per un “metodo di scelta random” la media spaziale 
+(ovvero in questo caso contare tutte le famiglie con una caratteristica) puo’ essere rimpiazzata
+da una media temporale, a patto proprio che il criterio di scelta delle famiglie sia sufficientemente “caotico/random”.
+Per questo posso ottenere lo stesso risultato indicato sopra se <strong>io chiedo</strong> a tutte le persone che 
+incontro al bar, una dopo l’altra (supponendo che siano sinceri, ovviamente):</p>
+<ul>
+  <li>se hanno 2 figli di cui almeno uno femmina</li>
+  <li>se il nome della ragazza e’ Jane</li>
+</ul>
+
+<p>Se uno guarda al problema dal punto di vista delle persone presenti allo stadio, il fatto di fare uscire
+dallo stadio tutti coloro che non corrispondono a “avere una figlia femmina” ha un effetto tangibile.
+Quando si chiede di uscire a tutti coloro che non corrispondono ad “avere una figlia femmina chiamata Jane” 
+l’effetto sara’ diverso. Vengono fatti dei <code class="language-plaintext highlighter-rouge">campionamenti differenti</code> dalla popolazione iniziale e questo
+modifica quindi le frazioni/probabilita’.</p>
+
+<p class="thi-warning"><i class="material-icons mat-icon">error</i>Attenzione: il modo di procedere appena esposto non corrisponde al problema iniziale!</p>
+
+<p>Il problema iniziale era invece: incontro Tizio ad un bar, ad un 
+certo punto <strong>lui mi dice</strong>  di avere due figli, di cui almeno una femmina e successivamente ci dice il nome della femmina: Jane.</p>
+
+<p>In questo caso il campionamento delle popolazioni e’ fatto in modo differente!
+Sono i vari possibili “Tizio” che incontro al bar che definiscono il campione. 
+Questo cambia molto il risultato. Vediamo come:</p>
+
+<h2 id="popolazione-c">Popolazione C</h2>
+
+<p>Supponiamo che ogni padre abbia piu’ o meno la stessa probabilita’ di parlare dei propri figli
+ (non e’ necessariamente vero ma e’ ragionevole), prendiamo ora la <strong>popolazione A</strong> e vediamo
+come si modifica, con un <em>campionamento spontaneo</em> (e’ il genitore che decide di cosa parlare):</p>
+<ul>
+  <li>da 100 000 famiglie del tipo MF, e’ ragionevole pensare che solo 1/2 dei padri mi parlera’ della figlia femmina
+l’altra meta’ mi dira’ di avere un figlio maschio $\rightarrow$ solo 50 000 famiglie di tipo MF vengono aggiunte al mio taccuino</li>
+  <li>da 100 000 famiglie del tipo FM $\rightarrow$ 50 000 famiglie anche in questo caso solo la meta’ dei padri parlera’ della femmina</li>
+  <li>da 100 000 famiglie del tipo FF $\rightarrow$ 100 000 famiglie: siamo certi che, se il padre
+parla di un solo figlio, dovra’ dire che ha almeno una femmina!</li>
+</ul>
+
+<div class="col s12">
+
+  <p><img src="/images/posts/popC.jpg" alt="" /></p>
+
+</div>
+
+<p>Quindi se io lascio che l’interlocutore decida di cosa parlare, la <strong>popolazione A</strong> diventa la <strong>popolazione C</strong>:</p>
+<ul>
+  <li>50 000 famiglie del tipo MF</li>
+  <li>50 000 famiglie del tipo FM</li>
+  <li>100 000 famiglie del tipo FF</li>
+</ul>
+
+<p>Per questo motivo se non si fa un campionamento <strong>attivo</strong>, quando si incontra Tizio al bar  e questi ci dice che
+ha 2 figli di cui almeno uno femmina, la probabilita’ che anche l’altro figlio sia femmina e’ 1/2.</p>
+
+<h2 id="popolazione-d">Popolazione D</h2>
+
+<p>Vediamo ora cosa succede se Tizio ci indica che il nome della propria figlia e’ Jane (nome con un’occorrenza
+ ipotetica di 1/100),
+ chiamo questo insieme di famiglie <strong>popolazione D</strong>:</p>
+<ul>
+  <li>da 50 000 famiglie MF si passa a 500 famiglie MJ</li>
+  <li>da 50 000 famiglie FM si passa a 500 famiglie JM</li>
+  <li>da 100 000 famiglie FF si passa a 1000 famiglie composte la meta’ da Jf e l’altra meta’ da fJ (non e’ possibile dare lo stesso nome a due figli…)</li>
+</ul>
+
+<p>In questo caso e’ interessante notare che un genitore con 2 figlie femmine, di cui una chiamata Jane, 
+potrebbe decidere di dirci il nome dell’<strong>altra</strong> figlia (50% dei casi). Per questo, nonostante la sua famiglia rientri
+nelle caratteristiche che noi vorremmo, verra’ rimossa dalla popolazione totale perche’ lui ha deciso di
+rivelarci un’altra informazione!</p>
+
+<p>In questo caso, il fatto che il genitore mi abbia indicato il nome della figlia non
+ha cambiato la probabilita’ che la seconda figlia sia femmina: resta 1/2.</p>
+
+<div class="col s12">
+
+  <p><img src="/images/posts/popD.jpg" alt="" /></p>
+
+</div>
+
+<h1 id="quando-succede">Quando succede?</h1>
+<p>E’ questo un discorso questo di lana caprina? No! se effettivamente potessimo fare un esperimento del genere e scommettessimo
+dei soldi sul sesso dell’altro figlio di un nostro interlocutore, potremmo vincere (in media, ripetendo l’esperimento molte volte)
+solo chiedendo ATTIVAMENTE delle informazioni sulla sua famiglia. Altrimenti, lasciando 
+all’interlocutore l’iniziativa di parlare e scommettendo sul sesso dell’altro figlio avremmo il 50% 
+delle probabilita’ di azzeccare.</p>
+
+<h1 id="conclusioni">Conclusioni</h1>
+<p>Il modo in cui l’informazione viene <strong>raccolta</strong> (come si fa l’esperimento per un fisico) modifica in modo sostanziale la risposta. Non e’ una cosa nuova.
+Tutti sanno, per esempio, che per studiare una popolazione di qualche natura, non posso basarmi sui dati
+che mi vengono spontaneamente dati. 
+Nel caso in questione, il fatto di <strong>chiedere attivamente</strong> all’interlocutore informazioni riguardo i
+propri figli, <strong>modifica</strong> quello che lui ci dira’. Nel caso di domande <strong>attive</strong>, le probabilita’ ottenute saranno quindi:</p>
+<ul>
+  <li>1/3 di coloro che ci dicono di avere una figlia femmina avra’ anche un’altra figlia femmina</li>
+  <li>1/2 di coloro che ci dicono di avere una figlia di nome Jane  avra’  anche un’altra figlia femmina.</li>
+</ul>
+
+<p>Se invece si registrano le informazioni fornite <strong>spontaneamente</strong>, anche se l’informazione fornita dall’interlocutore e’ la stessa rispetto 
+al caso precedente, otterremo:</p>
+<ul>
+  <li>1/2 di coloro che ci dicono di avere una figlia femmina avra’ anche un’altra figlia femmina</li>
+  <li>1/2 di coloro che ci dicono di avere una figlia di nome Jane  avra’  anche un’altra figlia femmina.</li>
+</ul>
+
+<p>Quindi il motivo per cui la probabilita’ (nel caso di domanda attiva) e’ differente nei 2 casi e’ perche’ <strong>io
+seleziono</strong> delle famiglie particolari creando delle <strong>popolazioni</strong> specifiche. 
+Nel dettaglio, selezionare le famiglie con almeno una figlia femmina di nome Jane privilegia le famiglie con 2 
+femmine. Per questo motivo la probabilita’ che anche il secondo figlio sia femmina passa da 1/3 a 1/2.</p>
+
+<p>P.S:
+probabilmente in un altro post descrivero’ cosa succede nel caso in cui ci sia del rumore e l’informazione non
+venga passata correttamente.</p>
+
+<p>P.P.S:
+ Una considerazione da fisico, questo tipo di fenomeno ricorda curiosamente
+il problema della misura in meccanica quantistica. L’evoluzione spontanea di un sistema e’ profondamente
+differente dall’evoluzione dove interviene una misura.</p>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#statistics"><div class="chip z-depth-1">statistics</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#math"><div class="chip z-depth-1">math</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#philosophy"><div class="chip z-depth-1">philosophy</div></a>
+      
+    </div>
+    
+    		
+			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script>
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/x/comments';
+
+let request = new XMLHttpRequest();
+request.open( 'GET', GH_API_URL, true );
+request.onload = function() {
+	if ( this.status >= 200 && this.status < 400 ) {
+		let response = JSON.parse( this.response );
+
+		for ( var i = 0; i < response.length; i++ ) {
+			document.getElementById( 'gh-comments-list' ).appendChild( createCommentEl( response[ i ] ) );
+		}
+
+		if ( 0 === response.length ) {
+			document.getElementById( 'no-comments-found' ).style.display = 'block';
+		}
+	} else {
+		console.error( this );
+	}
+};
+
+function createCommentEl( response ) {
+	let user = document.createElement( 'a' );
+	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.classList.add( 'user' );
+
+	let userAvatar = document.createElement( 'img' );
+	userAvatar.classList.add( 'avatar' );
+	userAvatar.setAttribute( 'src', response.user.avatar_url );
+
+	user.appendChild( userAvatar );
+
+	let commentLink = document.createElement( 'a' );
+	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.classList.add( 'comment-url' );
+	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+
+	let commentContents = document.createElement( 'div' );
+	commentContents.classList.add( 'comment-content' );
+	commentContents.innerHTML = response.body;
+	// Progressive enhancement.
+	if ( window.showdown ) {
+		let converter = new showdown.Converter();
+		commentContents.innerHTML = converter.makeHtml( response.body );
+	}
+
+	let comment = document.createElement( 'li' );
+	comment.setAttribute( 'data-created', response.created_at );
+	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	comment.setAttribute( 'data-user-url', response.user.url );
+
+	comment.appendChild( user );
+	comment.appendChild( commentContents );
+	comment.appendChild( commentLink );
+
+	return comment;
+}
+request.send();
+</script>
+
+<hr>
+
+<div class="github-comments">
+	<h2>Comments</h2>
+	<ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/x"class="button">Add comment (via Github)</a>
+	</div>
+</div>
+
+
+		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2020 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

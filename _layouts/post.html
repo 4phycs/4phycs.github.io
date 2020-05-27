@@ -29,11 +29,9 @@ js: ["post.js"]
             <a class="cat-class cat-commas" href="{{site.baseurl}}/categories#{{cat | slugify}}">{{ catego.name }}</a>{% unless forloop.last %},{% else %}.{% endunless %}
           {% endif %}
         {% endfor %}
+        {% include read_time.html %}
       </span>
     </div>
-
-
-    {% include read_time.html %}
 
     <div class="divider"></div>
     <div class="row thi-post">

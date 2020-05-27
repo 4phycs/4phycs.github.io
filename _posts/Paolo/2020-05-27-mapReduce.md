@@ -13,8 +13,7 @@ bigimg:
  (Attenzione, il sito originale sembra non piu' raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e' possibile trovarne una copia). 
 Queste diapositive sono state usate durante il corso di "Sistemi di Calcolo Parallelo" tenuto persso il DISCo all'Universita' degli Studi di Milano-Bicocca.
 
-Ho usato inoltre due adattamenti di 
-Python notebook: 
+Ho usato inoltre due Jupyter notebook: 
 
 * **[HADOOP Streaming]({{ site.baseurl }}/assets/MapReduce-02-Hadoop_PA.ipynb)**, qui viene introdotto come usare degli eseguibili scritti
  nel linguaggio preferito per usare  Hadoop (invece che dover usare Java)
@@ -23,7 +22,7 @@ Python notebook:
 * **[MRJob]({{ site.baseurl }}/assets/MapReduce-04-MRJob_PA.ipynb)**, per utilizzare delle semplici classi di Python per
  job di tipo MapReduce anche complessi (e testarli facilmente in locale, senza dover installare Hadoop)
 
-che avevo ricevuto durante le lezioni del CINECA del 2015, eventuali errori su queste versioni modificate sono miei e non da imputare agli autori dei notebook
+i notebook originali erano forniti in un corso del CINECA del 2015. Eventuali errori di queste versioni modificate sono miei e non da imputare agli autori dei notebook
 originali.
 
 

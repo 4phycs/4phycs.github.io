@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T11:46:58+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T12:50:21+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MapReduce a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;, in queste diapositive mostro un paio di modi
   per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
  http://www.norstad.org&lt;br /&gt;
@@ -6,8 +6,7 @@
 Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ho usato inoltre due adattamenti di 
-Python notebook:&lt;/p&gt;
+&lt;p&gt;Ho usato inoltre due Jupyter notebook:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -20,7 +19,7 @@ Python notebook:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;che avevo ricevuto durante le lezioni del CINECA del 2015, eventuali errori su queste versioni modificate sono miei e non da imputare agli autori dei notebook
+&lt;p&gt;i notebook originali erano forniti in un corso del CINECA del 2015. Eventuali errori di queste versioni modificate sono miei e non da imputare agli autori dei notebook
 originali.&lt;/p&gt;
 
 &lt;p&gt;A chi e’ rivolto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt;?&lt;/p&gt;

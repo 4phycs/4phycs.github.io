@@ -1,4 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-16T07:34:59+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Probabilita’ figli e misura</title><link href="http://localhost:4000/figli" rel="alternate" type="text/html" title="Probabilita' figli e misura" /><published>2020-04-16T00:00:00+02:00</published><updated>2020-04-16T00:00:00+02:00</updated><id>http://localhost:4000/figli</id><content type="html" xml:base="http://localhost:4000/figli">&lt;h1 id=&quot;il-problema&quot;&gt;Il Problema&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T10:05:21+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MapReduce a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;, in queste diapositive mostro un paio di modi
+  per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
+ http://www.norstad.org&lt;br /&gt;
+ (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). 
+Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Durante il corso  ho usato inoltre due adattamenti di 
+Python notebook:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/MapReduce-02-Hadoop_PA.ipynb&quot;&gt;HADOOP Streaming&lt;/a&gt;&lt;/strong&gt;, qui viene introdotto come usare degli eseguibili scritti
+ nel linguaggio preferito per usare  Hadoop (invece che dover usare Java)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/MapReduce-04-MRJob_PA.ipynb&quot;&gt;MRJob&lt;/a&gt;&lt;/strong&gt;, per utilizzare delle semplici classi di Python per
+ job di tipo MapReduce anche complessi (e testarli facilmente in locale, senza dover installare Hadoop)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;che avevo ricevuto durante le lezioni del CINECA del 2015, eventuali errori su queste versioni modificate sono miei e non da imputare agli autori dei notebook
+originali.&lt;/p&gt;
+
+&lt;p&gt;A chi e’ rivolto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;Una premessa: questa e’ l’ultima parte del corso, prima introduco &lt;strong&gt;&lt;a href=&quot;/MPI-18-19&quot;&gt;MPI&lt;/a&gt;&lt;/strong&gt;,
+ poi &lt;strong&gt;&lt;a href=&quot;/OpenMP-18-19&quot;&gt;OpenMP&lt;/a&gt;&lt;/strong&gt; 
+e &lt;strong&gt;&lt;a href=&quot;/Cuda&quot;&gt;CUDA&lt;/a&gt;&lt;/strong&gt;
+, infine passo  HADOOP/MapReduce.&lt;/p&gt;
+
+&lt;p&gt;I primi 3 argomenti sono pertinenti per chi e’ interessato a fare High Performance Computing. Richiedono di imparare 
+nuove API, capire nel dettaglio come e’ fatto l’hardware sottostante e scrivere dei codici abbastanza complessi.&lt;/p&gt;
+
+&lt;p&gt;Se invece lo scopo e’ quello di utilizzare hardware (quasi) commerciale e di cercare di evitare
+le problematiche legate ad imparare un nuovo linguaggio, allora ha senso pensare in termini di Hadoop/Mapreduce.&lt;/p&gt;
+
+&lt;p&gt;L’ipotesi di lavoro e’ che si abbia a che fare con grandi moli di dati (che devono essere distribuiti su computer distinti).&lt;/p&gt;
+
+&lt;p&gt;L’idea e’ proprio quella di facilitare buona parte della comunicazione necessaria quando si ha a che fare con
+tante macchine che lavorano in parallelo. Per questo, molto del lavoro e’ fatto dal filesystem distribuito (nel caso di HADOOP
+si chiama HDFS). Il cuore di un calcolo MapReduce e’ di utilizzare coppie &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chiave-valore&lt;/code&gt;.
+Il compito/algoritmo da eseguire in parallelo deve poter essere spezzato in 2 fasi una di seguito all’altra, chiamate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Reduce&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Durante la fase di Map, tanti computer in parallelo eseguono il medesimo compito (chiamato Mapping). 
+Il risultato dell’esecuzione di ogni Mapper e’ l’emissione di molte coppie chiave-valore (intermedie). 
+Si suppone quindi che la prima parte dell’algoritmo da parallelizzare possa essere eseguito senza comunicazione
+tra i vari Mapper. Essi fanno tutti la stessa cosa ma con parti diverse di dato (HDFS assegna i pezzi del dato senza un ordine particolare).
+ Le coppie chiave-valore prodotte dai Mapper
+vengono ridistribuite (&lt;strong&gt;shuffling&lt;/strong&gt;) da HDFS ai Reducer, in un modo particolare: ogni reducer riceve &lt;strong&gt;solo&lt;/strong&gt; coppie chiave-valore
+che abbiano la stessa chiave.&lt;/p&gt;
+
+&lt;p&gt;Tutta la comunicazione di un job MapReduce si riassume quindi nella fase di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shuffling&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;A questo punto tutti i Reducer lavorano con i dati ottenuti ed emettono a loro volta coppie chiave-valore (il risultato finale del calcolo MapReduce).
+Tutti i Reducer fanno esattamente lo stesso algoritmo, ma ognuno ha dei dati diversi opportunamente re-distribuiti tramite l’uso di coppie
+chiave-valore.&lt;/p&gt;
+
+&lt;p&gt;Il &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;difficile&lt;/code&gt; di un job  MapReduce e’ proprio nel trovare le giuste coppie chiave-valore intermedie emesse dai Mapper che consentano di fare arrivare
+ai Reudcer i dati corretti.&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="MapReduce" /><category term="Calcolo Parallelo" /><summary type="html">MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB.</summary></entry><entry><title type="html">CUDA, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/Cuda" rel="alternate" type="text/html" title="CUDA, Calcolo Parallelo, UNIMIB" /><published>2020-05-26T00:00:00+02:00</published><updated>2020-05-26T00:00:00+02:00</updated><id>http://localhost:4000/Cuda</id><content type="html" xml:base="http://localhost:4000/Cuda">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/cuda_52.pdf&quot;&gt;CUDA a.a. 2019-2020:&lt;/a&gt;&lt;/strong&gt;
+queste diapositive sono estese, ovvero contengono tutte le immagini e le “animazioni” (per esempio i punti di una lista possono comparire uno dopo l’altro).
+Rispetto all’anno precedente, sono state fatte varie modifiche, sia di tipo strutturale (alcuni argomenti sono stati modificati e spostati) e sono state
+aggiunte nuove immagini e “animazioni”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/cuda_35.pdf&quot;&gt;CUDA a.a. 2018-2019:&lt;/a&gt;&lt;/strong&gt; queste diapositive sono in formato “handout”, ovvero le
+ animazioni del singolo frame sono condensate nell’ultima immagine del frame, e le liste appaiono tutte insieme (non una per volta).
+D’altra parte la quantita’ di memoria richiesta e’ minore, e sono piu’ facilmente studiabili.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I link qui sopra si riferiscono alle note che ho scritto su &lt;strong&gt;CUDA&lt;/strong&gt;. Sono state usate durante il corso di “Sistemi di Calcolo Parallelo”, presso il
+Dipartimento di Informatica, Sistemisitca e Comunicazione dell’Universita’ degli Studi di Milano-Bicocca.
+In alcuni casi possono esserci dei richiami ad altre parti del corso, in particolare
+a  &lt;strong&gt;&lt;a href=&quot;/MPI-18-19&quot;&gt;MPI&lt;/a&gt;&lt;/strong&gt;
+ e &lt;strong&gt;&lt;a href=&quot;/OpenMP-18-19&quot;&gt;OpenMP&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A chi si rivolge CUDA?&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;a chi ha una scheda grafica NVIDIA!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;… e vuole velocizzare dei calcoli che richiedono molte volte la stessa operazione ma su dati differenti.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In una GPU infatti, ci sono centinaia (migliaia) di Aritmetic Logic Units (ALU) che possono eseguire operazioni in modo concorrente,
+ ma ci sono poche unita’ di controllo che gestiscono le ALU. Per questo motivo le 
+ALU devono lavorare in &lt;strong&gt;lockstep&lt;/strong&gt; ovvero un gruppo (warp) di ALU deve eseguire la stessa operazione … su dati differenti.&lt;/p&gt;
+
+&lt;p&gt;Questo approccio e’ una specie di versione piu’ complessa rispetto a  &lt;strong&gt;&lt;a href=&quot;/OpenMP-18-19&quot;&gt;OpenMP&lt;/a&gt;&lt;/strong&gt;
+ dove molti thread possono accedere ad aree di memoria condivise.&lt;/p&gt;
+
+&lt;p&gt;Il punto chiave da comprendere quando si vogliono velocizzare 
+dei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).
+Avendo a disposizione molte unita’ di processazione, il problema puo’ diventare quello di portare i dati 
+dalla memoria al chip. Se eseguire un calcolo puo’ richidere un solo ciclo di clock, 
+la &lt;strong&gt;latenza&lt;/strong&gt; necessaria per portare il dato sulla ALU ne puo’ richiedere centinaia!&lt;/p&gt;
+
+&lt;p&gt;Le GPU sono progettate per “nascondere” la latenza con un &lt;em&gt;trucco&lt;/em&gt;:
+mentre un warp aspetta la memoria, un altro warp puo’ essere attivato a costo zero ed eseguire operazioni. 
+Nelle normali CPU, questo passaggio (&lt;strong&gt;context switch&lt;/strong&gt;), puo’ essere molto costoso e come risultato
+una CPU puo’ passare molto tempo in stato di &lt;em&gt;idle&lt;/em&gt;. Con una GPU e’ invece possibile ottenere 
+delle occupancy molto alte.&lt;/p&gt;
+
+&lt;p&gt;Dal punto di vista del programmatore, invece, 
+per ottenere un codice che sfrutti al meglio le caratteristiche di CUDA 
+e’ necessario conoscere bene come si relazionano le strutture fisiche (CUDA core,
+Streaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).&lt;/p&gt;
+
+&lt;p&gt;E’ altrsi’ necessario sfruttare i vari tipi di memoria: registri, shared memory, cache, 
+Constant, Texture e Global.&lt;/p&gt;
+
+&lt;p&gt;Una buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una
+curva di apprendimento piu’ ripida rispetto ad OpenMP (e probabilmente anche di MPI).&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="Cuda" /><category term="Calcolo Parallelo" /><summary type="html">CUDA a.a. 2019-2020: queste diapositive sono estese, ovvero contengono tutte le immagini e le “animazioni” (per esempio i punti di una lista possono comparire uno dopo l’altro). Rispetto all’anno precedente, sono state fatte varie modifiche, sia di tipo strutturale (alcuni argomenti sono stati modificati e spostati) e sono state aggiunte nuove immagini e “animazioni”.</summary></entry><entry><title type="html">Probabilita’ figli e misura</title><link href="http://localhost:4000/figli" rel="alternate" type="text/html" title="Probabilita' figli e misura" /><published>2020-04-16T00:00:00+02:00</published><updated>2020-04-16T00:00:00+02:00</updated><id>http://localhost:4000/figli</id><content type="html" xml:base="http://localhost:4000/figli">&lt;h1 id=&quot;il-problema&quot;&gt;Il Problema&lt;/h1&gt;
 
 &lt;p&gt;Mi sono imbattuto in questo interessante e “semplice” problema di statistica 
 (sarebbe meglio dire dalla semplice formulazione).
@@ -3601,31 +3729,22 @@ Marko Pozner, Filip Zaludek, Kevin Wheeler e Patrick Einheber per la
 loro ispirazione, suggerimenti, aiuti, dati, controllo sui bug,
 referenze, miglioramento della versione inglese e traduzione.&lt;/p&gt;
 
-&lt;p&gt;Eric Brasseur - 23 Febbraio 1998 fino al 25 Dicembre 2016&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="C/C++" /><summary type="html">Autore: Eric Brasseur Traduzione in italiano di Paolo Avogadro Qui il link della versione originale (inglese) Qui invece il pdf di questa pagina</summary></entry><entry><title type="html">CUDA, Calcolo Parallelo, UNIMIB DISCo 2018-2019</title><link href="http://localhost:4000/Cuda-18-19" rel="alternate" type="text/html" title="CUDA, Calcolo Parallelo, UNIMIB DISCo 2018-2019" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/Cuda-18-19</id><content type="html" xml:base="http://localhost:4000/Cuda-18-19">&lt;p&gt;Ecco le &lt;strong&gt;&lt;a href=&quot;/assets/cuda_35.pdf&quot;&gt;diapositive&lt;/a&gt;&lt;/strong&gt; di Cuda per il corso di Calcolo Parallelo 
-(2018-2019) presso il DISCo, all’Universita’ degli Studi di Milano-Bicocca.
-Possono esserci richiami a  &lt;strong&gt;&lt;a href=&quot;/MPI-18-19&quot;&gt;MPI&lt;/a&gt;&lt;/strong&gt;
- e &lt;strong&gt;&lt;a href=&quot;/Cuda-18-19&quot;&gt;CUDA&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Eric Brasseur - 23 Febbraio 1998 fino al 25 Dicembre 2016&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="C/C++" /><summary type="html">Autore: Eric Brasseur Traduzione in italiano di Paolo Avogadro Qui il link della versione originale (inglese) Qui invece il pdf di questa pagina</summary></entry><entry><title type="html">MPI, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/MPI-18-19" rel="alternate" type="text/html" title="MPI, Calcolo Parallelo, UNIMIB" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/MPI-18-19</id><content type="html" xml:base="http://localhost:4000/MPI-18-19">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MPI a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;,  diapositive in formato handout.
+Ho aggiunto varie animazioni, corretto errori e modificato alcune parti rispetto all’anno precedente.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_63_handout-pages-deleted.pdf&quot;&gt;MPI a.a. 2018-2019&lt;/a&gt;&lt;/strong&gt;, queste diapositive sono in
+ formato handout (scritte con Latex-beamer)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;i file riguardanti gli esercizi proposti durante il corso sono &lt;strong&gt;&lt;a href=&quot;https://github.com/4phycs/mpi-ita-2018-19.git&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;La versione &lt;strong&gt;&lt;a href=&quot;/assets/cuda_35_handout.pdf&quot;&gt;handout&lt;/a&gt;&lt;/strong&gt;
- delle dispense e’ piu’ corta e non ci sono gli 
-effetti per fare comparire i punti delle liste uno per volta.&lt;/p&gt;
-
-&lt;p&gt;A chi si rivolge CUDA? a chi ha una scheda grafica NVIDIA!&lt;/p&gt;
-
-&lt;p&gt;Questo approccio e’ una specie di versione piu’ complessa rispetto a OpenMP.
-Il punto chiave da comprendere quando si vogliono velocizzare 
-dei calcoli tramite CUDA e’ spesso legato alla memoria (o meglio alle memorie).&lt;/p&gt;
-
-&lt;p&gt;Bisogna capire bene come si relazionano le strutture fisiche (CUDA core,
-Streaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e griglia).&lt;/p&gt;
-
-&lt;p&gt;Una buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una
-curva di apprendimento all’inizio piu’ ripida rispetto ad openMP (e probabilmente anche di MPI).&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="Cuda" /><category term="Calcolo Parallelo" /><summary type="html">Ecco le diapositive di Cuda per il corso di Calcolo Parallelo (2018-2019) presso il DISCo, all’Universita’ degli Studi di Milano-Bicocca. Possono esserci richiami a MPI e CUDA.</summary></entry><entry><title type="html">MPI, Calcolo Parallelo, UNIMIB, a.a. 2018-2019</title><link href="http://localhost:4000/MPI-18-19" rel="alternate" type="text/html" title="MPI, Calcolo Parallelo, UNIMIB, a.a. 2018-2019" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/MPI-18-19</id><content type="html" xml:base="http://localhost:4000/MPI-18-19">&lt;p&gt;In questa pagina ci sono i link del materiale per MPI per il corso di Calcolo Parallelo presso il DISCo 
-usato durante l’anno accademico 2018/2019 all’Universita’ di Milano Bicocca.&lt;/p&gt;
-
-&lt;p&gt;Cliccando &lt;strong&gt;&lt;a href=&quot;/assets/mpi_63_handout-pages-deleted.pdf&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt; si possono scaricare
-le diapositive, mentre i file 
-da usare durante il corso sono &lt;strong&gt;&lt;a href=&quot;https://github.com/4phycs/mpi-ita-2018-19.git&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In questa pagina ci sono i link del materiale che ho scritto per la parte di MPI del corso di Sistemi di Calcolo Parallelo presso il DISCo 
+ all’Universita’ degli Studi di Milano-Bicocca.&lt;/p&gt;
 
 &lt;p&gt;A chi e’ rivolto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MPI&lt;/code&gt;?&lt;/p&gt;
 
@@ -3641,12 +3760,30 @@ Non e’ un caso che questo standard si chiami infatti Message Passing Interface
 di calcolo, in linea di principio, esegue &lt;strong&gt;TUTTO&lt;/strong&gt; il codice che abbiamo scritto.
 Per questo motivo si devono usare delle condizioni &lt;em&gt;if/then&lt;/em&gt; abbinate a degli
 identificativi della macchina stessa (forniti da MPI tramite apposite API) per suddividere un calcolo
-tra le varie unita’ di processazione.&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="MPI" /><category term="Calcolo Parallelo" /><summary type="html">In questa pagina ci sono i link del materiale per MPI per il corso di Calcolo Parallelo presso il DISCo usato durante l’anno accademico 2018/2019 all’Universita’ di Milano Bicocca.</summary></entry><entry><title type="html">OpenMp, Calcolo Parallelo, UNIMIB, a.a. 2018-2019</title><link href="http://localhost:4000/OpenMP-18-19" rel="alternate" type="text/html" title="OpenMp, Calcolo Parallelo, UNIMIB, a.a. 2018-2019" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/OpenMP-18-19</id><content type="html" xml:base="http://localhost:4000/OpenMP-18-19">&lt;p&gt;Ecco le &lt;strong&gt;&lt;a href=&quot;/assets/openMP_29-pages-deleted.pdf&quot;&gt;diapositive&lt;/a&gt;&lt;/strong&gt;, mentre qui ci sono i 
-&lt;strong&gt;&lt;a href=&quot;https://github.com/4phycs/openmp-ita-2018-19.git&quot;&gt;file&lt;/a&gt;&lt;/strong&gt;
- per OpenMP per il corso di Calcolo Parallelo presso il DISCo,
-all’Universita’ di Milano Bicocca (a.a. 2018-2019). 
+tra le varie unita’ di processazione.&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="MPI" /><category term="Calcolo Parallelo" /><summary type="html">MPI a.a. 2019-2020, diapositive in formato handout. Ho aggiunto varie animazioni, corretto errori e modificato alcune parti rispetto all’anno precedente.</summary></entry><entry><title type="html">OpenMp, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/OpenMP-18-19" rel="alternate" type="text/html" title="OpenMp, Calcolo Parallelo, UNIMIB" /><published>2020-02-09T00:00:00+01:00</published><updated>2020-02-09T00:00:00+01:00</updated><id>http://localhost:4000/OpenMP-18-19</id><content type="html" xml:base="http://localhost:4000/OpenMP-18-19">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/openMP_33.pdf&quot;&gt;OpenMP a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;. Le differenze tra queste diapositive e quelle 
+dell’anno precedente riguardano nuove immagini e la correzione di alcuni errori.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/openMP_29-pages-deleted.pdf&quot;&gt;OpenMP a.a. 2018-2019&lt;/a&gt;&lt;/strong&gt;, questa presentazione non contiene
+ le soluzioni degli esercizi ed e’ in formato handout, quindi le “animazioni” non sono visibili, ma 
+le diapositive sono piu’ leggibili in quanto non compaiono un pezzo per volta.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;i 
+&lt;strong&gt;&lt;a href=&quot;https://github.com/4phycs/openmp-ita-2018-19.git&quot;&gt;file&lt;/a&gt;&lt;/strong&gt; da usare per gli esercizi proposti
+non contengono le soluzioni ma velocizzano la scrittura del codice (si devono solo apportare le modifiche
+richieste).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I link qui sopra si riferiscono alle note che ho scritto per la parte di OpenMP 
+del corso di “Sistemi di Calcolo Parallelo” presso il DISCo,
+all’Universita’ di Milano-Bicocca. Ho utilizzato varie fonti per scriverle
+e mi sono basato anche esperimenti numerici. 
 Ci possono essere alcuni richiami a  &lt;strong&gt;&lt;a href=&quot;/MPI-18-19&quot;&gt;MPI&lt;/a&gt;&lt;/strong&gt;
-(che viene presentato prima di OpenMP).&lt;/p&gt;
+(che viene presentato prima di OpenMP durante il corso).&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpenMP&lt;/code&gt;: contesto:&lt;/p&gt;
 
@@ -3665,4 +3802,4 @@ che debba velocizzare un codice senza dover impazzire a leggere centinaia di pag
 ingannevole. Non e’ difficile cadere in condizioni di &lt;strong&gt;race-condition&lt;/strong&gt;, ovvero
 quando i core accedono, leggono e (sovra) scrivono lo stesso oggetto. A causa
 di una &lt;strong&gt;race-condition&lt;/strong&gt; il risultato del calcolo non e’ deterministico:
-dipende dall’ordine di accesso dei core alla risorsa!&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="OpenMP" /><category term="Calcolo Parallelo" /><summary type="html">Ecco le diapositive, mentre qui ci sono i file per OpenMP per il corso di Calcolo Parallelo presso il DISCo, all’Universita’ di Milano Bicocca (a.a. 2018-2019). Ci possono essere alcuni richiami a MPI (che viene presentato prima di OpenMP).</summary></entry><entry><title type="html">Prova slug italiano</title><link href="http://localhost:4000/categorie" rel="alternate" type="text/html" title="Prova slug italiano" /><published>2020-01-19T00:00:00+01:00</published><updated>2020-01-19T00:00:00+01:00</updated><id>http://localhost:4000/categorie</id><content type="html" xml:base="http://localhost:4000/categorie">&lt;p&gt;aggiungo qualche linea di testo&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="theme" /><summary type="html">aggiungo qualche linea di testo</summary></entry></feed>
+dipende dall’ordine di accesso dei core alla risorsa!&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="OpenMP" /><category term="Calcolo Parallelo" /><summary type="html">OpenMP a.a. 2019-2020. Le differenze tra queste diapositive e quelle dell’anno precedente riguardano nuove immagini e la correzione di alcuni errori.</summary></entry><entry><title type="html">Prova slug italiano</title><link href="http://localhost:4000/categorie" rel="alternate" type="text/html" title="Prova slug italiano" /><published>2020-01-19T00:00:00+01:00</published><updated>2020-01-19T00:00:00+01:00</updated><id>http://localhost:4000/categorie</id><content type="html" xml:base="http://localhost:4000/categorie">&lt;p&gt;aggiungo qualche linea di testo&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="theme" /><summary type="html">aggiungo qualche linea di testo</summary></entry></feed>

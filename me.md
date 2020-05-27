@@ -12,14 +12,14 @@ our **[last publication](https://rdcu.be/b2K1c)** defined a new
 indicator which extends the concept of *discord*, for online analysis (a form of
 unsupervised `machine learning`). We are also about to publish a novel very fast algorithm on the same topic.
 
-I am the assistant professor for the course of `Parallel Computing` at the 
+I am the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 
 department of computer science 
 [DISCO](https://www.disco.unimib.it/it) at [University of Milan-Bicocca](http://www.unimib.it), 
  since 2015.
 I introduce the students to **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-MPI-18-19.md %})**
 , **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-OpenMP-18-19.md %})**, 
-**[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-Cuda-18-19.md %})**
- and the theory behind Map Reduce.  The languages of these lessons are C/C++ and some Python 
+**[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2020-05-26-Cuda.md %})**
+ and the theory behind **[Map Reduce]({% link _posts/Paolo/2020-05-27-mapReduce.md %})**.  The languages of these lessons are C/C++ and some Python 
 (but in any case my first love is FORTRAN).
 
 

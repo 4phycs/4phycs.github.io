@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T17:51:57+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T18:07:07+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MapReduce a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;, in queste diapositive mostro un paio di modi
   per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
  http://www.norstad.org&lt;br /&gt;
@@ -481,16 +481,21 @@ most of the cosmological theories, including the more accepted ones can hardly
 be disproved. On the other hand, we can collect many hints which can guide our idea
 of the universe and build theories which are more and more solid as a function
 of the hints that we have. I remember once at a school of general relativty with some
-of the big shots around, one of the finest lecturers was George Ellis, who, among other things provided, a very
-nice survey of many possibile variations regarding the structure of the universe.
-At the same school,  Andrey Linde, one of the fathers of inflationary cosmology,
-when asked about his theory of many universes each with its own constants of physics, simply
-repied that he could not prove it, but like a nice music, he was going to stick with this idea
-unless he heard a better one. The point here is that, for some complex topics,
+of the big shots around, one of the finest lecturers was George Ellis, who provided a very
+nice survey of many possibile variations regarding the structure of the universe. His approach
+being rather different than some of the science popularizers who give for granted that 
+the universe has 13.6 By and so on…
+At the same school there was  Andrey Linde, one of the fathers of inflationary cosmology.
+He explained his idea according to which there are many inflationary “big bangs” generating
+infinite universes, each with its own constants of physics.
+When he was asked about the strength of his theory, he simply
+replied that he could not prove it. However this theory was like a nice music, and
+ he was going to stick with it unless he heard a better one. 
+The point here is that, for some complex topics,
 the very idea of proving or disproving becomes blurry.&lt;/p&gt;
 
 &lt;p&gt;I am aware that this modified definition of science has limits (for example
-is very difficult to decide the weight which defines to which extent an action
+is very difficult to decide the weights defining to which extent an action
 is feasible). However one might accept the fact that science is
 not just a block of granite, but its boundaries are more like the sea shore.&lt;/p&gt;
 

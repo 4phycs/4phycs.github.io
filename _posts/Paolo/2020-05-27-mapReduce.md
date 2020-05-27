@@ -3,7 +3,7 @@ title: MapReduce, Calcolo Parallelo, UNIMIB
 categories: italiano
 tags: [Paolo, MapReduce, Calcolo Parallelo]
 maths: 1
-comments_id: 15
+comments_id: 19
 bigimg:
 ---
 

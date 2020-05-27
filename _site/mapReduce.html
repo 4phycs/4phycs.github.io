@@ -58,8 +58,8 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="MapReduce, Calcolo Parallelo, UNIMIB" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB." />
-<meta property="og:description" content="MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB." />
+<meta name="description" content="MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca." />
+<meta property="og:description" content="MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca." />
 <link rel="canonical" href="http://localhost:4000/mapReduce" />
 <meta property="og:url" content="http://localhost:4000/mapReduce" />
 <meta property="og:site_name" content="4Phycs" />
@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2020-05-27T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mapReduce"},"description":"MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB.","@type":"BlogPosting","url":"http://localhost:4000/mapReduce","headline":"MapReduce, Calcolo Parallelo, UNIMIB","dateModified":"2020-05-27T00:00:00+02:00","datePublished":"2020-05-27T00:00:00+02:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mapReduce"},"description":"MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.","@type":"BlogPosting","url":"http://localhost:4000/mapReduce","headline":"MapReduce, Calcolo Parallelo, UNIMIB","dateModified":"2020-05-27T00:00:00+02:00","datePublished":"2020-05-27T00:00:00+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -142,6 +142,15 @@
       </span>
     </div>
 
+
+    <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> reading time: 3 mins </font>
+  
+</span>
+
+
     <div class="divider"></div>
     <div class="row thi-post">
       <div class="col s12">
@@ -149,11 +158,11 @@
   <li><strong><a href="/assets/mpi_74.pdf">MapReduce a.a. 2019-2020</a></strong>, in queste diapositive mostro un paio di modi
   per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
  http://www.norstad.org<br />
- (Attenzione, il sito originale non sembre piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). 
-Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo UNIMIB.</li>
+ (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). 
+Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.</li>
 </ul>
 
-<p>Durante il corso  ho usato inoltre due adattamenti di 
+<p>Ho usato inoltre due adattamenti di 
 Python notebook:</p>
 
 <ul>
@@ -180,7 +189,7 @@ e <strong><a href="/Cuda">CUDA</a></strong>
 <p>I primi 3 argomenti sono pertinenti per chi e’ interessato a fare High Performance Computing. Richiedono di imparare 
 nuove API, capire nel dettaglio come e’ fatto l’hardware sottostante e scrivere dei codici abbastanza complessi.</p>
 
-<p>Se invece lo scopo e’ quello di utilizzare hardware (quasi) commerciale e di cercare di evitare
+<p>Se invece lo scopo e’ quello di utilizzare hardware (quasi) commerciale e  cercare di evitare
 le problematiche legate ad imparare un nuovo linguaggio, allora ha senso pensare in termini di Hadoop/Mapreduce.</p>
 
 <p>L’ipotesi di lavoro e’ che si abbia a che fare con grandi moli di dati (che devono essere distribuiti su computer distinti).</p>
@@ -188,7 +197,7 @@ le problematiche legate ad imparare un nuovo linguaggio, allora ha senso pensare
 <p>L’idea e’ proprio quella di facilitare buona parte della comunicazione necessaria quando si ha a che fare con
 tante macchine che lavorano in parallelo. Per questo, molto del lavoro e’ fatto dal filesystem distribuito (nel caso di HADOOP
 si chiama HDFS). Il cuore di un calcolo MapReduce e’ di utilizzare coppie <code class="language-plaintext highlighter-rouge">chiave-valore</code>.
-Il compito/algoritmo da eseguire in parallelo deve poter essere spezzato in 2 fasi una di seguito all’altra, chiamate:</p>
+Il compito/algoritmo da eseguire in parallelo deve poter essere spezzato in 2 fasi, una di seguito all’altra, chiamate:</p>
 
 <ul>
   <li>
@@ -200,16 +209,18 @@ Il compito/algoritmo da eseguire in parallelo deve poter essere spezzato in 2 fa
 </ul>
 
 <p>Durante la fase di Map, tanti computer in parallelo eseguono il medesimo compito (chiamato Mapping). 
-Il risultato dell’esecuzione di ogni Mapper e’ l’emissione di molte coppie chiave-valore (intermedie). 
-Si suppone quindi che la prima parte dell’algoritmo da parallelizzare possa essere eseguito senza comunicazione
-tra i vari Mapper. Essi fanno tutti la stessa cosa ma con parti diverse di dato (HDFS assegna i pezzi del dato senza un ordine particolare).
+Il risultato dell’esecuzione di ogni Mapper e’ l’emissione di molte coppie chiave-valore (intermedie).
+Attenzione, i Mapper lavorano in modo indipendente l’uno dall’altro: non comunicano tra loro! 
+Essi fanno tutti la stessa cosa ma con parti diverse di dato (HDFS assegna i pezzi del dato senza un ordine particolare).
  Le coppie chiave-valore prodotte dai Mapper
-vengono ridistribuite (<strong>shuffling</strong>) da HDFS ai Reducer, in un modo particolare: ogni reducer riceve <strong>solo</strong> coppie chiave-valore
-che abbiano la stessa chiave.</p>
+vengono ridistribuite (<strong>shuffling</strong>) da HDFS ai Reducer, in un modo specifico: ogni reducer riceve <strong>solo</strong> coppie chiave-valore
+che abbiano la stessa <strong>chiave</strong> (intermedia).</p>
 
-<p>Tutta la comunicazione di un job MapReduce si riassume quindi nella fase di <code class="language-plaintext highlighter-rouge">shuffling</code>!</p>
+<p>Tutta la <strong>comunicazione</strong> di un job MapReduce si riassume quindi nella fase di <code class="language-plaintext highlighter-rouge">shuffling</code>! Sta al programmatore scrivere dei Mapper che emettano
+le chiavi intermedie corrette, in modo che poi i reducer facciano il lavoro che ci si aspetta. Una volta fatto questo, la cominicazione e’ interamente
+gestita da  HDFS!</p>
 
-<p>A questo punto tutti i Reducer lavorano con i dati ottenuti ed emettono a loro volta coppie chiave-valore (il risultato finale del calcolo MapReduce).
+<p>A questo punto, tutti i Reducer lavorano con i dati ottenuti ed emettono a loro volta coppie chiave-valore (il risultato finale del calcolo MapReduce).
 Tutti i Reducer fanno esattamente lo stesso algoritmo, ma ognuno ha dei dati diversi opportunamente re-distribuiti tramite l’uso di coppie
 chiave-valore.</p>
 
@@ -239,7 +250,7 @@ ai Reudcer i dati corretti.</p>
     		
 			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
 <script>
-const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/15/comments';
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/19/comments';
 
 let request = new XMLHttpRequest();
 request.open( 'GET', GH_API_URL, true );
@@ -304,7 +315,7 @@ request.send();
 	<h2>Comments</h2>
 	<ul id="gh-comments-list"></ul>
 	<div class="buttonArea">
-	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/15"class="button">Add comment (via Github)</a>
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/19"class="button">Add comment (via Github)</a>
 	</div>
 </div>
 

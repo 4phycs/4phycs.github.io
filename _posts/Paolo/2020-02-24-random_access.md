@@ -102,12 +102,23 @@ An even better way to see science should include not only partial disproofs, but
 also partial proofs and hints. Think of Cosmology for example, it is a science
 which deals with the whole universe (and even more...) we can easily say that 
 most of the cosmological theories, including the more accepted ones can hardly
-be disproved.  
+be disproved. On the other hand, we can collect many hints which can guide our idea
+of the universe and build theories which are more and more solid as a function
+of the hints that we have. I remember once at a school of general relativty with some
+of the big shots around, one of the finest lecturers was George Ellis, who, among other things provided, a very
+nice survey of many possibile variations regarding the structure of the universe.
+At the same school,  Andrey Linde, one of the fathers of inflationary cosmology,
+when asked about his theory of many universes each with its own constants of physics, simply
+repied that he could not prove it, but like a nice music, he was going to stick with this idea
+unless he heard a better one. The point here is that, for some complex topics,
+the very idea of proving or disproving becomes blurry.
 
 
 I am aware that this modified definition of science has limits (for example
 is very difficult to decide the weight which defines to which extent an action
-is feasible), nonetheless I think that it  
+is feasible). However one might accept the fact that science is
+not just a block of granite, but its boundaries are more like the sea shore.  
+
 
 
 P.S.:
@@ -117,8 +128,9 @@ This is a bit misleading, it simply means that the resistence under observation
 exceeds the max range measurable by the tester.
 
 P.P.S:
-In any case I think that, at present, no definition of science completely satisfies.
-Many of them carry a lot of meaning, for example Thomas Kuhn's ideas are very interesting.
+I think that, among the approaches dealing with science, the paradigms shifts by
+ Thomas Kuhn are very appealing (but less compact than Popper ideas,
+and thus less easy to use).
 
 
 

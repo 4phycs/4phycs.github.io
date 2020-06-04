@@ -1,10 +1,14 @@
 ---
 title: Random numbers towards Philosophy
 categories: English
-tags: [statistics, math, philosophy]
+tags:
+  - statistics
+  - math
+  - philosophy
 maths: 1
 comments_id: 12
-bigimg: 
+bigimg: null
+published: true
 ---
 
 Random numbers and algorithms:
@@ -46,8 +50,7 @@ So we can say that at least one of them has a probability different from zero.
 Another way to see the same thing is to think that, even if I had 
 the "possibiliy" to choose among an infinite set of numbers, for most of them
 the probability was zero. However I don't like very much this last 
-interpretation. I can use it for the sake of math modelling what is going
-on but.... `there are no infinities in real life`.
+interpretation. I can use it for the sake of math modelling but.... `there are no infinities in real life`.
 
 Infinities
 ==========
@@ -72,7 +75,7 @@ Epistemology
 Since I am walking in the kingdom of phylosophy, please let me walk a bit further.
 
 The practical "feasability" of an action should always be taken into account.
-Sometimes people have the tendency to think too much "theoretically".
+Sometimes people have the tendency to think too theoretically.
 If something is theoretically feasible, than it is as if we have already done it.
 
 This is clearly not true. If an action requires too much time to be completed 
@@ -113,7 +116,7 @@ At the same school there was  Andrey Linde, one of the fathers of inflationary c
 He explained his idea according to which there are many inflationary "big bangs" generating
 infinite universes, each with its own constants of physics.
 When he was asked about the strength of his theory, he simply
-replied that he could not prove it. However this theory was like a nice music, and
+replied that he could not prove it. However this theory was like a nice symphony and
  he was going to stick with it unless he heard a better one. 
 The point here is that, for some complex topics,
 the very idea of proving or disproving becomes blurry.
@@ -136,20 +139,3 @@ P.P.S:
 I think that, among the approaches dealing with science, the paradigms shifts by
  Thomas Kuhn are very appealing (but less compact than Popper ideas,
 and thus less easy to use).
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-

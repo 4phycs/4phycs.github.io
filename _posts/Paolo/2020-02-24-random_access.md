@@ -45,7 +45,7 @@ Infinities
 Well, this should be explained with a bit more of detail since in every course of undergrad physics, one deals with all sorts of infinities.
 
 The potential of a point charge diverges at the center. Every time an integral is carried out we are dividing an interval in an infinite set of "points" and so on and so forth.
-The models requiring infinties are in fact very pervasive, but curiously enough people tend to forget that `no infinite quantity has ever been measured`.
+The models requiring infinities are in fact very pervasive, but curiously enough people tend to forget that `no infinite quantity has ever been measured`.
 
 The reason for this is essentially the same one that prevents a person to pick a number from an infinite set. In order to measure an infinite quantity, which needs to be described with an infinite set of digits, one person needs too much time: infinite.
 

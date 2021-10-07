@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T18:07:07+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-07T11:08:53+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">prose.io + ProWritingAid</title><link href="http://localhost:4000/prose-io" rel="alternate" type="text/html" title="prose.io + ProWritingAid" /><published>2020-06-04T00:00:00+02:00</published><updated>2020-06-04T00:00:00+02:00</updated><id>http://localhost:4000/prose-io</id><content type="html" xml:base="http://localhost:4000/prose-io">&lt;h2 id=&quot;editing-help-for-github-pages-proseio--prowritingaid-works-more-or-less&quot;&gt;Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!&lt;/h2&gt;
+
+&lt;p&gt;Some time ago, I wrote a post on this blog, about &lt;strong&gt;&lt;a href=&quot;/random_access&quot;&gt;random numbers and  philosophy&lt;/a&gt;&lt;/strong&gt; with my favourite editor: &lt;a href=&quot;www.vim.org&quot;&gt;gvim&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When using this editor, it is rather difficult to spot the little spelling mistakes, in particular before the markdown text has been compiled.
+I also made some syntax error where I used “too much + adverb” (while the correct version was “too + adverb”). For these reasons I was trying to use one of those nice apps like &lt;a href=&quot;www.grammarly.com&quot;&gt;Grammarly&lt;/a&gt; in order to improve my prose…&lt;/p&gt;
+
+&lt;p&gt;During this process, I found a useful service for managing the markdown posts for GitHub pages called:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;prose.io&quot;&gt;prose.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;to use it, you just need to grant access to your page, and it helps to manage posts, save them, commit, ecc.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, Google Chrome extensions like Grammarly do not work properly with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;, i.e. they do not underline the mistakes or provide any suggestion. One needs to copy and paste the post on supported applications, correct the text and copy it back on the blog. This method is rather annoying.
+For this reason I tried many other options, including:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik&quot;&gt;webpage spell-check&lt;/a&gt; is a Google Chrome extension which works with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;, but it simply underlines the typos (no suggestions of any kind)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://prowritingaid.com/en/App/ChromeExtension&quot;&gt;ProWritingAid&lt;/a&gt; is an extension similar to Grammarly, but it does not work with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No single Chrome extension I found provided both underlying typos and suggestions.&lt;/p&gt;
+
+&lt;p&gt;However, I found a tricky solution by combining the two aforementioned products:
+when you turn on the “spell check” option of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell-check&lt;/code&gt; everything becomes “editable”.
+The cursor becomes like the one you use when entering text, even in webpages where there is no editable content. Actually, it is kind of annoying since (often) you cannot “click” on links!&lt;/p&gt;
+
+&lt;p&gt;However, if you use it in conjunction with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProWritingAid&lt;/code&gt; it allows this latter to access the text of the posts you are editing with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;: at this point you get underlined typos and the suggestions.&lt;/p&gt;
+
+&lt;p&gt;This solution is not perfect:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It often suggests putting a period where you wrap a line although the sentence is not over&lt;/li&gt;
+  &lt;li&gt;It takes a few seconds for the spell checks and suggestions to appear.&lt;/li&gt;
+  &lt;li&gt;The suggestions can disappear magically, for example, when you change Windows desktop. At this point you need to turn off and on again the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell-check&lt;/code&gt; (maybe a couple of times).&lt;/li&gt;
+  &lt;li&gt;It is slow to edit the text when the suggestions are on! However, a click allows one to replace the old statement with the suggestion, making it easy, but …&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;most annoying problem&lt;/strong&gt; is that sometimes, after you click on the suggested correction, it remains on the editing window but it is not saved! In practice, in order to be sure that correction remain, you &lt;strong&gt;must&lt;/strong&gt; edit them yourself rather than clicking for the automatic substitution.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;in-summary&quot;&gt;In summary:&lt;/h3&gt;
+
+&lt;p&gt;In order to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt; with editing suggestions, one needs to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; on Chrome&lt;/li&gt;
+  &lt;li&gt;install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProWritingAid&lt;/code&gt; on Chrome (and turn it on for the website &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;enter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt; (you need to give permission to access to your GitHub Pages site).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;disable&lt;/strong&gt; the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; (left click on the icon on Chrome, it is the bottom option)&lt;/li&gt;
+  &lt;li&gt;enter the dir containing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; and select the desired one.&lt;/li&gt;
+  &lt;li&gt;turn &lt;strong&gt;on&lt;/strong&gt; the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; and wait a few seconds, at this point the suggestions by ProWritingAid will appear under the text and by left-clicking on the underlined words one gets the suggestions, and the possibility to replace the text!&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="editing" /><summary type="html">Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!</summary></entry><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2020-05-27T00:00:00+02:00</published><updated>2020-05-27T00:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MapReduce a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;, in queste diapositive mostro un paio di modi
   per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
  http://www.norstad.org&lt;br /&gt;
@@ -70,6 +121,13 @@ chiave-valore.&lt;/p&gt;
 &lt;p&gt;Il &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;difficile&lt;/code&gt; di un job  MapReduce e’ proprio nel trovare le giuste coppie chiave-valore intermedie emesse dai Mapper che consentano di fare arrivare
 ai Reudcer i dati corretti.&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="MapReduce" /><category term="Calcolo Parallelo" /><summary type="html">MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.</summary></entry><entry><title type="html">CUDA, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/Cuda" rel="alternate" type="text/html" title="CUDA, Calcolo Parallelo, UNIMIB" /><published>2020-05-26T00:00:00+02:00</published><updated>2020-05-26T00:00:00+02:00</updated><id>http://localhost:4000/Cuda</id><content type="html" xml:base="http://localhost:4000/Cuda">&lt;ul&gt;
   &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/cuda_61.pdf&quot;&gt;CUDA a.a. 2020-2021:&lt;/a&gt;&lt;/strong&gt;
+Anche queste sono diapositive “estese”, ovvero contengono tutte le immagini e le “animazioni”. Ho migliorato l’impaginazione e  ho aggiunto un po’
+di disegni (dato che ho trovato un modo migliore per impostare i passaggi da una slide all’altra senza dover salvare una per una tutte le diapositive, 
+ma inserendo un unico pdf! eureka). CUDA sta diventando sempre piu’ user friendly e quindi una buona parte delle raccomandazioni che erano 
+necessarie per le prime schede grafiche stanno diventando obsolete.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/cuda_52.pdf&quot;&gt;CUDA a.a. 2019-2020:&lt;/a&gt;&lt;/strong&gt;
 queste diapositive sono estese, ovvero contengono tutte le immagini e le “animazioni” (per esempio i punti di una lista possono comparire uno dopo l’altro).
 Rispetto all’anno precedente, sono state fatte varie modifiche, sia di tipo strutturale (alcuni argomenti sono stati modificati e spostati) e sono state
@@ -127,7 +185,7 @@ Streaming Multiprocessor,…) e le strutture logiche (thread, warp, blocco e gri
 Constant, Texture e Global.&lt;/p&gt;
 
 &lt;p&gt;Una buona applicazione di CUDA puo’ velocizzare notevolmente un calcolo, ma ha una
-curva di apprendimento piu’ ripida rispetto ad OpenMP (e probabilmente anche di MPI).&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="Cuda" /><category term="Calcolo Parallelo" /><summary type="html">CUDA a.a. 2019-2020: queste diapositive sono estese, ovvero contengono tutte le immagini e le “animazioni” (per esempio i punti di una lista possono comparire uno dopo l’altro). Rispetto all’anno precedente, sono state fatte varie modifiche, sia di tipo strutturale (alcuni argomenti sono stati modificati e spostati) e sono state aggiunte nuove immagini e “animazioni”.</summary></entry><entry><title type="html">Probabilita’ figli e misura</title><link href="http://localhost:4000/figli" rel="alternate" type="text/html" title="Probabilita' figli e misura" /><published>2020-04-16T00:00:00+02:00</published><updated>2020-04-16T00:00:00+02:00</updated><id>http://localhost:4000/figli</id><content type="html" xml:base="http://localhost:4000/figli">&lt;h1 id=&quot;il-problema&quot;&gt;Il Problema&lt;/h1&gt;
+curva di apprendimento piu’ ripida rispetto ad OpenMP (e probabilmente anche di MPI).&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="Cuda" /><category term="Calcolo Parallelo" /><summary type="html">CUDA a.a. 2020-2021: Anche queste sono diapositive “estese”, ovvero contengono tutte le immagini e le “animazioni”. Ho migliorato l’impaginazione e ho aggiunto un po’ di disegni (dato che ho trovato un modo migliore per impostare i passaggi da una slide all’altra senza dover salvare una per una tutte le diapositive, ma inserendo un unico pdf! eureka). CUDA sta diventando sempre piu’ user friendly e quindi una buona parte delle raccomandazioni che erano necessarie per le prime schede grafiche stanno diventando obsolete.</summary></entry><entry><title type="html">Probabilita’ figli e misura</title><link href="http://localhost:4000/figli" rel="alternate" type="text/html" title="Probabilita' figli e misura" /><published>2020-04-16T00:00:00+02:00</published><updated>2020-04-16T00:00:00+02:00</updated><id>http://localhost:4000/figli</id><content type="html" xml:base="http://localhost:4000/figli">&lt;h1 id=&quot;il-problema&quot;&gt;Il Problema&lt;/h1&gt;
 
 &lt;p&gt;Mi sono imbattuto in questo interessante e “semplice” problema di statistica 
 (sarebbe meglio dire dalla semplice formulazione).
@@ -385,124 +443,75 @@ venga passata correttamente.&lt;/p&gt;
  Una considerazione da fisico, questo tipo di fenomeno ricorda curiosamente
 il problema della misura in meccanica quantistica. L’evoluzione spontanea di un sistema e’ profondamente
 differente dall’evoluzione dove interviene una misura.&lt;/p&gt;</content><author><name></name></author><category term="statistics" /><category term="math" /><category term="philosophy" /><summary type="html">Il Problema</summary></entry><entry><title type="html">Random numbers towards Philosophy</title><link href="http://localhost:4000/random_access" rel="alternate" type="text/html" title="Random numbers towards Philosophy" /><published>2020-02-24T00:00:00+01:00</published><updated>2020-02-24T00:00:00+01:00</updated><id>http://localhost:4000/random_access</id><content type="html" xml:base="http://localhost:4000/random_access">&lt;h1 id=&quot;random-numbers-and-algorithms&quot;&gt;Random numbers and algorithms:&lt;/h1&gt;
-&lt;p&gt;I was once browsing a math newsgroup, at a certain point I found a tricky 
-question which made me think a bit.&lt;/p&gt;
+&lt;p&gt;I was once browsing a math newsgroup, at a certain point I found a tricky question which made me think a bit.&lt;/p&gt;
 
 &lt;p&gt;The question sounded like this:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;consider all the possible numbers (Real 
-or Rational, there is no big difference) between 0 and 1.&lt;/li&gt;
+  &lt;li&gt;consider all the numbers between 0 and 1 (Real or Rational, there is no big difference).&lt;/li&gt;
   &lt;li&gt;Now please extract a random number among them.&lt;/li&gt;
   &lt;li&gt;(within 3 seconds I thought: 0.4324), done?&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;At this point the person highlighted the following strange thing:
-If a set contains infinite numbers, 
-each of them has &lt;strong&gt;ZERO&lt;/strong&gt; probability. How could you extract a number?&lt;/p&gt;
+If a set contains infinite numbers, each of them has &lt;strong&gt;ZERO&lt;/strong&gt; probability. How could you extract a number?&lt;/p&gt;
 
 &lt;p&gt;That made me think.&lt;/p&gt;
 
-&lt;p&gt;This is one of the typical paradoxes based on the fact that you are told by
-sombody to do something, you think that you have done it, but in reality 
-it is not true. It is generally called &lt;strong&gt;false choice&lt;/strong&gt; when used by 
-magicians or mentalists. For example they make you choose &lt;strong&gt;freely&lt;/strong&gt; a card,
-but in reality your choice is guided… In this case I think it was a genuine question.&lt;/p&gt;
+&lt;p&gt;This is one of the typical paradoxes based on the fact that you are told by somebody to do something, you think that you have done it, but in reality it is not true. It is generally called &lt;strong&gt;false choice&lt;/strong&gt; when used by magicians or mentalists. For example, they make you choose &lt;strong&gt;freely&lt;/strong&gt; a card, but in reality your choice is guided… In this case, I think it was a genuine question.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;How do you pick a random number&lt;/code&gt;?
 Let’s suppose that a human brain contains a natural mechanism which allows
  you to  &lt;em&gt;select&lt;/em&gt; digits randomly (like those random number generators based
  on quantum mechanics). 
 Let’s also suppose that a brain can think of 100 digits per second.
-It took me 3 seconds to answer, so at most I had the time for thinking at a number
-with 300 digits: a lot! (well my brain is surely much slower…).&lt;/p&gt;
+It took me 3 seconds to answer, so at most I had the time for thinking at a number with 300 digits: a lot! (well my brain is surely much slower…).&lt;/p&gt;
 
-&lt;p&gt;Unfortunatelly, as long as the number of digits is finite, it means that 
-the mechanism for picking random number works on a finite set of numbers (and not
-on an infinite set as it appeared from the question).
+&lt;p&gt;Unfortunately, as long as the number of digits is finite, it means that the mechanism for picking random number works on a finite set of numbers (and not on an infinite set, as it appeared from the question).
 So we can say that at least one of them has a probability different from zero.&lt;/p&gt;
 
-&lt;p&gt;Another way to see the same thing is to think that, even if I had 
-the “possibiliy” to choose among an infinite set of numbers, for most of them
-the probability was zero. However I don’t like very much this last 
-interpretation. I can use it for the sake of math modelling what is going
-on but…. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are no infinities in real life&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Another way to see the same thing is to think that, even if I had the “possibility” to choose among an infinite set of numbers, for most of them the probability was zero. However, I don’t like very much this last interpretation. I can use it for the sake of math modelling but…. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;there are no infinities in real life&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;infinities&quot;&gt;Infinities&lt;/h1&gt;
 
-&lt;p&gt;Well, this should be explained with a bit more of detail since in every
-course of undergrad physics one deals with all sort of infinities.&lt;/p&gt;
+&lt;p&gt;Well, this should be explained with a bit more of detail since in every course of undergrad physics, one deals with all sorts of infinities.&lt;/p&gt;
 
-&lt;p&gt;The potential of a point charge diverges at the center. Every time an integral
- is carried out we are dividing an interval in an infinite set of “points” and so on
-and so forth.
-The models requiring infinties are in fact very pervasive, but curiously enough
-people tend to forget that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;no infinite quantity has ever been measured&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The potential of a point charge diverges at the center. Every time an integral is carried out we are dividing an interval in an infinite set of “points” and so on and so forth.
+The models requiring infinities are in fact very pervasive, but curiously enough people tend to forget that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;no infinite quantity has ever been measured&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;The reason for this is essentially the same one that prevents a person to pick 
-a number from an infinite set. In order to measure an infinite quantity,
-which needs to be described with an infinite set of digits, one person needs
-too much time: infinite.&lt;/p&gt;
+&lt;p&gt;The reason for this is essentially the same one that prevents a person to pick a number from an infinite set. In order to measure an infinite quantity, which needs to be described with an infinite set of digits, one person needs too much time: infinite.&lt;/p&gt;
 
 &lt;h1 id=&quot;epistemology&quot;&gt;Epistemology&lt;/h1&gt;
 
-&lt;p&gt;Since I am walking in the kingdom of phylosophy, please let me walk a bit further.&lt;/p&gt;
+&lt;p&gt;Since I am walking in the kingdom of philosophy, please let me walk a bit further.&lt;/p&gt;
 
-&lt;p&gt;The practical “feasability” of an action should always be taken into account.
-Sometimes people have the tendency to think too much “theoretically”.
-If something is theoretically feasible, than it is as if we have already done it.&lt;/p&gt;
+&lt;p&gt;The practical “feasibility” of an action should always be taken into account. Sometimes people have the tendency to think too theoretically. If something is theoretically feasible, then it is as if we have already done it.&lt;/p&gt;
 
-&lt;p&gt;This is clearly not true. If an action requires too much time to be completed 
-it might become practically impossible. The same happens if the action requires too 
-many resources. The different paths taken which might lead to a result should also be taken into
-account.&lt;/p&gt;
+&lt;p&gt;Clearly, this is not true. If an action requires too much time to be completed it might become practically impossible. The same happens if the action requires too many resources.&lt;/p&gt;
 
-&lt;p&gt;One of the most popular definitinos of science (due to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karl Popper&lt;/code&gt;), suggests
+&lt;p&gt;One of the most popular definitions of science (due to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karl Popper&lt;/code&gt;), suggests
 that a statement is scientific if it is possible to disprove it.
 It is a very compact definition which grasps a lot of what is science, and that
 is probably the reason of its popularity.&lt;/p&gt;
 
 &lt;p&gt;I notice however one of it limits with the following example.
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;There is at least a mushroom in Norway, underneath which lives a gnome&lt;/code&gt;.
-It is enough to look under a mushroom to check, and the number of mushrooms
-in Norway is clearly finite. In this respect there is a clear method to disprove
-the sentence, and somebody might think that for this reason it becomes “scientific”.
-Nonetheless the practical feasibility of checking all of the mushrooms, is 
-essentially zero. According to my opinion
-the scientific value of the sentence is essentially zero too.&lt;/p&gt;
+It is enough to look under a mushroom to check, and the number of mushrooms in Norway is clearly finite. In this respect, there is a theoretical method to disprove the sentence, and somebody might think that for this reason it becomes “scientific”.
+Nonetheless, the practical feasibility of checking all the mushrooms is essentially zero. According to my opinion, the scientific value of the sentence is essentially zero too.&lt;/p&gt;
 
-&lt;p&gt;In general, I belive that an adjustment of this definition of science should
-use weights for the sentences. The more “feasible” it is to disprove the 
-sentence, the more scientific it becomes.&lt;/p&gt;
+&lt;p&gt;In general, I believe that an adjustment of this definition of science should use weights for the sentences. The more “feasible” it is to disprove the sentence, the more scientific it becomes.&lt;/p&gt;
 
-&lt;p&gt;An even better way to see science should include not only partial disproofs, but 
-also partial proofs and hints. Think of Cosmology for example, it is a science
-which deals with the whole universe (and even more…) we can easily say that 
-most of the cosmological theories, including the more accepted ones can hardly
-be disproved. On the other hand, we can collect many hints which can guide our idea
-of the universe and build theories which are more and more solid as a function
-of the hints that we have. I remember once at a school of general relativty with some
-of the big shots around, one of the finest lecturers was George Ellis, who provided a very
-nice survey of many possibile variations regarding the structure of the universe. His approach
-being rather different than some of the science popularizers who give for granted that 
-the universe has 13.6 By and so on…
-At the same school there was  Andrey Linde, one of the fathers of inflationary cosmology.
-He explained his idea according to which there are many inflationary “big bangs” generating
-infinite universes, each with its own constants of physics.
-When he was asked about the strength of his theory, he simply
-replied that he could not prove it. However this theory was like a nice music, and
- he was going to stick with it unless he heard a better one. 
-The point here is that, for some complex topics,
-the very idea of proving or disproving becomes blurry.&lt;/p&gt;
+&lt;p&gt;An even better way to see science should include not only partial disproofs but also partial proofs and hints. Think of Cosmology for example, it is a science which deals with the whole universe (and even more…) we can easily say that most of the cosmological theories, including the more accepted ones, can hardly be disproved. On the other hand, we can collect many hints which can guide our idea of the universe and build theories which are more and more solid as a function of the hints we have. I remember once at a school of general relativity with some of the big shots around, one of the finest lecturers was George Ellis, who provided a very nice survey of many possible variations regarding the structure of the universe. His approach being rather different from those of some science popularizers who give for granted that 
+the universe has 13.6 billion years and so on…
+At the same school, there was  Andrei Linde, one of the fathers of inflationary cosmology.
+He explained his idea according to which there are many inflationary “big bangs” generating infinite universes, each with its own constants of physics. When he was asked about the strength of his theory, he simply replied that he could not prove it. However, this theory was like a nice symphony and he would stick with it unless he heard a better one. The point here is that for some complex topics, the very idea of proving or disproving becomes blurry.&lt;/p&gt;
 
-&lt;p&gt;I am aware that this modified definition of science has limits (for example
-is very difficult to decide the weights defining to which extent an action
-is feasible). However one might accept the fact that science is
-not just a block of granite, but its boundaries are more like the sea shore.&lt;/p&gt;
+&lt;p&gt;I know that this modified definition of science has limits (for example, is very difficult to decide the weights defining to which extent an action is feasible). However, one might accept the fact that science is
+not just a block of granite, but its boundaries are more like the seashore.&lt;/p&gt;
 
 &lt;p&gt;P.S.:
-People who have seen an analog tester, might claim that when you measure the
-resistence there is a scale with an &lt;script type=&quot;math/tex&quot;&gt;\infty&lt;/script&gt; sign on it.
-This is a bit misleading, it simply means that the resistence under observation
+People who have seen an analog tester might claim that when you measure the
+resistance there is a scale with an &lt;script type=&quot;math/tex&quot;&gt;\infty&lt;/script&gt; sign on it.
+This is a bit misleading, it simply means that the resistance under observation
 exceeds the max range measurable by the tester.&lt;/p&gt;
 
 &lt;p&gt;P.P.S:

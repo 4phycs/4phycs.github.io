@@ -13,8 +13,8 @@ toc: 1
 
 ## Introduzione a queste note
 
-Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di **[Python Engineer](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer)** (Patrick Loeber):
-https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer
+Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di **[Python Engineer](https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA)** (Patrick Loeber):
+
 
 Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e' bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio un corso introduttivo del MIT: https://www.youtube.com/watch?v=5tvmMX8r_OM&ab_channel=AlexanderAmini 
 
@@ -138,7 +138,7 @@ In ogni iterazione si fanno dei dropout differenti (scelti in modo random) in mo
 ## Indice delle lezioni di Python-Engineer
 I codici possono essere scaricati **[qui](https://github.com/python-engineer/pytorchTutorial)**. Qui indico le lezioni di Python Engineer, la loro durata e i capitoli corrispondenti in questo notebook.
 
-1. Istallazione     5:45 
+1. [Istallazione](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer)     5:45 
 2. [Tensor Basics](#Tensor-Basics) 18:28
 3. [Gradient Calculation con Autograd](#ChainRule-e-Autograd) 15:54
 4. [Backpropagation - teorie ed esempi](#Backpropagation) 13:13   (molto ben fatto)

@@ -419,11 +419,9 @@ Per esempio:
 $
 {\bf x}=
 \left(
-\begin{tabular}{c}
  x_1 \\
  x_2 \\
  x_3
-\end{tabular}
 \right)
 $
 

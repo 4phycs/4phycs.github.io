@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 categories: italiano
 tags:
   - Python
@@ -17,7 +17,7 @@ toc: 1
 Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di **[Python Engineer](https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA)** (Patrick Loeber):
 
 
-Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e' bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio un corso introduttivo del MIT: https://www.youtube.com/watch?v=5tvmMX8r_OM&ab_channel=AlexanderAmini 
+Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e' bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio questo **[corso introduttivo](https://www.youtube.com/watch?v=5tvmMX8r_OM&ab_channel=AlexanderAmini)** del MIT.  
 
 In alcuni casi ho preso direttamente i codici di Patrick Loeber (forniti nei link alle sue lezioni), ma nella maggior parte dei casi li ho riscritti (sempre seguendo il video), quindi potrebbero esserci delle piccole differenze. Questo e' anche dovuto al fatto che questi codici sono pensati per girare all'interno di un notebook, mentre Python Engineer usa Vstudio Code.  Per esempio, quando Patrick vuole mostrare alcuni grafici tramite Matplotlib deve lanciare dei comandi che non servono qui. 
 Piu' di una volta mi e' capitato avere dei problemi con i codici. Spesso il motivo era una mia errata comprensione dei  video che dava luogo a degli errori non facilmente notabili,  nonostante questo segno questi errori (tra i commenti) perche' sono utili esempi di cosa si puo' sbagliare.
@@ -36,17 +36,18 @@ Queste note sono pensate per potere essere navigate tramite un indice interattiv
 
 ## Disclaimer
 Eventuali errori di queste note sono da attribuire solo a me. 
-Sono appunti personali di cui non assicuro il funzionamento.
+Sono appunti personali di cui non assicuro il funzionamento (o la pericolosita').
+Ci sono vari problemi di traduzine dal Jupyter notebook su cui sono gli originali e questi,
+dato che in Markdown alcuni effetti non sono possibili e mancano delle immagini.
 
 ## Altre fonti utili
-Un articolo interssante (suggerito proprio da Python Engineer) sulle RNN e' quello di Andrej Karpathy (ora a Tesla): 
-http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+Un **[articolo](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)** interssante (suggerito proprio da Python Engineer) sulle RNN e' quello di Andrej Karpathy (ora a Tesla). 
 
-Altri appunt utili possono essere trovati qui:
-https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/
 
-Altro corso molto interessante (da cui Python Engineer ha preso spunto, per esempio per l'autoencoder):
- https://www.cs.toronto.edu/~lczhang/360/
+Altri appunt utili possono essere trovati **[qui](https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/)**
+
+Altro **[corso]( https://www.cs.toronto.edu/~lczhang/360/)* molto interessante (da cui Python Engineer ha preso spunto, per esempio per l'**autoencoder**.
+
 
 
 
@@ -141,27 +142,27 @@ In ogni iterazione si fanno dei dropout differenti (scelti in modo random) in mo
 I codici possono essere scaricati **[qui](https://github.com/python-engineer/pytorchTutorial)**. Qui indico le lezioni di Python Engineer, la loro durata e i capitoli corrispondenti in questo notebook.
 
 1. [Istallazione](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer)     5:45 
-2. [Tensor Basics](#Tensor-Basics) 18:28
-3. [Gradient Calculation con Autograd](#ChainRule-e-Autograd) 15:54
-4. [Backpropagation - teorie ed esempi](#Backpropagation) 13:13   (molto ben fatto)
-5. [Gradient Descent con Autograd e Backpropagation](#Discesa-del-gradiente-Manuale) 17:31
-6. Training Pipeline: Model, Loss, e Optimizer  14:16
-7. Regressione Lineare   12:11
-8. Regressione Logistica 18:22
-9. Dataset e DataLoader - Batch Training 15:27   (importante da rivedere)
-10. Dataset Transforms  10:43
-11. Softmax e Cross Entropy 18:17
-12. Activation Functions 10:00
-13. Feed-Forward Neural Network 21:34
-14. Convolutional Neural Network 22:07
-15. Transfer Learning 14:55
-16. How to use TensorBoard 25:41 
-17. Saving and loading Models 18:24
-18. Create and Deploy A Deep Learning App - PyTorch Model Deployment with Flask  41:52
-19. RNN Tutorial- Name Classification Using a Recurrent 38:57
-20. RNN & LSTM & GRU Recurrent Neural Nets 15:52
-21. Lightning Tutorial Lightweight PyTorch Wrapper for ML 28:02
-22. LR Scheduler - Adjust the learning Rate for Better Results 13:29 
+2. [Tensor Basics](https://www.youtube.com/watch?v=exaWOE8jvy8&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=2) 18:28
+3. [Gradient Calculation con Autograd](https://www.youtube.com/watch?v=DbeIqrwb_dE&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=3) 15:54
+4. [Backpropagation - teorie ed esempi](https://www.youtube.com/watch?v=3Kb0QS6z7WA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=4) 13:13   (molto ben fatto)
+5. [Gradient Descent con Autograd e Backpropagation](https://www.youtube.com/watch?v=E-I2DNVzQLg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=5) 17:31
+6. [Training Pipeline: Model, Loss, e Optimizer](https://www.youtube.com/watch?v=VVDHU_TWwUg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=6)  14:16
+7. [Regressione Lineare](https://www.youtube.com/watch?v=YAJ5XBwlN4o&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=7)   12:11
+8. [Regressione Logistica](https://www.youtube.com/watch?v=OGpQxIkR4ao&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=8) 18:22
+9. [Dataset e DataLoader - Batch Training](https://www.youtube.com/watch?v=PXOzkkB5eH0&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=9) 15:27   (importante da rivedere)
+10. [Dataset Transforms](https://www.youtube.com/watch?v=X_QOZEko5uE&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=10)  10:43
+11. [Softmax e Cross Entropy](https://www.youtube.com/watch?v=7q7E91pHoW4&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=11) 18:17
+12. [Activation Functions](https://www.youtube.com/watch?v=3t9lZM7SS7k&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=12) 10:00
+13. [Feed-Forward Neural Network](https://www.youtube.com/watch?v=oPhxf2fXHkQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=13) 21:34
+14. [Convolutional Neural Network](https://www.youtube.com/watch?v=pDdP0TFzsoQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=14) 22:07
+15. [Transfer Learning](https://www.youtube.com/watch?v=K0lWSB2QoIQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=15) 14:55
+16. [How to use TensorBoard](https://www.youtube.com/watch?v=VJW9wU-1n18&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=16) 25:41 
+17. [Saving and loading Models](https://www.youtube.com/watch?v=9L9jEOwRrCg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=17) 18:24
+18. [Create and Deploy A Deep Learning App - PyTorch Model Deployment with Flask](https://www.youtube.com/watch?v=bA7-DEtYCNM&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=18)  41:52
+19. [RNN Tutorial- Name Classification Using a Recurrent](https://www.youtube.com/watch?v=WEV61GmmPrk&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=19) 38:57
+20. [RNN & LSTM & GRU Recurrent Neural Nets](https://www.youtube.com/watch?v=0_PgWWmauHk&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=20) 15:52
+21. [Lightning Tutorial Lightweight PyTorch Wrapper for ML](https://www.youtube.com/watch?v=Hgg8Xy6IRig&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=21) 28:02
+22. [LR Scheduler - Adjust the learning Rate for Better Results](https://www.youtube.com/watch?v=81NJgoR5RfY&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=22) 13:29 
 
 
 # Tensor Basics 

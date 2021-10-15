@@ -34,6 +34,9 @@ Il valore aggiunto portato da me riguarda principalmente 4 cose:
 
 Queste note sono pensate per potere essere navigate tramite un indice interattivo. Nel Jupyter Notebook dove sono state scritte ho ottenuto l'indice tramite: `jupyter-navbar.` Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) ho fatto girare da Babun con python2.7 il file setup.py (questo perche' lo sto facendo girare in Windows 10). In questo modo, a sinistra appare il panel con l'indice. 
 
+## Disclaimer
+Eventuali errori di queste note sono da attribuire solo a me. 
+Sono appunti personali di cui non assicuro il funzionamento.
 
 ## Altre fonti utili
 Un articolo interssante (suggerito proprio da Python Engineer) sulle RNN e' quello di Andrej Karpathy (ora a Tesla): 
@@ -45,8 +48,6 @@ https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/
 Altro corso molto interessante (da cui Python Engineer ha preso spunto, per esempio per l'autoencoder):
  https://www.cs.toronto.edu/~lczhang/360/
 
-
-Eventuali errori di queste note sono da attribuire solo a me. 
 
 
 

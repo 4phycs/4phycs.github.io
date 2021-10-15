@@ -1,12 +1,16 @@
 ---
 layout: page
 title: Who am I?
-css: ["contact.css"]
+css:
+  - contact.css
+published: true
 ---
 
 `Hello world`, my name is `Paolo`   (**[CV]({{ site.baseurl }}/assets/PA55_13Dec2020.pdf)**).
 
-I am a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). 
+I am a consultant.
+I have been working as a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). I keep on loving these topics and I keep on creating new algorithms and
+definitions in computer science.
 My main focus is now on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
 our **[last publication](https://rdcu.be/b2K1c)** defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
@@ -45,4 +49,3 @@ put, comas, in, random positions.
 <div class="thi-signature">
     {{ site.user.name }}
 </div>
-

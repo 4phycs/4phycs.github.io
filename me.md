@@ -26,7 +26,7 @@ I introduce the students to **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2020-
 (but in any case my first love is FORTRAN).
 
 
-I am part of the team which has been developing the [Pollicina project](https://www.progettopollicina.eu/)
+I am part of the team which has developed the [Pollicina project](https://www.progettopollicina.eu/)
 for creating cultural paths within the flipped learning pedagogical approach.
 
 I am (slowly) adding some of my codes on [GitHub](https://github.com/4phycs).

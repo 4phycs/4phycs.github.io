@@ -1,6 +1,6 @@
 ---
 published: true
-categories: Italiano
+categories: italiano
 tags:
   - Python
   - DeepLearning

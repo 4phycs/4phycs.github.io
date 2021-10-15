@@ -7,6 +7,7 @@ tags:
   - Neural Nets
 maths: 1
 comments_id: 13
+toc: 1
 ---
 # PyTorch e Deep Learning
 

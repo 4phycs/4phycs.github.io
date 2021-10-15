@@ -15,10 +15,10 @@ our **[last publication](https://rdcu.be/b2K1c)** defined a new
 indicator which extends the concept of *discord*, for online analysis (a form of
 unsupervised `machine learning`). We are also about to publish a novel very fast algorithm on the same topic.
 
-I am the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 
+I was the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 
 department of computer science 
 [DISCO](https://www.disco.unimib.it/it) at [University of Milan-Bicocca](http://www.unimib.it), 
- since 2015.
+ from 2015 to 2021.
 I introduce the students to **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-MPI-18-19.md %})**
 , **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-OpenMP-18-19.md %})**, 
 **[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2020-05-26-Cuda.md %})**

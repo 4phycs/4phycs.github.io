@@ -424,11 +424,11 @@ $
  x_3
 \right)
 $
-
+$
 \left(
 \mycolv{C_1\\C_2} 
 \right)
-
+$
 $
 {\bf y}=
 \left(

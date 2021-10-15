@@ -1,5 +1,12 @@
 ---
-published: false
+published: true
+categories: Italiano
+tags:
+  - Python
+  - DeepLearning
+  - Neural Nets
+maths: 1
+comments_id: 13
 ---
 # PyTorch e Deep Learning
 
@@ -4664,4 +4671,3 @@ for k in range(0, num_epochs,4):
 
 
 ![png](output_files/output_118_2.png)
-

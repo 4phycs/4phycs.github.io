@@ -11,7 +11,7 @@ published: true
 I am a consultant.
 I have been working as a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). I keep on loving these topics and I keep on creating new research about  computer and data science (although I don't have so much time).
 My main focus is on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
-our **[last publication](https://rdcu.be/b2K1c)** defined a new 
+in this  **[article](https://rdcu.be/b2K1c)** we defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
 unsupervised `machine learning`). We are also about to publish a novel very fast algorithm on the same topic.
 

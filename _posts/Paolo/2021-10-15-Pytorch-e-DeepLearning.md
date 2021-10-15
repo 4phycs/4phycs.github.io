@@ -5,6 +5,7 @@ tags:
   - Python
   - DeepLearning
   - Neural Nets
+  - Cuda
 maths: 1
 comments_id: 13
 toc: 1

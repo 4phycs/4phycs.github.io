@@ -13,7 +13,7 @@ toc: 1
 
 ## Introduzione a queste note
 
-Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di Python Engineer (Patrick Loeber):
+Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di **[Python Engineer](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer)** (Patrick Loeber):
 https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer
 
 Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e' bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio un corso introduttivo del MIT: https://www.youtube.com/watch?v=5tvmMX8r_OM&ab_channel=AlexanderAmini 

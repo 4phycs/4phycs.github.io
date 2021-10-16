@@ -1,0 +1,404 @@
+---
+published: true
+categories: italiano
+tags:
+  - Python
+  - DeepLearning
+  - Neural Nets
+  - Cuda
+maths: 1
+comments_id: 17
+toc: 1
+---
+# PyTorch e Deep Learning
+
+## Introduzione a queste note
+
+Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e' una traduzione delle  lezioni di **[Python Engineer](https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA)** (Patrick Loeber):
+
+
+Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e' bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio questo **[corso introduttivo](https://www.youtube.com/watch?v=5tvmMX8r_OM&ab_channel=AlexanderAmini)** del MIT.  
+
+In alcuni casi ho preso direttamente i codici di Patrick Loeber (forniti nei link alle sue lezioni), ma nella maggior parte dei casi li ho riscritti (sempre seguendo il video), quindi potrebbero esserci delle piccole differenze. Questo e' anche dovuto al fatto che questi codici sono pensati per girare all'interno di un notebook, mentre Python Engineer usa Vstudio Code.  Per esempio, quando Patrick vuole mostrare alcuni grafici tramite Matplotlib deve lanciare dei comandi che non servono qui. 
+Piu' di una volta mi e' capitato avere dei problemi con i codici. Spesso il motivo era una mia errata comprensione dei  video che dava luogo a degli errori non facilmente notabili,  nonostante questo segno questi errori (tra i commenti) perche' sono utili esempi di cosa si puo' sbagliare.
+
+Il valore aggiunto portato da me riguarda principalmente 4 cose:
+
+1. Il lavoro di traduzione che mi obbliga a pensare mentre scrivo il codice. Alle volte, mantengo i termini inglesi perche' mi consentono di ricordare le keyword e la sintassi.
+
+2. Ove lo ritengo utile aggiungo dei test e delle prove per capire meglio quello che sta succedendo.
+
+3. Ho inoltre aggiunto alcune mie considerazioni personali, utili per me per ricordare e capire meglio certe cose. 
+
+4. Ho messo un contesto e una cornice iniziale di teorina e notazioni che leghi insieme le varie lezioni.
+
+Queste note sono pensate per potere essere navigate tramite un indice interattivo. Nel Jupyter Notebook dove sono state scritte ho ottenuto l'indice tramite: `jupyter-navbar.` Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) ho fatto girare da Babun con python2.7 il file setup.py (questo perche' lo sto facendo girare in Windows 10). In questo modo, a sinistra appare il panel con l'indice. 
+
+## Disclaimer
+Eventuali errori di queste note sono da attribuire solo a me. 
+Sono appunti personali di cui non assicuro il funzionamento (o la pericolosita').
+Ci sono vari problemi di traduzine dal Jupyter notebook su cui sono gli originali e questi,
+dato che in Markdown alcuni effetti non sono possibili e mancano delle immagini.
+
+
+
+## Indice delle lezioni di Python-Engineer
+I codici possono essere scaricati **[qui](https://github.com/python-engineer/pytorchTutorial)**. Qui indico le lezioni di Python Engineer, la loro durata e i capitoli corrispondenti in questo notebook.
+
+1. [Istallazione](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&ab_channel=PythonEngineer)     5:45 
+2. [Tensor Basics](https://www.youtube.com/watch?v=exaWOE8jvy8&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=2) 18:28
+3. [Gradient Calculation con Autograd](https://www.youtube.com/watch?v=DbeIqrwb_dE&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=3) 15:54
+4. [Backpropagation - teorie ed esempi](https://www.youtube.com/watch?v=3Kb0QS6z7WA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=4) 13:13   (molto ben fatto)
+5. [Gradient Descent con Autograd e Backpropagation](https://www.youtube.com/watch?v=E-I2DNVzQLg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=5) 17:31
+6. [Training Pipeline: Model, Loss, e Optimizer](https://www.youtube.com/watch?v=VVDHU_TWwUg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=6)  14:16
+7. [Regressione Lineare](https://www.youtube.com/watch?v=YAJ5XBwlN4o&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=7)   12:11
+8. [Regressione Logistica](https://www.youtube.com/watch?v=OGpQxIkR4ao&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=8) 18:22
+9. [Dataset e DataLoader - Batch Training](https://www.youtube.com/watch?v=PXOzkkB5eH0&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=9) 15:27   (importante da rivedere)
+10. [Dataset Transforms](https://www.youtube.com/watch?v=X_QOZEko5uE&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=10)  10:43
+11. [Softmax e Cross Entropy](https://www.youtube.com/watch?v=7q7E91pHoW4&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=11) 18:17
+12. [Activation Functions](https://www.youtube.com/watch?v=3t9lZM7SS7k&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=12) 10:00
+13. [Feed-Forward Neural Network](https://www.youtube.com/watch?v=oPhxf2fXHkQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=13) 21:34
+14. [Convolutional Neural Network](https://www.youtube.com/watch?v=pDdP0TFzsoQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=14) 22:07
+15. [Transfer Learning](https://www.youtube.com/watch?v=K0lWSB2QoIQ&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=15) 14:55
+16. [How to use TensorBoard](https://www.youtube.com/watch?v=VJW9wU-1n18&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=16) 25:41 
+17. [Saving and loading Models](https://www.youtube.com/watch?v=9L9jEOwRrCg&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=17) 18:24
+18. [Create and Deploy A Deep Learning App - PyTorch Model Deployment with Flask](https://www.youtube.com/watch?v=bA7-DEtYCNM&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=18)  41:52
+19. [RNN Tutorial- Name Classification Using a Recurrent](https://www.youtube.com/watch?v=WEV61GmmPrk&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=19) 38:57
+20. [RNN & LSTM & GRU Recurrent Neural Nets](https://www.youtube.com/watch?v=0_PgWWmauHk&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=20) 15:52
+21. [Lightning Tutorial Lightweight PyTorch Wrapper for ML](https://www.youtube.com/watch?v=Hgg8Xy6IRig&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=21) 28:02
+22. [LR Scheduler - Adjust the learning Rate for Better Results](https://www.youtube.com/watch?v=81NJgoR5RfY&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=22) 13:29 
+
+
+
+
+## Altre fonti utili
+Un **[articolo](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)** interssante (suggerito proprio da Python Engineer) sulle RNN e' quello di Andrej Karpathy (ora a Tesla). 
+
+
+Altri appunt utili possono essere trovati **[qui](https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/)**
+
+Altro **[corso]( https://www.cs.toronto.edu/~lczhang/360/)* molto interessante (da cui Python Engineer ha preso spunto, per esempio per l'**autoencoder**.
+
+
+
+
+
+```python
+import torch
+import numpy as np
+```
+
+## Lingo -  Utilia
+Qui metto un po' di keyword che possono risultare utili:
+
+
+- **super()**  metodo che viene usato quando si costruisce una classe ereditandola da un'altra e consente di usare i metodi della classe genitore. 
+- **tensor**   e' una matrice con in aggiunta dei metodi che sono propri di PyTorch, e' il tipo fondamentale di PyTorch (il capitolo Tensor Basics e' fatto proprio per dare una introduzione)
+- **_** Un metodo il cui nome termina con un underscore vuole dire che lavora **inplace**
+- **Dataset**  e' una classe di *torch.utils.data* dove viene messo il dataset che serve alla rete neurale
+- **DataLoader** e' una classe di *torch.utils.data*, serve per dividere il dataset in batch da dare in pasto alla rete
+- **epoch** <br> un passo forward e un backward di **TUTTI** i campioni del training
+- **batch_size** numero di campioni di training in un forward/backward pass
+- **numero di iterazioni** numero di passi, dove in ogni passo(forward/backward) si usa un batch di campioni ( di dimensione "batch_size")
+- **criterion** e' il *criterio* (la funzione) che usiamo per generare la Loss (per esempio, cross_entropy).Nota che la loss e' il singolo valore ottenuto (in genere), mentre il criterio e' il tipo di funzione che, ottenuti come argomenti i valori predetti e quelli corretti fornisce il valore. In queste note uso in modo "liberale" i termini loss e criterion, normalmente questo non dovrebbe creare problemi.
+- **learning rate** in generale si ottimizzano i pesi della rete usando una tecnica tipo **discesa del gradiente**. La loss e' una funzione da $R^n \rightarrow R$ (dove n e' il numero di pesi usati). Se calcolo il gradiente allora conosco la massima pendenza e mi posso muovere lungo quella direzione per cercare il minimo (ma nel verso opposto). Di quanto mi muovo? la grandezza di questo passo verso il possibile minimo e' data dal learning rate. Il prolema di come variare il learning rate e' fondamentale per poter ottenere delle buone convergenze.
+- **Grafo computazionale**, immagina di mettere tutte le operazioni fatte per ottenere i risultati della rete neurale. In pratica stai costruendo una funzione $R^n \rightarrow R^m$. Questa funzione puo' essere vista come una serire di passi, ognuno indipendente dall'altro. Per esempio se hai una rete neurale con vari hidden layer, ogni passaggo ad un layer e' diverso, ci sono poi delle funzioni non lineari applicate ecc. La tua funzione Loss e' quindi una funzione di funzione:F(x) = f(g(h(x)))  (ho messo solo 3 funzioni per esempio ma sono in genere di piu'). Quando vorrai calcolare il gradiente rispetto ai parametri dovrai usare una chain rule e spesso questo viene visualizzato come un grafo con vari passi. 
+
+## Domande
+
+- viene piu' volte consigliato di non fare fare la somma quando si fa backpropagation perche' viene fatta in automatico.
+Ci sono vari modi per evitare questo (devo indicare quali sono i video).
+
+
+## Pipeline
+Lo scopo e' costruire un codice tramite Pytorch che impari a fare qualcosa. Qui sotto indico la pipeline (la serie di passi) che serve per ottenere questo risultato. Attenzione: con il wrapper `Pytorch-Lightning`, alcuni di questi passi possono essere saltati e diventa quindi piu' semplice ottenre un modello funzionante.
+
+- si importano i dati in `dataset` (sia per il training che per il test)
+- i dataset vengono trasformati per migliorarne le caratteristiche tramite delle funzioni `transformations` (per esempio si possono normalizzare le informazioni)
+- si costruisce i `dataloader` per dare al modello dei batch (sia per train che per test)
+- si eredita un `nn.Model` (ricordati di mettere il *super*) dove vengono inseriti i vari strati della rete nella funzione `__init__`. 
+- nel modello si inserisce anche un metodo `forward` (ATTENTO il nome deve porprio essere `forward`, si sta facendo un overload di un metodo gia' esistente in nn.Model!) dove vengono proprio implementati i passi uno dopo l'altro. Questo e' il cosiddetto `grafo computazionale`
+- nota che il modello ereditato e' "callable" ovvero posso usarlo come una funzione a cui do in pasto qualcosa... in pratica i batch di dati. 
+- si istanzia il modello passando solo `pochi parametri` come: dimensione input, dimensione hidden e dimensione output!
+- Quando si chiama l'istanza del nostro modello personalizzato inserendo un batch, viene chiamata la funzone `forward` a cui e' passato il batch.
+- si fa un ciclo esterno sulle Epoche (ogni epoca e' divisa in batch)
+- si fa un ciclo interno su tutti i batch (infornate) di ogni epoca.
+- si istanzia una funzione chiamata `criterion` (spesso chiamiamo l'istanza proprio `criterion`) che viene usata per ottenre la loss. Il criterio e' la forma generale della loss (per esempio cross-entropy), mentre la Loss e' l'istanza particolare associata al criterio.
+- la `loss` e' una funzione sia delle predizioni $\hat y$ che dei valori noti $y$. Si usano delle notazioni che rimandano con precisione alle funzioni e gli stimatori, per esempio l'input e' dato dalla $x$, l'output e' dato dalla $\hat{y}$ (questa scrittura assomiglia a quella di uno stimatore di un'osservabile di una distribuzione)
+Il risultato di applicare il criterion a questi dati produce un numero (la loss) che quantifica la qualita' della predizione. Nota che a questo punto ho una fun
+- `empirical loss` e' la **media** delle varie loss ottenute da un batch, in pratica quindi la discesa del gradiente viene fatta sull'empirical loss 
+- `optimizer.zero_grad()` serve per evitare che tutte le azioni (per esempio l'optimizer) vengno considerate parte del grafo computazionale 
+- `loss.backward()`    fa la backpropagation in modo da ottenere i gradienti rispetto ai pesi (stiamo cercando un minimo rispetto della loss dove le variabili sono i pesi)  
+- `optimizer.step()`   e' il modo in cui ci si muove (con un passo di grandezza `learning_rate`) sul landscape dato dalla loss per cercare il minimo, per esempio usando la tecnica chiamata SGD (stochastic gradient descent). 
+
+Una osservazione sui batch (supportata dalla prima lecture del MIT intorno al min 47).
+Cosa significa dare in pasto un batch alla mia (feed forward) rete neurale?
+Immagina la rete neurale smplicemente come una funzione di:
+- ${\bf x_i}$ : sono gli input, per esempio i pixel di una foto. Nel seguito supporro' che sia una sola variabile
+- ${\bf w}$ i *pesi*,  anche qui per semplicita' si ha un  solo peso.
+
+Con i valori in uscita (output) e i valori veri (noti nel training set) otteniamo una funzione di Loss.
+Questa funzione e' $\displaystyle L = f(x,w)$
+
+A questo punto pensa al modello piu' semplice del mondo in cui ho un solo peso $w$.  in questo caso $L = x \cdot w^2$ (nota che i pesi possono entrare in modo non lineare). Se passo 2 vettori di input diversi (per esempio 2 immagini) allora ho 2 funzioni di loss diverse:
+- $L(x_1,w) = x_1 \cdot w^2 +x_1\cdot w$  (una quadratica in funzione di y, dove $x_1$ e' un prametro)
+- $L(x_2,w) = x_2 \cdot  w^2 +x_2\cdot w$
+
+Noi ora cambiamo prospettiva, dato che vogliamo minimizzare la loss in funzione dei pesi, considero ora:
+- $x_i$ sono i parametri
+- w  sono le variabili 
+
+La `average loss`: $L=L_1 +L_2$ e' ora una funzione di $y$.
+Per trovare il minimo, uno dei modi piu' interessanti e' muoversi nella direzione di massima pendenza (gradient) verso valori piu' bassi (basta ricordare le utilissime note di Valentina di analisi 2 sulle approssimazioni lineari di funzioni da $R^n \rightarrow R$. In questo caso calcolo la derivata parziale della loss rispetto al peso: $\frac{\partial}{\partial w}$. Se i pesi sono tanti, allora calcolo il gradiente e ottengo quindi una direzione verso cui muovermi.
+
+In questo esempio banale le loss sono due parabole centrate in zero e non e' interessante, il minimo si ottiene mettendo $w=0$. Se prendiamo un caso appena piu' complicato, dove la loss e' la somma di due parabole non centrate in zero otteniamo una curva con vari minimi.  Nota che il profilo della funzinoe `Loss empirica` non e' identico a quello della loss del singolo imput e noi siamo intressati ad un minimo globale per tutto il batch.
+
+## Overfitting
+
+Come evitare l'overfitting durange la fase di training? I casi reali si riferiscono a delle funzioni che sono multidimensionali con una dimensionalita' enorme (migliaia o centinaia di migliaia di parametri). Questo implica che la superficie su cui facciamo la minimizzazione, data dalla Loss avra' molti minimi locali. Noi siamo interessati ad un minimo globale che non abbia una forte dipendenza dagli input iniziali, ma vada bene per un vasto range di casi.
+
+Per evitare l'overfitting per esempio ci sono delle regolarizzazioni:
+- `Regularization 1`: metodo **dropout**, si spengono random dei neuroni (guarda 5.3)
+https://www.youtube.com/watch?v=5tvmMX8r_OM&t=1008s&ab_channel=AlexanderAmini
+In ogni iterazione si fanno dei dropout differenti (scelti in modo random) in modo da ottenere diversi percorsi "neuronali". Avendo spento alcuni dei neuroni diventa anche piu' facile fare il training in quanto il numero di parametri per la backpropagation diminiuisce.
+-`Regularization 2`: **Early Stopping**, fermare il fit dei parametri prima che raggiunga il minimio. Se si guardano le curve che indicano l'errore del training e della validation, al crescere delle iterazioni tendono a scendere. La curva del training pero' continua a scendere anche quando la validazione ha smesso di scendere. A quel punto sto overfittando.
+
+
+
+
+
+
+# Tensor Basics 
+Gli oggetti chiave di PyTorch sono i **tensor**. 
+
+
+- un tensor non e' un **tensore** della matematica (funzionale lineare, con proprieta' di trasformazione)!
+- un tensor e' una matrice di dimensione variabile (1D, 2D, 3D, ...)
+- un tensor ha associati dei metodi particolari che servono durante il training di un neural network
+- le convenzioni sono simili a quelle di Numpy (per esempio riguardo lo **slicing**)
+- E' spesso utile cambiare la **forma** del tensore (per esempio con il metodo **.view()**)
+- E' spesso utile cambiare il **tipo** degli oggetti contenuti nel tensore **dtype=torch.float16**. Nota che Torch ha i suoi tipi.
+
+comandi utili:
+
+
+
+```python
+x = torch.empty(1)       # scalar   NON inizializzato
+x = torch.empty(3)       # vector, 1D
+x = torch.empty(2,3)     # matrice 2D con 2 righe e 3 colonne
+x = torch.empty(2,2,3)   # matrice 3D 
+x = torch.empty(2,2,2,3) # matrice 4D 
+```
+
+## Costruire tensori (Random, 0, e 1 e custom) 
+- **torch.empty(5,3)** per avere un tensore **NON** inizializzato
+- **torch.rand(5,3)** per costruire un tensore pieno di numeri **Random** U (0,1)
+- **torch.zeros(5,3)**  per avere un tensore pieno di **0**
+- **torch.ones(5,3)** per avere un tensore pieno di **1**
+- **torch.tensor([1,2,3])** per creare un tensore, a partire da una `lista`
+- **x.size()** ci dice la forma del tensore (numero di righe, colonne, ecc)
+- **dtype=torch.float16** per esempio  **float32** default
+
+
+```python
+x = torch.rand(5, 3)                       # numeri RANDOM intervallo [0,1]
+x = torch.zeros(5, 3)                      # zeri
+x = torch.ones(5, 3)                       # gli ingressi sono tutti uno
+x = torch.zeros(5, 3, dtype=torch.float16) # specifico il tipo
+x = torch.tensor([5.5, 3])  # con questa scrittura si inizializza il tensore inserendo i valori in una lista. Questo
+                            # determina automaticamente anche il numero di righe e colonne
+```
+
+## Attributi/metodi dei tensori
+- x.size()      &emsp;    numero di **righe** e **colonne**  
+- x.dtype       &emsp;    **tipo** degli oggetti contenuti 
+- x[1]          &emsp;&emsp; &emsp;      fai uno **slicing** ottieni un **TENSORE**
+- x[1].item()   &ensp;    **estrai** un valore: otteni un **FLOAT** (o quello che e' il tipo degli oggetti nel tensore)
+- x.mean()      &emsp;    e' un metodo che calcola la media di TUTTI gli ingressi (non importa se il tensore e' 2D, ottieni uno scalare)
+
+
+```python
+print(x.size() )         # dimmi il numero di righe e colonne  
+print(x.dtype )          # dimmi il tipo degli oggetti contenuti 
+print(x[1])              # questo e' un TENSORE
+print(x[1].item())       # questo e' un FLOAT
+type(x[1].item())        # infatti...
+```
+
+    torch.Size([2])
+    torch.float32
+    tensor(3.)
+    3.0
+
+
+
+
+
+    float
+
+
+
+
+```python
+g= torch.tensor([[1.,2,3,4], [2., 4,6,8]])
+print(g.mean(), g.size())
+```
+
+    tensor(3.7500) torch.Size([2, 4])
+
+
+## requires_grad=True,  operazioni tra tensori e slicing
+
+- **requires_grad=True** se si inserisce questo argomento nella creazione di un tensore, allora, durante il processo di ottimizzazione PyTorch calcolera' il gradiente (derivata parziale rispetto a questo tensore). Nota che questa opzione e' accesa di default 
+
+Le `operazioni` di base tra tensori sono ottenute con dei metodi indicati con **3** lettere, **minuscole**:  <br>
+- torch.sub(x,y)  &ensp;  oppure    &emsp;  - (fa la sottrazione tra x e y e la restituisce)
+- torch.add()      &emsp;  oppure    &emsp;  +
+- torch.div()      &emsp;  oppure    &emsp;  /
+- torch.mul()      &emsp;  oppure    &emsp;  *
+- **requires_grad=True** se voglio che PyTorch calcoli il gradiente (derivata parziale) rispetto a questo tensore rispetto al grafo computazionale.
+- tutti i casi in cui il metodo finisce con un underscore _ lavorano **INPLACE**
+
+
+
+```python
+x = torch.tensor([5.5, 3], requires_grad=True)
+
+y = torch.rand(2, 2)   # costruiamo 2 tensori random 2D
+x = torch.rand(2, 2)   # costruiamo 2 tensori random 2D
+
+# ADDIZIONI 
+z = x + y
+z = torch.add(x,y)
+y.add_(x)                   # INPLACE   <=====================
+
+
+# SOTTRAZIONI
+z = x - y
+z = torch.sub(x, y)
+
+# MOLTIPLICAZIONI
+z = x * y
+z = torch.mul(x,y)
+
+# DIVISIONI
+z = x / y
+z = torch.div(x,y)
+
+# Slicing restituisce dei sotto-tensori (ma sempre di tipo tensor)
+x = torch.rand(5,3)
+print(x)
+print(x[:, 0])  # tutte le righe, colonna 0
+print(x[1, :])  # riga 1, tutte le colonne 
+print(x[1,1])   # elemento  1, 1
+
+# Se voglio ottenere il valore di un ingresso devo usare il metodo .item() (vale per 1 solo valore)
+print(x[1,1].item())
+```
+
+    tensor([[0.7356, 0.5790, 0.3409],
+            [0.1011, 0.1175, 0.8874],
+            [0.5814, 0.6688, 0.1503],
+            [0.7797, 0.6233, 0.0940],
+            [0.5445, 0.1418, 0.8160]])
+    tensor([0.7356, 0.1011, 0.5814, 0.7797, 0.5445])
+    tensor([0.1011, 0.1175, 0.8874])
+    tensor(0.1175)
+    0.11745560169219971
+
+
+## IMPORTANTE: Cambiare la forma di un tensore view()!
+con il metodo **view** si cambia la forma di un tensore. Questo e' particolarmente utile quando si fanno per esempio le reti convoluzionali. In una fully connected layer io vedo l'ingresso come un verttore 1D. Se faccio la convoluzione devo ridare una forma 2D. 
+
+- con **view(3,4)** cambio la forma. Semplicemente si mette il numero di righe (3 nell'esempio) e colonne(4 nell'esempio) voluto! 
+- **NON** lavora inplace
+- il valore **-1** e' un jolly: torch automaticamente determina il numero di righe (per esempio) se io scrivo solo il numero di colonne. Per esempio **x.view(-1,8)** allora torch mettera' come numero di colonne, il numero di ingressi diviso per 8.
+
+
+```python
+x = torch.randn(4, 4)                 # costruisco un tensore2D: 4x4 
+y = x.view(16)                        # lo trasformo in 1D: 16x1
+z = x.view(-1, 8)                     # Voglio ora un tensore2D, con 8 colonne a partire da quello di prima 
+                                      # il -1 indica che in questa dimensione sceglie torch AUTOMATICAMENTE!
+w = x.view(2,2,-1,2)    
+print(x.size(), y.size(), z.size(), w.size())
+```
+
+    torch.Size([4, 4]) torch.Size([16]) torch.Size([2, 8]) torch.Size([2, 2, 2, 2])
+
+
+## Reshape
+questo e' un altro metodo che serve per modificare la forma di un tensore. 
+Reshape **puo'** resituire sia una **copy** che una **view**
+
+## Numpy,  Tensori e GPU
+vediamo come passare da un `ndarray` (Numpy) ad un tensore e viceversa.
+
+- **.numpy()** e' un **metodo di torch** per trasformare un tensor $\rightarrow$ ndarray (di numpy). **ATTENZIONE** usando questo metodo cosi': *b = torch.numpy(a)*
+si ottiene b, che e' un ndarray, ma i suoi valori sono presi da a. NON e' un oggetto completamente nuovo. Se modifico "a", anche "b" cambia! 
+- **.from_numpy()** e' un **metodo di torch** per trasformare un ndarray $\rightarrow$ tensor  
+- **attenzione** se il tensore e' sulla GPU e lo trasformo in NUMPY anche il trasformato resta sulla GPU
+- esiste un oggetto che dice dove deve essere il tensore: **device=torch.device("cuda")**, nota che il nome scelto in questo caso serve a ricordarci che l'argomento perche' e' identico
+- **.to()** per muovere un tensore da un posto all'altro basta il metodo: **x=x.to(device)**
+- numpy non e' in grado di gestire tensori sulla GPU
+- **torch.cuda.is_available()** per sapere se CUDA e' disponibile, e' BOOL
+
+
+```python
+# Numpy
+# Convertiamo un TENSORE in un ndarray di Numpy
+a = torch.ones(5)    # a e' un TENSORE (Torch)
+b = a.numpy()        # b e' un ndarray (Numpy)  (occhio che  .numpy e' un metodo dei TENSORI)
+
+a.add_(1)            # cambiamo a
+print('a=',a)            
+print('b=',b)        # anche b e' cambiato <================ ATTENTO
+
+
+
+# numpy to torch with .from_numpy(x)
+a = np.ones(5)
+b = torch.from_numpy(a)
+print(a)
+print(b)
+
+# again be careful when modifying
+a += 1
+print(a)
+print(b)
+
+# by default all tensors are created on the CPU,
+# but you can also move them to the GPU (only if it's available )
+if torch.cuda.is_available():
+    device = torch.device("cuda")          # a CUDA device object
+    print("Cuda e' disponibile!!\n")
+    y = torch.ones_like(x, device=device)  # directly create a tensor on GPU
+    x = x.to(device)                       # or just use strings ``.to("cuda")``
+    z = x + y
+    # z = z.numpy() # not possible because numpy cannot handle GPU tenors
+    # move to CPU again
+    z.to("cpu")       # ``.to`` can also change dtype together!
+    # z = z.numpy()
+```
+
+    a= tensor([2., 2., 2., 2., 2.])
+    b= [2. 2. 2. 2. 2.]
+    [1. 1. 1. 1. 1.]
+    tensor([1., 1., 1., 1., 1.], dtype=torch.float64)
+    [2. 2. 2. 2. 2.]
+    tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
+    Cuda e' disponibile!!
+    
+
+
+## Funzioni Custom sui tensori:
+guarda la risposta di  msd15213 al link:
+**[link](https://stackoverflow.com/questions/46509039/pytorch-define-custom-function)**
+
+molto meglio **[questo](https://stackoverflow.com/questions/55765234/pytorch-custom-activation-functions)**
+
+## Tensori avanzato
+- un tensore puo' essere **[contiguous](https://stackoverflow.com/questions/26998223/what-is-the-difference-between-contiguous-and-non-contiguous-arrays/26999092#26999092)**
+
+

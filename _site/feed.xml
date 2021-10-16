@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-16T23:19:20+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">DeepLearning con Pytorch</title><link href="http://localhost:4000/Pytorch-e-DeepLearning" rel="alternate" type="text/html" title="DeepLearning con Pytorch" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-e-DeepLearning</id><content type="html" xml:base="http://localhost:4000/Pytorch-e-DeepLearning">&lt;h1 id=&quot;pytorch-e-deep-learning&quot;&gt;PyTorch e Deep Learning&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-16T23:34:04+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">DeepLearning con Pytorch</title><link href="http://localhost:4000/Pytorch-e-DeepLearning" rel="alternate" type="text/html" title="DeepLearning con Pytorch" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-e-DeepLearning</id><content type="html" xml:base="http://localhost:4000/Pytorch-e-DeepLearning">&lt;h1 id=&quot;pytorch-e-deep-learning&quot;&gt;PyTorch e Deep Learning&lt;/h1&gt;
 
 &lt;h2 id=&quot;introduzione-a-queste-note&quot;&gt;Introduzione a queste note&lt;/h2&gt;
 
@@ -3896,8 +3896,6 @@ h_t = \tanh\left( \frac{} {}
 &lt;p&gt;Vediamo un grafico per &lt;strong&gt;LSTM&lt;/strong&gt;:
 &lt;img src=&quot;/images/posts/pytorch/LSTM.jpg&quot; alt=&quot;LSTM&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/LSTM.jpg&quot; alt=&quot;LSTM&quot; /&gt;&lt;/p&gt;
-
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch.nn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;
@@ -4617,7 +4615,397 @@ Epoch: 10, Loss:0.0356
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">PyTorch e Deep Learning</summary></entry><entry><title type="html">prose.io + ProWritingAid</title><link href="http://localhost:4000/prose-io" rel="alternate" type="text/html" title="prose.io + ProWritingAid" /><published>2020-06-04T00:00:00+02:00</published><updated>2020-06-04T00:00:00+02:00</updated><id>http://localhost:4000/prose-io</id><content type="html" xml:base="http://localhost:4000/prose-io">&lt;h2 id=&quot;editing-help-for-github-pages-proseio--prowritingaid-works-more-or-less&quot;&gt;Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">PyTorch e Deep Learning</summary></entry><entry><title type="html">Pytorch Test</title><link href="http://localhost:4000/Pytorch-test" rel="alternate" type="text/html" title="Pytorch Test" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-test</id><content type="html" xml:base="http://localhost:4000/Pytorch-test">&lt;h1 id=&quot;pytorch-e-deep-learning&quot;&gt;PyTorch e Deep Learning&lt;/h1&gt;
+
+&lt;h2 id=&quot;introduzione-a-queste-note&quot;&gt;Introduzione a queste note&lt;/h2&gt;
+
+&lt;p&gt;Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e’ una traduzione delle  lezioni di &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA&quot;&gt;Python Engineer&lt;/a&gt;&lt;/strong&gt; (Patrick Loeber):&lt;/p&gt;
+
+&lt;p&gt;Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e’ bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio questo &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;amp;ab_channel=AlexanderAmini&quot;&gt;corso introduttivo&lt;/a&gt;&lt;/strong&gt; del MIT.&lt;/p&gt;
+
+&lt;p&gt;In alcuni casi ho preso direttamente i codici di Patrick Loeber (forniti nei link alle sue lezioni), ma nella maggior parte dei casi li ho riscritti (sempre seguendo il video), quindi potrebbero esserci delle piccole differenze. Questo e’ anche dovuto al fatto che questi codici sono pensati per girare all’interno di un notebook, mentre Python Engineer usa Vstudio Code.  Per esempio, quando Patrick vuole mostrare alcuni grafici tramite Matplotlib deve lanciare dei comandi che non servono qui. 
+Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il motivo era una mia errata comprensione dei  video che dava luogo a degli errori non facilmente notabili,  nonostante questo segno questi errori (tra i commenti) perche’ sono utili esempi di cosa si puo’ sbagliare.&lt;/p&gt;
+
+&lt;p&gt;Il valore aggiunto portato da me riguarda principalmente 4 cose:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Il lavoro di traduzione che mi obbliga a pensare mentre scrivo il codice. Alle volte, mantengo i termini inglesi perche’ mi consentono di ricordare le keyword e la sintassi.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ove lo ritengo utile aggiungo dei test e delle prove per capire meglio quello che sta succedendo.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ho inoltre aggiunto alcune mie considerazioni personali, utili per me per ricordare e capire meglio certe cose.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ho messo un contesto e una cornice iniziale di teorina e notazioni che leghi insieme le varie lezioni.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Queste note sono pensate per potere essere navigate tramite un indice interattivo. Nel Jupyter Notebook dove sono state scritte ho ottenuto l’indice tramite: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyter-navbar.&lt;/code&gt; Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) ho fatto girare da Babun con python2.7 il file setup.py (questo perche’ lo sto facendo girare in Windows 10). In questo modo, a sinistra appare il panel con l’indice.&lt;/p&gt;
+
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h2&gt;
+&lt;p&gt;Eventuali errori di queste note sono da attribuire solo a me. 
+Sono appunti personali di cui non assicuro il funzionamento (o la pericolosita’).
+Ci sono vari problemi di traduzine dal Jupyter notebook su cui sono gli originali e questi,
+dato che in Markdown alcuni effetti non sono possibili e mancano delle immagini.&lt;/p&gt;
+
+&lt;h2 id=&quot;indice-delle-lezioni-di-python-engineer&quot;&gt;Indice delle lezioni di Python-Engineer&lt;/h2&gt;
+&lt;p&gt;I codici possono essere scaricati &lt;strong&gt;&lt;a href=&quot;https://github.com/python-engineer/pytorchTutorial&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;. Qui indico le lezioni di Python Engineer, la loro durata e i capitoli corrispondenti in questo notebook.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=EMXfZB8FVUA&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;ab_channel=PythonEngineer&quot;&gt;Istallazione&lt;/a&gt;     5:45&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=exaWOE8jvy8&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=2&quot;&gt;Tensor Basics&lt;/a&gt; 18:28&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=DbeIqrwb_dE&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=3&quot;&gt;Gradient Calculation con Autograd&lt;/a&gt; 15:54&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3Kb0QS6z7WA&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=4&quot;&gt;Backpropagation - teorie ed esempi&lt;/a&gt; 13:13   (molto ben fatto)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=E-I2DNVzQLg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=5&quot;&gt;Gradient Descent con Autograd e Backpropagation&lt;/a&gt; 17:31&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VVDHU_TWwUg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=6&quot;&gt;Training Pipeline: Model, Loss, e Optimizer&lt;/a&gt;  14:16&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=YAJ5XBwlN4o&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=7&quot;&gt;Regressione Lineare&lt;/a&gt;   12:11&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OGpQxIkR4ao&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=8&quot;&gt;Regressione Logistica&lt;/a&gt; 18:22&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PXOzkkB5eH0&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=9&quot;&gt;Dataset e DataLoader - Batch Training&lt;/a&gt; 15:27   (importante da rivedere)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=X_QOZEko5uE&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=10&quot;&gt;Dataset Transforms&lt;/a&gt;  10:43&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=7q7E91pHoW4&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=11&quot;&gt;Softmax e Cross Entropy&lt;/a&gt; 18:17&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=3t9lZM7SS7k&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=12&quot;&gt;Activation Functions&lt;/a&gt; 10:00&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oPhxf2fXHkQ&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=13&quot;&gt;Feed-Forward Neural Network&lt;/a&gt; 21:34&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pDdP0TFzsoQ&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=14&quot;&gt;Convolutional Neural Network&lt;/a&gt; 22:07&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=K0lWSB2QoIQ&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=15&quot;&gt;Transfer Learning&lt;/a&gt; 14:55&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=VJW9wU-1n18&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=16&quot;&gt;How to use TensorBoard&lt;/a&gt; 25:41&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=17&quot;&gt;Saving and loading Models&lt;/a&gt; 18:24&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bA7-DEtYCNM&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=18&quot;&gt;Create and Deploy A Deep Learning App - PyTorch Model Deployment with Flask&lt;/a&gt;  41:52&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WEV61GmmPrk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=19&quot;&gt;RNN Tutorial- Name Classification Using a Recurrent&lt;/a&gt; 38:57&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=0_PgWWmauHk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=20&quot;&gt;RNN &amp;amp; LSTM &amp;amp; GRU Recurrent Neural Nets&lt;/a&gt; 15:52&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&quot;&gt;Lightning Tutorial Lightweight PyTorch Wrapper for ML&lt;/a&gt; 28:02&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=81NJgoR5RfY&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=22&quot;&gt;LR Scheduler - Adjust the learning Rate for Better Results&lt;/a&gt; 13:29&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;altre-fonti-utili&quot;&gt;Altre fonti utili&lt;/h2&gt;
+&lt;p&gt;Un &lt;strong&gt;&lt;a href=&quot;http://karpathy.github.io/2015/05/21/rnn-effectiveness/&quot;&gt;articolo&lt;/a&gt;&lt;/strong&gt; interssante (suggerito proprio da Python Engineer) sulle RNN e’ quello di Andrej Karpathy (ora a Tesla).&lt;/p&gt;
+
+&lt;p&gt;Altri appunt utili possono essere trovati &lt;strong&gt;&lt;a href=&quot;https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Altro &lt;strong&gt;&lt;a href=&quot;https://www.cs.toronto.edu/~lczhang/360/&quot;&gt;corso&lt;/a&gt;* molto interessante (da cui Python Engineer ha preso spunto, per esempio per l’&lt;/strong&gt;autoencoder**.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lingo----utilia&quot;&gt;Lingo -  Utilia&lt;/h2&gt;
+&lt;p&gt;Qui metto un po’ di keyword che possono risultare utili:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;super()&lt;/strong&gt;  metodo che viene usato quando si costruisce una classe ereditandola da un’altra e consente di usare i metodi della classe genitore.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;tensor&lt;/strong&gt;   e’ una matrice con in aggiunta dei metodi che sono propri di PyTorch, e’ il tipo fondamentale di PyTorch (il capitolo Tensor Basics e’ fatto proprio per dare una introduzione)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;_&lt;/strong&gt; Un metodo il cui nome termina con un underscore vuole dire che lavora &lt;strong&gt;inplace&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dataset&lt;/strong&gt;  e’ una classe di &lt;em&gt;torch.utils.data&lt;/em&gt; dove viene messo il dataset che serve alla rete neurale&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;DataLoader&lt;/strong&gt; e’ una classe di &lt;em&gt;torch.utils.data&lt;/em&gt;, serve per dividere il dataset in batch da dare in pasto alla rete&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;epoch&lt;/strong&gt; &lt;br /&gt; un passo forward e un backward di &lt;strong&gt;TUTTI&lt;/strong&gt; i campioni del training&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;batch_size&lt;/strong&gt; numero di campioni di training in un forward/backward pass&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;numero di iterazioni&lt;/strong&gt; numero di passi, dove in ogni passo(forward/backward) si usa un batch di campioni ( di dimensione “batch_size”)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;criterion&lt;/strong&gt; e’ il &lt;em&gt;criterio&lt;/em&gt; (la funzione) che usiamo per generare la Loss (per esempio, cross_entropy).Nota che la loss e’ il singolo valore ottenuto (in genere), mentre il criterio e’ il tipo di funzione che, ottenuti come argomenti i valori predetti e quelli corretti fornisce il valore. In queste note uso in modo “liberale” i termini loss e criterion, normalmente questo non dovrebbe creare problemi.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;learning rate&lt;/strong&gt; in generale si ottimizzano i pesi della rete usando una tecnica tipo &lt;strong&gt;discesa del gradiente&lt;/strong&gt;. La loss e’ una funzione da $R^n \rightarrow R$ (dove n e’ il numero di pesi usati). Se calcolo il gradiente allora conosco la massima pendenza e mi posso muovere lungo quella direzione per cercare il minimo (ma nel verso opposto). Di quanto mi muovo? la grandezza di questo passo verso il possibile minimo e’ data dal learning rate. Il prolema di come variare il learning rate e’ fondamentale per poter ottenere delle buone convergenze.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Grafo computazionale&lt;/strong&gt;, immagina di mettere tutte le operazioni fatte per ottenere i risultati della rete neurale. In pratica stai costruendo una funzione $R^n \rightarrow R^m$. Questa funzione puo’ essere vista come una serire di passi, ognuno indipendente dall’altro. Per esempio se hai una rete neurale con vari hidden layer, ogni passaggo ad un layer e’ diverso, ci sono poi delle funzioni non lineari applicate ecc. La tua funzione Loss e’ quindi una funzione di funzione:F(x) = f(g(h(x)))  (ho messo solo 3 funzioni per esempio ma sono in genere di piu’). Quando vorrai calcolare il gradiente rispetto ai parametri dovrai usare una chain rule e spesso questo viene visualizzato come un grafo con vari passi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;domande&quot;&gt;Domande&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;viene piu’ volte consigliato di non fare fare la somma quando si fa backpropagation perche’ viene fatta in automatico.
+Ci sono vari modi per evitare questo (devo indicare quali sono i video).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pipeline&quot;&gt;Pipeline&lt;/h2&gt;
+&lt;p&gt;Lo scopo e’ costruire un codice tramite Pytorch che impari a fare qualcosa. Qui sotto indico la pipeline (la serie di passi) che serve per ottenere questo risultato. Attenzione: con il wrapper &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pytorch-Lightning&lt;/code&gt;, alcuni di questi passi possono essere saltati e diventa quindi piu’ semplice ottenre un modello funzionante.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;si importano i dati in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dataset&lt;/code&gt; (sia per il training che per il test)&lt;/li&gt;
+  &lt;li&gt;i dataset vengono trasformati per migliorarne le caratteristiche tramite delle funzioni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transformations&lt;/code&gt; (per esempio si possono normalizzare le informazioni)&lt;/li&gt;
+  &lt;li&gt;si costruisce i &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dataloader&lt;/code&gt; per dare al modello dei batch (sia per train che per test)&lt;/li&gt;
+  &lt;li&gt;si eredita un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nn.Model&lt;/code&gt; (ricordati di mettere il &lt;em&gt;super&lt;/em&gt;) dove vengono inseriti i vari strati della rete nella funzione &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__init__&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;nel modello si inserisce anche un metodo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forward&lt;/code&gt; (ATTENTO il nome deve porprio essere &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forward&lt;/code&gt;, si sta facendo un overload di un metodo gia’ esistente in nn.Model!) dove vengono proprio implementati i passi uno dopo l’altro. Questo e’ il cosiddetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grafo computazionale&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;nota che il modello ereditato e’ “callable” ovvero posso usarlo come una funzione a cui do in pasto qualcosa… in pratica i batch di dati.&lt;/li&gt;
+  &lt;li&gt;si istanzia il modello passando solo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pochi parametri&lt;/code&gt; come: dimensione input, dimensione hidden e dimensione output!&lt;/li&gt;
+  &lt;li&gt;Quando si chiama l’istanza del nostro modello personalizzato inserendo un batch, viene chiamata la funzone &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forward&lt;/code&gt; a cui e’ passato il batch.&lt;/li&gt;
+  &lt;li&gt;si fa un ciclo esterno sulle Epoche (ogni epoca e’ divisa in batch)&lt;/li&gt;
+  &lt;li&gt;si fa un ciclo interno su tutti i batch (infornate) di ogni epoca.&lt;/li&gt;
+  &lt;li&gt;si istanzia una funzione chiamata &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;criterion&lt;/code&gt; (spesso chiamiamo l’istanza proprio &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;criterion&lt;/code&gt;) che viene usata per ottenre la loss. Il criterio e’ la forma generale della loss (per esempio cross-entropy), mentre la Loss e’ l’istanza particolare associata al criterio.&lt;/li&gt;
+  &lt;li&gt;la &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss&lt;/code&gt; e’ una funzione sia delle predizioni $\hat y$ che dei valori noti $y$. Si usano delle notazioni che rimandano con precisione alle funzioni e gli stimatori, per esempio l’input e’ dato dalla $x$, l’output e’ dato dalla $\hat{y}$ (questa scrittura assomiglia a quella di uno stimatore di un’osservabile di una distribuzione)
+Il risultato di applicare il criterion a questi dati produce un numero (la loss) che quantifica la qualita’ della predizione. Nota che a questo punto ho una fun&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;empirical loss&lt;/code&gt; e’ la &lt;strong&gt;media&lt;/strong&gt; delle varie loss ottenute da un batch, in pratica quindi la discesa del gradiente viene fatta sull’empirical loss&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimizer.zero_grad()&lt;/code&gt; serve per evitare che tutte le azioni (per esempio l’optimizer) vengno considerate parte del grafo computazionale&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loss.backward()&lt;/code&gt;    fa la backpropagation in modo da ottenere i gradienti rispetto ai pesi (stiamo cercando un minimo rispetto della loss dove le variabili sono i pesi)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimizer.step()&lt;/code&gt;   e’ il modo in cui ci si muove (con un passo di grandezza &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;learning_rate&lt;/code&gt;) sul landscape dato dalla loss per cercare il minimo, per esempio usando la tecnica chiamata SGD (stochastic gradient descent).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Una osservazione sui batch (supportata dalla prima lecture del MIT intorno al min 47).
+Cosa significa dare in pasto un batch alla mia (feed forward) rete neurale?
+Immagina la rete neurale smplicemente come una funzione di:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;${\bf x_i}$ : sono gli input, per esempio i pixel di una foto. Nel seguito supporro’ che sia una sola variabile&lt;/li&gt;
+  &lt;li&gt;${\bf w}$ i &lt;em&gt;pesi&lt;/em&gt;,  anche qui per semplicita’ si ha un  solo peso.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Con i valori in uscita (output) e i valori veri (noti nel training set) otteniamo una funzione di Loss.
+Questa funzione e’ $\displaystyle L = f(x,w)$&lt;/p&gt;
+
+&lt;p&gt;A questo punto pensa al modello piu’ semplice del mondo in cui ho un solo peso $w$.  in questo caso $L = x \cdot w^2$ (nota che i pesi possono entrare in modo non lineare). Se passo 2 vettori di input diversi (per esempio 2 immagini) allora ho 2 funzioni di loss diverse:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$L(x_1,w) = x_1 \cdot w^2 +x_1\cdot w$  (una quadratica in funzione di y, dove $x_1$ e’ un prametro)&lt;/li&gt;
+  &lt;li&gt;$L(x_2,w) = x_2 \cdot  w^2 +x_2\cdot w$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Noi ora cambiamo prospettiva, dato che vogliamo minimizzare la loss in funzione dei pesi, considero ora:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$x_i$ sono i parametri&lt;/li&gt;
+  &lt;li&gt;w  sono le variabili&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;average loss&lt;/code&gt;: $L=L_1 +L_2$ e’ ora una funzione di $y$.
+Per trovare il minimo, uno dei modi piu’ interessanti e’ muoversi nella direzione di massima pendenza (gradient) verso valori piu’ bassi (basta ricordare le utilissime note di Valentina di analisi 2 sulle approssimazioni lineari di funzioni da $R^n \rightarrow R$. In questo caso calcolo la derivata parziale della loss rispetto al peso: $\frac{\partial}{\partial w}$. Se i pesi sono tanti, allora calcolo il gradiente e ottengo quindi una direzione verso cui muovermi.&lt;/p&gt;
+
+&lt;p&gt;In questo esempio banale le loss sono due parabole centrate in zero e non e’ interessante, il minimo si ottiene mettendo $w=0$. Se prendiamo un caso appena piu’ complicato, dove la loss e’ la somma di due parabole non centrate in zero otteniamo una curva con vari minimi.  Nota che il profilo della funzinoe &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Loss empirica&lt;/code&gt; non e’ identico a quello della loss del singolo imput e noi siamo intressati ad un minimo globale per tutto il batch.&lt;/p&gt;
+
+&lt;h2 id=&quot;overfitting&quot;&gt;Overfitting&lt;/h2&gt;
+
+&lt;p&gt;Come evitare l’overfitting durange la fase di training? I casi reali si riferiscono a delle funzioni che sono multidimensionali con una dimensionalita’ enorme (migliaia o centinaia di migliaia di parametri). Questo implica che la superficie su cui facciamo la minimizzazione, data dalla Loss avra’ molti minimi locali. Noi siamo interessati ad un minimo globale che non abbia una forte dipendenza dagli input iniziali, ma vada bene per un vasto range di casi.&lt;/p&gt;
+
+&lt;p&gt;Per evitare l’overfitting per esempio ci sono delle regolarizzazioni:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Regularization 1&lt;/code&gt;: metodo &lt;strong&gt;dropout&lt;/strong&gt;, si spengono random dei neuroni (guarda 5.3)
+https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;amp;t=1008s&amp;amp;ab_channel=AlexanderAmini
+In ogni iterazione si fanno dei dropout differenti (scelti in modo random) in modo da ottenere diversi percorsi “neuronali”. Avendo spento alcuni dei neuroni diventa anche piu’ facile fare il training in quanto il numero di parametri per la backpropagation diminiuisce.
+-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Regularization 2&lt;/code&gt;: &lt;strong&gt;Early Stopping&lt;/strong&gt;, fermare il fit dei parametri prima che raggiunga il minimio. Se si guardano le curve che indicano l’errore del training e della validation, al crescere delle iterazioni tendono a scendere. La curva del training pero’ continua a scendere anche quando la validazione ha smesso di scendere. A quel punto sto overfittando.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;tensor-basics&quot;&gt;Tensor Basics&lt;/h1&gt;
+&lt;p&gt;Gli oggetti chiave di PyTorch sono i &lt;strong&gt;tensor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;un tensor non e’ un &lt;strong&gt;tensore&lt;/strong&gt; della matematica (funzionale lineare, con proprieta’ di trasformazione)!&lt;/li&gt;
+  &lt;li&gt;un tensor e’ una matrice di dimensione variabile (1D, 2D, 3D, …)&lt;/li&gt;
+  &lt;li&gt;un tensor ha associati dei metodi particolari che servono durante il training di un neural network&lt;/li&gt;
+  &lt;li&gt;le convenzioni sono simili a quelle di Numpy (per esempio riguardo lo &lt;strong&gt;slicing&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;E’ spesso utile cambiare la &lt;strong&gt;forma&lt;/strong&gt; del tensore (per esempio con il metodo &lt;strong&gt;.view()&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;E’ spesso utile cambiare il &lt;strong&gt;tipo&lt;/strong&gt; degli oggetti contenuti nel tensore &lt;strong&gt;dtype=torch.float16&lt;/strong&gt;. Nota che Torch ha i suoi tipi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;comandi utili:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# scalar   NON inizializzato
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# vector, 1D
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;# matrice 2D con 2 righe e 3 colonne
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# matrice 3D 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# matrice 4D 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;costruire-tensori-random-0-e-1-e-custom&quot;&gt;Costruire tensori (Random, 0, e 1 e custom)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;torch.empty(5,3)&lt;/strong&gt; per avere un tensore &lt;strong&gt;NON&lt;/strong&gt; inizializzato&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;torch.rand(5,3)&lt;/strong&gt; per costruire un tensore pieno di numeri &lt;strong&gt;Random&lt;/strong&gt; U (0,1)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;torch.zeros(5,3)&lt;/strong&gt;  per avere un tensore pieno di &lt;strong&gt;0&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;torch.ones(5,3)&lt;/strong&gt; per avere un tensore pieno di &lt;strong&gt;1&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;torch.tensor([1,2,3])&lt;/strong&gt; per creare un tensore, a partire da una &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lista&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;x.size()&lt;/strong&gt; ci dice la forma del tensore (numero di righe, colonne, ecc)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;dtype=torch.float16&lt;/strong&gt; per esempio  &lt;strong&gt;float32&lt;/strong&gt; default&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                       &lt;span class=&quot;c1&quot;&gt;# numeri RANDOM intervallo [0,1]
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                      &lt;span class=&quot;c1&quot;&gt;# zeri
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                       &lt;span class=&quot;c1&quot;&gt;# gli ingressi sono tutti uno
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;float16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# specifico il tipo
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# con questa scrittura si inizializza il tensore inserendo i valori in una lista. Questo
+&lt;/span&gt;                            &lt;span class=&quot;c1&quot;&gt;# determina automaticamente anche il numero di righe e colonne
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;attributimetodi-dei-tensori&quot;&gt;Attributi/metodi dei tensori&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;x.size()           numero di &lt;strong&gt;righe&lt;/strong&gt; e &lt;strong&gt;colonne&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;x.dtype            &lt;strong&gt;tipo&lt;/strong&gt; degli oggetti contenuti&lt;/li&gt;
+  &lt;li&gt;x[1]                    fai uno &lt;strong&gt;slicing&lt;/strong&gt; ottieni un &lt;strong&gt;TENSORE&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;x[1].item()        &lt;strong&gt;estrai&lt;/strong&gt; un valore: otteni un &lt;strong&gt;FLOAT&lt;/strong&gt; (o quello che e’ il tipo degli oggetti nel tensore)&lt;/li&gt;
+  &lt;li&gt;x.mean()           e’ un metodo che calcola la media di TUTTI gli ingressi (non importa se il tensore e’ 2D, ottieni uno scalare)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# dimmi il numero di righe e colonne  
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dtype&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# dimmi il tipo degli oggetti contenuti 
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;# questo e' un TENSORE
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# questo e' un FLOAT
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# infatti...
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([2])
+torch.float32
+tensor(3.)
+3.0
+
+
+
+
+
+float
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]])&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tensor(3.7500) torch.Size([2, 4])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;requires_gradtrue--operazioni-tra-tensori-e-slicing&quot;&gt;requires_grad=True,  operazioni tra tensori e slicing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;requires_grad=True&lt;/strong&gt; se si inserisce questo argomento nella creazione di un tensore, allora, durante il processo di ottimizzazione PyTorch calcolera’ il gradiente (derivata parziale rispetto a questo tensore). Nota che questa opzione e’ accesa di default&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Le &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;operazioni&lt;/code&gt; di base tra tensori sono ottenute con dei metodi indicati con &lt;strong&gt;3&lt;/strong&gt; lettere, &lt;strong&gt;minuscole&lt;/strong&gt;:  &lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;torch.sub(x,y)     oppure       - (fa la sottrazione tra x e y e la restituisce)&lt;/li&gt;
+  &lt;li&gt;torch.add()         oppure       +&lt;/li&gt;
+  &lt;li&gt;torch.div()         oppure       /&lt;/li&gt;
+  &lt;li&gt;torch.mul()         oppure       *&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;requires_grad=True&lt;/strong&gt; se voglio che PyTorch calcoli il gradiente (derivata parziale) rispetto a questo tensore rispetto al grafo computazionale.&lt;/li&gt;
+  &lt;li&gt;tutti i casi in cui il metodo finisce con un underscore _ lavorano &lt;strong&gt;INPLACE&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requires_grad&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# costruiamo 2 tensori random 2D
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# costruiamo 2 tensori random 2D
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# ADDIZIONI 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                   &lt;span class=&quot;c1&quot;&gt;# INPLACE   &amp;lt;=====================
+&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# SOTTRAZIONI
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# MOLTIPLICAZIONI
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# DIVISIONI
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Slicing restituisce dei sotto-tensori (ma sempre di tipo tensor)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# tutte le righe, colonna 0
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:])&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# riga 1, tutte le colonne 
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# elemento  1, 1
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Se voglio ottenere il valore di un ingresso devo usare il metodo .item() (vale per 1 solo valore)
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tensor([[0.7356, 0.5790, 0.3409],
+        [0.1011, 0.1175, 0.8874],
+        [0.5814, 0.6688, 0.1503],
+        [0.7797, 0.6233, 0.0940],
+        [0.5445, 0.1418, 0.8160]])
+tensor([0.7356, 0.1011, 0.5814, 0.7797, 0.5445])
+tensor([0.1011, 0.1175, 0.8874])
+tensor(0.1175)
+0.11745560169219971
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;importante-cambiare-la-forma-di-un-tensore-view&quot;&gt;IMPORTANTE: Cambiare la forma di un tensore view()!&lt;/h2&gt;
+&lt;p&gt;con il metodo &lt;strong&gt;view&lt;/strong&gt; si cambia la forma di un tensore. Questo e’ particolarmente utile quando si fanno per esempio le reti convoluzionali. In una fully connected layer io vedo l’ingresso come un verttore 1D. Se faccio la convoluzione devo ridare una forma 2D.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;con &lt;strong&gt;view(3,4)&lt;/strong&gt; cambio la forma. Semplicemente si mette il numero di righe (3 nell’esempio) e colonne(4 nell’esempio) voluto!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NON&lt;/strong&gt; lavora inplace&lt;/li&gt;
+  &lt;li&gt;il valore &lt;strong&gt;-1&lt;/strong&gt; e’ un jolly: torch automaticamente determina il numero di righe (per esempio) se io scrivo solo il numero di colonne. Per esempio &lt;strong&gt;x.view(-1,8)&lt;/strong&gt; allora torch mettera’ come numero di colonne, il numero di ingressi diviso per 8.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;# costruisco un tensore2D: 4x4 
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                        &lt;span class=&quot;c1&quot;&gt;# lo trasformo in 1D: 16x1
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                     &lt;span class=&quot;c1&quot;&gt;# Voglio ora un tensore2D, con 8 colonne a partire da quello di prima 
+&lt;/span&gt;                                      &lt;span class=&quot;c1&quot;&gt;# il -1 indica che in questa dimensione sceglie torch AUTOMATICAMENTE!
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;torch.Size([4, 4]) torch.Size([16]) torch.Size([2, 8]) torch.Size([2, 2, 2, 2])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reshape&quot;&gt;Reshape&lt;/h2&gt;
+&lt;p&gt;questo e’ un altro metodo che serve per modificare la forma di un tensore. 
+Reshape &lt;strong&gt;puo’&lt;/strong&gt; resituire sia una &lt;strong&gt;copy&lt;/strong&gt; che una &lt;strong&gt;view&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;numpy--tensori-e-gpu&quot;&gt;Numpy,  Tensori e GPU&lt;/h2&gt;
+&lt;p&gt;vediamo come passare da un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ndarray&lt;/code&gt; (Numpy) ad un tensore e viceversa.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;.numpy()&lt;/strong&gt; e’ un &lt;strong&gt;metodo di torch&lt;/strong&gt; per trasformare un tensor $\rightarrow$ ndarray (di numpy). &lt;strong&gt;ATTENZIONE&lt;/strong&gt; usando questo metodo cosi’: &lt;em&gt;b = torch.numpy(a)&lt;/em&gt;
+si ottiene b, che e’ un ndarray, ma i suoi valori sono presi da a. NON e’ un oggetto completamente nuovo. Se modifico “a”, anche “b” cambia!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;.from_numpy()&lt;/strong&gt; e’ un &lt;strong&gt;metodo di torch&lt;/strong&gt; per trasformare un ndarray $\rightarrow$ tensor&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;attenzione&lt;/strong&gt; se il tensore e’ sulla GPU e lo trasformo in NUMPY anche il trasformato resta sulla GPU&lt;/li&gt;
+  &lt;li&gt;esiste un oggetto che dice dove deve essere il tensore: &lt;strong&gt;device=torch.device(“cuda”)&lt;/strong&gt;, nota che il nome scelto in questo caso serve a ricordarci che l’argomento perche’ e’ identico&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;.to()&lt;/strong&gt; per muovere un tensore da un posto all’altro basta il metodo: &lt;strong&gt;x=x.to(device)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;numpy non e’ in grado di gestire tensori sulla GPU&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;torch.cuda.is_available()&lt;/strong&gt; per sapere se CUDA e’ disponibile, e’ BOOL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Numpy
+# Convertiamo un TENSORE in un ndarray di Numpy
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# a e' un TENSORE (Torch)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# b e' un ndarray (Numpy)  (occhio che  .numpy e' un metodo dei TENSORI)
+&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# cambiamo a
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a='&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;            
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'b='&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# anche b e' cambiato &amp;lt;================ ATTENTO
+&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;# numpy to torch with .from_numpy(x)
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from_numpy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# again be careful when modifying
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# by default all tensors are created on the CPU,
+# but you can also move them to the GPU (only if it's available )
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cuda&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cuda&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;# a CUDA device object
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Cuda e' disponibile!!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones_like&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# directly create a tensor on GPU
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                       &lt;span class=&quot;c1&quot;&gt;# or just use strings ``.to(&quot;cuda&quot;)``
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# z = z.numpy() # not possible because numpy cannot handle GPU tenors
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# move to CPU again
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cpu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# ``.to`` can also change dtype together!
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# z = z.numpy()
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a= tensor([2., 2., 2., 2., 2.])
+b= [2. 2. 2. 2. 2.]
+[1. 1. 1. 1. 1.]
+tensor([1., 1., 1., 1., 1.], dtype=torch.float64)
+[2. 2. 2. 2. 2.]
+tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
+Cuda e' disponibile!!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;funzioni-custom-sui-tensori&quot;&gt;Funzioni Custom sui tensori:&lt;/h2&gt;
+&lt;p&gt;guarda la risposta di  msd15213 al link:
+&lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/questions/46509039/pytorch-define-custom-function&quot;&gt;link&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;molto meglio &lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/questions/55765234/pytorch-custom-activation-functions&quot;&gt;questo&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tensori-avanzato&quot;&gt;Tensori avanzato&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;un tensore puo’ essere &lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/questions/26998223/what-is-the-difference-between-contiguous-and-non-contiguous-arrays/26999092#26999092&quot;&gt;contiguous&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">PyTorch e Deep Learning</summary></entry><entry><title type="html">prose.io + ProWritingAid</title><link href="http://localhost:4000/prose-io" rel="alternate" type="text/html" title="prose.io + ProWritingAid" /><published>2020-06-04T00:00:00+02:00</published><updated>2020-06-04T00:00:00+02:00</updated><id>http://localhost:4000/prose-io</id><content type="html" xml:base="http://localhost:4000/prose-io">&lt;h2 id=&quot;editing-help-for-github-pages-proseio--prowritingaid-works-more-or-less&quot;&gt;Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!&lt;/h2&gt;
 
 &lt;p&gt;Some time ago, I wrote a post on this blog, about &lt;strong&gt;&lt;a href=&quot;/random_access&quot;&gt;random numbers and  philosophy&lt;/a&gt;&lt;/strong&gt; with my favourite editor: &lt;a href=&quot;www.vim.org&quot;&gt;gvim&lt;/a&gt;.&lt;/p&gt;
 
@@ -8469,4 +8857,4 @@ che debba velocizzare un codice senza dover impazzire a leggere centinaia di pag
 ingannevole. Non e’ difficile cadere in condizioni di &lt;strong&gt;race-condition&lt;/strong&gt;, ovvero
 quando i core accedono, leggono e (sovra) scrivono lo stesso oggetto. A causa
 di una &lt;strong&gt;race-condition&lt;/strong&gt; il risultato del calcolo non e’ deterministico:
-dipende dall’ordine di accesso dei core alla risorsa!&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="OpenMP" /><category term="Calcolo Parallelo" /><summary type="html">OpenMP a.a. 2020-2021. In questa versione ci sono varie nuove immagini e altre correzioni. In totale sono 114 diapositive, ho espanso le transizioni e le immagini in modo che tutta la presentazione sia piu’ leggibile. In alcuni casi anche gli elenchi appaiono come multi-diapositiva. Questo perche’ ho essenzialmente commentato i comandi “\pause” ma alcuni elenchi sono fatti tramite scritture tipo “&amp;lt;1,4&amp;gt;”, “&amp;lt;2,4&amp;gt;” ecc che non sono rimuovibili velocemente. Si noti che la presentazione e’ abbastanza auto-contenuta, ma a lezione aggiungevo parti, espandevo le spiegazioni e facevo domande. Chiaramente queste cose non sono incluse nelle diapositive.</summary></entry><entry><title type="html">Prova slug italiano</title><link href="http://localhost:4000/categorie" rel="alternate" type="text/html" title="Prova slug italiano" /><published>2020-01-19T00:00:00+01:00</published><updated>2020-01-19T00:00:00+01:00</updated><id>http://localhost:4000/categorie</id><content type="html" xml:base="http://localhost:4000/categorie">&lt;p&gt;aggiungo qualche linea di testo. Provo latex $R^n$&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="theme" /><summary type="html">aggiungo qualche linea di testo. Provo latex $R^n$</summary></entry></feed>
+dipende dall’ordine di accesso dei core alla risorsa!&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="OpenMP" /><category term="Calcolo Parallelo" /><summary type="html">OpenMP a.a. 2020-2021. In questa versione ci sono varie nuove immagini e altre correzioni. In totale sono 114 diapositive, ho espanso le transizioni e le immagini in modo che tutta la presentazione sia piu’ leggibile. In alcuni casi anche gli elenchi appaiono come multi-diapositiva. Questo perche’ ho essenzialmente commentato i comandi “\pause” ma alcuni elenchi sono fatti tramite scritture tipo “&amp;lt;1,4&amp;gt;”, “&amp;lt;2,4&amp;gt;” ecc che non sono rimuovibili velocemente. Si noti che la presentazione e’ abbastanza auto-contenuta, ma a lezione aggiungevo parti, espandevo le spiegazioni e facevo domande. Chiaramente queste cose non sono incluse nelle diapositive.</summary></entry></feed>

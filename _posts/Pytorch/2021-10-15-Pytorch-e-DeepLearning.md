@@ -3897,9 +3897,6 @@ Vediamo un grafico per **LSTM**:
 ![LSTM]({{ site.baseurl }}/images/posts/pytorch/LSTM.jpg)
 
 
-![LSTM]({{ site.baseurl }}/images/posts/pytorch/LSTM.jpg)
-
-
 
 ```python
 import numpy as np

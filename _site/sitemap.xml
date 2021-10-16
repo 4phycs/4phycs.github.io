@@ -37,6 +37,10 @@
 <lastmod>2020-06-04T00:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/Pytorch-e-DeepLearning</loc>
+<lastmod>2021-10-15T00:00:00+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/about</loc>
 </url>
 <url>
@@ -93,8 +97,16 @@
 <lastmod>2020-05-27T07:35:23+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/assets/mpi_88_noPause.pdf</loc>
+<lastmod>2021-10-11T09:20:24+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/assets/openMP_29-pages-deleted.pdf</loc>
 <lastmod>2020-03-09T07:21:08+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/openMP_40_noPause.pdf</loc>
+<lastmod>2021-10-08T13:18:02+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/trad30.pdf</loc>

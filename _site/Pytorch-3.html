@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Pytorch 3 Loss Activation DataLoader | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pytorch 3 Loss Activation DataLoader" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LOSS e OPTIMIZER di PyTorch Qqui vediamo qualche esempio di: LOSS function (ovvero il criterion) Optimizer, ovvero le metodologie che vengono usate per fare l’update dei pesi per migliorare la loss (dato che devo minimizzare la loss sto facendo una ottimizzazione, o minimizzazione nel dettaglio!)" />
+<meta property="og:description" content="LOSS e OPTIMIZER di PyTorch Qqui vediamo qualche esempio di: LOSS function (ovvero il criterion) Optimizer, ovvero le metodologie che vengono usate per fare l’update dei pesi per migliorare la loss (dato che devo minimizzare la loss sto facendo una ottimizzazione, o minimizzazione nel dettaglio!)" />
+<link rel="canonical" href="http://localhost:4000/Pytorch-3" />
+<meta property="og:url" content="http://localhost:4000/Pytorch-3" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-3"},"description":"LOSS e OPTIMIZER di PyTorch Qqui vediamo qualche esempio di: LOSS function (ovvero il criterion) Optimizer, ovvero le metodologie che vengono usate per fare l’update dei pesi per migliorare la loss (dato che devo minimizzare la loss sto facendo una ottimizzazione, o minimizzazione nel dettaglio!)","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-3","headline":"Pytorch 3 Loss Activation DataLoader","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Ita-Eng</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#loss-e-optimizer-di-pytorch">LOSS e OPTIMIZER di PyTorch</a></li>
+  <li><a href="#modelli-di-pytorch">Modelli di PyTorch</a></li>
+  <li><a href="#dataset-e-dataloader">Dataset e DataLoader</a>
+    <ol>
+      <li><a href="#dataset">Dataset</a></li>
+      <li><a href="#dataloader">DataLoader</a></li>
+    </ol>
+  </li>
+  <li><a href="#dataset-transforms">Dataset Transforms</a></li>
+  <li><a href="#softmax-e-cross-entropy-loss">Softmax e Cross-Entropy Loss</a>
+    <ol>
+      <li><a href="#cross-entropy-loss">Cross-Entropy Loss</a></li>
+      <li><a href="#crossentropyloss">CrossEntropyLoss</a></li>
+      <li><a href="#esempio-applicazione-di-softmax">Esempio Applicazione di Softmax</a></li>
+    </ol>
+  </li>
+  <li><a href="#activation-function">Activation Function</a></li>
+</ol>
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Pytorch 3 Loss Activation DataLoader</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">15/10/2021</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+          
+        
+        <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> Reading time: 32 mins </font>
+  
+</span>
+
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="loss-e-optimizer-di-pytorch">LOSS e OPTIMIZER di PyTorch</h1>
+<p>Qqui vediamo qualche esempio di:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LOSS</code> function (ovvero il criterion)</li>
+  <li><code class="language-plaintext highlighter-rouge">Optimizer</code>, ovvero le metodologie che vengono usate per fare l’update dei pesi per migliorare la loss (dato che devo minimizzare la loss sto facendo una ottimizzazione, o minimizzazione nel dettaglio!)</li>
+</ul>
+
+<p>Questo codice e’ molto simile al precedente. La differenza e’ nell’optimizer, ovvero che strategia viene portata avanti per minimizzare le LOSS. In pratica ci sono varie funzioni che prendono come argomento il gradiente rispetto ad un tensore e minimizzano la funzione.</p>
+
+<p>Passi:</p>
+<ol>
+  <li>si disegna il modello</li>
+  <li>si costruiscono la <strong>loss</strong> e l’<strong>optimizer</strong></li>
+  <li>si fa un loop di training</li>
+</ol>
+
+<p>Consideriamo un grafo computazionale ancora del tipo linear regression.</p>
+
+<p><strong>optimizer.step()</strong> e’ il metodo che ci fa muovere tra i parametri secondo l’algoritmo di ottimizzazione.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="c1"># Linear regression
+# f = w * x 
+</span>
+<span class="c1"># here : f = 2 * x
+</span>
+<span class="c1"># 0) Training samples
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>   <span class="c1"># weights
+</span>
+<span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">w</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Prediction before training: f(5) = {forward(5).item():.3f}'</span><span class="p">)</span>
+
+<span class="c1"># 2) Define loss and optimizer    
+</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>               <span class="c1"># questo viene passato come parmetro all'optimizer
+</span><span class="n">n_iters</span> <span class="o">=</span> <span class="mi">100</span>
+
+
+<span class="n">loss</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>                <span class="c1"># e' una funzione predefinita di Torch  
+</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">([</span><span class="n">w</span><span class="p">],</span> <span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>  <span class="c1"># Optimizer ha come parameri di imput [w] (pesi) e lr=learning_rate
+</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iters</span><span class="p">):</span>       <span class="c1"># TRAINING LOOP
+</span>    <span class="n">y_predicted</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>       <span class="c1"># FORWARD 
+</span>    <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">)</span>       <span class="c1"># LOSS     
+</span>    <span class="n">l</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>                   <span class="c1"># Backward (e' un metodo sul tensore dato dalla loss) 
+</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>               <span class="c1"># Optimizer, uso il metodo .step() 
+</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>          <span class="c1"># azzera i gradienti usati per l'ottimizzatore
+</span>
+    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'epoch '</span><span class="p">,</span> <span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s">': w = '</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="s">' loss = '</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Prediction after training: f(5) = {forward(5).item():.3f}'</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Prediction before training: f(5) = 0.000
+epoch  1 : w =  tensor(0.3000, requires_grad=True)  loss =  tensor(30., grad_fn=&lt;MseLossBackward&gt;)
+epoch  11 : w =  tensor(1.6653, requires_grad=True)  loss =  tensor(1.1628, grad_fn=&lt;MseLossBackward&gt;)
+epoch  21 : w =  tensor(1.9341, requires_grad=True)  loss =  tensor(0.0451, grad_fn=&lt;MseLossBackward&gt;)
+epoch  31 : w =  tensor(1.9870, requires_grad=True)  loss =  tensor(0.0017, grad_fn=&lt;MseLossBackward&gt;)
+epoch  41 : w =  tensor(1.9974, requires_grad=True)  loss =  tensor(6.7705e-05, grad_fn=&lt;MseLossBackward&gt;)
+epoch  51 : w =  tensor(1.9995, requires_grad=True)  loss =  tensor(2.6244e-06, grad_fn=&lt;MseLossBackward&gt;)
+epoch  61 : w =  tensor(1.9999, requires_grad=True)  loss =  tensor(1.0176e-07, grad_fn=&lt;MseLossBackward&gt;)
+epoch  71 : w =  tensor(2.0000, requires_grad=True)  loss =  tensor(3.9742e-09, grad_fn=&lt;MseLossBackward&gt;)
+epoch  81 : w =  tensor(2.0000, requires_grad=True)  loss =  tensor(1.4670e-10, grad_fn=&lt;MseLossBackward&gt;)
+epoch  91 : w =  tensor(2.0000, requires_grad=True)  loss =  tensor(5.0768e-12, grad_fn=&lt;MseLossBackward&gt;)
+Prediction after training: f(5) = 10.000
+</code></pre></div></div>
+
+<h1 id="modelli-di-pytorch">Modelli di PyTorch</h1>
+<p>qui vediamo come usare i modelli preinstallati di pytorch.</p>
+
+<ul>
+  <li><strong>model = nn.Linear(input_size, output_size)</strong>  modello lineare, ha 2 argomenti: i parametri in ingresso e in uscita.</li>
+  <li><strong>X = torch.tensor([[1], [2], [3], [4]])</strong> occhio al formato [1] = prima riga, [2] =seconda riga, [3] = terza riga, [4]= quarta riga. X.shape = 4 righe, 1 colonna.</li>
+  <li>ATTENTO: <strong>optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)</strong> all’ottimizzatore da’ in pasto un parametro, il learning rate.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="c1"># Linear regression
+# f = w * x 
+</span>
+<span class="c1"># here : f = 2 * x
+</span>
+<span class="c1"># 0) Training samples, watch the shape!
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>                            <span class="c1"># 4 righe, 1 colonna. 4 osservazioni 1 sola FEATURE (predictor)
+</span><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'#samples: {n_samples}, #features: {n_features}'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#samples: 4, #features: 1
+torch.Size([4, 1])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 0) create a test sample
+</span><span class="n">X_test</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>        <span class="c1"># costruisco un nuovo punto per testare
+</span>
+<span class="c1"># 1) Design Model, the model has to implement the forward pass!
+# Here we can use a built-in model from PyTorch
+</span><span class="n">input_size</span> <span class="o">=</span> <span class="n">n_features</span>                                
+<span class="n">output_size</span> <span class="o">=</span> <span class="n">n_features</span>
+
+<span class="c1"># we can call this model with samples X
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>             <span class="c1"># modello di PyTorch
+</span>
+<span class="s">'''
+class LinearRegression(nn.Module):
+    def __init__(self, input_dim, output_dim):
+        super(LinearRegression, self).__init__()
+        # define diferent layers
+        self.lin = nn.Linear(input_dim, output_dim)
+
+    def forward(self, x):
+        return self.lin(x)
+
+model = LinearRegression(input_size, output_size)
+'''</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Prediction before training: f(5) = {model(X_test).item():.3f}'</span><span class="p">)</span>
+
+
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>                       <span class="c1"># learning rate
+</span><span class="n">n_iters</span> <span class="o">=</span> <span class="mi">100</span>                              <span class="c1"># numero iterazioni  
+</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>                        <span class="c1"># funzione loss  
+</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+
+<span class="c1"># 3) Training loop
+</span><span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iters</span><span class="p">):</span>
+    <span class="c1"># predict = forward pass with our model
+</span>    <span class="n">y_predicted</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="c1"># loss
+</span>    <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">y_predicted</span><span class="p">)</span>
+
+    <span class="c1"># calculate gradients = backward pass
+</span>    <span class="n">l</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+    <span class="c1"># update weights
+</span>    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+    <span class="c1"># zero the gradients after updating
+</span>    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="p">[</span><span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span> <span class="c1"># unpack parameters
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">'epoch '</span><span class="p">,</span> <span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s">': w = '</span><span class="p">,</span> <span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">(),</span> <span class="s">' loss = '</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Prediction after training: f(5) = {model(X_test).item():.3f}'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="dataset-e-dataloader">Dataset e DataLoader</h1>
+<p>Qui viene definito il dataloader. Supponi di avere un classificatore di immagini. 
+In ingresso prende una immagine e  in uscita mi dice a che classe appartiene (per esempio gatto-cane).
+ Non posso fare il training su una sola immagine, altrimenti farei un overfit. Quello che normalmente 
+si fa e’: passare dei batch (infornate di immagini), fare il training e poi fare il trainig su nuovi batch. 
+In alcuni casi in modo incrementale, ovvero batch successivi includono quelli precedenti.</p>
+
+<p>Secondo Python Engineer e’ anche vero il contrario. Se passp tutti i dati di training, allora fare delle gradient 
+calculations (backpropagation) diventa computazionalemtne oneroso.</p>
+
+<p><strong>Osservazione</strong> di natura <code class="language-plaintext highlighter-rouge">notazionale</code>, di solito Loeber nelle istanze che crea, usa il medesimo 
+nome della funzione/classe di Torch, ma con tutte le lettere minuscole. Per esmpio, in PyTorch 
+esiste <code class="language-plaintext highlighter-rouge">Dataset</code> e lui chiama la sua istanza: <code class="language-plaintext highlighter-rouge">dataset</code> (minuscolo). Mi pare un’ottima 
+convenzione che aiuta a ricordare i nomi delle funzioni, metodi e classi.</p>
+
+<ul>
+  <li>si fa un loop (esterno) su tutte le epoch</li>
+  <li>per ogni epoch si fa un loop (interno) su tutti i batch</li>
+  <li>l’ottimizzazione viene fatta <strong>solo</strong> sul batch</li>
+</ul>
+
+<p>Lingo:</p>
+<ul>
+  <li><strong>epoch</strong> un passo forward e un backward di <strong>TUTTI</strong> i campioni del training.</li>
+  <li><strong>batch</strong> un sottoinsieme di elementi del training dataset</li>
+  <li><strong>batch_size</strong> numero di campioni di training in un forward/backward pass.</li>
+  <li><strong>numero di iterazioni</strong> numero di passi, ogni passo(forward/backward) usa “batch_size” campioni</li>
+</ul>
+
+<p>Per esempio:</p>
+<ul>
+  <li>100 campioni</li>
+  <li>batch_size=20</li>
+  <li>5 iterazioni  formano  1 epoch</li>
+</ul>
+
+<p>I DataLoader sono <strong>CLASSI</strong>, fanno la computazione del batch (la gestiscono).
+Vengono ereditati da “torch.utils.data import DataLoader.</p>
+
+<ol>
+  <li>implementano un Dataset custom (voluto dall’utente)</li>
+  <li>inherit Dataset</li>
+  <li>implement <strong>__init__</strong>, <strong>__getitem__</strong>, e <strong>__len__</strong></li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>  
+<span class="kn">from</span>   <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span> 
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">WineDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>           <span class="c1"># Eredito dalla classe "Dataset" di torch.utils.data
+</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>               <span class="c1"># metodo __init__, inizializza, leggi ecc 
+</span>        <span class="n">xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">'./data/wine/wine.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">xy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># definisce attributo n_samples = numero di righe
+</span>
+        <span class="c1"># Costruisci due attributi: sono i dati di training e le labels (come tensori) 
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">x_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:])</span>  <span class="c1"># size [n_samples, n_features]
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">y_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">xy</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]])</span> <span class="c1"># size [n_samples, 1] (la colonna zero sono gli obiettivi)
+</span>
+    <span class="c1"># support indexing such that dataset[i] can be used to get i-th sample
+</span>    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>                     <span class="c1"># questo mi fa scegliere i pezzi del dataset
+</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_data</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_data</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+    <span class="c1"># chiamando len(dataset) si ottiene la size 
+</span>    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span>
+    
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">WineDataset</span><span class="p">()</span>  <span class="c1"># carico il dataset
+#first_data = dataset[0]
+#features, labels = first_data
+</span></code></pre></div></div>
+
+<p>In questo dataset ci sono 3 categorie di  vino e sono la prima colonna del dataset. Tutte le altre colonne sono le features. Quindi nella classe sopra ho diviso mettendo [0] per le label.
+A questo punto l’oggetto dataset contiene varie proprieta’.</p>
+
+<p>Ora costruisco un dataloader, prendendo la classe che esiste gia’ in Torch. <br />
+Dato che ho gia’ importato l’oggetto DataLoader da <code class="language-plaintext highlighter-rouge">torch.utils.data</code>, basta che gli passo
+i parametri corretti.</p>
+
+<h2 id="dataset">Dataset</h2>
+<p>In torchvision ci sono gia’ molti dataset disponibili che consentono di fare molti esperiemnti.
+Le classi Dataset e Dataloader invece sono in <code class="language-plaintext highlighter-rouge">torch.utils.data</code></p>
+
+<ul>
+  <li>un Dataset e’ <code class="language-plaintext highlighter-rouge">subscriptable</code> (ovvero se si chiama mioDataset e faccio mioDataset[1], ottengo l’oggetto al secondo posto del dataset)</li>
+  <li>nel dataset (solitamente) ci sono sia i <code class="language-plaintext highlighter-rouge">dati</code> che le <code class="language-plaintext highlighter-rouge">label</code></li>
+  <li><strong>non</strong> riesco a trasformare un dataset in una funzione iteratrice</li>
+</ul>
+
+<h2 id="dataloader">DataLoader</h2>
+
+<ul>
+  <li>un  DataLoader <strong>non</strong> e’ <code class="language-plaintext highlighter-rouge">subscriptable</code>, ma posso trasformarlo in un iteratore tramite <code class="language-plaintext highlighter-rouge">iter</code> e accedere quindi ai pezzi uno per volta (saranno i batch)</li>
+  <li>uso la funzione iter() per trasformare il dataloader in una funzione iteratrice (da mettere nei loop) (ho creato una nuova funzione che e’ l’iteratore del dataloader)</li>
+  <li>a questo punto posso prendere i vari pezzi</li>
+  <li><strong>Attenzione</strong> se faccio <code class="language-plaintext highlighter-rouge">data=dataiter.next()</code> ci possono essere dei problemi e il sistema puo’ non avere abbastanza memoria, per risolvere il problema si deve mettere:
+<code class="language-plaintext highlighter-rouge">num_workers= 0</code>  (e non 2 come nell’esempio).
+https://stackoverflow.com/questions/60101168/pytorch-runtimeerror-dataloader-worker-pids-15332-exited-unexpectedly</li>
+</ul>
+
+<p>Argomenti di un Dataloader:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">dataset= mio_dataset()</code>  <code class="language-plaintext highlighter-rouge">mio_dataset</code> e’ un oggetto ereditato da <code class="language-plaintext highlighter-rouge">dataset</code> (usa dataset come nome standard, in modo da ricordare)</li>
+  <li><code class="language-plaintext highlighter-rouge">batch_size = 4</code>             (oppure crea una variabile batch_size)</li>
+  <li><code class="language-plaintext highlighter-rouge">shuffle=True</code>               (fa shuffling, non chiaro in quali circostanze usare, la logica vuole che quando si costruiscono i train e validation sets si facciano dei sampling random. Per questo si fa lo shuffling all’interno del dataset</li>
+  <li><code class="language-plaintext highlighter-rouge">num_workers</code>                (occhio che se metto 4 come nel tutorial mi da errore: devo mettere 0)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">num_workers</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">num_workers</span> <span class="o">=</span> <span class="n">num_workers</span><span class="p">)</span>
+<span class="n">dataiter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">dataloader</span><span class="p">)</span>  <span class="c1"># trasformato in una funzione iteratrice
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">dataiter</span><span class="o">.</span><span class="nb">next</span><span class="p">()</span>        <span class="c1"># prendo il prossimo oggetto (il primo)
+#data = next(dataiter)
+#features, labels = data
+#print(features, labels)
+</span></code></pre></div></div>
+
+<p>A questo punto fa un training loop finto per provare a vedere come funge.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Attento</code> in enumerate non mette la funzione iteratrice ma il <code class="language-plaintext highlighter-rouge">dataloader</code>.</li>
+  <li>ho provato a fare iterare su data ma da’ errore: too many values to unpack (expected 2)</li>
+  <li>occhio la cella sotto funge anche con dataiter solo se prima faccio girare la cella sopra.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#for i, j in enumerate(dataloader):
+#    print(i,j)
+</span><span class="n">dataloader</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;torch.utils.data.dataloader.DataLoader at 0x216799d3670&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#for i, j in enumerate(dataset):
+#    print(i,j)    
+</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="nb">id</span><span class="o">.</span><span class="nb">next</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+&lt;ipython-input-33-4dc6e5e585ab&gt; in &lt;module&gt;
+      2 #    print(i,j)
+      3 id = iter(dataset)
+----&gt; 4 id.next()
+
+
+AttributeError: 'iterator' object has no attribute 'next'
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">total_samples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="n">n_iterations</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">total_samples</span><span class="o">/</span><span class="n">batch_size</span><span class="p">)</span> <span class="c1"># ceil altrimenti arrotonda per difetto
+#n_iterations 
+</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>   <span class="c1"># giro tra le epoche
+</span>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">dataloader</span><span class="p">):</span>    <span class="c1"># qui ha passato il dataloader
+</span>        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#print( f'epoch {epoch+1}/{num_epochs}, step {i+1}/{n_iterations}, inputs {inputs.shape}' ) 
+</span>            <span class="k">pass</span>  <span class="c1"># se non voglio stampare altrimenti decommenta sopra
+</span>        
+<span class="c1"># Idea mia, e se invece di usare un enumerate usassi data (che e' una funzione iteratrice?)
+</span>
+<span class="c1">#j=0
+#for epoch in range(num_epochs):   # giro tra le epoche
+#    for inputs, labels in dataiter:   # qui ha passato il data (iteratrice)
+#        j=j+1
+#        print(j)
+#        if (j+1)%5 == 0:
+#            print( f'epoch {epoch+1}/{num_epochs}, step {j+1}/{n_iterations}, inputs {inputs.shape}' )    
+</span>
+<span class="c1"># dataset pre-installati:
+</span>
+<span class="c1">#torchvision.datasets.MNIST()  # occhio che e'  M N I S T
+# fashion-mnist
+# cifar
+# coco
+</span></code></pre></div></div>
+
+<h1 id="dataset-transforms">Dataset Transforms</h1>
+
+<p>In pratica si deve passare un argomento <code class="language-plaintext highlighter-rouge">transform</code> alla classe associata al dataset.</p>
+
+<p>Documentazione sulle possibili trasformazioni:
+https://pytorch.org/docs/stable/torchvision/transforms.html</p>
+
+<p>riassunto delle trasformazioni (UTILE, lo fa Python engineer):</p>
+
+<p>Quando carichi un dataset da <code class="language-plaintext highlighter-rouge">torchvision</code> puoi usare l’argomento: download=True!</p>
+
+<p>Traformazioni sulle <code class="language-plaintext highlighter-rouge">Immagini</code>:</p>
+<ul>
+  <li>CenterCrop, Grayscale, Pad, RandomAffine, RandomCrop, RandomHorizontalFlip, RandomRotation, Resize, Scale</li>
+</ul>
+
+<p>Sui <code class="language-plaintext highlighter-rouge">Tensori</code>:</p>
+<ul>
+  <li>LinearTransformation, Normalize, RandomErasing</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Conversion</code>:
+-ToPILImage: da tensore o ndarray  (PILI = Pillow image)
+-ToTensor: da numpy.ndarray o PILImage</p>
+
+<p>Generic:</p>
+<ul>
+  <li>lambda</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Custom:</code></p>
+<ul>
+  <li>Si puo’ scrivere una propria classe</li>
+</ul>
+
+<p>Trasformazioni <code class="language-plaintext highlighter-rouge">composte multiple</code>:</p>
+<ul>
+  <li>
+    <p>composed = transforms.Compose( [Rescale(256] , RandomCrop(224)] )</p>
+  </li>
+  <li>torchvision.transforms.ReScale(256)     # occhio che qui ha messo S maiuscola</li>
+  <li>torchvision.transforms.ToTensor()</li>
+</ul>
+
+<p><strong>Trasformazioni</strong> <br />
+Ora prendo la classe usata sopra per i dataset e aggiungo un argomento: transform,
+che specifica quali trasformazioni posso applicare!</p>
+
+<ul>
+  <li>va passato qualcosa al momento della creazione della classe dataset</li>
+  <li>viene fatto un esempio con una <code class="language-plaintext highlighter-rouge">trasformazione custom</code>, usando una <strong>classe</strong></li>
+  <li>ho un problema, mi dice che, al contrario del codice del corso, WineDataset non ha l’attributo transform. in particolare succede se faccio: 
+dataset = WineDataset(transform =ToTensor())
+dataset[0] &lt;- qui e’ il problema</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+
+<span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1">#dataset = torchvision.datasets.MNIST(root='./data', download= True, transform=torchvision.transforms.ToTensor())
+</span>
+<span class="k">class</span> <span class="nc">WineDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>   <span class="c1"># posso anche non passare transform, di default = None
+</span>        <span class="n">xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">'./data/wine/wine.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">xy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">xy</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">xy</span><span class="p">[:,[</span><span class="mi">0</span><span class="p">]]</span>  <span class="c1"># NOTA che scrivo [0]
+</span>        
+        <span class="bp">self</span><span class="o">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span> <span class="c1"># quando chiamo la trasformazione dall'istanza.
+</span>    
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>            <span class="c1"># questo mi prende lo specifico dato alla posizione index
+</span>        <span class="c1">#return self.x[index], self.y[index]  # non ritorna l'oggetto, ma voglio trasformare!
+</span>        <span class="n">sample</span> <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>  <span class="c1"># costruisco l'oggetto
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">:</span>                      <span class="c1"># se e' presente
+</span>             <span class="n">sample</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tranform</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+                
+        <span class="k">return</span> <span class="n">sample</span>                           <span class="c1"># lo metto qui in modo che ritorni qualcosa comunque  
+</span>
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">n_samples</span>
+
+    
+<span class="c1">############## trasformazione custom ###############
+############## abbiamo bisogno di un metodo chiamato __call__
+</span><span class="k">class</span> <span class="nc">ToTensor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">):</span>   <span class="c1">##############  FONDAMENTALE ########## 
+</span>        <span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">sample</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">inputs</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">targets</span><span class="p">)</span>
+    
+    
+
+<span class="c1">#dataset = WineDataset(transform =None)
+#dataset = WineDataset(transform=ToTensor)
+#dataset = WineDataset(transform = ToTensor())
+#dataset[0]
+</span>
+<span class="c1">#first_data = dataset[0]        ################### NON FUNGE #################
+#features, labels  = first_data
+#print(type(features), type(labels))
+</span>
+
+<span class="c1">##  posso fare trasoformazioni multiple:
+</span>
+<span class="k">class</span> <span class="nc">MulTransform</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">factor</span> <span class="o">=</span> <span class="n">factor</span>
+        
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">):</span>
+        <span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">sample</span>
+        <span class="n">inputs</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">factor</span>
+        <span class="k">return</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">target</span>
+
+<span class="n">composed</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">MulTransform</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">WineDataset</span> <span class="p">(</span><span class="n">transform</span> <span class="o">=</span> <span class="n">composed</span><span class="p">)</span>
+<span class="c1">#first_data = dataset[0]     ###################### NON FUNGE #####################
+</span></code></pre></div></div>
+
+<h1 id="softmax-e-cross-entropy-loss">Softmax e Cross-Entropy Loss</h1>
+<p>Queste sono tra le funzioni piu’ comuni per “schiacciare i risultati” (un po’ come la logit(p) =ln(p/1-p) =ln(odds) )</p>
+
+<p><code class="language-plaintext highlighter-rouge">Softmax</code>:
+<script type="math/tex">\displaystyle S(y_i) = \frac{e^{y_i}}{\sum e^{y_i}}</script>
+I risultati vanno quindi tra 0 e 1.
+A denominatore sembra una funzione di ripartizione (ma i valori non sono negativi).</p>
+
+<p>Chiaramente $ \sum S(y_i) =1$ quindi le $S(y_i)$ possono essere interpretate come delle <code class="language-plaintext highlighter-rouge">probabilita'</code>. 
+Per questo vengono applicate come layer in uscita dopo l’ultimo strato in modo che ad ognuna delle classi sia associata una probabilita’.
+<img src="/images/posts/pytorch/softmax.png" alt="cane" /></p>
+
+<ul>
+  <li>
+    <p>Se fossero solo <strong>2 le classi</strong> come nella regressione logistica si userebbe la <strong>sigmoid</strong> function (che e’ la versione non generalizzata ma con solo 2 classi in pratica):
+<script type="math/tex">Sigmoid(x) = \frac{1}{1+e^{-x}}</script></p>
+  </li>
+  <li>
+    <p>Come Loss si potrebbe usare la <code class="language-plaintext highlighter-rouge">nn.BCELoss()</code>  (binary cross entropy loss). In questo caso pero’ BISOGNA implementare la sigmoide dopo l’ultimo strato.</p>
+  </li>
+  <li>
+    <p>La cross entropy di Pytorch implementa gia’ la <strong>softmax</strong> dall’ultimo strato, per questo bisogna evitare di applicare la softmax un’altra volta!</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>                                       <span class="c1"># costruisco una softmax di un ARRAY x
+</span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span>  <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># ho tutti gli elementi
+</span>
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.1</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1">########## qui uso una softmax gia' presente in Torch
+</span><span class="n">x</span>  <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mf">2.</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">])</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># devo specificare la dimensione dove giro
+</span><span class="k">print</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+
+<span class="n">x</span><span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">500</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span><span class="mf">0.01</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span>  <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span> <span class="p">)</span>
+<span class="c1">#y = sigmoid(x)
+</span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="c1">#x
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[0.65900114 0.24243297 0.09856589]
+tensor([0.6590, 0.2424, 0.0986])
+
+
+
+
+
+[&lt;matplotlib.lines.Line2D at 0x2165c85f910&gt;]
+</code></pre></div></div>
+
+<p><img src="/images/posts/pytorch/output_52_2.png" alt="png" /></p>
+
+<h2 id="cross-entropy-loss">Cross-Entropy Loss</h2>
+<p>La Cross-Entropy Loss e’ una funzione di Loss, che  viene spesso combinata alla soft-max.</p>
+
+<p>Come la maggior parte delle funzioni di Loss trasforma i valori ottenuti (output) e le label in un
+singolo valore. Dato ci sono 2 vettori N-dimensionali:</p>
+<ul>
+  <li>il vettore calcolato (a partire dall’input) $\hat{Y}= [0.7, 0.2, 0.1]$ Gli ingressi devono poter essere interpretabili come probabilita’, ergo devono essere nel range (0,1]. Questo e’ il motivo per cui gli si danno in pasto dei valori che sono gia’ stati convertiti con delle Softmax.</li>
+  <li>e quello osservato $Y= [1,0,0]$ (<strong>One-Hot Encoded</strong> labels) <code class="language-plaintext highlighter-rouge">dubbio</code>, ma cosi’ facendo non e’ manco piu’ una somma! tutte le $Y_i$ vengono azzerate tranne 1. E’ vero solo se faccio un oggetto per volta. Se faccio un batch di oggetti e quindi sommo i risultati (per ottenere la empirical loss), avro’ piu’ di un valore diverso da 0.</li>
+</ul>
+
+<p>la <code class="language-plaintext highlighter-rouge">Cross Entropy Loss</code> viene definita come:
+<script type="math/tex">D(\hat{Y}, Y) = - \frac{1}{N} \sum Y_i \cdot log(\hat{Y}_i)</script>
+Nota che la Cross-Entropy loss restituisce valori [0,1].</p>
+
+<p><strong>Migliore</strong> la predizione, piu’ <strong>bassa</strong> e’ la Loss. <br /></p>
+
+<p><strong>Domanda</strong>: come ottengo questa formula a partiere dall’entropia di <code class="language-plaintext highlighter-rouge">Shannon</code>?</p>
+
+<p>Quindi e’ un’entropia di Shannon ma in cui da un lato inserisco i valori osservati e quelli ottenuti. Chiaramente serve che le Y e $\hat{Y}$ siano in un range [0,1] se voglio ottenere dei risultati simili all’entropia di Shannon.</p>
+
+<p><strong>Attenzione</strong>  nel codice del video, Loeber non segue la definizione in quanto <strong>non</strong> divide per il numero di oggetti, non so perche’. Quindi i risultati che ottiene non sono nel range [0,1]</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">cross_entropy</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">):</span>       <span class="c1"># sono 2 array N-dim
+</span>    <span class="n">loss</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span> <span class="n">actual</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">predicted</span><span class="p">)</span> <span class="p">))</span>  <span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">actual</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">loss</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">y_pred_good</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">])</span>
+<span class="n">y_pred_bad</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span>
+
+<span class="n">l1</span>  <span class="o">=</span> <span class="n">cross_entropy</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_good</span><span class="p">)</span>
+<span class="n">l2</span>  <span class="o">=</span> <span class="n">cross_entropy</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_bad</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Loss1 : {l1:.4f}'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Loss2 : {l2:.4f}'</span><span class="p">)</span>
+
+      
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Loss1 : 0.1189
+Loss2 : 0.7675
+</code></pre></div></div>
+
+<h2 id="crossentropyloss">CrossEntropyLoss</h2>
+<p>la funzione nn.CrossEntropyLoss <strong>usa gia’</strong>:<br />
+<code class="language-plaintext highlighter-rouge">nn.LogSoftMax -&gt; nn.NLLLos</code>  (negative log likelihood loss)</p>
+
+<p>Per questo <code class="language-plaintext highlighter-rouge">NON</code> le (a nn.LogSoftMax) si devono dare in pasto i vettori codificati tramite:</p>
+
+<ul>
+  <li>One Hot encoding (<strong>NO</strong>)</li>
+  <li>Softmax (<strong>NO</strong>)</li>
+</ul>
+
+<p>La funzione di Loss in PyTorch consente di avere samples multipli. <br />
+Ovvero si ha una loss per il primo sample, una per il secondo sample, ecc in pratica viene un vettore di loss.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">######## QUI usiamo la cross entropy embedded in Torch
+</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># questa e' la classe corretta e' UN Solo valore
+</span>
+<span class="c1">#qui sotto la dimensione e' n_samples x n_classes =  1 x 3  (in questo caso)
+## e' un ARRAY di ARRAY
+</span><span class="n">Y_pred_good</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span> <span class="p">[</span>  <span class="p">[</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">]</span> <span class="p">)</span>  <span class="c1"># e' buona perche' la classe 0 ha il valore maggiore
+</span>
+<span class="n">Y_pred_bad</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span> <span class="p">[</span>  <span class="p">[</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]</span> <span class="p">]</span> <span class="p">)</span>   <span class="c1"># e' cattiva perche' il valore maggiore e' per la classe 1
+</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>  <span class="c1"># istanzio la funzione
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">loss</span> <span class="p">(</span><span class="n">Y_pred_good</span><span class="p">,</span> <span class="n">Y</span> <span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">loss</span> <span class="p">(</span><span class="n">Y_pred_bad</span> <span class="p">,</span> <span class="n">Y</span> <span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+
+<span class="c1">### per ottenere le predizioni:
+</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">pred1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span> <span class="p">(</span><span class="n">Y_pred_good</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># il secondo ingresso e' la dimensione dove gira?
+</span><span class="n">_</span><span class="p">,</span> <span class="n">pred2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span> <span class="p">(</span><span class="n">Y_pred_bad</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">pred1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pred2</span><span class="p">)</span>
+
+<span class="c1">############## sample multipli ###########################
+</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>   <span class="c1"># vettore 3 (n_samples)
+</span>
+                            <span class="c1"># vettore n_labels x n_samples
+</span><span class="n">Y_pred_good</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span> <span class="p">[</span>  <span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">]</span> <span class="p">,</span>
+                               <span class="p">[</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">,</span>
+                               <span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">]</span> <span class="p">)</span>
+
+<span class="n">Y_pred_bad</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span> <span class="p">[</span>  <span class="p">[</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">,</span>
+                               <span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">]</span> <span class="p">,</span>
+                               <span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span> <span class="p">]</span> <span class="p">)</span> 
+
+<span class="k">print</span><span class="p">(</span><span class="n">loss</span> <span class="p">(</span><span class="n">Y_pred_good</span><span class="p">,</span> <span class="n">Y</span> <span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">loss</span> <span class="p">(</span><span class="n">Y_pred_bad</span> <span class="p">,</span> <span class="n">Y</span> <span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+
+<span class="n">_</span><span class="p">,</span> <span class="n">pred1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span> <span class="p">(</span><span class="n">Y_pred_good</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># il secondo ingresso e' la dimensione dove gira?
+</span><span class="n">_</span><span class="p">,</span> <span class="n">pred2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span> <span class="p">(</span><span class="n">Y_pred_bad</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pred1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pred2</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0.4170299470424652
+1.840616226196289
+tensor([0])
+tensor([1])
+0.3018244206905365
+1.6241613626480103
+tensor([2, 0, 1])
+tensor([0, 2, 1])
+</code></pre></div></div>
+
+<h2 id="esempio-applicazione-di-softmax">Esempio Applicazione di Softmax</h2>
+<ul>
+  <li>un solo hidden layer con <code class="language-plaintext highlighter-rouge">hidden_size</code> nodi</li>
+  <li><code class="language-plaintext highlighter-rouge">input_size</code> e’ per esempio il num di punti dell’immagine</li>
+  <li><code class="language-plaintext highlighter-rouge">num_classes</code> e’ il numero di possibili classi in uscita (output_size)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">NeuralNet2</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NeuralNet2</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>   <span class="c1"># questo serve per ereditare il costruttore?
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>        <span class="c1">#   
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>                                    <span class="c1"># metodo nuovo 
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>       <span class="c1"># altro metodo che prende 2 arg   
+</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>            <span class="c1"># devo passare l'input: x
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="c1"># NON USARE softmax, e' gia' messa nella Loss che usiamo popi
+</span>        <span class="k">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+       
+<span class="n">model</span> <span class="o">=</span> <span class="n">NeuralNet2</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># istanzio il modello
+</span><span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>                                   <span class="c1"># Applica gia' la Softmax di default.
+</span>
+        
+<span class="c1">################# Classificazione binaria ############################
+# num_classes = 1   # il risultato vale un numero da [0,1]
+# model = NeuralNet1(input_size = 28*28, hidden_size = 5)
+# critetrion = nn.BCELoss()
+</span></code></pre></div></div>
+
+<h1 id="activation-function">Activation Function</h1>
+<p>https://www.youtube.com/watch?v=3t9lZM7SS7k&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=12&amp;ab_channel=PythonEngineer</p>
+
+<ul>
+  <li>ReLU  rectified linear unit _/</li>
+</ul>
+
+<p>Le funzioni di attivazione vengono applicate dopo avere fatto il prodotto scalare e si applicano a tutti i neuroni/nodi (hidden).</p>
+
+<p>Nel video  dice che se non mettiamo delle funzioni di attivazione si ha un gigantesco livello lineare (il disegno e’ in un certo senso sbagliato, quello al minuto 1:15). All’inizio pensavo sbagliasse, ma ripensandoci ha completamente ragione. Per esempio supponiamo che ci siano solo due variabili di ingresso (x,y) e 2 nodi nel primo hidden layer:</p>
+<ul>
+  <li>$a_1x+b_1y$</li>
+  <li>$c_1x+d_1y$</li>
+</ul>
+
+<p>(evito i bias che tanto sono costanti). A questo punto mettiamo un secondo hidden layer con 2 nodi e ottengo:</p>
+<ul>
+  <li>$a_2(a_1x+b_1y) + b_2(c_1x+d_1y)$  $\rightarrow$   $(a_2 a_1 +  b_2 c_1) x+(a_2 b_1 + b_2 d_1)y $</li>
+  <li>$c_2(a_1x+b_1y) + d_2(c_1x+d_1y)$  $\rightarrow$   $(c_2 a_1 +  d_2 c_1) x+(c_2 b_1 + d_2 d_1)y $</li>
+</ul>
+
+<p>Non ho mai termini quadratici o cubici in x o y. 
+Se non ci fossero le funzioni di attivazione sarebbe proprio un modello lineare, in cui non avrebbe nemmeno senso mettere tanti nodi al primo hidden layer (e tantomeno mettere piu’ di un layer!)</p>
+
+<p>Alla fine del capitolo successivo (il 13) ho provato a fare un modello senza funzioni di attivazione. I risultati sono interessanti.</p>
+
+<p>In ogni caso le funzioni lineari applicate dopo ogni layer migliorano le prestazioni.</p>
+
+<ul>
+  <li>Step function $\displaystyle f(x)= \begin{cases} 0 &amp; \text{if } x &lt; 0  \ 
+                                    1 &amp; \text{if } x\ge 0\end{cases}$</li>
+  <li>Sigmoid <code class="language-plaintext highlighter-rouge">nn.Sigomoid</code> $\displaystyle f(x) = \frac{1}{1+e^{-x}}$</li>
+  <li>Tanh  <code class="language-plaintext highlighter-rouge">nn.TanH</code>   $\displaystyle f(x) = \frac{2}{1+e^{-2x}} -1$</li>
+  <li>ReLU  <code class="language-plaintext highlighter-rouge">nn.ReLU</code>   $\displaystyle f(x)= \begin{cases} 0 &amp; \text{if } x &lt; 0  \ 
+                                    x &amp; \text{if } x\ge 0\end{cases}$</li>
+  <li>Leacky ReLU <code class="language-plaintext highlighter-rouge">nn.LeakyReLU</code> $\displaystyle f(x)= \begin{cases} ax &amp; \text{if } x &lt; 0  \ 
+                                    x &amp; \text{if } x\ge 0\end{cases}$  con $a &lt; 1$</li>
+  <li>Softmax <code class="language-plaintext highlighter-rouge">nn.Softmax</code>  $\displaystyle S(y_i) = \frac{e^y_i}{ \sum_i e^{y_i}}$</li>
+</ul>
+
+<p>Sono disponibili anche come funzioni di Torch, ma in questo caso i nomi sono tutti in <code class="language-plaintext highlighter-rouge">minuscolo</code>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">nn.ReLU()</code>  $\leftrightarrow$ <code class="language-plaintext highlighter-rouge">torch.relu()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nn.Sigmoid()</code>  $\leftrightarrow$ <code class="language-plaintext highlighter-rouge">torch.sigmoid()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nn.Softmax()</code>  $\leftrightarrow$ <code class="language-plaintext highlighter-rouge">torch.softmax()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nn.TanH()</code>  $\leftrightarrow$ <code class="language-plaintext highlighter-rouge">torch.tanh()</code></li>
+</ul>
+
+<p>In alcuni casi le funzioni non sono disponibili da Torch,
+ma si deve passare da torch.nn.functional:</p>
+
+<ul>
+  <li>F.relu()</li>
+  <li>F.leaky_relu()</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="n">F</span>
+
+<span class="c1"># opzione 1: creare un modulo nn 
+</span><span class="k">class</span> <span class="nc">NeuralNet1</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NeuralNet1</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>   <span class="c1"># questo serve per ereditare il costruttore?
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>        <span class="c1">#   
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>                                    <span class="c1"># metodo nuovo 
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>       <span class="c1"># altro metodo che prende 2 arg 
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">sigmoid</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>            <span class="c1"># devo passare l'input: x
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span> 
+    
+    
+        
+<span class="c1"># opzione 2: usare le funzioni di attivazione di Torch 
+</span><span class="k">class</span> <span class="nc">NeuralNet2</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NeuralNet2</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>   <span class="c1"># questo serve per ereditare il costruttore?
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>        <span class="c1">#   
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">linear2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>       <span class="c1"># altro metodo che prende 2 arg 
+</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>                     <span class="c1"># devo passare l'input: x
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>     <span class="c1"># ho usato le funzioni di torch
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear2</span><span class="p">(</span><span class="n">out</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">out</span> 
+                            
+</code></pre></div></div>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#python_cap"><div class="chip z-depth-1">Python</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#deeplearning_cap"><div class="chip z-depth-1">DeepLearning</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#neural-nets_cap"><div class="chip z-depth-1">Neural Nets</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#cuda_cap"><div class="chip z-depth-1">Cuda</div></a>
+      
+    </div>
+    
+    		
+			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script>
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/18/comments';
+
+let request = new XMLHttpRequest();
+request.open( 'GET', GH_API_URL, true );
+request.onload = function() {
+	if ( this.status >= 200 && this.status < 400 ) {
+		let response = JSON.parse( this.response );
+
+		for ( var i = 0; i < response.length; i++ ) {
+			document.getElementById( 'gh-comments-list' ).appendChild( createCommentEl( response[ i ] ) );
+		}
+
+		if ( 0 === response.length ) {
+			document.getElementById( 'no-comments-found' ).style.display = 'block';
+		}
+	} else {
+		console.error( this );
+	}
+};
+
+function createCommentEl( response ) {
+	let user = document.createElement( 'a' );
+	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.classList.add( 'user' );
+
+	let userAvatar = document.createElement( 'img' );
+	userAvatar.classList.add( 'avatar' );
+	userAvatar.setAttribute( 'src', response.user.avatar_url );
+
+	user.appendChild( userAvatar );
+
+	let commentLink = document.createElement( 'a' );
+	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.classList.add( 'comment-url' );
+	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+
+	let commentContents = document.createElement( 'div' );
+	commentContents.classList.add( 'comment-content' );
+	commentContents.innerHTML = response.body;
+	// Progressive enhancement.
+	if ( window.showdown ) {
+		let converter = new showdown.Converter();
+		commentContents.innerHTML = converter.makeHtml( response.body );
+	}
+
+	let comment = document.createElement( 'li' );
+	comment.setAttribute( 'data-created', response.created_at );
+	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	comment.setAttribute( 'data-user-url', response.user.url );
+
+	comment.appendChild( user );
+	comment.appendChild( commentContents );
+	comment.appendChild( commentLink );
+
+	return comment;
+}
+request.send();
+</script>
+
+<hr>
+
+<div class="github-comments">
+	<h2>Comments</h2>
+	<ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/18"class="button">Add comment (via Github)</a>
+	</div>
+</div>
+
+
+		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2021 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

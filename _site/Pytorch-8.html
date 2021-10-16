@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Pytorch 8 Lightning | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pytorch 8 Lightning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PyTorch Lightning" />
+<meta property="og:description" content="PyTorch Lightning" />
+<link rel="canonical" href="http://localhost:4000/Pytorch-8" />
+<meta property="og:url" content="http://localhost:4000/Pytorch-8" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-8"},"description":"PyTorch Lightning","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-8","headline":"Pytorch 8 Lightning","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Ita-Eng</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#pytorch-lightning">PyTorch Lightning</a></li>
+  <li><a href="#lr-scheduler">LR Scheduler</a></li>
+</ol>
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Pytorch 8 Lightning</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">15/10/2021</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+          
+        
+        <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> Reading time: 9 mins </font>
+  
+</span>
+
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="pytorch-lightning">PyTorch Lightning</h1>
+
+<p>https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=21&amp;ab_channel=PythonEngineer</p>
+
+<p>PyTorch Lightning  e’ un wrapper per velocizzare la scrittura di reti neurali, con Pytorch.</p>
+
+<p>Sito di Pytorch Lightning
+https://www.pytorchlightning.ai/</p>
+
+<p>Per istallarlo: <code class="language-plaintext highlighter-rouge">conda install pytorch-lightning -c conda-forge</code></p>
+
+<p><strong>Non</strong> e’ piu’ necessario:</p>
+<ul>
+  <li>model.train() (ovvero settare il modello  in  training mode)</li>
+  <li>model.eval()  (ovvero settare il modello  in  evaluation mode)</li>
+  <li>definire una <code class="language-plaintext highlighter-rouge">device</code> e fare model.to(device)  si puo’ “sconnettere” la GPU facilmente</li>
+  <li>optimizer.zero_grad()</li>
+  <li>loss.backwards()</li>
+  <li>optimizer.step()</li>
+  <li>with torch.nograd()</li>
+  <li>x= x.detach</li>
+</ul>
+
+<p><strong>Bonus</strong></p>
+<ul>
+  <li>stampa consigli e aiuti!</li>
+  <li>supporto Tensorboard: viene costruito un folder chiamato <code class="language-plaintext highlighter-rouge">lightning_logs</code>.
+Per usare tensorboard <code class="language-plaintext highlighter-rouge">tensorboard  --logdir lightning_logs</code>  (e’ il nome della dir creata in automatico, nel video fa un errore e scrive log_dir)</li>
+</ul>
+
+<p>A questo punto per fare inspecting del training, creiamo un altro dict.</p>
+
+<p>Usiamo il codice del tutorial 13 e lo modifichiamo per PyTorch Lightning.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Suggerimenti</code>:
+-suggerisce di usare il metodo <code class="language-plaintext highlighter-rouge">validation_epoch_end()</code> per accumulare statistiche. Nota che nel video Loeber copia i metodi dal sito e li modifica per l’occasione. Questo metodo viene poi piazzato all’interno del modello</p>
+
+<p><code class="language-plaintext highlighter-rouge">Domande</code>:
+mi viene GPU present = True, used False, devo accendere l’uso della GPU. Si va nel metodo <code class="language-plaintext highlighter-rouge">Trainer</code> e si mette: <code class="language-plaintext highlighter-rouge">trainer=Trainer(gpus=1, max_epochs=num_epochs, fast_dev_run =True)</code>. Ok ho controllato e ora la GPU e’ presente e usata… ma il tempo di esecuzione praticamente non cambia!</p>
+<ul>
+  <li>Si puo’ usare anche una TPU e anche un <code class="language-plaintext highlighter-rouge">distributed backend</code> una DDP</li>
+  <li>Si puo’ passare a precisione 16 bit</li>
+  <li>in Trainer si puo’ mettere anche il karg: <code class="language-plaintext highlighter-rouge">auto_lr_find =True</code> per il learning rate</li>
+  <li>in Trainer si puo’ mettere anche il karg: <code class="language-plaintext highlighter-rouge">deterministic =True</code> per riprodurre esattamente i risultati</li>
+  <li>in Trainer si puo’ mettere anche il karg: <code class="language-plaintext highlighter-rouge">gradient_clip_val =0.3</code> (un numero tra 0 e 1 per fare clipping dei gradienti)</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Problemi</code>:<br /></p>
+<ul>
+  <li>nel video si vede la loss che scende in basso a dx mentre per me e’ un NAN. Ok il problema era che non facevo “ritornare” nulla dal metodo <code class="language-plaintext highlighter-rouge">training_step</code> che invece deve restituire un dict della forma {‘loss’:loss}, che viene preso direttamente dal PL e mostrato nella barra sotto</li>
+  <li>non vedo apparire la fase di validazione con una barra che si riempie (nel video c’e’)</li>
+  <li>mi da il seguente warning: UserWarning: The {log:dict keyword} was deprecated in 0.9.1 and will be removed in 1.0.0
+Please use self.log(…) inside the lightningModule instead.
+#log on a step or aggregate epoch metric to the logger and/or progress bar (inside LightningModule)
+self.log(‘train_loss’, loss, on_step=True, on_epoch=True, prog_bar=True)
+warnings.warn(*args, **kwargs)</li>
+  <li>In tensor borad non riesco a trovare train_loss (e’ uno scalare ma non lo trovo)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">torchvision.transforms</span> <span class="k">as</span> <span class="n">transforms</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="n">F</span> 
+
+<span class="kn">import</span> <span class="nn">pytorch_lightning</span> <span class="k">as</span> <span class="n">pl</span> <span class="c1"># PL
+</span><span class="kn">from</span> <span class="nn">pytorch_lightning</span> <span class="kn">import</span> <span class="n">Trainer</span> 
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="c1"># device config
+</span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s">'cpu'</span><span class="p">)</span>
+
+
+<span class="c1"># Hyper parametri 
+</span><span class="n">input_size</span> <span class="o">=</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span>      <span class="c1">#  =784 sono le dimensioni delle immagini
+</span><span class="n">hidden_size</span>  <span class="o">=</span> <span class="mi">500</span>      <span class="c1">#  scelto da me
+</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">10</span>        <span class="c1">#  devo classificare immagini di numeri
+</span><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">2</span>          <span class="c1">#  quanti giri completi vengono fatti
+</span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>        <span class="c1">#  questo non so come sia stato scelto
+</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>   <span class="c1">#  piccolo
+</span>
+<span class="c1">#train_dataset = torchvision.datasets.MNIST(root= './data/', train= True, transform =transforms.ToTensor(), download = True)
+#test_dataset = torchvision.datasets.MNIST(root= './data/', train= False, transform =transforms.ToTensor(), download = False) # ho gia' scaricato tutto con il train_datast
+</span>
+<span class="c1">#train_loader = torch.utils.data.DataLoader(dataset= train_dataset, batch_size = batch_size, shuffle=True)
+#test_loader = torch.utils.data.DataLoader (dataset=  test_dataset, batch_size = batch_size, shuffle=False)
+</span>
+
+<span class="c1">############  MODELLO ####################
+</span>
+
+<span class="c1">#class NeuralNet(nn.Module):             #vecchi
+</span><span class="k">class</span> <span class="nc">LitNeuralNet</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">LightningModule</span><span class="p">):</span>  <span class="c1"># nome scelto da noi, pl.LightningModule e' la versione super di nn.Module    
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LitNeuralNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_size</span> <span class="o">=</span> <span class="n">input_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
+       
+    <span class="k">def</span> <span class="nf">forward</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>    <span class="c1"># x e' l'input.
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>      <span class="c1"># 
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>  <span class="c1"># 
+</span>        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l2</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span>            <span class="c1"># 
+</span>
+    
+    <span class="k">def</span> <span class="nf">training_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">batch_idx</span><span class="p">):</span>  <span class="c1"># PL non uso piu' i loop!!!! 
+</span>        <span class="c1">#x,y = batch           # unpack
+</span>        <span class="n">images</span><span class="p">,</span> <span class="n">labels</span>  <span class="o">=</span><span class="n">batch</span> <span class="c1"># PL unpack
+</span>        <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span>   <span class="c1"># non e' piu' necessairo to(device)
+</span>        
+        <span class="c1">#y_hats = self(x)     # ????
+</span>        <span class="n">outputs</span>  <span class="o">=</span> <span class="bp">self</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>  <span class="c1"># PL questo e' il forward pass! usiamo self perche' usiamo direttamente questo modulo
+</span>        
+        <span class="c1">#loss = F.cross_entropy(y_hat, y)
+</span>        <span class="n">loss</span> <span class="o">=</span><span class="n">F</span><span class="o">.</span><span class="n">cross_entropy</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+        
+        <span class="n">tensorboard_logs</span> <span class="o">=</span> <span class="p">{</span><span class="s">'train_loss'</span><span class="p">:</span><span class="n">loss</span><span class="p">}</span>    <span class="c1"># devo metterlo anche nel validatio_epoch_end
+</span>        <span class="k">return</span> <span class="p">{</span><span class="s">'loss'</span><span class="p">:</span><span class="n">loss</span><span class="p">,</span> <span class="s">'log'</span><span class="p">:</span><span class="n">tensorboard_logs</span><span class="p">}</span>   <span class="c1"># PL i nomi delle chiavi sono FISSI: e' log non Log
+</span>        <span class="c1">#return {'loss': loss}
+</span>    
+    
+    
+    <span class="k">def</span> <span class="nf">configure_optimizers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># PL ma il nome e' fissato da PL? penso di si'
+</span>        <span class="c1">#optimizer = torch.optim.Adam(self.parameters(), lr = learning_rate)  # non ho capito se serve o no...   
+</span>        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span> <span class="mf">0.001</span><span class="p">)</span>  <span class="c1">#  PL self e' l'istanza del modello
+</span>    
+    <span class="k">def</span> <span class="nf">train_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#dataset = MNIST(os.getcwd(), train=True, download=True, transform =transforms.ToTensor())
+</span>        <span class="c1">#loader = DataLoader (dataset, batch_size= 32, num_workers=1, shuffle=True)   #lui ha messo num_workers = 4
+</span>        <span class="n">train_dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">download</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+        <span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span> <span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">train_loader</span>
+    
+    <span class="c1"># il nome deve essere questo!
+</span>    <span class="k">def</span> <span class="nf">val_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">val_dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">False</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">download</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span> <span class="c1"># ho gia' scaricato tutto con il train_datast
+</span>        <span class="n">val_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span> <span class="p">(</span><span class="n">dataset</span><span class="o">=</span> <span class="n">val_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val_loader</span>    
+    
+    
+    <span class="c1"># questo viene eseguito dopo ogni epoch di validazione
+</span>    <span class="k">def</span> <span class="nf">validation_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">outputs</span><span class="p">):</span>
+        <span class="n">avg_loss</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="s">'val_loss'</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">outputs</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+     
+        <span class="n">tensorboard_logs</span>  <span class="o">=</span> <span class="p">{</span><span class="s">'tavg_val_loss'</span><span class="p">:</span> <span class="n">avg_loss</span><span class="p">}</span> <span class="c1"># PL per ora non lo guardiamo
+</span>        <span class="k">return</span> <span class="p">{</span><span class="s">'tavg_val_loss'</span><span class="p">:</span> <span class="n">avg_loss</span><span class="p">,</span> <span class="s">'log'</span><span class="p">:</span><span class="n">tensorboard_logs</span><span class="p">}</span>
+        <span class="c1">#return {'val_loss': avg_loss}    
+</span>    
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="c1">#trainer = Trainer(max_epochs = num_epochs, fast_dev_run = False)  # PL Trainer e' importato da PL
+</span><span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">gpus</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">max_epochs</span> <span class="o">=</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">fast_dev_run</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>  <span class="c1"># PL Trainer e' importato da PL
+</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LitNeuralNet</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>        <span class="c1"># PL istanzio il modello  
+</span><span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>                                                <span class="c1"># faccio il training sul modello
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Tempo training+test= "</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">start</span><span class="p">)</span>    
+    
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GPU available: True, used: True
+TPU available: None, using: 0 TPU cores
+
+  | Name | Type   | Params
+--------------------------------
+0 | l1   | Linear | 392 K 
+1 | relu | ReLU   | 0     
+2 | l2   | Linear | 5.0 K 
+--------------------------------
+397 K     Trainable params
+0         Non-trainable params
+397 K     Total params
+1.590     Total estimated model params size (MB)
+
+
+
+HBox(children=(HTML(value='Training'), FloatProgress(value=1.0, bar_style='info', layout=Layout(flex='2'), max…
+
+
+
+Tempo training+test=  12.651966094970703
+</code></pre></div></div>
+
+<h1 id="lr-scheduler">LR Scheduler</h1>
+<p>url di riferimento: https://www.youtube.com/watch?v=81NJgoR5RfY&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=22&amp;ab_channel=PythonEngineer</p>
+
+<p>Vediamo come sfruttare le funzioni di Pytorch che automaticamente modificano il learning rate per ottenere dei risultati ottimali.</p>
+
+<p>Spesso (intuitivamente) si vuole diminuire il <code class="language-plaintext highlighter-rouge">Learning Rate</code>. La logica a mio avviso e’ la seguente, quando mi avvicino al minimo se non diminuisco il LR rischio di saltare da una parte all’altra del minimo stesso.</p>
+
+<p>Per questo si usa uno scheduler.
+Onestamente non mi pare ultra necessario, uno puo’ costruire delle funzioni custom che facciano la cosa ogni volta.  Anzi se uso una funzione che non ho scritto io c’e’ la possibilita’ che io non controlli perfertamente.</p>
+
+<p>Una interessante e’ che si riduce solo se una certa metrica ha raggiunto un plateau.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Osservazioni</code></p>
+<ul>
+  <li>in python // e’ floor division.</li>
+</ul>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#python_cap"><div class="chip z-depth-1">Python</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#deeplearning_cap"><div class="chip z-depth-1">DeepLearning</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#neural-nets_cap"><div class="chip z-depth-1">Neural Nets</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#cuda_cap"><div class="chip z-depth-1">Cuda</div></a>
+      
+    </div>
+    
+    		
+			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script>
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/17/comments';
+
+let request = new XMLHttpRequest();
+request.open( 'GET', GH_API_URL, true );
+request.onload = function() {
+	if ( this.status >= 200 && this.status < 400 ) {
+		let response = JSON.parse( this.response );
+
+		for ( var i = 0; i < response.length; i++ ) {
+			document.getElementById( 'gh-comments-list' ).appendChild( createCommentEl( response[ i ] ) );
+		}
+
+		if ( 0 === response.length ) {
+			document.getElementById( 'no-comments-found' ).style.display = 'block';
+		}
+	} else {
+		console.error( this );
+	}
+};
+
+function createCommentEl( response ) {
+	let user = document.createElement( 'a' );
+	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.classList.add( 'user' );
+
+	let userAvatar = document.createElement( 'img' );
+	userAvatar.classList.add( 'avatar' );
+	userAvatar.setAttribute( 'src', response.user.avatar_url );
+
+	user.appendChild( userAvatar );
+
+	let commentLink = document.createElement( 'a' );
+	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.classList.add( 'comment-url' );
+	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+
+	let commentContents = document.createElement( 'div' );
+	commentContents.classList.add( 'comment-content' );
+	commentContents.innerHTML = response.body;
+	// Progressive enhancement.
+	if ( window.showdown ) {
+		let converter = new showdown.Converter();
+		commentContents.innerHTML = converter.makeHtml( response.body );
+	}
+
+	let comment = document.createElement( 'li' );
+	comment.setAttribute( 'data-created', response.created_at );
+	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	comment.setAttribute( 'data-user-url', response.user.url );
+
+	comment.appendChild( user );
+	comment.appendChild( commentContents );
+	comment.appendChild( commentLink );
+
+	return comment;
+}
+request.send();
+</script>
+
+<hr>
+
+<div class="github-comments">
+	<h2>Comments</h2>
+	<ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/17"class="button">Add comment (via Github)</a>
+	</div>
+</div>
+
+
+		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2021 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Pytorch 6 Input Output | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pytorch 6 Input Output" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I/O Saving and Loading Models https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=17&amp;ab_channel=PythonEngineer" />
+<meta property="og:description" content="I/O Saving and Loading Models https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=17&amp;ab_channel=PythonEngineer" />
+<link rel="canonical" href="http://localhost:4000/Pytorch-6" />
+<meta property="og:url" content="http://localhost:4000/Pytorch-6" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-6"},"description":"I/O Saving and Loading Models https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=17&amp;ab_channel=PythonEngineer","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-6","headline":"Pytorch 6 Input Output","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Ita-Eng</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#io-saving-and-loading-models">I/O Saving and Loading Models</a>
+    <ol>
+      <li><a href="#salvare-modelli-da-gpu">Salvare modelli da GPU</a></li>
+    </ol>
+  </li>
+  <li><a href="#creare-e-deployare-un-modello-pytorch-con-flask">Creare e deployare un modello pytorch con Flask</a></li>
+</ol>
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Pytorch 6 Input Output</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">15/10/2021</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+          
+        
+        <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> Reading time: 7 mins </font>
+  
+</span>
+
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="io-saving-and-loading-models">I/O Saving and Loading Models</h1>
+<p>https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=17&amp;ab_channel=PythonEngineer</p>
+
+<p>Un modello viene salvato come un dictionary.</p>
+
+<p>i 3 metodi da ricordare:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">torch.save(arg, PATH)</code> posso salvare tensor, model o dictiionary  (e posso usare Pickle)</li>
+  <li><code class="language-plaintext highlighter-rouge">torch.load(PATH)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">model.load_state_dict(arg)</code></li>
+</ol>
+
+<p>Ci sono 2 modi per salvare un modello: il modo <code class="language-plaintext highlighter-rouge">lazy</code> e modo <code class="language-plaintext highlighter-rouge">raccomandato</code></p>
+
+<ol>
+  <li>lazy: usando <code class="language-plaintext highlighter-rouge">torch.save(arg, PATH)</code> e poi carico il modello con <code class="language-plaintext highlighter-rouge">model =torch.load(PATH)</code>
+A questo punto si usa:<br />
+<code class="language-plaintext highlighter-rouge">model.eval()</code> in questo modo si entra in modalita’ evaluation (da controllare)</li>
+</ol>
+
+<p>Il difetto del metodo lazy e’ che i dati “serializzati” (intende compressi con pickle) seguono esattamente la classe e la struttura di quando sono salvati.</p>
+
+<ol>
+  <li>modo raccomandato: basta salvare <strong>SOLO</strong> i parametri del modello stesso: <br />
+<code class="language-plaintext highlighter-rouge">torch.save(model.state_dict(), PATH)</code></li>
+</ol>
+
+<p>A questo punto devo creare un nuovo modello, e poi importare i parametri: <br />
+<code class="language-plaintext highlighter-rouge">model= Model(*args, **kwargs)</code><br />
+<code class="language-plaintext highlighter-rouge">model.load_state_dict(torch.load(PATH))</code> <br />
+<code class="language-plaintext highlighter-rouge">model.eval()</code><br /></p>
+
+<ul>
+  <li>i modelli vengono salvati in file che hanno come estensione <code class="language-plaintext highlighter-rouge">pth</code></li>
+</ul>
+
+<p>Salviamo anche i checkpoint:<br />
+un check point e’ un dizionario di dizionari!</p>
+<ul>
+  <li>i parametri del modello sono un dizionario</li>
+  <li>i parametri dell’optimizer sono un dizionario
+ -….</li>
+</ul>
+
+<p>Quindi quello che facciamo e’ un dizionario in cui la prima key e’ “model” e associamo
+ il dizionario del modello, poi la chiave “optimizer” e il dizionario dell’ottimizzatore.
+ Alla fine quando abbiamo bisogno usiamo checkpoint[“model”] e lui mi restituisce il dizionario
+ con i parametri del modello (o se ho scritto optimizer, quelli dell’ottimizzatore).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">######## LAZY method #################
+</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>  <span class="c1"># eredita un oggetto nn.Module
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">n_input_features</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_input_features</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">y_pred</span>
+        
+<span class="n">model</span> <span class="o">=</span>  <span class="n">Model</span><span class="p">(</span><span class="n">n_input_features</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+
+<span class="c1">######## SALVO IL MODELLO ############
+</span><span class="n">FILE</span> <span class="o">=</span> <span class="s">"model.pth"</span>       <span class="c1"># solitamente i modelli hanno come estensione pth ?
+</span><span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">FILE</span><span class="p">)</span>     
+
+<span class="c1">######## CARICO IL MODELLO ###########
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">FILE</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="nb">eval</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Parameter containing:
+tensor([[-0.3695,  0.2621,  0.0619, -0.2925, -0.3088, -0.2284]],
+       requires_grad=True)
+Parameter containing:
+tensor([-0.2680], requires_grad=True)
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">########## Metodo raccomandato ###########
+</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>  <span class="c1"># eredita un oggetto nn.Module
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">n_input_features</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_input_features</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">y_pred</span>
+        
+<span class="n">model</span> <span class="o">=</span>  <span class="n">Model</span><span class="p">(</span><span class="n">n_input_features</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="c1">#for param in model.parameters():
+#    print('Prima',param)
+</span>
+<span class="c1">######## SALVO IL MODELLO ############
+</span><span class="n">FILE</span> <span class="o">=</span> <span class="s">"model-raccomandato.pth"</span>       <span class="c1"># solitamente i modelli hanno come estensione pth ?
+</span><span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="n">FILE</span><span class="p">)</span>  <span class="c1"># salvo solo i parametri del modello   
+</span>
+<span class="c1">######## Prima devo definire un modello #####
+</span><span class="n">loaded_model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">n_input_features</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>        <span class="c1"># creo un modello con la stessa struttura
+</span><span class="n">loaded_model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">FILE</span><span class="p">))</span>  <span class="c1"># carico i parametri
+</span><span class="n">loaded_model</span><span class="o">.</span><span class="nb">eval</span><span class="p">()</span>                             <span class="c1"># setto il modello in eval mode.
+</span>
+
+<span class="c1">#for param in loaded_model.parameters():
+#    print('Dopo', param)
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Model(
+  (linear): Linear(in_features=6, out_features=1, bias=True)
+)
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">############# Check point  ####################
+</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">Model</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>  <span class="c1"># eredita un oggetto nn.Module
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span> <span class="p">,</span> <span class="n">n_input_features</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Model</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_input_features</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">y_pred</span>
+        
+<span class="n">model</span> <span class="o">=</span>  <span class="n">Model</span><span class="p">(</span><span class="n">n_input_features</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span> <span class="n">learning_rate</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">state_dict</span><span class="p">())</span>
+
+<span class="c1">####### CHECK point ######
+</span>
+<span class="n">checkpoint</span>  <span class="o">=</span> <span class="p">{</span>         <span class="c1"># e' un dizionario
+</span>    <span class="s">"epoch"</span><span class="p">:</span><span class="mi">90</span><span class="p">,</span>         <span class="c1"># per esempio siamo alla epoca 90
+</span>    <span class="s">"model_state"</span><span class="p">:</span> <span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span>
+    <span class="s">"optim_state"</span><span class="p">:</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">,</span> <span class="s">"checkpoint.pth"</span><span class="p">)</span>
+
+<span class="c1">#  a questo punto posso caricare:
+</span>
+<span class="n">loaded_checkpoint</span>  <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">"checkpoint.pth"</span><span class="p">)</span>
+<span class="n">epoch</span>  <span class="o">=</span><span class="n">loaded_checkpoint</span><span class="p">[</span><span class="s">"epoch"</span><span class="p">]</span> 
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">n_input_features</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># mettiamo 0 e poi carichiamo la corretta lr
+</span><span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s">"model_state"</span><span class="p">])</span>
+<span class="n">optimizer</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">checkpoint</span><span class="p">[</span><span class="s">"optim_state"</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">optimizer</span><span class="o">.</span><span class="n">state_dict</span><span class="p">())</span>
+
+
+
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'state': {}, 'param_groups': [{'lr': 0.01, 'momentum': 0, 'dampening': 0, 'weight_decay': 0, 'nesterov': False, 'params': [0, 1]}]}
+{'state': {}, 'param_groups': [{'lr': 0.01, 'momentum': 0, 'dampening': 0, 'weight_decay': 0, 'nesterov': False, 'params': [0, 1]}]}
+</code></pre></div></div>
+
+<h2 id="salvare-modelli-da-gpu">Salvare modelli da GPU</h2>
+<p>Minuto 16 circa.</p>
+
+<p>Gli esempi sopra fungono se tutt il modello e’ tenuto sulla CPU (sia per load che train, validation).</p>
+
+<p><strong>map_location</strong>
+argomento di <code class="language-plaintext highlighter-rouge">load_state_dict(PATH, map_location=device)</code></p>
+
+<p>non e’ chiaro cosa intenda per <em>save on GPU</em> (io salvo su disco! magari intende che il modello e’ sulla GPU e poi lo metto su disco)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+
+<span class="c1"># SAVE sulla GPU, load sulla CPU
+</span>
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">"cuda"</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="n">PATH</span><span class="p">)</span>
+
+
+<span class="n">device</span> <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">"cpu"</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="n">device</span><span class="p">))</span>
+
+<span class="c1">#####################################
+</span>
+<span class="c1"># SAVE sulla GPU, load sulla GPU
+</span>
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">"cuda"</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="n">PATH</span><span class="p">)</span>
+
+
+<span class="n">device</span> <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">"cpu"</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">PATH</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>                      
+
+
+<span class="c1">#####################################
+</span>
+<span class="c1"># SAVE sulla CPU, load sulla GPU
+</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="n">PATH</span><span class="p">)</span>
+
+
+<span class="n">device</span> <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">"cuda"</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="n">map_location</span><span class="o">=</span><span class="s">"cuda:0"</span><span class="p">)</span>  <span class="c1"># 0 e' per la GPU zerp
+</span><span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>                        
+                      
+                      
+                      
+                      
+</code></pre></div></div>
+
+<h1 id="creare-e-deployare-un-modello-pytorch-con-flask">Creare e deployare un modello pytorch con Flask</h1>
+<p>questo lo salto per ora.</p>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#python_cap"><div class="chip z-depth-1">Python</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#deeplearning_cap"><div class="chip z-depth-1">DeepLearning</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#neural-nets_cap"><div class="chip z-depth-1">Neural Nets</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#cuda_cap"><div class="chip z-depth-1">Cuda</div></a>
+      
+    </div>
+    
+    		
+			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script>
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/23/comments';
+
+let request = new XMLHttpRequest();
+request.open( 'GET', GH_API_URL, true );
+request.onload = function() {
+	if ( this.status >= 200 && this.status < 400 ) {
+		let response = JSON.parse( this.response );
+
+		for ( var i = 0; i < response.length; i++ ) {
+			document.getElementById( 'gh-comments-list' ).appendChild( createCommentEl( response[ i ] ) );
+		}
+
+		if ( 0 === response.length ) {
+			document.getElementById( 'no-comments-found' ).style.display = 'block';
+		}
+	} else {
+		console.error( this );
+	}
+};
+
+function createCommentEl( response ) {
+	let user = document.createElement( 'a' );
+	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.classList.add( 'user' );
+
+	let userAvatar = document.createElement( 'img' );
+	userAvatar.classList.add( 'avatar' );
+	userAvatar.setAttribute( 'src', response.user.avatar_url );
+
+	user.appendChild( userAvatar );
+
+	let commentLink = document.createElement( 'a' );
+	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.classList.add( 'comment-url' );
+	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+
+	let commentContents = document.createElement( 'div' );
+	commentContents.classList.add( 'comment-content' );
+	commentContents.innerHTML = response.body;
+	// Progressive enhancement.
+	if ( window.showdown ) {
+		let converter = new showdown.Converter();
+		commentContents.innerHTML = converter.makeHtml( response.body );
+	}
+
+	let comment = document.createElement( 'li' );
+	comment.setAttribute( 'data-created', response.created_at );
+	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	comment.setAttribute( 'data-user-url', response.user.url );
+
+	comment.appendChild( user );
+	comment.appendChild( commentContents );
+	comment.appendChild( commentLink );
+
+	return comment;
+}
+request.send();
+</script>
+
+<hr>
+
+<div class="github-comments">
+	<h2>Comments</h2>
+	<ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/23"class="button">Add comment (via Github)</a>
+	</div>
+</div>
+
+
+		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2021 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

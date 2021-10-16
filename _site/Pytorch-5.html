@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      Pytorch 5 Convolutional Neural Network | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Pytorch 5 Convolutional Neural Network" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Convolutional Neural Network" />
+<meta property="og:description" content="Convolutional Neural Network" />
+<link rel="canonical" href="http://localhost:4000/Pytorch-5" />
+<meta property="og:url" content="http://localhost:4000/Pytorch-5" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-5"},"description":"Convolutional Neural Network","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-5","headline":"Pytorch 5 Convolutional Neural Network","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/categories">Ita-Eng</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#convolutional-neural-network">Convolutional Neural Network</a>
+    <ol>
+      <li><a href="#come-misurare-le-dimensioni-dei-tensori-in-uscita">Come misurare le dimensioni dei tensori in uscita</a></li>
+    </ol>
+  </li>
+  <li><a href="#transfer-learning">Transfer Learning</a>
+    <ol>
+      <li><a href="#image-folder">Image Folder</a></li>
+      <li><a href="#scheduler">Scheduler</a></li>
+      <li><a href="#fine-tuninig">Fine Tuninig</a></li>
+      <li><a href="#domande">Domande</a></li>
+      <li><a href="#tempo">Tempo</a></li>
+      <li><a href="#train-e-eval">Train() e Eval()</a></li>
+    </ol>
+  </li>
+  <li><a href="#tensorboard">Tensorboard</a></li>
+</ol>
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>Pytorch 5 Convolutional Neural Network</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">15/10/2021</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+          
+        
+        <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> Reading time: 42 mins </font>
+  
+</span>
+
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="convolutional-neural-network">Convolutional Neural Network</h1>
+
+<p>Lezione del MIT sulle CNN: https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;ab_channel=AlexanderAmini</p>
+
+<p>Lezione estesa:
+https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&amp;index=3&amp;ab_channel=AlexanderAmini</p>
+
+<p>Materiale della lezione:
+http://introtodeeplearning.com​</p>
+
+<p>qui vediamo degli esempi specifici riguardo le reti convoluzionali.</p>
+<ul>
+  <li>L’esempio e’ basato sul dataset CIFAR-10.</li>
+  <li>10 classi, 6000 immagini per classe.</li>
+  <li>ogni immagine sono 32 x 32</li>
+  <li>ogni immagine ha 3 canali</li>
+  <li>50 000 immagini di training e 10 000 immagini di test</li>
+  <li>Il dataset sembra gia’ essere diviso in batches</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Problema</code> ho implementato fino a criterion ma ho un errore quando istanzio il modello (prima di averlo riempito…
+forse e’ per quello). <code class="language-plaintext highlighter-rouge">'ConvNet' object has no attribute '_modules'</code></p>
+
+<p>-Domanda: Non mi e’ chiaro come vengano gestiti i casi di 3 canali di colore. Come faccio ad associarli a una singola immagine?
+-Risposta. Posso pensare i 3 canli come un’immagine una sopra l’altra. Le convoluzioni applicano in modo indipendente ai 3 canali, ma alla fine quando faccio un flatten li metto tutti in un unico tensore 1D (forse)</p>
+
+<p>Regola del numero di punti restanti in funzione di una convoluzione/ pooling,</p>
+<ul>
+  <li>w  = larghezza dell’<code class="language-plaintext highlighter-rouge">immagine</code>.</li>
+  <li>F  = larghezza del <code class="language-plaintext highlighter-rouge">filtro</code></li>
+  <li>P  = larghezza del <code class="language-plaintext highlighter-rouge">padding</code></li>
+  <li>S  = stride</li>
+</ul>
+
+<p>Risultato (minuto 14:00 del tutorial 14): 
+<script type="math/tex">\frac{W-F+2P}{S}+1</script>
+(in questo caso P =0 dato che non ho padding, e S=1 in quanto il kernel si muove di un quadretto per volta)
+<!---
+![convoluzione](/images/posts/pytorch/convoluzione.png)
+-->
+<img src="/images/posts/pytorch/convoluzione.png" alt="drawing" width="600" />
+(nota che i quadrati colorati successivi sono un po’ piu’ piccoli per evitare sovrapposizioni ma riguardano 
+tutti i punti delle celle che toccano)
+Ora viene implementata una rete neurale con la seguente (immagine da internet, non penso sia di Loeber) struttura:</p>
+
+<p><img src="/images/posts/pytorch/auto-convolution.jpeg" alt="drawing" width="600" /></p>
+
+<ul>
+  <li>conv + relu</li>
+  <li>pooling</li>
+  <li>conv + relu</li>
+  <li>pooling</li>
+  <li>fully connected</li>
+  <li>fully connected</li>
+  <li>fully connected</li>
+</ul>
+
+<h2 id="come-misurare-le-dimensioni-dei-tensori-in-uscita">Come misurare le dimensioni dei tensori in uscita</h2>
+
+<p>Quando si hanno delle convoluzioni o dei pooling, la dimensione dei tensori in uscita non
+e’ facilissima da calcolare al volo, fortunatamente esiste una formula semplice.</p>
+
+<ol>
+  <li>In torch le convoluzioni <code class="language-plaintext highlighter-rouge">nn.Conv2d(3,6,5)</code> hanno 3 parametri:</li>
+</ol>
+
+<ul>
+  <li>il primo parametro e’ il numero di <strong>canali in ingresso</strong> (per esempio 3, associati a r g b).</li>
+  <li>il secondo parametro e’ il numero di <strong>canali in USCITA</strong>, nell’esempio sopra 6. Cosa significa? significa che ho preso 6 
+kernel differenti (riempiti con valori random) e li ho applicati tutti e 6 (ipotesi mia)!</li>
+  <li>
+    <p>il terzo parametro e’ la <strong>dimensione del kernel</strong></p>
+  </li>
+  <li>ci sono i canali (in entrata di solito sono i colori, in uscita non hanno questo significato, in quanto possono cambiare.</li>
+</ul>
+
+<ol>
+  <li>I max pooling hanno 2 parametri, per esempio: <code class="language-plaintext highlighter-rouge">nn.MaxPool2d(2,2)</code>:
+    <ul>
+      <li>la dimensione del kernel</li>
+      <li>lo stride</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Riassumendo si usa la formula <strong>(w - f +2p )/s +1</strong> sia per convoluzione che per pooling:</p>
+<ul>
+  <li>prima convoluzione (kernel 5 x 5) passo da 3 canali 32 x 32 a   : (32-5-0)/1+1  = 28 x 28   ( 6 canali ,scelto da me)</li>
+  <li>primo pooling (kernel 2 x 2) con stride 2 passo da 6 canali 28 x 28 -&gt; (28-2-0)/2 + 1 = 14 x 14 ( 6 canali, non modificabile)</li>
+  <li>seconda convoluzione (kernel 5 x5) passo da 6 canali 14 x 14 a -&gt; (14 - 5 -0)/1+1 = 10 x 10 (16 canali, scelto da me)</li>
+  <li>secondo pooling (kernel 2 x 2) passp da 16 canali 10 x 10 a -&gt; (10-2 -0)/2 +1 = 5 x 5 (16 canali non modificabile)</li>
+</ul>
+
+<p>Quindi quando faccio un flatten alla fine ottengo: 5 x 5 x 16  <strong>esatto</strong> come nel video!</p>
+
+<p>In grassetto metto i valori che scelgo io (per esempio i canali di ouput con la convolione)</p>
+
+<!---
+|   operazione  |    kernel     |  Stride  |  canali input | figura input |  canali output |  figura output |
+| ------------- | ------------- | -------- | ------------- | ------------ | -------------- | -------------- |   
+| I convoluzione  |     5 x 5     |     1    |       3       |   32 x 32    |       **6**      |  (32-5-0)/1+1 =28 |
+| I max pooling   |     2 x 2     |     2    |       6       |   28 x 28    |         6      |  (28-2-0)/2+1 =14 |
+| II convoluzione  |     5 x 5     |     1    |      6        |  14 x 14    |      **16**      |  (14-5-0)/1+1 =10 |
+| II max pooling   |     2 x 2     |     2    |     16       |   10 x 10    |        16      |  (10-2-0)/2+1 = 5 |
+--->
+
+<table>
+  <thead>
+    <tr>
+      <th>operazione</th>
+      <th>canali input</th>
+      <th>canali output</th>
+      <th>kernel</th>
+      <th>Stride</th>
+      <th>figura input</th>
+      <th>figura output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I convoluzione</td>
+      <td><strong>3</strong></td>
+      <td><strong>6</strong></td>
+      <td><strong>5</strong> x 5</td>
+      <td>1</td>
+      <td>32 x 32</td>
+      <td>(32-5-0)/1+1 =28</td>
+    </tr>
+    <tr>
+      <td>I max pooling</td>
+      <td>6</td>
+      <td>6</td>
+      <td><strong>2</strong> x 2</td>
+      <td><strong>2</strong></td>
+      <td>28 x 28</td>
+      <td>(28-2-0)/2+1 =14</td>
+    </tr>
+    <tr>
+      <td>II convoluzione</td>
+      <td><strong>6</strong></td>
+      <td><strong>16</strong></td>
+      <td><strong>5</strong> x 5</td>
+      <td>1</td>
+      <td>14 x 14</td>
+      <td>(14-5-0)/1+1 =10</td>
+    </tr>
+    <tr>
+      <td>II max pooling</td>
+      <td>16</td>
+      <td>16</td>
+      <td><strong>2</strong> x 2</td>
+      <td><strong>2</strong></td>
+      <td>10 x 10</td>
+      <td>(10-2-0)/2+1 = 5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Osservazione</strong></p>
+<ul>
+  <li>alla funzione di convoluzione vengono passati come argomenti solo: i <code class="language-plaintext highlighter-rouge">canali di ingresso</code>, <code class="language-plaintext highlighter-rouge">canali di uscita</code> e la <code class="language-plaintext highlighter-rouge">dimensione del kernel</code>, per esempio: <code class="language-plaintext highlighter-rouge">nn.Conv2d(3,6,5)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Non</code> si passa la dimensione delle figure, viene presa in automatico!</li>
+  <li>alla funzione di max pool invece si passano solo: la <code class="language-plaintext highlighter-rouge">dimensione del kernel</code> e <code class="language-plaintext highlighter-rouge">dimensione della stride</code>:<code class="language-plaintext highlighter-rouge">nn.MaxPool2d(2,2)</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Problemi:</code></p>
+
+<ul>
+  <li>ho provato ha mettere dei valori custom degli strati finali fully connected, non mi prende hidden_size2,
+ma se metto un valore preciso lo prende… perche? Il motivo era che avevo messo queste quantita’ dentro la classe
+indentando. Se le metto fuori, vengono prese come variabili globali!</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="n">F</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">torchvision.transforms</span> <span class="k">as</span> <span class="n">transforms</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="c1"># device config
+</span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s">'cpu'</span><span class="p">)</span>
+
+<span class="c1"># Hyper parametri 
+</span><span class="n">input_size</span> <span class="o">=</span> <span class="mi">32</span><span class="o">*</span><span class="mi">32</span>    <span class="c1">#  =1024 sono le dimensioni delle immagini
+</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">10</span>      <span class="c1">#  devo classificare immagini di numeri
+</span><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">6</span>        <span class="c1">#  quanti giri completi vengono fatti
+</span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">4</span>        <span class="c1">#  questo no so come sia stato scelto
+</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span> <span class="c1">#  piccolo
+</span><span class="n">hidden_size1</span>  <span class="o">=</span> <span class="mi">220</span>   <span class="c1">#  scelto da me
+</span><span class="n">hidden_size2</span>  <span class="o">=</span> <span class="mi">184</span>   <span class="c1">#  scelto da me 
+</span>
+<span class="n">transform</span> <span class="o">=</span>  <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span> <span class="p">[</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>  <span class="p">)</span>  <span class="p">]</span> <span class="p">)</span>
+
+
+<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">CIFAR10</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">True</span><span class="p">,</span> 
+                                           <span class="n">transform</span> <span class="o">=</span><span class="n">transform</span><span class="p">,</span>            <span class="c1"># uso le trasformazioni indicate sopra
+</span>                                          <span class="n">download</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+
+<span class="n">test_dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">CIFAR10</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">False</span><span class="p">,</span> 
+                                           <span class="n">transform</span> <span class="o">=</span><span class="n">transform</span><span class="p">,</span>
+                                          <span class="n">download</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span> <span class="c1"># ho gia' scaricato tutto con il train_datast
+</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span> <span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span> <span class="p">(</span><span class="n">dataset</span><span class="o">=</span>  <span class="n">test_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1"># Pytorch lavora con numeri, qui assegno i nomi corrispondenti
+#             0       1       2       3      4      5       6       7       8        9 
+</span><span class="n">classes</span> <span class="o">=</span> <span class="p">(</span><span class="s">'plane'</span><span class="p">,</span> <span class="s">'car'</span><span class="p">,</span> <span class="s">'bird'</span><span class="p">,</span> <span class="s">'cat'</span><span class="p">,</span> <span class="s">'deer'</span><span class="p">,</span> <span class="s">'dog'</span><span class="p">,</span> <span class="s">'frog'</span><span class="p">,</span> <span class="s">'horse'</span><span class="p">,</span> <span class="s">'ship'</span><span class="p">,</span> <span class="s">'truck'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">img</span> <span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="c1"># "denormalizza" forse per avere dei colori migliori
+</span>    <span class="n">npimg</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">npimg</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)))</span>
+
+
+<span class="c1">######### MODELLO ###############
+</span>
+<span class="k">class</span> <span class="nc">ConvNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ConvNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span>  <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>     <span class="c1"># input channel size, output channel size,  Kernel size 5 (5x5)
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span>   <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>      <span class="c1"># kernel size, stride  (e' un quadrato 4x4 diviso in 4 parti 2x2)
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span>  <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1"># input channel size = out di prima = 6, scelgo l'out= 16 e kernel size 5 (5x5)  
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span>    <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">16</span><span class="o">*</span><span class="mi">5</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="n">hidden_size1</span><span class="p">)</span> <span class="c1"># fully connected (spiegato dopo) ingresso, e 120 in uscita
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span>    <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size1</span><span class="p">,</span> <span class="n">hidden_size2</span><span class="p">)</span>     <span class="c1"># in ingresso prende l'uscita del precedente e in output un tensor 1D con 84 ingressi
+</span>        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span>    <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>      <span class="c1"># in uscita ho solo le 10 classi di oggetti (riga 38)            
+</span>        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>  <span class="c1">#  MaxPool(ReLU(convoluzione(immagine))
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>  <span class="c1">#  MaxPool(ReLU(convoluzione( ))
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="o">*</span><span class="mi">5</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>                <span class="c1">#  metto l'immagine processata in un vettore 1D
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>               <span class="c1">#  ReLU(fc())
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>               <span class="c1">#  ReLU(fc())
+</span>        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                       <span class="c1">#  qui non faccio la ReLU, perche' poi nella cross entropy c'e' softmax
+</span>        <span class="k">return</span> <span class="n">x</span>
+
+
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">ConvNet</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>                  <span class="c1"># metto sul device    
+</span>    
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>             <span class="c1"># serve per fare la LOSS, include la softmax per l'ultimo strato
+</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span> <span class="o">=</span> <span class="n">learning_rate</span><span class="p">)</span>
+    
+<span class="n">n_total_steps</span>  <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_loader</span><span class="p">):</span>
+        <span class="c1"># forma [4, 3, 32, 32] -&gt; [4, 3, 1024]       4 immagini, 3 canali di colore, 32 x 32 
+</span>        <span class="c1"># input layer: 3 canali di input, 6 canali di uscita, 5 kernel size
+</span>        <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        
+        <span class="c1"># forward
+</span>        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+        
+        <span class="c1"># backward e ottimizzazione dei pesi
+</span>        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>              <span class="c1"># chain rule
+</span>        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>             <span class="c1"># step di ottimizzazione dato il learning rate
+</span>        
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'epoch {epoch+1} / {num_epochs}, step {i+1}/{n_total_steps}, loss= {loss.item():.4f}'</span><span class="p">)</span>     
+<span class="k">print</span><span class="p">(</span><span class="s">"Training Terminato"</span><span class="p">)</span>
+
+<span class="c1"># qui faccio la fase di testing:
+</span>
+<span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+    <span class="n">n_correct</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n_samples</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">n_class_correct</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>  <span class="c1"># e' una lista uso una list-comprehension
+</span>    <span class="n">n_class_samples</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>  <span class="c1"># non chiaro cosa sia questo
+</span>    
+    <span class="k">for</span> <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">test_loader</span><span class="p">:</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        
+        <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">n_samples</span> <span class="o">+=</span> <span class="n">labels</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># non serve una quadra?
+</span>        <span class="n">n_correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">predicted</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>       <span class="c1"># questa da capire bene 
+</span>        
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">batch_size</span><span class="p">):</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>        <span class="c1"># gira nel batch, label della singola immagine
+</span>            <span class="n">pred</span> <span class="o">=</span> <span class="n">predicted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>      <span class="c1"># guarda la riga 90
+</span>            
+            <span class="k">if</span> <span class="p">(</span><span class="n">label</span> <span class="o">==</span> <span class="n">pred</span><span class="p">):</span>
+                <span class="n">n_class_correct</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># fa un istogramma
+</span>            <span class="n">n_class_samples</span> <span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">+=</span><span class="mi">1</span>      <span class="c1"># ne ho trovsata una un piu' della classe label
+</span>    
+    <span class="n">acc</span> <span class="o">=</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="n">n_correct</span> <span class="o">/</span> <span class="n">n_samples</span>      <span class="c1"># percentuale di corrette sul totale dei sample
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Accuracy  = {acc}:.4f'</span><span class="p">)</span>
+        
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">acc</span> <span class="o">=</span> <span class="mf">100.0</span> <span class="o">*</span><span class="n">n_class_correct</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span> <span class="n">n_class_samples</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># accuracy della singola classe
+</span>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Accuracy della classe {classes[i]}: {acc} </span><span class="si">%</span><span class="s">'</span>  <span class="p">)</span>
+    
+        
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Files already downloaded and verified
+epoch 1 / 6, step 1000/12500, loss= 2.3000
+epoch 1 / 6, step 2000/12500, loss= 2.3080
+epoch 1 / 6, step 3000/12500, loss= 2.3117
+epoch 1 / 6, step 4000/12500, loss= 2.2834
+epoch 1 / 6, step 5000/12500, loss= 2.2788
+epoch 1 / 6, step 6000/12500, loss= 2.2987
+epoch 1 / 6, step 7000/12500, loss= 2.2965
+epoch 1 / 6, step 8000/12500, loss= 2.3122
+epoch 1 / 6, step 9000/12500, loss= 2.1770
+epoch 1 / 6, step 10000/12500, loss= 2.2453
+epoch 1 / 6, step 11000/12500, loss= 1.9151
+epoch 1 / 6, step 12000/12500, loss= 2.1131
+epoch 2 / 6, step 1000/12500, loss= 2.2575
+epoch 2 / 6, step 2000/12500, loss= 1.6527
+epoch 2 / 6, step 3000/12500, loss= 1.3318
+epoch 2 / 6, step 4000/12500, loss= 1.4340
+epoch 2 / 6, step 5000/12500, loss= 2.3746
+epoch 2 / 6, step 6000/12500, loss= 1.9364
+epoch 2 / 6, step 7000/12500, loss= 2.1739
+epoch 2 / 6, step 8000/12500, loss= 2.1157
+epoch 2 / 6, step 9000/12500, loss= 1.5521
+epoch 2 / 6, step 10000/12500, loss= 1.7367
+epoch 2 / 6, step 11000/12500, loss= 1.6836
+epoch 2 / 6, step 12000/12500, loss= 1.8475
+epoch 3 / 6, step 1000/12500, loss= 1.7431
+epoch 3 / 6, step 2000/12500, loss= 2.2294
+epoch 3 / 6, step 3000/12500, loss= 2.5908
+epoch 3 / 6, step 4000/12500, loss= 1.4687
+epoch 3 / 6, step 5000/12500, loss= 1.6939
+epoch 3 / 6, step 6000/12500, loss= 1.4162
+epoch 3 / 6, step 7000/12500, loss= 1.5874
+epoch 3 / 6, step 8000/12500, loss= 1.5107
+epoch 3 / 6, step 9000/12500, loss= 1.7396
+epoch 3 / 6, step 10000/12500, loss= 1.6814
+epoch 3 / 6, step 11000/12500, loss= 2.7111
+epoch 3 / 6, step 12000/12500, loss= 1.9274
+epoch 4 / 6, step 1000/12500, loss= 1.4081
+epoch 4 / 6, step 2000/12500, loss= 1.0557
+epoch 4 / 6, step 3000/12500, loss= 1.9581
+epoch 4 / 6, step 4000/12500, loss= 1.2325
+epoch 4 / 6, step 5000/12500, loss= 2.0073
+epoch 4 / 6, step 6000/12500, loss= 1.1686
+epoch 4 / 6, step 7000/12500, loss= 2.1211
+epoch 4 / 6, step 8000/12500, loss= 1.8252
+epoch 4 / 6, step 9000/12500, loss= 1.3711
+epoch 4 / 6, step 10000/12500, loss= 0.7326
+epoch 4 / 6, step 11000/12500, loss= 1.5150
+epoch 4 / 6, step 12000/12500, loss= 1.2301
+epoch 5 / 6, step 1000/12500, loss= 1.7059
+epoch 5 / 6, step 2000/12500, loss= 1.4075
+epoch 5 / 6, step 3000/12500, loss= 1.5126
+epoch 5 / 6, step 4000/12500, loss= 1.4504
+epoch 5 / 6, step 5000/12500, loss= 1.7903
+epoch 5 / 6, step 6000/12500, loss= 1.4010
+epoch 5 / 6, step 7000/12500, loss= 1.5074
+epoch 5 / 6, step 8000/12500, loss= 1.0711
+epoch 5 / 6, step 9000/12500, loss= 0.9101
+epoch 5 / 6, step 10000/12500, loss= 1.4603
+epoch 5 / 6, step 11000/12500, loss= 1.5229
+epoch 5 / 6, step 12000/12500, loss= 1.2879
+epoch 6 / 6, step 1000/12500, loss= 0.9052
+epoch 6 / 6, step 2000/12500, loss= 1.2526
+epoch 6 / 6, step 3000/12500, loss= 1.0965
+epoch 6 / 6, step 4000/12500, loss= 1.1149
+epoch 6 / 6, step 5000/12500, loss= 1.2192
+epoch 6 / 6, step 6000/12500, loss= 1.1820
+epoch 6 / 6, step 7000/12500, loss= 1.4098
+epoch 6 / 6, step 8000/12500, loss= 1.8098
+epoch 6 / 6, step 9000/12500, loss= 1.0243
+epoch 6 / 6, step 10000/12500, loss= 1.3008
+epoch 6 / 6, step 11000/12500, loss= 0.9658
+epoch 6 / 6, step 12000/12500, loss= 1.0129
+Training Terminato
+Accuracy  = 52.13:.4f
+Accuracy della classe plane: 49.5 %
+Accuracy della classe car: 71.5 %
+Accuracy della classe bird: 49.9 %
+Accuracy della classe cat: 33.7 %
+Accuracy della classe deer: 29.7 %
+Accuracy della classe dog: 32.7 %
+Accuracy della classe frog: 78.4 %
+Accuracy della classe horse: 50.6 %
+Accuracy della classe ship: 69.7 %
+Accuracy della classe truck: 55.6 %
+</code></pre></div></div>
+
+<h1 id="transfer-learning">Transfer Learning</h1>
+<p>In questo paragrafro viene spiegato come usare parzialmente dei modelli gia’ “trainati” per fare dei nuovi compiti simili.
+Curiosamente questo sembra funzionare molto bene.
+Dico curiosamente perche’ non e’ chiaro il motivo per cui una rete neurale che ha un training su degli oggetti possa andare bene anche su degli oggetti differenti. A meno che, in qualche modo, si siano imparate delle caratteristiche generali dal primo training.</p>
+
+<p>Quello che e’ davvero potente e’ che modificando l’ultimo layer posso cambiare 
+il numero di valori in uscita. Con Resnet18 ci sono 1000 classi in uscita. Cambio l’ultimo layer e 
+me ne servono solo 2 in uscita: no problem!</p>
+
+<ul>
+  <li>per esempio faccio il training per un modello che classifica <strong>uccelli</strong> e <strong>gatti</strong></li>
+  <li>con una piccola modifica gli faro’ classificare <strong>api</strong>  e <strong>cani</strong></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Osservazione</code></p>
+<ul>
+  <li>gli <strong>uccelli</strong> hanno caratteristiche in comune alle <strong>api</strong> (non mi pare scelto a caso!)</li>
+  <li>i <strong>cani</strong> hanno caratteristiche in comune ai <strong>gatti</strong> (anche questo non mi pare a caso)</li>
+</ul>
+
+<p>Quindi il transfer learning, intuitivamente, funziona bene quando le modifiche da fare sono piccole (e’ un pensiero mio).</p>
+
+<p>Si cambia solo l’ultimo strato <strong>fully connected</strong> (rispetto al caso precedente gli ultimi 3 strati),
+questo e’ infatti lo <code class="language-plaintext highlighter-rouge">strato di classificazione</code>. Gli strati precedenti tramite le convoluzioni e i pooling dovrebbero estrarre le caratteristiche dei vari oggetti.</p>
+
+<ul>
+  <li>Intuitivamente mi viene da dire che gli strati convoluzionali prendono i “pezzi” (p.es le ali, le zampe, ecc, ma nella realta’ prendono dettagli molto piu’ piccoli)</li>
+  <li>gli strati finali mettono insieme questi pezzi elementari.</li>
+  <li>quindi mi viene da dire che dovrebbe bastare 1 strato fully connected.</li>
+  <li>in realta’ nel video di 3blue1brown si vede che non e’ molto chiaro cosa venga preso nei vari passaggi.</li>
+</ul>
+
+<p>In questo caso vediamo anche come caricare un modello gia’ “trainato” (devo trovare un nome migliore…ma dire con i pesi ottimizzati e’ lungo e anche modello ottimizzato non mi piace):<br />
+<strong>Resnet18NN</strong></p>
+<ul>
+  <li>basato sul <strong>Imagenet database</strong> (con piu’ di 1 000 000 immagni)</li>
+  <li>ha 18 strati</li>
+  <li>classifica oggetti di 1000 categorie.</li>
+</ul>
+
+<p>Attenzione che qui fa una cosa leggemente diversa da quanto fatto finora, dove si costruisce il modello e lo si lancia da un loop.</p>
+
+<p>In questo caso costruisce una funzione</p>
+
+<h2 id="image-folder">Image Folder</h2>
+<p>Costruire un folder dove mettere le immagini che devono servire per train e test. <br />
+Il folder che contiene le immagini che vogliamo usare come nuovo training ha il seguente formato:</p>
+<ul>
+  <li>train
+    <ul>
+      <li>ants</li>
+      <li>bees</li>
+    </ul>
+  </li>
+  <li>val
+    <ul>
+      <li>ants</li>
+      <li>bees</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Quindi se la struttura e’ questa chiamando <code class="language-plaintext highlighter-rouge">datasets.Imagefolder</code> posso leggere e trasformare in un dataset.
+Posso inoltre usare l’attributo <code class="language-plaintext highlighter-rouge">classes</code>.</p>
+
+<h2 id="scheduler">Scheduler</h2>
+<ul>
+  <li>E’ una funzione che modifica il learning rate durante il training per ottimizzare la discesa dei gradienti.</li>
+</ul>
+
+<h2 id="fine-tuninig">Fine Tuninig</h2>
+<p>tengo tutto il modello pre-trainato ma modifico solo l’ultimo layer</p>
+
+<h2 id="domande">Domande</h2>
+<p>per come e’ scritto il codice sembra che in varie epoche i modelli siano diversi, non ci sia un aggiornamento continuo. In pratica fa una deepcopy del miglior modello (ma io dovrei salvare, altrimenti perdo tutto e devo rifare)</p>
+
+<p>Non riesco a trovare il modello!? dove lo ha caricato? Non lo ha ancora caricato!</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">model.train()</code>  metodo che fa il training?</li>
+</ul>
+
+<h2 id="tempo">Tempo</h2>
+<ul>
+  <li>se freezo il train tranne l’ultimo layer ci mette 1:42 s</li>
+  <li>se re-train tutto il modello ci ha messo circa 2:14 s</li>
+</ul>
+
+<p>(ricorda che partiva gia’ trainato)</p>
+
+<h2 id="train-e-eval">Train() e Eval()</h2>
+<p>sono due metodi associati al modello che precedentemente non avevo usato</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># prendo e modifico il codice di prima secondo quanto scritto nella lezione 14
+</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="n">F</span>
+<span class="kn">from</span> <span class="nn">torch.optim</span> <span class="kn">import</span> <span class="n">lr_scheduler</span>  <span class="c1"># nuovo non ancora  caricato prima
+</span><span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="c1">#import torchvision.transforms as transforms
+</span><span class="kn">from</span> <span class="nn">torchvision</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">transforms</span>  <span class="c1"># 
+</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">time</span>                      <span class="c1"># per controllare l'orario
+</span><span class="kn">import</span> <span class="nn">os</span>                        <span class="c1"># per interagire con l'os
+</span><span class="kn">import</span> <span class="nn">copy</span>                      <span class="c1"># per fare una deep copy del modello che e' un oggetto complesso (non vogliamo shallow copy)
+</span><span class="kn">import</span> <span class="nn">sys</span>                       <span class="c1"># per bloccare (c'e' una funzione tipo  stop del fortran)
+</span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="c1"># device config
+</span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s">'cpu'</span><span class="p">)</span>
+
+<span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">])</span>   <span class="c1"># queste non so come sono state scelte
+</span><span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])</span>    <span class="c1"># idem
+</span>
+
+<span class="c1"># Hyper parametri 
+</span><span class="n">input_size</span> <span class="o">=</span> <span class="mi">32</span><span class="o">*</span><span class="mi">32</span>    <span class="c1">#  =1024 sono le dimensioni delle immagini
+</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">10</span>      <span class="c1">#  devo classificare immagini di numeri
+</span><span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">6</span>        <span class="c1">#  quanti giri completi vengono fatti
+</span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">4</span>        <span class="c1">#  questo no so come sia stato scelto
+</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span> <span class="c1">#  piccolo
+</span><span class="n">hidden_size1</span>  <span class="o">=</span> <span class="mi">220</span>   <span class="c1">#  scelto da me
+</span><span class="n">hidden_size2</span>  <span class="o">=</span> <span class="mi">184</span>   <span class="c1">#  scelto da me 
+</span>
+
+<span class="c1"># qui faccio un dizionario che contiene le trasformazioni da applicare
+</span><span class="n">data_transforms</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'train'</span><span class="p">:</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">),</span> 
+        <span class="n">transforms</span><span class="o">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span><span class="n">std</span><span class="p">)])</span>
+    <span class="p">,</span>
+    <span class="s">'val'</span><span class="p">:</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="mi">256</span><span class="p">),</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">CenterCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">),</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+        <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span><span class="n">std</span><span class="p">)</span>
+    <span class="p">])</span>
+<span class="p">}</span>
+
+<span class="c1"># import data
+</span><span class="n">data_dir</span> <span class="o">=</span> <span class="s">'data/hymenoptera_data'</span>         <span class="c1"># dove ci sono le api? Imenotteri
+</span><span class="n">sets</span>  <span class="o">=</span> <span class="p">[</span><span class="s">'train'</span><span class="p">,</span> <span class="s">'val'</span><span class="p">]</span>                   <span class="c1"># lista che contiene mi sa che poi non lo usa
+</span>
+
+<span class="c1"># Questo sotto e' da pensare un momento
+# e' una list comprehension (in un dictionary)
+# dove in realta' ci sono 2 directory, poteva mettere il path... e forse scriveva meno.
+# in ogni caso la parte che non mi e' chiarissima sono i : dopo la x
+# no e' banale: e' un dictionary e la x sono le chiavi e le datasets.Image... sono i valori
+# tutti ottenuti con una list comprehension finale
+</span><span class="n">image_datasets</span><span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span><span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">data_transforms</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="p">)</span>
+                 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'train'</span><span class="p">,</span> <span class="s">'val'</span><span class="p">]</span> <span class="p">}</span>
+
+<span class="n">dataloaders</span>  <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">image_datasets</span><span class="p">[</span><span class="n">x</span><span class="p">],</span>
+                    <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span>
+                    <span class="n">shuffle</span><span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+                    <span class="n">num_workers</span><span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span>  <span class="p">[</span><span class="s">'train'</span><span class="p">,</span> <span class="s">'val'</span><span class="p">]}</span>
+
+
+<span class="n">dataset_sizes</span>  <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">image_datasets</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'train'</span><span class="p">,</span> <span class="s">'val'</span><span class="p">]}</span>
+<span class="n">class_names</span>  <span class="o">=</span> <span class="n">image_datasets</span><span class="p">[</span><span class="s">'train'</span><span class="p">]</span><span class="o">.</span><span class="n">classes</span>      <span class="c1"># .classes e' un attributo 
+</span>
+<span class="k">print</span><span class="p">(</span><span class="n">class_names</span><span class="p">)</span>
+<span class="c1">#sys.exit()                      # per fermare qui
+</span>
+
+<span class="c1">######### funzione che contiene il training loop  ##############
+</span>
+<span class="k">def</span> <span class="nf">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">25</span><span class="p">):</span> 
+    <span class="n">since</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>     <span class="c1"># penso chen questo sia il momento d'inizio
+</span>
+    <span class="n">best_model_wts</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">())</span>  <span class="c1"># fa una deep copy del modello
+</span>    <span class="n">best_acc</span> <span class="o">=</span> <span class="mf">0.0</span>                                      <span class="c1"># 
+</span>    
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Epoch {epoch}/{num_epochs-1}'</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'-'</span><span class="o">*</span> <span class="mi">10</span><span class="p">)</span>                             <span class="c1"># disegna una riga orizzontale
+</span>        
+        <span class="c1"># In ogni epoca si ha una fase di training e validation:
+</span>        <span class="k">for</span> <span class="n">phase</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'train'</span><span class="p">,</span> <span class="s">'val'</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">phase</span><span class="o">==</span> <span class="s">'train'</span><span class="p">:</span>
+                <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>              <span class="c1"># set model to train mode  #######################
+</span>            <span class="k">else</span><span class="p">:</span>
+                <span class="n">model</span><span class="o">.</span><span class="nb">eval</span><span class="p">()</span>               <span class="c1"># set model to evaluation mode
+</span>            
+            <span class="n">running_loss</span> <span class="o">=</span> <span class="mf">0.0</span>             <span class="c1"># in qualche modo voglio vedere live se il training va bene
+</span>            <span class="n">running_corrects</span> <span class="o">=</span><span class="mi">0</span>
+            
+
+            <span class="k">for</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">dataloaders</span><span class="p">[</span><span class="n">phase</span><span class="p">]:</span>       <span class="c1"># distinguo tra le fasi train/val
+</span>                <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+                <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+            
+                <span class="c1">################  forward pass
+</span>                <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">set_grad_enabled</span><span class="p">(</span><span class="n">phase</span> <span class="o">==</span> <span class="s">'train'</span><span class="p">):</span>
+                    <span class="n">outputs</span> <span class="o">=</span>  <span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+                    <span class="n">_</span><span class="p">,</span> <span class="n">preds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span>
+            
+                <span class="c1">################ backward pass
+</span>                    <span class="k">if</span> <span class="n">phase</span> <span class="o">==</span> <span class="s">'train'</span><span class="p">:</span>
+                        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>      <span class="c1"># non mi seve quando faccio l'ottimizzazione
+</span>                        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>            <span class="c1"># chain rule
+</span>                        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>           <span class="c1"># mi muovo in funzione del gradiente
+</span>                 
+                <span class="n">running_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">*</span> <span class="n">inputs</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">running_corrects</span> <span class="o">+=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">preds</span><span class="o">==</span><span class="n">labels</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>  
+            
+            <span class="k">if</span> <span class="n">phase</span> <span class="o">==</span><span class="s">'train'</span><span class="p">:</span>
+                <span class="n">scheduler</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>    <span class="c1"># =========================  questo aggiorna il learning_rate
+</span>            
+            <span class="n">epoch_loss</span> <span class="o">=</span><span class="n">running_loss</span> <span class="o">/</span> <span class="n">dataset_sizes</span><span class="p">[</span><span class="n">phase</span><span class="p">]</span>
+            <span class="n">epoch_acc</span> <span class="o">=</span> <span class="n">running_corrects</span><span class="o">.</span><span class="n">double</span><span class="p">()</span> <span class="o">/</span> <span class="n">dataset_sizes</span><span class="p">[</span><span class="n">phase</span><span class="p">]</span>
+            
+            <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{phase} Loss: {epoch_loss:.4f}  Acc: {epoch_acc:.4f} '</span><span class="p">)</span>
+
+            <span class="c1"># deep copy model
+</span>            
+            <span class="k">if</span> <span class="n">phase</span> <span class="o">==</span><span class="s">'val'</span> <span class="ow">and</span> <span class="n">epoch_acc</span> <span class="o">&gt;</span> <span class="n">best_acc</span><span class="p">:</span>
+                <span class="n">best_acc</span> <span class="o">=</span> <span class="n">epoch_acc</span>
+                <span class="n">best_model_wts</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">())</span>   <span class="c1"># questo copia il dizionario associato al miglior modello
+</span>        
+        <span class="k">print</span><span class="p">()</span>
+    <span class="n">time_elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span><span class="n">since</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'Training completato in {time_elapsed//60:.0f}  minuti {time_elapsed</span><span class="si">%60</span><span class="s">:.0f}s '</span><span class="p">)</span>
+           
+    <span class="n">model</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">best_model_wts</span><span class="p">)</span>    
+    <span class="k">return</span> <span class="n">model</span>    
+        
+<span class="c1">######### importiamo il MODELLO ############### 
+</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet18</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>       <span class="c1"># qui il modello e' importato da torchvision e lo mette nella cache
+</span>
+<span class="c1"># se voglio bloccare tutti i parametri tranne quelli dell'ultimo layer basta che 
+# li blocco:!
+</span>
+<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+    <span class="n">param</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="bp">False</span>     <span class="c1"># non fa il gradiente!
+</span>
+<span class="n">num_ftrs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fc</span><span class="o">.</span><span class="n">in_features</span>                 <span class="c1"># ho preso il layer fully connected (ultimo) e queste sono le input features?
+</span>
+<span class="c1"># ora creo un nuovo layer e lo assegno come ultimo layer. 
+# come faccio a sapere che l'ultimo layer si chiama `fc`?
+</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_ftrs</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># ho solo 2 classi in uscita.  DI DEFAULT ha requires_grad = True
+</span><span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>                    
+
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span> <span class="p">)</span>   <span class="c1"># occhio che lui aveva importato in modo diverso e chiama solo optim.SGD
+</span>
+<span class="c1">############ SCHEDULER che fa una update del lr #######
+</span>
+<span class="n">step_lr_scheduler</span> <span class="o">=</span> <span class="n">lr_scheduler</span><span class="o">.</span><span class="n">StepLR</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">step_size</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># ogni 7 epoch lr =lr*gamma (diventa 1/10)
+</span>
+<span class="c1">#for epoch in range(100):
+#    train()   # optimizer.step()
+#    evaluate()
+#    scheduler.Step()
+</span>    
+<span class="n">model</span> <span class="o">=</span> <span class="n">train_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">step_lr_scheduler</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># qui alla fine ho trovato il modello ottimale, e potrei salvarlo volendo.
+</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['ants', 'bees']
+Epoch 0/19
+----------
+train Loss: 0.6456  Acc: 0.6230 
+val Loss: 0.5187  Acc: 0.8039 
+
+Epoch 1/19
+----------
+train Loss: 0.5606  Acc: 0.7049 
+val Loss: 0.4390  Acc: 0.8627 
+
+Epoch 2/19
+----------
+train Loss: 0.5181  Acc: 0.7623 
+val Loss: 0.4065  Acc: 0.8301 
+
+Epoch 3/19
+----------
+train Loss: 0.4886  Acc: 0.7910 
+val Loss: 0.3304  Acc: 0.8954 
+
+Epoch 4/19
+----------
+train Loss: 0.4584  Acc: 0.8197 
+val Loss: 0.3134  Acc: 0.8954 
+
+Epoch 5/19
+----------
+train Loss: 0.4822  Acc: 0.7623 
+val Loss: 0.2991  Acc: 0.9085 
+
+Epoch 6/19
+----------
+train Loss: 0.4221  Acc: 0.8115 
+val Loss: 0.2734  Acc: 0.9216 
+
+Epoch 7/19
+----------
+train Loss: 0.4034  Acc: 0.8156 
+val Loss: 0.2741  Acc: 0.9216 
+
+Epoch 8/19
+----------
+train Loss: 0.3629  Acc: 0.8852 
+val Loss: 0.2734  Acc: 0.9216 
+
+Epoch 9/19
+----------
+train Loss: 0.4139  Acc: 0.8197 
+val Loss: 0.2570  Acc: 0.9216 
+
+Epoch 10/19
+----------
+train Loss: 0.4058  Acc: 0.8402 
+val Loss: 0.2794  Acc: 0.9085 
+
+Epoch 11/19
+----------
+train Loss: 0.4000  Acc: 0.8238 
+val Loss: 0.2611  Acc: 0.9346 
+
+Epoch 12/19
+----------
+train Loss: 0.4265  Acc: 0.8156 
+val Loss: 0.2510  Acc: 0.9346 
+
+Epoch 13/19
+----------
+train Loss: 0.3911  Acc: 0.8648 
+val Loss: 0.2729  Acc: 0.9085 
+
+Epoch 14/19
+----------
+train Loss: 0.4748  Acc: 0.7787 
+val Loss: 0.2668  Acc: 0.9216 
+
+Epoch 15/19
+----------
+train Loss: 0.3790  Acc: 0.8443 
+val Loss: 0.2865  Acc: 0.9020 
+
+Epoch 16/19
+----------
+train Loss: 0.3815  Acc: 0.8730 
+val Loss: 0.2611  Acc: 0.9412 
+
+Epoch 17/19
+----------
+train Loss: 0.3946  Acc: 0.8197 
+val Loss: 0.2722  Acc: 0.9020 
+
+Epoch 18/19
+----------
+train Loss: 0.4166  Acc: 0.8525 
+val Loss: 0.2828  Acc: 0.9085 
+
+Epoch 19/19
+----------
+train Loss: 0.3790  Acc: 0.8484 
+val Loss: 0.2649  Acc: 0.9216 
+
+Training completato in 1  minuti 42s 
+</code></pre></div></div>
+
+<h1 id="tensorboard">Tensorboard</h1>
+
+<p>https://pytorch.org/docs/stable/tensorboard.html</p>
+
+<p>installazione, io ho usato conda: <code class="language-plaintext highlighter-rouge">conda install -c conda-forge/label/cf202003 tensorboard</code></p>
+
+<p>Tensorboard e’ un metodo per visualizzare tramite delle dashboard visibili da browser:</p>
+<ul>
+  <li>il grafo computazionale</li>
+  <li>l’evoluzione dei parametri (Loss, accuracy, ecc…)</li>
+  <li>nota che e’ sviluppato per Tensorflow (ma funge anche con Pytorch)</li>
+  <li>visualizzare istogrammi dei <strong>pesi</strong> e dei <strong>bias</strong></li>
+  <li>visualizzare immagini, testi, audio (eh si lavora anche con quelli)</li>
+  <li>fare un profiling dei programmi di TensorFlow</li>
+  <li><code class="language-plaintext highlighter-rouge">Project embeddings in lower dimensional spaces</code>   ?????</li>
+</ul>
+
+<p>Viene usato il codice del tutorial numero <strong>13</strong> (il riconoscimento delle immagini dei numeri da 0 a 9). Da quel codice ho tolto quasi tutti i commenti in modo che i commenti rimanenti siano solo per 
+l’utilizzo di tensorboard</p>
+
+<ul>
+  <li>
+    <p>Quando si lancia Tensorboard bisogna specificare il path dove verranno salvati i logfile. Di default vengono messi nella directory chiamata <code class="language-plaintext highlighter-rouge">run</code> (suppongo che sia una sottodir dell’installazione di Tensorboard</p>
+  </li>
+  <li>
+    <p>per fare partire Tensorboad (dalla dir dove si e’ lanciato il Python):  <br />
+<code class="language-plaintext highlighter-rouge">tensorboard --logdir=runs</code> <br />
+a questo punto si apre un browser alla pagina: <br />
+<code class="language-plaintext highlighter-rouge">http://localhost:6006</code></p>
+  </li>
+</ul>
+
+<p>(CTRL+C = quit)</p>
+
+<ul>
+  <li>La prima cosa che si fa e’ essenzialmente istanziare un <code class="language-plaintext highlighter-rouge">writer</code>: <code class="language-plaintext highlighter-rouge">writer=SummaryWriter('runs/mnist')</code> (riga 12).
+Il writer  in pratica scrive dei valori in formato JSON (controllare) con specifiche che tensorboard va a leggere nella dir runs e, note le chiavi le mette nella dashboard.</li>
+</ul>
+
+<p>In pratica a quanto capisco, il writer scrive i dati in un formato particolare che viene poi
+letto da tensorboard e mandato nella dashboard al localhost:6006. Questo e’ il motivo per cui l’oggetto fondamentale e’ un writer che ha dei vari metodi in grado di scrivere le informazioni dei vari oggetti in modo che Tensorboard le interpreti correttamente.</p>
+
+<p><strong>I Esempio</strong> di utilizzo: visualizzo i dati nel browser, consiste di 3 passi (piu’ l’istanza del writer appena fatta):</p>
+
+<ol>
+  <li>Costruisco una griglia di immagini <code class="language-plaintext highlighter-rouge">img_grid  = torchvision.utils.make_grid(example_data)</code> (usando le utility di torchvision)</li>
+  <li>Do in pasto la griglia al writer, tramite il metodo add_image:  <code class="language-plaintext highlighter-rouge">writer.add_image('Immagini di Mnist', img_grid)</code>,
+il primo argomento una label per la image grid, il secondo e’ la griglia stessa</li>
+  <li>uso il metodo <code class="language-plaintext highlighter-rouge">writer.close()</code> per assicurarmi che tutti i dati siano mandati</li>
+</ol>
+
+<p><strong>II Esempio</strong> di utilizzo: visualizzo il grafo computazionale. Consiste di 2 passi.</p>
+<ol>
+  <li>uso il metodo   <code class="language-plaintext highlighter-rouge">writer.add_graph(model, examples_data.reshape(-1,28*28).to(device))</code>,quindi il primo argomento e’ il modello e il secondo sono ancora gli esempio (che ho flattenato). Attento, dato che sto mettendo tutto sul device, devo farlo anche per quanto riguarda examples_data, nel video non viene fatto! (questo perche’ il notebook usato non ha una scheda grafica dedicata e quindi sono comunque tutti sull’host.</li>
+  <li>chiudo il writer per assicurarmi che tutti i dati vengano passati: <code class="language-plaintext highlighter-rouge">writer.close()</code></li>
+</ol>
+
+<p>Nota che dopo avere scritto l’esempio II,  appare una seconda scelta in tensorboard (in alto), chiamata graph. Si vede quindi il grafo computazionale che viene visualizzato. Con dei doppi click si aprono nel dettaglio i grafi!</p>
+
+<p><strong>III Esempio</strong> di utilizzo: mando la loss e la accuracy durante l’esecuzione. Consiste di 2 passi. Vogliamo la loss media durante il training, quindi aggiungo delle variabili al mdoello.</p>
+<ol>
+  <li>uso un nuovo metodo: <code class="language-plaintext highlighter-rouge">writer.add_scalar('Training loss', running_loss/100, epoch* n_total_steps + i)</code>
+Nota che ho definito prima delle nuove quantita’ da mandare al writer tramite add_scalar</li>
+</ol>
+
+<p><strong>Attento</strong> se continuo a fare girare la rete neurale nel notebook, i dati in Tensorboard si accumulano a quelli dei run precedenti. Devo trovare un modo per azzerare i dati.
+<code class="language-plaintext highlighter-rouge">Soluzione</code>:<br />
+devi rinominare la dir  dove vengono salvati i dati per ogni run diverso. In questo modo si avranno delle righe di colore diverso per ogni run. Altrimenti provo ad andare a cancellare il contenuto della dir <code class="language-plaintext highlighter-rouge">runs/mnist</code> (occhio che e’ una cartella che viene creata nella stessa dir di dove gira il python!) (magari esiste un metodo migliore devo investigare). Ho cancellato tutto ma non funge… ok funge, li teneva in memoria! ho riavviato tensorboard ed e’ sparito tutto. La cosa curiosa e’ che aprendo gli eventi sembrano vuoti… Solo il primo contiene molti valori, il resto sono gli incrementi sul primo direi.</p>
+
+<p><strong>Attento</strong> quando ci sono degli scalari (dei grafici) di default Tensorboard aggiunge una linea di smoothing (e’ nella modale(?) subito a sinistra).</p>
+
+<p><strong>IV Eempio</strong> di utilizzo: aggiungere una precision e recall curve (riguarda le note sulla confusoin matrix per le definizioni esatte). Esiste un metodo apposta per aggiungere la precision. Guarda il link: pytorch.org/docs/stable/tensorboard.html</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">torchvision.transforms</span> <span class="k">as</span> <span class="n">transforms</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="kn">from</span> <span class="nn">torch.utils.tensorboard</span> <span class="kn">import</span> <span class="n">SummaryWriter</span>   <span class="c1">##############  TENSORBOARD
+</span><span class="kn">import</span> <span class="nn">sys</span> 
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="n">F</span>
+
+<span class="c1">##### costruisco un writer ####################
+</span><span class="n">writer</span>  <span class="o">=</span><span class="n">SummaryWriter</span><span class="p">(</span><span class="s">'runs/mnist'</span><span class="p">)</span> <span class="c1"># come argomento serve la dir dove vanno salvati i file
+#####    fine writer   ########################
+</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s">'cpu'</span><span class="p">)</span>
+
+<span class="n">input_size</span> <span class="o">=</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span>    
+<span class="n">hidden_size</span>  <span class="o">=</span> <span class="mi">100</span>    
+<span class="n">num_classes</span> <span class="o">=</span> <span class="mi">10</span>      
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">2</span>        
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>      
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span> 
+
+<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">True</span> <span class="p">,</span> <span class="n">transform</span> <span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">download</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">test_dataset</span>  <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">MNIST</span><span class="p">(</span><span class="n">root</span><span class="o">=</span> <span class="s">'./data/'</span><span class="p">,</span> <span class="n">train</span><span class="o">=</span> <span class="bp">False</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span> <span class="n">download</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span> <span class="c1"># 
+</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span> <span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span> <span class="p">(</span><span class="n">dataset</span><span class="o">=</span>  <span class="n">test_dataset</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="n">examples</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">test_loader</span><span class="p">)</span>
+<span class="n">examples_data</span><span class="p">,</span> <span class="n">examples_targets</span> <span class="o">=</span> <span class="n">examples</span><span class="o">.</span><span class="nb">next</span><span class="p">()</span>
+<span class="c1">#for i in range(6):
+#    plt.subplot(2,3,i+1)
+#    plt.imshow(example_data[i][0], cmap='gray')
+</span>
+    
+<span class="n">img_grid</span>  <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">make_grid</span><span class="p">(</span><span class="n">examples_data</span><span class="p">)</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">add_image</span><span class="p">(</span><span class="s">'Immagini di Mnist'</span> <span class="p">,</span> <span class="n">img_grid</span><span class="p">)</span>    
+<span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>     <span class="c1"># questo assicura che tutti gli output sono flushati
+#sys.exit()    # per non dover fare tutto il training    
+</span>
+<span class="c1">############  MODELLO ####################
+</span><span class="k">class</span> <span class="nc">NeuralNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">NeuralNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>  
+        <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
+       
+    <span class="k">def</span> <span class="nf">forward</span> <span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>       
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">l2</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span>             
+
+<span class="c1">############### ISTANZIO MODELLO, Back e Forw ########
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">NeuralNet</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">criterion</span>  <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>   <span class="c1"># non ha bisogno di parametri
+</span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span> <span class="o">=</span> <span class="n">learning_rate</span><span class="p">)</span>        
+
+
+<span class="c1">######  Aggiungo un altro grafo alla dashboard di Tensorboard,
+###### ora uso il metodo     add_graph   (prima ho usato add_image)
+</span><span class="n">writer</span><span class="o">.</span><span class="n">add_graph</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">examples_data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">))</span>
+<span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="c1">#sys.exit()
+</span>
+<span class="c1">############### TRAINING LOOP ############
+</span><span class="n">n_total_steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="p">)</span>
+
+
+<span class="n">running_loss</span> <span class="o">=</span> <span class="mf">0.0</span>      <span class="c1"># questo e' il valore aggiornato in tempo reale
+</span><span class="n">running_correct</span> <span class="o">=</span> <span class="mi">0</span>     <span class="c1"># idem
+</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>                           
+   <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">images</span><span class="p">,</span><span class="n">labels</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span> <span class="p">(</span><span class="n">train_loader</span><span class="p">):</span>         
+        <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>     
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+              
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span> <span class="p">(</span><span class="n">images</span><span class="p">)</span>                           
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+                 
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>     
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>            
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>          
+        
+<span class="c1">################ da mandare a TENSORBOARD ####################        
+</span>        <span class="n">running_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>  <span class="c1"># aggiorno il totale
+</span>        <span class="n">_</span><span class="p">,</span> <span class="n">predicted</span>  <span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">outputs</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">running_correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">predicted</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+<span class="c1">################ ##################### ########################        
+</span>        
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#print(f'epoch {epoch+1} / {num_epochs}, step {i+1}/{n_total_steps}, loss= {loss.item():.4f}')        
+</span>
+<span class="c1">############## qui aggiungo alla dashboard un nuovo oggetto TENSORBOARD ######
+</span>            <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s">'Training loss'</span><span class="p">,</span> <span class="n">running_loss</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">epoch</span><span class="o">*</span> <span class="n">n_total_steps</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="s">'Accuracy'</span><span class="p">,</span> <span class="n">running_correct</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span> <span class="n">epoch</span><span class="o">*</span> <span class="n">n_total_steps</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> 
+            <span class="n">running_loss</span> <span class="o">=</span> <span class="mf">0.0</span>     <span class="c1"># riazzero
+</span>            <span class="n">running_correct</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1"># riazzero
+</span>            <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="c1">######################################################            
+</span>            
+            
+
+        
+        
+        
+<span class="c1">################ per Tensorboard ########################
+</span><span class="n">labels2</span> <span class="o">=</span> <span class="p">[]</span>   <span class="c1">#occhio che aveva gia' definito labels sotto, ho messo un 2 Tensorboard
+</span><span class="n">preds</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1">#########################################################
+</span>        
+<span class="c1">############ TEST LOOP #################
+</span><span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>    
+    <span class="n">n_correct</span> <span class="o">=</span> <span class="mi">0</span>         
+    <span class="n">n_samples</span> <span class="o">=</span> <span class="mi">0</span>           
+    <span class="k">for</span> <span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="ow">in</span> <span class="n">test_loader</span><span class="p">:</span>
+        <span class="n">images</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="o">*</span><span class="mi">28</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>    
+        
+        <span class="n">_</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>  
+        <span class="n">n_samples</span> <span class="o">+=</span> <span class="n">labels</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           
+        <span class="n">n_correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">predictions</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+        
+        <span class="n">class_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">outputs</span><span class="p">]</span>  <span class="c1"># ho bisogno di probabilita', quindi serve softmax
+</span>        <span class="n">preds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">class_predictions</span><span class="p">)</span>
+        <span class="n">labels2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">predicted</span><span class="p">)</span>   <span class="c1"># per TENSORBOARD
+</span>        
+    <span class="n">preds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span> <span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span> <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">preds</span> <span class="p">])</span> <span class="c1"># tensorboard 2D oggetto 1000, 1
+</span>    <span class="n">labels2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">labels2</span><span class="p">)</span>   <span class="c1"># Tensorboard concateno le liste in un oggetto 1D        1000
+</span>    
+    <span class="n">classes</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>   <span class="c1"># tutte le possibili classi  0-9  Tensorboard
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">classes</span><span class="p">:</span>
+        <span class="n">labels_i</span> <span class="o">=</span> <span class="n">labels2</span> <span class="o">==</span> <span class="n">i</span>    <span class="c1"># Tensorboard    non chiaro cosa fa
+</span>        <span class="n">preds_i</span> <span class="o">=</span> <span class="n">preds</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span>      <span class="c1"># Tensorboard 
+</span>        <span class="n">writer</span><span class="o">.</span><span class="n">add_pr_curve</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">labels_i</span><span class="p">,</span> <span class="n">preds_i</span><span class="p">,</span> <span class="n">global_step</span> <span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># TEnsorboard
+</span>        <span class="n">writer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>       <span class="c1"># chiudo il writer
+</span>    
+    
+    <span class="n">acc</span> <span class="o">=</span> <span class="mf">100.0</span>  <span class="o">*</span> <span class="n">n_correct</span> <span class="o">/</span> <span class="n">n_samples</span>       
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'accuracy ={acc}'</span><span class="p">)</span>            
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>accuracy =95.03
+</code></pre></div></div>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#python_cap"><div class="chip z-depth-1">Python</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#deeplearning_cap"><div class="chip z-depth-1">DeepLearning</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#neural-nets_cap"><div class="chip z-depth-1">Neural Nets</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#cuda_cap"><div class="chip z-depth-1">Cuda</div></a>
+      
+    </div>
+    
+    		
+			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script>
+const GH_API_URL = 'https://api.github.com/repos/4phycs/4phycs.github.io/issues/22/comments';
+
+let request = new XMLHttpRequest();
+request.open( 'GET', GH_API_URL, true );
+request.onload = function() {
+	if ( this.status >= 200 && this.status < 400 ) {
+		let response = JSON.parse( this.response );
+
+		for ( var i = 0; i < response.length; i++ ) {
+			document.getElementById( 'gh-comments-list' ).appendChild( createCommentEl( response[ i ] ) );
+		}
+
+		if ( 0 === response.length ) {
+			document.getElementById( 'no-comments-found' ).style.display = 'block';
+		}
+	} else {
+		console.error( this );
+	}
+};
+
+function createCommentEl( response ) {
+	let user = document.createElement( 'a' );
+	user.setAttribute( 'href', response.user.url.replace( 'api.github.com/users', 'github.com' ) );
+	user.classList.add( 'user' );
+
+	let userAvatar = document.createElement( 'img' );
+	userAvatar.classList.add( 'avatar' );
+	userAvatar.setAttribute( 'src', response.user.avatar_url );
+
+	user.appendChild( userAvatar );
+
+	let commentLink = document.createElement( 'a' );
+	commentLink.setAttribute( 'href', response.html_url );
+	commentLink.classList.add( 'comment-url' );
+	commentLink.innerHTML = '#' + response.id + ' - ' + response.created_at;
+
+	let commentContents = document.createElement( 'div' );
+	commentContents.classList.add( 'comment-content' );
+	commentContents.innerHTML = response.body;
+	// Progressive enhancement.
+	if ( window.showdown ) {
+		let converter = new showdown.Converter();
+		commentContents.innerHTML = converter.makeHtml( response.body );
+	}
+
+	let comment = document.createElement( 'li' );
+	comment.setAttribute( 'data-created', response.created_at );
+	comment.setAttribute( 'data-author-avatar', response.user.avatar_url );
+	comment.setAttribute( 'data-user-url', response.user.url );
+
+	comment.appendChild( user );
+	comment.appendChild( commentContents );
+	comment.appendChild( commentLink );
+
+	return comment;
+}
+request.send();
+</script>
+
+<hr>
+
+<div class="github-comments">
+	<h2>Comments</h2>
+	<ul id="gh-comments-list"></ul>
+	<div class="buttonArea">
+	  <a target="_blank" href="https://github.com/4phycs/4phycs.github.io/issues/22"class="button">Add comment (via Github)</a>
+	</div>
+</div>
+
+
+		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2021 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

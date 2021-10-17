@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-17T11:32:22+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;h1 id=&quot;pytorch-e-deep-learning&quot;&gt;PyTorch e Deep Learning&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-17T22:00:26+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;h1 id=&quot;pytorch-e-deep-learning&quot;&gt;PyTorch e Deep Learning&lt;/h1&gt;
 
 &lt;h2 id=&quot;indice-globale-degli-argomenti-nei-post&quot;&gt;Indice globale degli argomenti nei post:&lt;/h2&gt;
 
@@ -3607,14 +3607,11 @@ argomento di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;
 
 &lt;h1 id=&quot;recurrent-neural-network&quot;&gt;Recurrent Neural Network&lt;/h1&gt;
 
-&lt;p&gt;Url di riferimento: https://www.youtube.com/watch?v=WEV61GmmPrk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=19&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=WEV61GmmPrk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=19&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video,&lt;/a&gt;
+ note e &lt;a href=&quot;https://github.com/python-engineer/pytorch-examples&quot;&gt;diapositive&lt;/a&gt; di Python Engineer.&lt;/p&gt;
 
-&lt;p&gt;Note e Slide: https://github.com/python-engineer/pytorch-examples&lt;/p&gt;
-
-&lt;p&gt;Lezione interessante del MIT sulle RNN
-https://www.youtube.com/watch?v=qjrad0V0uJE&amp;amp;ab_channel=AlexanderAmini&lt;/p&gt;
-
-&lt;p&gt;© Alexander Amini and Ava Soleimany  &lt;br /&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qjrad0V0uJE&amp;amp;ab_channel=AlexanderAmini&quot;&gt;Lezione&lt;/a&gt;  del MIT sulle RNN
+© Alexander Amini and Ava Soleimany  &lt;br /&gt;
 MIT 6.S191: Introduction to Deep Learning &lt;br /&gt;
 IntroToDeepLearning.com &lt;br /&gt;&lt;/p&gt;
 
@@ -3642,98 +3639,116 @@ IntroToDeepLearning.com &lt;br /&gt;&lt;/p&gt;
     La parola &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aiuola&lt;/code&gt; diventa la seguente sequenza di tensori 1D contennti 6 ingressi:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;a&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-   {\bf 1}  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   \end{array} \right)$
-,$~&lt;del&gt;$&lt;strong&gt;i&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   {\bf 1}  \ 
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   \end{array} \right)$
-,$&lt;/del&gt;~$&lt;strong&gt;u&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   0  &lt;br /&gt;
-   {\bf 1}  &lt;br /&gt;
-   0  &lt;br /&gt;
-   \end{array} \right)$ 
-,$~&lt;del&gt;$&lt;strong&gt;o&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   {\bf 1}  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   \end{array} \right)$ 
-,$&lt;/del&gt;~$&lt;strong&gt;l&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-  {\bf 1}  &lt;br /&gt;
-   \end{array} \right)$ 
-,$~~~$&lt;strong&gt;a&lt;/strong&gt;= 
-$\left( \begin{array}{c}
-  {\bf 1}  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   \end{array} \right)$&lt;/p&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\left( 
+\begin{eqnarray}
+   {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  
+\end{eqnarray} 
+\right)&lt;/script&gt;
+, &lt;strong&gt;i&lt;/strong&gt;= 
+&lt;script type=&quot;math/tex&quot;&gt;\left( \begin{eqnarray}
+   0  \\
+   0  \\
+   {\bf 1}  \\ 
+   0  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt;
+, &lt;strong&gt;u&lt;/strong&gt;= 
+&lt;script type=&quot;math/tex&quot;&gt;\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   0  \\
+   {\bf 1}  \\
+   0  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; 
+, &lt;strong&gt;o&lt;/strong&gt;= 
+&lt;script type=&quot;math/tex&quot;&gt;\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   {\bf 1}  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; 
+, &lt;strong&gt;l&lt;/strong&gt;= 
+&lt;script type=&quot;math/tex&quot;&gt;\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+  {\bf 1}  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; 
+, &lt;strong&gt;a&lt;/strong&gt;= 
+&lt;script type=&quot;math/tex&quot;&gt;\left( \begin{eqnarray}
+  {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Quanto appena fatto e’ un tipo di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;embedding&lt;/code&gt;, ovvero una trasformazione da un dominio (quello delle lettere in questo caso) ad un 
+formato matematico (di grandezza fissa) che puo’ essere processato dalle reti neurali. Chiaramente esistono molti tipi di embedding
+differenti e possono avere un impatto importante sui risultati.&lt;/p&gt;
 
 &lt;p&gt;Il tensore hidden invece ha una dimensione che fissiamo noi (nell’esempio 128), al passo 0 viene inizializzato con tutti 0, 
 ma ai passi successivi si popola perche’ lo strato lineare che costruisce le versioni successive del tensore hidden prende in ingresso sia il tensore combinato che il tensore della lettera. Per esempio se la lettera passata e’ la $a$ e il tensore-hidden e’:&lt;br /&gt;
 &lt;strong&gt;hidden&lt;/strong&gt; = 
-$\left( \begin{array}{c}
-  {\bf 0.3}  &lt;br /&gt;
-   0.23  &lt;br /&gt;
-   \dots  \ 
-   0.29  &lt;br /&gt;
-   0.52  &lt;br /&gt;
-   0.11  &lt;br /&gt;
-   \end{array} \right)$ 
-$\begin{array}{c}
-   1  &lt;br /&gt;
-   2  &lt;br /&gt;
-   \dots  \ 
-   126  &lt;br /&gt;
-   127  &lt;br /&gt;
-   128  &lt;br /&gt;
-   \end{array}$  &lt;br /&gt;
-Allora il &lt;strong&gt;tensore-combinato&lt;/strong&gt; = 
-$\left(\begin{array}{c}
-     {\bf a}  &lt;br /&gt;
-    {\bf hidden}  &lt;br /&gt;
-   \end{array} \right)$ =
-$\left( \begin{array}{c}
-   {\bf 1}  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  \ 
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-   0  &lt;br /&gt;
-  {\bf 0.3}  &lt;br /&gt;
-   0.23  &lt;br /&gt;
-   \dots  \ 
-   0.29  &lt;br /&gt;
-   0.52  &lt;br /&gt;
-   0.11  &lt;br /&gt;
-   \end{array} \right)$ 
+&lt;script type=&quot;math/tex&quot;&gt;\left( \begin{eqnarray}
+  {\bf 0.3}  \\
+   0.23  \\
+   \dots  \\ 
+   0.29  \\
+   0.52  \\
+   0.11  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; 
+&lt;script type=&quot;math/tex&quot;&gt;\begin{eqnarray}
+   1  \\
+   2  \\
+   \dots  \\ 
+   126  \\
+   127  \\
+   128  \\
+   \end{eqnarray}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Allora il &lt;strong&gt;tensore-combinato&lt;/strong&gt; = 
+&lt;script type=&quot;math/tex&quot;&gt;\left(\begin{eqnarray}
+     {\bf a}  \\
+    {\bf hidden}  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; =
+&lt;script type=&quot;math/tex&quot;&gt;$\left( \begin{eqnarray}
+   {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  \\
+  {\bf 0.3}  \\
+   0.23  \\
+   \dots  \\ 
+   0.29  \\
+   0.52  \\
+   0.11  \\
+   \end{eqnarray} 
+\right)&lt;/script&gt; 
 (in questo esempio  il tensore combinato ha dimensione 6 + 128 (perche’ in questo esempio l’alfabeto per  l’one-hot encoring contiene solo &lt;em&gt;aeioul&lt;/em&gt;, mentre la dimensione del tensore combinato nel video di Python Engineer e’ 57 +128, perche’ l’alfabeto da lui usato contiene tutte le maiuscole, le minuscole e alcuni segni di punteggiatura.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/rnn-nomi-lingue.png&quot; alt=&quot;cane&quot; /&gt;&lt;/p&gt;
@@ -4015,18 +4030,24 @@ Inserisci un nome (quit per terminare)quit
 
 &lt;h1 id=&quot;rnn-gru-e-lstm&quot;&gt;RNN, GRU e LSTM&lt;/h1&gt;
 
-&lt;p&gt;url: https://www.youtube.com/watch?v=0_PgWWmauHk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=20&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;Il &lt;a href=&quot;https://www.youtube.com/watch?v=0_PgWWmauHk&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=20&amp;amp;ab_channel=PythonEngineer&quot;&gt;video&lt;/a&gt;
+di Python Enginner contiene un esempio di RNN. E’ basato fortemente sulle &lt;a href=&quot;nn.RNN: https://pytorch.org/docs/stable/generated/torch.nn.RNN.html&quot;&gt;note&lt;/a&gt;
+ di PyTorch.&lt;/p&gt;
 
-&lt;p&gt;nn.RNN: https://pytorch.org/docs/stable/generated/torch.nn.RNN.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks&quot;&gt;Recurrent Neural Networks cheatsheet&lt;/a&gt; di Stanford
+e’ molto completa e succinta! Probabilmente e’ la guida piu’ precisa, la matematica usa delle notazioni diverse dalle altre due 
+(per esempio l’hidden tensor viene indicato con a), ma suppongo che sia la piu’ affidabile.&lt;/p&gt;
 
-&lt;p&gt;Stanford: https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks
-Questa e’ probabilmente la guida piu’ precisa, la matematica usa delle notazioni diverse dalle altre due (per esempio l’hidden tensor viene indicato con a), masuppongo che sia la piu’ affidabile.&lt;/p&gt;
+&lt;p&gt;In questa &lt;a href=&quot;https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21&quot;&gt;guida&lt;/a&gt; 
+illustrata delle LSTM e dell GRU si cerca di non mettere la matematica, ma ci sono delle gif animate.&lt;/p&gt;
 
-&lt;p&gt;Una guida illustrata su LSTM e GRU: https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21 qui cerca di non mettere la matematica, ma ci sono delle gif animate.&lt;/p&gt;
+&lt;p&gt;In questa &lt;a href=&quot;http://dprogrammer.org/rnn-lstm-gru&quot;&gt;pagina&lt;/a&gt; vengono indicate anche le formule associate ai vari passaggi;
+   ma sospetto che le formule non corrispondano alle immagini (ha preso le immagini da qualche parte e le formule altrove). 
+Di buono mette anche le formule per la backpropagation!&lt;/p&gt;
 
-&lt;p&gt;Qui indica anche un po’ di matematica: http://dprogrammer.org/rnn-lstm-gru  ma sospetto che le formule non corrispondano alle immagini (ha preso le immagini da qualche parte e le formule altrove). Di buono mette anche le formule per la backpropagation!&lt;/p&gt;
+&lt;h2 id=&quot;il-codice&quot;&gt;Il Codice&lt;/h2&gt;
 
-&lt;p&gt;Qui usiamo i moduli gia’ creati per Long Short Term Memory e per GRU. Si prende come punto di partenza il tutorial 13.&lt;/p&gt;
+&lt;p&gt;Qui usiamo i moduli gia’ creati per Long Short Term Memory e per GRU. Si prende come punto di partenza il tutorial 13 di Python Engineer.&lt;/p&gt;
 
 &lt;p&gt;Invece che guardare a tutta una immagine per volta vogliamo prendere una &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sequenza&lt;/code&gt; di righe&lt;/p&gt;
 

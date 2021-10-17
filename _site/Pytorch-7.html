@@ -118,7 +118,11 @@
     </div>
     <ol id="toc-sidebar">
   <li><a href="#recurrent-neural-network">Recurrent Neural Network</a></li>
-  <li><a href="#rnn-gru-e-lstm">RNN, GRU e LSTM</a></li>
+  <li><a href="#rnn-gru-e-lstm">RNN, GRU e LSTM</a>
+    <ol>
+      <li><a href="#il-codice">Il Codice</a></li>
+    </ol>
+  </li>
 </ol>
   </div>
 </div>
@@ -141,7 +145,7 @@
         <span class="reading-time" title="Estimated read time">
   
   
-  <font size="2"> Reading time: 26 mins </font>
+  <font size="2"> Reading time: 27 mins </font>
   
 </span>
 
@@ -179,14 +183,11 @@
 
 <h1 id="recurrent-neural-network">Recurrent Neural Network</h1>
 
-<p>Url di riferimento: https://www.youtube.com/watch?v=WEV61GmmPrk&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=19&amp;ab_channel=PythonEngineer</p>
+<p><a href="https://www.youtube.com/watch?v=WEV61GmmPrk&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=19&amp;ab_channel=PythonEngineer">Video,</a>
+ note e <a href="https://github.com/python-engineer/pytorch-examples">diapositive</a> di Python Engineer.</p>
 
-<p>Note e Slide: https://github.com/python-engineer/pytorch-examples</p>
-
-<p>Lezione interessante del MIT sulle RNN
-https://www.youtube.com/watch?v=qjrad0V0uJE&amp;ab_channel=AlexanderAmini</p>
-
-<p>© Alexander Amini and Ava Soleimany  <br />
+<p><a href="https://www.youtube.com/watch?v=qjrad0V0uJE&amp;ab_channel=AlexanderAmini">Lezione</a>  del MIT sulle RNN
+© Alexander Amini and Ava Soleimany  <br />
 MIT 6.S191: Introduction to Deep Learning <br />
 IntroToDeepLearning.com <br /></p>
 
@@ -214,98 +215,116 @@ IntroToDeepLearning.com <br /></p>
     La parola <code class="language-plaintext highlighter-rouge">aiuola</code> diventa la seguente sequenza di tensori 1D contennti 6 ingressi:</p>
 
 <p><strong>a</strong>= 
-$\left( \begin{array}{c}
-   {\bf 1}  <br />
-   0  <br />
-   0  \ 
-   0  <br />
-   0  <br />
-   0  <br />
-   \end{array} \right)$
-,$~<del>$<strong>i</strong>= 
-$\left( \begin{array}{c}
-   0  <br />
-   0  <br />
-   {\bf 1}  \ 
-   0  <br />
-   0  <br />
-   0  <br />
-   \end{array} \right)$
-,$</del>~$<strong>u</strong>= 
-$\left( \begin{array}{c}
-   0  <br />
-   0  <br />
-   0  \ 
-   0  <br />
-   {\bf 1}  <br />
-   0  <br />
-   \end{array} \right)$ 
-,$~<del>$<strong>o</strong>= 
-$\left( \begin{array}{c}
-   0  <br />
-   0  <br />
-   0  \ 
-   {\bf 1}  <br />
-   0  <br />
-   0  <br />
-   \end{array} \right)$ 
-,$</del>~$<strong>l</strong>= 
-$\left( \begin{array}{c}
-   0  <br />
-   0  <br />
-   0  \ 
-   0  <br />
-   0  <br />
-  {\bf 1}  <br />
-   \end{array} \right)$ 
-,$~~~$<strong>a</strong>= 
-$\left( \begin{array}{c}
-  {\bf 1}  <br />
-   0  <br />
-   0  \ 
-   0  <br />
-   0  <br />
-   0  <br />
-   \end{array} \right)$</p>
+<script type="math/tex">\left( 
+\begin{eqnarray}
+   {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  
+\end{eqnarray} 
+\right)</script>
+, <strong>i</strong>= 
+<script type="math/tex">\left( \begin{eqnarray}
+   0  \\
+   0  \\
+   {\bf 1}  \\ 
+   0  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)</script>
+, <strong>u</strong>= 
+<script type="math/tex">\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   0  \\
+   {\bf 1}  \\
+   0  \\
+   \end{eqnarray} 
+\right)</script> 
+, <strong>o</strong>= 
+<script type="math/tex">\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   {\bf 1}  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)</script> 
+, <strong>l</strong>= 
+<script type="math/tex">\left( 
+\begin{eqnarray}
+   0  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+  {\bf 1}  \\
+   \end{eqnarray} 
+\right)</script> 
+, <strong>a</strong>= 
+<script type="math/tex">\left( \begin{eqnarray}
+  {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  \\
+   \end{eqnarray} 
+\right)</script></p>
+
+<p>Quanto appena fatto e’ un tipo di <code class="language-plaintext highlighter-rouge">embedding</code>, ovvero una trasformazione da un dominio (quello delle lettere in questo caso) ad un 
+formato matematico (di grandezza fissa) che puo’ essere processato dalle reti neurali. Chiaramente esistono molti tipi di embedding
+differenti e possono avere un impatto importante sui risultati.</p>
 
 <p>Il tensore hidden invece ha una dimensione che fissiamo noi (nell’esempio 128), al passo 0 viene inizializzato con tutti 0, 
 ma ai passi successivi si popola perche’ lo strato lineare che costruisce le versioni successive del tensore hidden prende in ingresso sia il tensore combinato che il tensore della lettera. Per esempio se la lettera passata e’ la $a$ e il tensore-hidden e’:<br />
 <strong>hidden</strong> = 
-$\left( \begin{array}{c}
-  {\bf 0.3}  <br />
-   0.23  <br />
-   \dots  \ 
-   0.29  <br />
-   0.52  <br />
-   0.11  <br />
-   \end{array} \right)$ 
-$\begin{array}{c}
-   1  <br />
-   2  <br />
-   \dots  \ 
-   126  <br />
-   127  <br />
-   128  <br />
-   \end{array}$  <br />
-Allora il <strong>tensore-combinato</strong> = 
-$\left(\begin{array}{c}
-     {\bf a}  <br />
-    {\bf hidden}  <br />
-   \end{array} \right)$ =
-$\left( \begin{array}{c}
-   {\bf 1}  <br />
-   0  <br />
-   0  \ 
-   0  <br />
-   0  <br />
-   0  <br />
-  {\bf 0.3}  <br />
-   0.23  <br />
-   \dots  \ 
-   0.29  <br />
-   0.52  <br />
-   0.11  <br />
-   \end{array} \right)$ 
+<script type="math/tex">\left( \begin{eqnarray}
+  {\bf 0.3}  \\
+   0.23  \\
+   \dots  \\ 
+   0.29  \\
+   0.52  \\
+   0.11  \\
+   \end{eqnarray} 
+\right)</script> 
+<script type="math/tex">\begin{eqnarray}
+   1  \\
+   2  \\
+   \dots  \\ 
+   126  \\
+   127  \\
+   128  \\
+   \end{eqnarray}</script></p>
+
+<p>Allora il <strong>tensore-combinato</strong> = 
+<script type="math/tex">\left(\begin{eqnarray}
+     {\bf a}  \\
+    {\bf hidden}  \\
+   \end{eqnarray} 
+\right)</script> =
+<script type="math/tex">$\left( \begin{eqnarray}
+   {\bf 1}  \\
+   0  \\
+   0  \\ 
+   0  \\
+   0  \\
+   0  \\
+  {\bf 0.3}  \\
+   0.23  \\
+   \dots  \\ 
+   0.29  \\
+   0.52  \\
+   0.11  \\
+   \end{eqnarray} 
+\right)</script> 
 (in questo esempio  il tensore combinato ha dimensione 6 + 128 (perche’ in questo esempio l’alfabeto per  l’one-hot encoring contiene solo <em>aeioul</em>, mentre la dimensione del tensore combinato nel video di Python Engineer e’ 57 +128, perche’ l’alfabeto da lui usato contiene tutte le maiuscole, le minuscole e alcuni segni di punteggiatura.</p>
 
 <p><img src="/images/posts/pytorch/rnn-nomi-lingue.png" alt="cane" /></p>
@@ -587,18 +606,24 @@ Inserisci un nome (quit per terminare)quit
 
 <h1 id="rnn-gru-e-lstm">RNN, GRU e LSTM</h1>
 
-<p>url: https://www.youtube.com/watch?v=0_PgWWmauHk&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=20&amp;ab_channel=PythonEngineer</p>
+<p>Il <a href="https://www.youtube.com/watch?v=0_PgWWmauHk&amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;index=20&amp;ab_channel=PythonEngineer">video</a>
+di Python Enginner contiene un esempio di RNN. E’ basato fortemente sulle <a href="nn.RNN: https://pytorch.org/docs/stable/generated/torch.nn.RNN.html">note</a>
+ di PyTorch.</p>
 
-<p>nn.RNN: https://pytorch.org/docs/stable/generated/torch.nn.RNN.html</p>
+<p><a href="https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks">Recurrent Neural Networks cheatsheet</a> di Stanford
+e’ molto completa e succinta! Probabilmente e’ la guida piu’ precisa, la matematica usa delle notazioni diverse dalle altre due 
+(per esempio l’hidden tensor viene indicato con a), ma suppongo che sia la piu’ affidabile.</p>
 
-<p>Stanford: https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-recurrent-neural-networks
-Questa e’ probabilmente la guida piu’ precisa, la matematica usa delle notazioni diverse dalle altre due (per esempio l’hidden tensor viene indicato con a), masuppongo che sia la piu’ affidabile.</p>
+<p>In questa <a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21">guida</a> 
+illustrata delle LSTM e dell GRU si cerca di non mettere la matematica, ma ci sono delle gif animate.</p>
 
-<p>Una guida illustrata su LSTM e GRU: https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21 qui cerca di non mettere la matematica, ma ci sono delle gif animate.</p>
+<p>In questa <a href="http://dprogrammer.org/rnn-lstm-gru">pagina</a> vengono indicate anche le formule associate ai vari passaggi;
+   ma sospetto che le formule non corrispondano alle immagini (ha preso le immagini da qualche parte e le formule altrove). 
+Di buono mette anche le formule per la backpropagation!</p>
 
-<p>Qui indica anche un po’ di matematica: http://dprogrammer.org/rnn-lstm-gru  ma sospetto che le formule non corrispondano alle immagini (ha preso le immagini da qualche parte e le formule altrove). Di buono mette anche le formule per la backpropagation!</p>
+<h2 id="il-codice">Il Codice</h2>
 
-<p>Qui usiamo i moduli gia’ creati per Long Short Term Memory e per GRU. Si prende come punto di partenza il tutorial 13.</p>
+<p>Qui usiamo i moduli gia’ creati per Long Short Term Memory e per GRU. Si prende come punto di partenza il tutorial 13 di Python Engineer.</p>
 
 <p>Invece che guardare a tutta una immagine per volta vogliamo prendere una <code class="language-plaintext highlighter-rouge">sequenza</code> di righe</p>
 

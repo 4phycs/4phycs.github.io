@@ -58,8 +58,8 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Pytorch 2 Chainrule Autograd" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="ChainRule e Autograd Il pacchetto Autograd fornisce differenziazione automatica per le operazioni (funzioni) sui tensori: requires_grad=True Immagina un tensore come una semplice variabile (multidimensionale) che entra in un grafo computazionale. Alla fine del grafo ho uno scalare (in genere) e voglio sapere come dipende questo scalare dal un particolare tensore, allora devo usare Autograd." />
-<meta property="og:description" content="ChainRule e Autograd Il pacchetto Autograd fornisce differenziazione automatica per le operazioni (funzioni) sui tensori: requires_grad=True Immagina un tensore come una semplice variabile (multidimensionale) che entra in un grafo computazionale. Alla fine del grafo ho uno scalare (in genere) e voglio sapere come dipende questo scalare dal un particolare tensore, allora devo usare Autograd." />
+<meta name="description" content="Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder." />
+<meta property="og:description" content="Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder." />
 <link rel="canonical" href="http://localhost:4000/Pytorch-2" />
 <meta property="og:url" content="http://localhost:4000/Pytorch-2" />
 <meta property="og:site_name" content="4Phycs" />
@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-2"},"description":"ChainRule e Autograd Il pacchetto Autograd fornisce differenziazione automatica per le operazioni (funzioni) sui tensori: requires_grad=True Immagina un tensore come una semplice variabile (multidimensionale) che entra in un grafo computazionale. Alla fine del grafo ho uno scalare (in genere) e voglio sapere come dipende questo scalare dal un particolare tensore, allora devo usare Autograd.","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-2","headline":"Pytorch 2 Chainrule Autograd","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-2"},"description":"Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder.","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-2","headline":"Pytorch 2 Chainrule Autograd","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -142,13 +142,13 @@
         
           
           
-            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+            <a class="cat-class cat-commas" href="/categories#italiano">Italiano</a>.
           
         
         <span class="reading-time" title="Estimated read time">
   
   
-  <font size="2"> Reading time: 17 mins </font>
+  <font size="2"> Reading time: 18 mins </font>
   
 </span>
 
@@ -158,7 +158,33 @@
     <div class="divider"></div>
     <div class="row thi-post">
       <div class="col s12">
-        <h1 id="chainrule-e-autograd">ChainRule e Autograd</h1>
+        <p>Indice Globale degli argomenti tra i vari post:</p>
+<ul>
+  <li><strong><a href="/Pytorch-1">Indice degli argomenti</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Introduzione e fonti</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Lingo - Gergo utilizzato</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Tensori in Pytorch</a></strong>.</li>
+  <li><strong><a href="/Pytorch-2">Grafo Computazionale e Calcolo dei Gradienti con Autograd</a></strong>.</li>
+  <li><strong><a href="/Pytorch-2">Backpropagation introduzione</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Loss e optimizer</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Dataset e Dataloader</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Modelli di Pytorch</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Dataset Transforms</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Softmax</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Activation Function</a></strong>.</li>
+  <li><strong><a href="/Pytorch-4">Feed Forward Neural Network</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Convolutional Neural Network</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Transfer Learning</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Tensorboard</a></strong>.</li>
+  <li><strong><a href="/Pytorch-6">I/O Saving and Loading Models</a></strong>.</li>
+  <li><strong><a href="/Pytorch-7">Recurrent Neural Networks</a></strong>.</li>
+  <li><strong><a href="/Pytorch-7">RNN, GRU e LSTM</a></strong>.</li>
+  <li><strong><a href="/Pytorch-8">Pytorch Lightning</a></strong>.</li>
+  <li><strong><a href="/Pytorch-8">LR Scheduler</a></strong>.</li>
+  <li><strong><a href="/Pytorch-9">Autoencoder</a></strong>.</li>
+</ul>
+
+<h1 id="chainrule-e-autograd">ChainRule e Autograd</h1>
 <p>Il pacchetto <code class="language-plaintext highlighter-rouge">Autograd</code> fornisce differenziazione automatica per le operazioni (funzioni) sui tensori:<br />
 <strong>requires_grad=True</strong> <br />
 Immagina un <strong>tensore</strong> come una semplice variabile (multidimensionale) che entra in un grafo computazionale. Alla fine del grafo ho uno scalare (in genere) e voglio sapere come dipende questo scalare dal un particolare tensore, allora devo usare Autograd.

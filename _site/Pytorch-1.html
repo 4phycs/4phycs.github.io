@@ -12,7 +12,7 @@
 
   <title>
     
-      Pytorch 1 Tensori | 4Phycs
+      Pytorch 1 Inizio, Tensori | 4Phycs
     
   </title>
 
@@ -56,7 +56,7 @@
   
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Pytorch 1 Tensori" />
+<meta property="og:title" content="Pytorch 1 Inizio, Tensori" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="PyTorch e Deep Learning" />
 <meta property="og:description" content="PyTorch e Deep Learning" />
@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-1"},"description":"PyTorch e Deep Learning","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-1","headline":"Pytorch 1 Tensori","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-1"},"description":"PyTorch e Deep Learning","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-1","headline":"Pytorch 1 Inizio, Tensori","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -119,6 +119,7 @@
     <ol id="toc-sidebar">
   <li><a href="#pytorch-e-deep-learning">PyTorch e Deep Learning</a>
     <ol>
+      <li><a href="#indice-globale-degli-argomenti-nei-post">Indice globale degli argomenti nei post:</a></li>
       <li><a href="#introduzione-a-queste-note">Introduzione a queste note</a></li>
       <li><a href="#disclaimer">Disclaimer</a></li>
       <li><a href="#indice-delle-lezioni-di-python-engineer">Indice delle lezioni di Python-Engineer</a></li>
@@ -149,7 +150,7 @@
 <main>
   <div class="container">
     <div id="post-info">
-      <h3>Pytorch 1 Tensori</h3>
+      <h3>Pytorch 1 Inizio, Tensori</h3>
       <span>
         Posted on
         <span style="display: initial;" class="cat-class">15/10/2021</span>,
@@ -157,13 +158,13 @@
         
           
           
-            <a class="cat-class cat-commas" href="/categories#italiano">italiano</a>.
+            <a class="cat-class cat-commas" href="/categories#italiano">Italiano</a>.
           
         
         <span class="reading-time" title="Estimated read time">
   
   
-  <font size="2"> Reading time: 22 mins </font>
+  <font size="2"> Reading time: 23 mins </font>
   
 </span>
 
@@ -174,6 +175,33 @@
     <div class="row thi-post">
       <div class="col s12">
         <h1 id="pytorch-e-deep-learning">PyTorch e Deep Learning</h1>
+
+<h2 id="indice-globale-degli-argomenti-nei-post">Indice globale degli argomenti nei post:</h2>
+
+<ul>
+  <li><strong><a href="/Pytorch-1">Indice degli argomenti</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Introduzione e fonti</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Lingo - Gergo utilizzato</a></strong>.</li>
+  <li><strong><a href="/Pytorch-1">Tensori in Pytorch</a></strong>.</li>
+  <li><strong><a href="/Pytorch-2">Grafo Computazionale e Calcolo dei Gradienti con Autograd</a></strong>.</li>
+  <li><strong><a href="/Pytorch-2">Backpropagation introduzione</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Loss e optimizer</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Dataset e Dataloader</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Modelli di Pytorch</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Dataset Transforms</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Softmax</a></strong>.</li>
+  <li><strong><a href="/Pytorch-3">Activation Function</a></strong>.</li>
+  <li><strong><a href="/Pytorch-4">Feed Forward Neural Network</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Convolutional Neural Network</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Transfer Learning</a></strong>.</li>
+  <li><strong><a href="/Pytorch-5">Tensorboard</a></strong>.</li>
+  <li><strong><a href="/Pytorch-6">I/O Saving and Loading Models</a></strong>.</li>
+  <li><strong><a href="/Pytorch-7">Recurrent Neural Networks</a></strong>.</li>
+  <li><strong><a href="/Pytorch-7">RNN, GRU e LSTM</a></strong>.</li>
+  <li><strong><a href="/Pytorch-8">Pytorch Lightning</a></strong>.</li>
+  <li><strong><a href="/Pytorch-8">LR Scheduler</a></strong>.</li>
+  <li><strong><a href="/Pytorch-9">Autoencoder</a></strong>.</li>
+</ul>
 
 <h2 id="introduzione-a-queste-note">Introduzione a queste note</h2>
 
@@ -194,20 +222,25 @@ Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il 
     <p>Ove lo ritengo utile aggiungo dei test e delle prove per capire meglio quello che sta succedendo.</p>
   </li>
   <li>
-    <p>Ho inoltre aggiunto alcune mie considerazioni personali, utili per me per ricordare e capire meglio certe cose.</p>
+    <p>Ho aggiunto alcune mie considerazioni personali,  per ricordare e capire meglio.</p>
   </li>
   <li>
     <p>Ho messo un contesto e una cornice iniziale di teorina e notazioni che leghi insieme le varie lezioni.</p>
   </li>
 </ol>
 
-<p>Queste note sono pensate per potere essere navigate tramite un indice interattivo. Nel Jupyter Notebook dove sono state scritte ho ottenuto l’indice tramite: <code class="language-plaintext highlighter-rouge">jupyter-navbar.</code> Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) ho fatto girare da Babun con python2.7 il file setup.py (questo perche’ lo sto facendo girare in Windows 10). In questo modo, a sinistra appare il panel con l’indice.</p>
+<p>Queste note sono pensate per potere essere navigate tramite un indice interattivo. 
+Nel Jupyter Notebook dove sono state scritte ho ottenuto l’indice tramite: <code class="language-plaintext highlighter-rouge">jupyter-navbar.</code> 
+Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) 
+ho fatto girare da Babun con python2.7 il file setup.py (questo perche’ lo sto facendo girare in Windows 10). 
+In questo modo, a sinistra appare il panel con l’indice.</p>
 
 <h2 id="disclaimer">Disclaimer</h2>
 <p>Eventuali errori di queste note sono da attribuire solo a me. 
 Sono appunti personali di cui non assicuro il funzionamento (o la pericolosita’).
-Ci sono vari problemi di traduzine dal Jupyter notebook su cui sono gli originali e questi,
-dato che in Markdown alcuni effetti non sono possibili e mancano delle immagini.</p>
+Ci sono vari problemi di traduzine dal Jupyter notebook in markdown. 
+Dovrei citare gli articoli originali di ricerca, ma per ora mi limito ai siti da cui ho 
+preso le informazioni.</p>
 
 <h2 id="indice-delle-lezioni-di-python-engineer">Indice delle lezioni di Python-Engineer</h2>
 <p>I codici possono essere scaricati <strong><a href="https://github.com/python-engineer/pytorchTutorial">qui</a></strong>. Qui indico le lezioni di Python Engineer, la loro durata e i capitoli corrispondenti in questo notebook.</p>

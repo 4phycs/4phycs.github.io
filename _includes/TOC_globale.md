@@ -1,0 +1,22 @@
+-                                    **[Indice degli argomenti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
+-                                      **[Introduzione e fonti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
+ -                                 **[Lingo - Gergo utilizzato]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
+-                                        **[Tensori in Pytorch]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
+- **[Grafo Computazionale e Calcolo dei Gradienti con Autograd]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-2.md %})**.
+-                              **[Backpropagation introduzione]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-2.md %})**.
+-                                          **[Loss e optimizer]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                                      **[Dataset e Dataloader]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                                        **[Modelli di Pytorch]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                                        **[Dataset Transforms]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                                                   **[Softmax]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                                       **[Activation Function]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
+-                               **[Feed Forward Neural Network]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-4.md %})**.
+-                              **[Convolutional Neural Network]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-5.md %})**.
+-                                         **[Transfer Learning]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-5.md %})**.
+-                                               **[Tensorboard]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-5.md %})**.
+-                             **[I/O Saving and Loading Models]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-6.md %})**.
+-                                 **[Recurrent Neural Networks]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-7.md %})**.
+-                                           **[RNN, GRU e LSTM]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-7.md %})**.
+-                                         **[Pytorch Lightning]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-8.md %})**.
+-                                              **[LR Scheduler]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-8.md %})**.
+-                                               **[Autoencoder]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-9.md %})**.

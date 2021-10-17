@@ -1,6 +1,6 @@
 ---
 title: DeepLearning con Pytorch
-published: true
+published: false
 categories: italiano
 tags:
   - Python

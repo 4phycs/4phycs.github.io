@@ -58,8 +58,8 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Pytorch 9 Autoencoder" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder." />
-<meta property="og:description" content="Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder." />
+<meta name="description" content="tocIn this post" />
+<meta property="og:description" content="tocIn this post" />
 <link rel="canonical" href="http://localhost:4000/Pytorch-9" />
 <meta property="og:url" content="http://localhost:4000/Pytorch-9" />
 <meta property="og:site_name" content="4Phycs" />
@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2021-10-15T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-9"},"description":"Indice Globale degli argomenti tra i vari post: Indice degli argomenti. Introduzione e fonti. Lingo - Gergo utilizzato. Tensori in Pytorch. Grafo Computazionale e Calcolo dei Gradienti con Autograd. Backpropagation introduzione. Loss e optimizer. Dataset e Dataloader. Modelli di Pytorch. Dataset Transforms. Softmax. Activation Function. Feed Forward Neural Network. Convolutional Neural Network. Transfer Learning. Tensorboard. I/O Saving and Loading Models. Recurrent Neural Networks. RNN, GRU e LSTM. Pytorch Lightning. LR Scheduler. Autoencoder.","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-9","headline":"Pytorch 9 Autoencoder","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-9"},"description":"tocIn this post","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-9","headline":"Pytorch 9 Autoencoder","dateModified":"2021-10-15T00:00:00+02:00","datePublished":"2021-10-15T00:00:00+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -146,7 +146,7 @@
         <span class="reading-time" title="Estimated read time">
   
   
-  <font size="2"> Reading time: 17 mins </font>
+  <font size="2"> Reading time: 18 mins </font>
   
 </span>
 
@@ -156,7 +156,24 @@
     <div class="divider"></div>
     <div class="row thi-post">
       <div class="col s12">
-        <p>Indice Globale degli argomenti tra i vari post:</p>
+        <div id="toc">
+  <div class="toc-title">
+    <i class="material-icons mat-icon">toc</i><span>In this post</span>
+  </div>
+  <div id="full">
+<ul id="markdown-toc">
+  <li><a href="#autoencoder" id="markdown-toc-autoencoder">Autoencoder</a>    <ul>
+      <li><a href="#senza-convoluzioni" id="markdown-toc-senza-convoluzioni">Senza convoluzioni</a></li>
+      <li><a href="#con-convoluzioni" id="markdown-toc-con-convoluzioni">Con Convoluzioni</a></li>
+      <li><a href="#my-playground" id="markdown-toc-my-playground">My Playground</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<p>Indice Globale degli argomenti tra i vari post:</p>
 <ul>
   <li><strong><a href="/Pytorch-1">Indice degli argomenti</a></strong>.</li>
   <li><strong><a href="/Pytorch-1">Introduzione e fonti</a></strong>.</li>
@@ -576,6 +593,93 @@ Epoch: 10, Loss:0.0356
       <a class="tag-chip" href="/tags#cuda_cap"><div class="chip z-depth-1">Cuda</div></a>
       
     </div>
+    
+          <style type="text/css">
+.related-posts{
+  border: 3px dotted #2e87e7;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 10px 0 10px;
+}
+.related-posts span{
+  font-size: 130%;
+  font-weight: 500;
+  color: #2e87e7;
+}
+.related-posts ul{
+  margin-top: 5px!important;
+}
+.thi-icon{
+  float: left;
+  line-height: inherit;
+  margin-right: 5px;
+  margin-left: 2px;
+  color: #2e87e7;
+}
+</style>
+
+<div class="related-posts">
+  <i class="material-icons thi-icon">grade</i><span>You might also like ...</span>
+  
+  <ul>
+    
+    
+      
+      
+        
+          <li>
+            <a href="/Pytorch-7">
+              Pytorch 7 Recurrent Neural Network
+            </a>
+            <small>17 Oct 2021</small>
+          </li>
+          
+          
+    
+      
+      
+        
+          <li>
+            <a href="/Pytorch-1">
+              Pytorch 1 Inizio, Tensori
+            </a>
+            <small>17 Oct 2021</small>
+          </li>
+          
+          
+    
+      
+      
+        
+          <li>
+            <a href="/Pytorch-8">
+              Pytorch 8 Lightning
+            </a>
+            <small>15 Oct 2021</small>
+          </li>
+          
+          
+    
+      
+      
+        
+          <li>
+            <a href="/Pytorch-6">
+              Pytorch 6 Input Output
+            </a>
+            <small>15 Oct 2021</small>
+          </li>
+          
+          
+    
+      
+        
+
+    
+    
+  </ul>
+</div>
+
     
     		
 			<script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>

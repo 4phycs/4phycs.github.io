@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-10-17T22:28:11+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-10-17T00:00:00+02:00</published><updated>2021-10-17T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-06T15:27:13+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-10-17T00:00:00+02:00</published><updated>2021-10-17T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
   &lt;div class=&quot;toc-title&quot;&gt;
     &lt;i class=&quot;material-icons mat-icon&quot;&gt;toc&lt;/i&gt;&lt;span&gt;In this post&lt;/span&gt;
   &lt;/div&gt;
@@ -63,9 +63,15 @@
 
 &lt;h2 id=&quot;introduzione-a-queste-note&quot;&gt;Introduzione a queste note&lt;/h2&gt;
 
-&lt;p&gt;Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e’ una traduzione delle  lezioni di &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA&quot;&gt;Python Engineer&lt;/a&gt;&lt;/strong&gt; (Patrick Loeber):&lt;/p&gt;
+&lt;p&gt;Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e’ una traduzione delle  lezioni di 
+&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA&quot;&gt;Python Engineer&lt;/a&gt;&lt;/strong&gt; (Patrick Loeber) con l’aggiunta di mie osservazioni
+e spiegazioni.&lt;/p&gt;
 
-&lt;p&gt;Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e’ bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio questo &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;amp;ab_channel=AlexanderAmini&quot;&gt;corso introduttivo&lt;/a&gt;&lt;/strong&gt; del MIT.&lt;/p&gt;
+&lt;p&gt;Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e’ bene avere 
+una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro 
+le scelte di programmazione e di modellazione delle reti neurali consiglio questo &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;amp;ab_channel=AlexanderAmini&quot;&gt;corso introduttivo&lt;/a&gt;&lt;/strong&gt; del MIT 
+(© Alexander Amini and Ava Soleimany). Questo corso (MIT 6.S191) ha anche un sito di supporto: &lt;a href=&quot;http://introtodeeplearning.com&quot;&gt;http://introtodeeplearning.com&lt;/a&gt; a differenza 
+di Python Engineer viene pero’ usato TensorFlow. Io preferisco l’approccio di Pytorch, che quindi uso in queste note (in futuro magari aggiugnero’ anche TensorFlow).&lt;/p&gt;
 
 &lt;p&gt;In alcuni casi ho preso direttamente i codici di Patrick Loeber (forniti nei link alle sue lezioni), ma nella maggior parte dei casi li ho riscritti (sempre seguendo il video), quindi potrebbero esserci delle piccole differenze. Questo e’ anche dovuto al fatto che questi codici sono pensati per girare all’interno di un notebook, mentre Python Engineer usa Vstudio Code.  Per esempio, quando Patrick vuole mostrare alcuni grafici tramite Matplotlib deve lanciare dei comandi che non servono qui. 
 Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il motivo era una mia errata comprensione dei  video che dava luogo a degli errori non facilmente notabili,  nonostante questo segno questi errori (tra i commenti) perche’ sono utili esempi di cosa si puo’ sbagliare.&lt;/p&gt;
@@ -87,7 +93,7 @@ Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il 
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Queste note sono pensate per potere essere navigate tramite un indice interattivo. 
+&lt;p&gt;Queste note sono pensate per potere essere navigate tramite un indice interattivo su un Jupyter Notebook. 
 Nel Jupyter Notebook dove sono state scritte ho ottenuto l’indice tramite: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyter-navbar.&lt;/code&gt; 
 Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) 
 ho fatto girare da Babun con python2.7 il file setup.py (questo perche’ lo sto facendo girare in Windows 10). 
@@ -133,7 +139,7 @@ preso le informazioni.&lt;/p&gt;
 
 &lt;p&gt;Altri appunt utili possono essere trovati &lt;strong&gt;&lt;a href=&quot;https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Altro &lt;strong&gt;&lt;a href=&quot;https://www.cs.toronto.edu/~lczhang/360/&quot;&gt;corso&lt;/a&gt;* molto interessante (da cui Python Engineer ha preso spunto, per esempio per l’&lt;/strong&gt;autoencoder**.&lt;/p&gt;
+&lt;p&gt;Altro &lt;strong&gt;&lt;a href=&quot;https://www.cs.toronto.edu/~lczhang/360/&quot;&gt;corso&lt;/a&gt;&lt;/strong&gt; molto interessante (da cui Python Engineer ha preso spunto, per esempio per l’&lt;strong&gt;autoencoder&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
@@ -2362,7 +2368,8 @@ tensor([0, 2, 1])
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;activation-function&quot;&gt;Activation Function&lt;/h1&gt;
-&lt;p&gt;https://www.youtube.com/watch?v=3t9lZM7SS7k&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=12&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[Video] (https://www.youtube.com/watch?v=3t9lZM7SS7k&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=12&amp;amp;ab_channel=PythonEngineer)&lt;/strong&gt;
+di riferimento  di Python Engineer&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;ReLU  rectified linear unit _/&lt;/li&gt;
@@ -3130,10 +3137,9 @@ accuracy =86.55
 
 &lt;h1 id=&quot;convolutional-neural-network&quot;&gt;Convolutional Neural Network&lt;/h1&gt;
 
-&lt;p&gt;Lezione del MIT sulle CNN: https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;amp;ab_channel=AlexanderAmini&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;amp;ab_channel=AlexanderAmini&quot;&gt;Video-Lezione&lt;/a&gt;&lt;/strong&gt; del MIT sulle CNN (Inglese).&lt;/p&gt;
 
-&lt;p&gt;Lezione estesa:
-https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;amp;list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&amp;amp;index=3&amp;amp;ab_channel=AlexanderAmini&lt;/p&gt;
+&lt;p&gt;Una video-lezione estesa sugli stessi argomenti e dagli stessi autori &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=AjtX1N_VT9E&amp;amp;list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&amp;amp;index=3&amp;amp;ab_channel=AlexanderAmini&quot;&gt;qui&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Materiale della lezione:
 http://introtodeeplearning.com​&lt;/p&gt;
@@ -4159,7 +4165,8 @@ devi rinominare la dir  dove vengono salvati i dati per ogni run diverso. In que
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;io-saving-and-loading-models&quot;&gt;I/O Saving and Loading Models&lt;/h1&gt;
-&lt;p&gt;https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=17&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=17&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video-lezione&lt;/a&gt;&lt;/strong&gt; 
+di Python Engineer sul soggetto.&lt;/p&gt;
 
 &lt;p&gt;Un modello viene salvato come un dictionary.&lt;/p&gt;
 
@@ -4429,8 +4436,9 @@ argomento di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;pytorch-lightning&quot;&gt;PyTorch Lightning&lt;/h1&gt;
-
-&lt;p&gt;https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[Video-lezione]
+(https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&amp;amp;ab_channel=PythonEngineer)&lt;/strong&gt;
+di Python Engineer.&lt;/p&gt;
 
 &lt;p&gt;PyTorch Lightning  e’ un wrapper per velocizzare la scrittura di reti neurali, con Pytorch.&lt;/p&gt;
 
@@ -4678,7 +4686,12 @@ Onestamente non mi pare ultra necessario, uno puo’ costruire delle funzioni cu
 
 &lt;h1 id=&quot;autoencoder&quot;&gt;Autoencoder&lt;/h1&gt;
 
-&lt;p&gt;https://www.youtube.com/watch?v=zp8clK9yCro&amp;amp;t=1075s&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=zp8clK9yCro&amp;amp;t=1075s&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video-lezione&lt;/a&gt;&lt;/strong&gt; di Python Engineer con una spiegazione su come scrivere i codici
+e una introduzione alla teoria.&lt;/p&gt;
+
+&lt;p&gt;La teoria viene spiegata molto bene in questa
+&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=BUNl0To1IVw&amp;amp;list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&amp;amp;index=4&quot;&gt;video-lezione&lt;/a&gt;&lt;/strong&gt;
+del corso MIT 6.S191, dove vengono anche introdotti ulteriori concetti come i Variational AutoEncoders (VAE).&lt;/p&gt;
 
 &lt;p&gt;Un autoencoder e’ una rete neurale che cerca di “riassumere i tratti principali dell’input. L’idea e’ molto sempice, 
 Pensiamo a delle immagini. Si prende e si fanno vari strati che hanno via via meno parametri. A quel punto si fanno i passi inversi (letteralemente) in modo da riottenere un medesimo numero di valori finali. Come funzione di Loss si usa una MSE. E’ intuitivo. se ho una immagine in ingresso voglio vedere la STESSA immagine in uscita (o almeno avvicinarmi)&lt;/p&gt;
@@ -5046,55 +5059,74 @@ Epoch: 10, Loss:0.0356
 
 &lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">prose.io + ProWritingAid</title><link href="http://localhost:4000/prose-io" rel="alternate" type="text/html" title="prose.io + ProWritingAid" /><published>2020-06-04T00:00:00+02:00</published><updated>2020-06-04T00:00:00+02:00</updated><id>http://localhost:4000/prose-io</id><content type="html" xml:base="http://localhost:4000/prose-io">&lt;h2 id=&quot;editing-help-for-github-pages-proseio--prowritingaid-works-more-or-less&quot;&gt;Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!&lt;/h2&gt;
-
-&lt;p&gt;Some time ago, I wrote a post on this blog, about &lt;strong&gt;&lt;a href=&quot;/random_access&quot;&gt;random numbers and  philosophy&lt;/a&gt;&lt;/strong&gt; with my favourite editor: &lt;a href=&quot;www.vim.org&quot;&gt;gvim&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;When using this editor, it is rather difficult to spot the little spelling mistakes, in particular before the markdown text has been compiled.
-I also made some syntax error where I used “too much + adverb” (while the correct version was “too + adverb”). For these reasons I was trying to use one of those nice apps like &lt;a href=&quot;www.grammarly.com&quot;&gt;Grammarly&lt;/a&gt; in order to improve my prose…&lt;/p&gt;
-
-&lt;p&gt;During this process, I found a useful service for managing the markdown posts for GitHub pages called:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;prose.io&quot;&gt;prose.io&lt;/a&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img src=&quot;/images/posts/pytorch/output_118_2.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">MapReduce, Calcolo Parallelo, UNIMIB</title><link href="http://localhost:4000/mapReduce" rel="alternate" type="text/html" title="MapReduce, Calcolo Parallelo, UNIMIB" /><published>2021-08-10T02:00:00+02:00</published><updated>2021-08-10T02:00:00+02:00</updated><id>http://localhost:4000/mapReduce</id><content type="html" xml:base="http://localhost:4000/mapReduce">&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/assets/mpi_74.pdf&quot;&gt;MapReduce a.a. 2019-2020&lt;/a&gt;&lt;/strong&gt;, in queste diapositive mostro un paio di modi
+  per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da
+ http://www.norstad.org&lt;br /&gt;
+ (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). 
+Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;to use it, you just need to grant access to your page, and it helps to manage posts, save them, commit, ecc.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, Google Chrome extensions like Grammarly do not work properly with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;, i.e. they do not underline the mistakes or provide any suggestion. One needs to copy and paste the post on supported applications, correct the text and copy it back on the blog. This method is rather annoying.
-For this reason I tried many other options, including:&lt;/p&gt;
+&lt;p&gt;Ho usato inoltre due Jupyter notebook:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik&quot;&gt;webpage spell-check&lt;/a&gt; is a Google Chrome extension which works with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;, but it simply underlines the typos (no suggestions of any kind)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://prowritingaid.com/en/App/ChromeExtension&quot;&gt;ProWritingAid&lt;/a&gt; is an extension similar to Grammarly, but it does not work with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/MapReduce-02-Hadoop_PA.ipynb&quot;&gt;HADOOP Streaming&lt;/a&gt;&lt;/strong&gt;, qui viene introdotto come usare degli eseguibili scritti
+ nel linguaggio preferito per usare  Hadoop (invece che dover usare Java)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;/assets/MapReduce-04-MRJob_PA.ipynb&quot;&gt;MRJob&lt;/a&gt;&lt;/strong&gt;, per utilizzare delle semplici classi di Python per
+ job di tipo MapReduce anche complessi (e testarli facilmente in locale, senza dover installare Hadoop)&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;No single Chrome extension I found provided both underlying typos and suggestions.&lt;/p&gt;
+&lt;p&gt;i notebook originali erano forniti in un corso del CINECA del 2015. Eventuali errori di queste versioni modificate sono miei e non da imputare agli autori dei notebook
+originali.&lt;/p&gt;
 
-&lt;p&gt;However, I found a tricky solution by combining the two aforementioned products:
-when you turn on the “spell check” option of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell-check&lt;/code&gt; everything becomes “editable”.
-The cursor becomes like the one you use when entering text, even in webpages where there is no editable content. Actually, it is kind of annoying since (often) you cannot “click” on links!&lt;/p&gt;
+&lt;p&gt;A chi e’ rivolto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MapReduce&lt;/code&gt;?&lt;/p&gt;
 
-&lt;p&gt;However, if you use it in conjunction with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProWritingAid&lt;/code&gt; it allows this latter to access the text of the posts you are editing with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;: at this point you get underlined typos and the suggestions.&lt;/p&gt;
+&lt;p&gt;Una premessa: questa e’ l’ultima parte del corso, prima introduco &lt;strong&gt;&lt;a href=&quot;/MPI-18-19&quot;&gt;MPI&lt;/a&gt;&lt;/strong&gt;,
+ poi &lt;strong&gt;&lt;a href=&quot;/OpenMP-18-19&quot;&gt;OpenMP&lt;/a&gt;&lt;/strong&gt; 
+e &lt;strong&gt;&lt;a href=&quot;/Cuda&quot;&gt;CUDA&lt;/a&gt;&lt;/strong&gt;
+, infine passo  HADOOP/MapReduce.&lt;/p&gt;
 
-&lt;p&gt;This solution is not perfect:&lt;/p&gt;
+&lt;p&gt;I primi 3 argomenti sono pertinenti per chi e’ interessato a fare High Performance Computing. Richiedono di imparare 
+nuove API, capire nel dettaglio come e’ fatto l’hardware sottostante e scrivere dei codici abbastanza complessi.&lt;/p&gt;
+
+&lt;p&gt;Se invece lo scopo e’ quello di utilizzare hardware (quasi) commerciale e  cercare di evitare
+le problematiche legate ad imparare un nuovo linguaggio, allora ha senso pensare in termini di Hadoop/Mapreduce.&lt;/p&gt;
+
+&lt;p&gt;L’ipotesi di lavoro e’ che si abbia a che fare con grandi moli di dati (che devono essere distribuiti su computer distinti).&lt;/p&gt;
+
+&lt;p&gt;L’idea e’ proprio quella di facilitare buona parte della comunicazione necessaria quando si ha a che fare con
+tante macchine che lavorano in parallelo. Per questo, molto del lavoro e’ fatto dal filesystem distribuito (nel caso di HADOOP
+si chiama HDFS). Il cuore di un calcolo MapReduce e’ di utilizzare coppie &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chiave-valore&lt;/code&gt;.
+Il compito/algoritmo da eseguire in parallelo deve poter essere spezzato in 2 fasi, una di seguito all’altra, chiamate:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;It often suggests putting a period where you wrap a line although the sentence is not over&lt;/li&gt;
-  &lt;li&gt;It takes a few seconds for the spell checks and suggestions to appear.&lt;/li&gt;
-  &lt;li&gt;The suggestions can disappear magically, for example, when you change Windows desktop. At this point you need to turn off and on again the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell-check&lt;/code&gt; (maybe a couple of times).&lt;/li&gt;
-  &lt;li&gt;It is slow to edit the text when the suggestions are on! However, a click allows one to replace the old statement with the suggestion, making it easy, but …&lt;/li&gt;
-  &lt;li&gt;The &lt;strong&gt;most annoying problem&lt;/strong&gt; is that sometimes, after you click on the suggested correction, it remains on the editing window but it is not saved! In practice, in order to be sure that correction remain, you &lt;strong&gt;must&lt;/strong&gt; edit them yourself rather than clicking for the automatic substitution.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Map&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Reduce&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;in-summary&quot;&gt;In summary:&lt;/h3&gt;
+&lt;p&gt;Durante la fase di Map, tanti computer in parallelo eseguono il medesimo compito (chiamato Mapping). 
+Il risultato dell’esecuzione di ogni Mapper e’ l’emissione di molte coppie chiave-valore (intermedie).
+Attenzione, i Mapper lavorano in modo indipendente l’uno dall’altro: non comunicano tra loro! 
+Essi fanno tutti la stessa cosa ma con parti diverse di dato (HDFS assegna i pezzi del dato senza un ordine particolare).
+ Le coppie chiave-valore prodotte dai Mapper
+vengono ridistribuite (&lt;strong&gt;shuffling&lt;/strong&gt;) da HDFS ai Reducer, in un modo specifico: ogni reducer riceve &lt;strong&gt;solo&lt;/strong&gt; coppie chiave-valore
+che abbiano la stessa &lt;strong&gt;chiave&lt;/strong&gt; (intermedia).&lt;/p&gt;
 
-&lt;p&gt;In order to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt; with editing suggestions, one needs to:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; on Chrome&lt;/li&gt;
-  &lt;li&gt;install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProWritingAid&lt;/code&gt; on Chrome (and turn it on for the website &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;enter &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose.io&lt;/code&gt; (you need to give permission to access to your GitHub Pages site).&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;disable&lt;/strong&gt; the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; (left click on the icon on Chrome, it is the bottom option) otherwise you not be able to click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prose&lt;/code&gt; buttons!&lt;/li&gt;
-  &lt;li&gt;enter the dir containing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; and select the desired one.&lt;/li&gt;
-  &lt;li&gt;turn &lt;strong&gt;on&lt;/strong&gt; the spell check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpage spell check&lt;/code&gt; and wait a few seconds, at this point the suggestions by ProWritingAid will appear under the text and by left-clicking on the underlined words one gets the suggestions, and the possibility to replace the text!&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="editing" /><summary type="html">Editing help for GitHub Pages: prose.io + ProWritingAid works (more or less)!</summary></entry></feed>
+&lt;p&gt;Tutta la &lt;strong&gt;comunicazione&lt;/strong&gt; di un job MapReduce si riassume quindi nella fase di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shuffling&lt;/code&gt;! Sta al programmatore scrivere dei Mapper che emettano
+le chiavi intermedie corrette, in modo che poi i reducer facciano il lavoro che ci si aspetta. Una volta fatto questo, la cominicazione e’ interamente
+gestita da  HDFS!&lt;/p&gt;
+
+&lt;p&gt;A questo punto, tutti i Reducer lavorano con i dati ottenuti ed emettono a loro volta coppie chiave-valore (il risultato finale del calcolo MapReduce).
+Tutti i Reducer fanno esattamente lo stesso algoritmo, ma ognuno ha dei dati diversi opportunamente re-distribuiti tramite l’uso di coppie
+chiave-valore.&lt;/p&gt;
+
+&lt;p&gt;Il &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;difficile&lt;/code&gt; di un job  MapReduce e’ proprio nel trovare le giuste coppie chiave-valore intermedie emesse dai Mapper che consentano di fare arrivare
+ai Reudcer i dati corretti.&lt;/p&gt;</content><author><name></name></author><category term="Paolo" /><category term="MapReduce" /><category term="Calcolo Parallelo" /><summary type="html">MapReduce a.a. 2019-2020, in queste diapositive mostro un paio di modi per fare il prodotto matrice-matrice tramite MapReduce; in pratica ho fatto un adattamento e traduzione di quanto fatto da http://www.norstad.org (Attenzione, il sito originale sembra non piu’ raggiungibile, probabilmente tramite quei servizi che contengono un archivio di internet e’ possibile trovarne una copia). Queste diapositive sono state usate durante il corso di “Sistemi di Calcolo Parallelo” tenuto persso il DISCo all’Universita’ degli Studi di Milano-Bicocca.</summary></entry></feed>

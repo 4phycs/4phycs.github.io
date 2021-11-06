@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2021-10-17T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-1"},"description":"tocIn this post","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-1","headline":"Pytorch 1 Inizio, Tensori","dateModified":"2021-10-17T00:00:00+02:00","datePublished":"2021-10-17T00:00:00+02:00","@context":"https://schema.org"}</script>
+{"headline":"Pytorch 1 Inizio, Tensori","dateModified":"2021-10-17T00:00:00+02:00","datePublished":"2021-10-17T00:00:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Pytorch-1"},"description":"tocIn this post","@type":"BlogPosting","url":"http://localhost:4000/Pytorch-1","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -143,6 +143,7 @@
     </ol>
   </li>
 </ol>
+
   </div>
 </div>
   
@@ -239,9 +240,15 @@
 
 <h2 id="introduzione-a-queste-note">Introduzione a queste note</h2>
 
-<p>Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e’ una traduzione delle  lezioni di <strong><a href="https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA">Python Engineer</a></strong> (Patrick Loeber):</p>
+<p>Queste sono le mie note (Paolo Avogadro) su PyTorch e reti neurali in genere. La maggior parte del materiale e’ una traduzione delle  lezioni di 
+<strong><a href="https://www.youtube.com/channel/UCbXgNpp0jedKWcQiULLbDTA">Python Engineer</a></strong> (Patrick Loeber) con l’aggiunta di mie osservazioni
+e spiegazioni.</p>
 
-<p>Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e’ bene avere una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro le scelte di programmazione e di modellazione delle reti neurali consiglio questo <strong><a href="https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;ab_channel=AlexanderAmini">corso introduttivo</a></strong> del MIT.</p>
+<p>Le lezioni di Python Engineer contengono dei riassunti di teoria, ma per capire a fondo il motivo di quello che viene fatto e’ bene avere 
+una solida base di come funzionano le reti neurali. Per una buona introduzione teorica che permetta di capire meglio la logica dietro 
+le scelte di programmazione e di modellazione delle reti neurali consiglio questo <strong><a href="https://www.youtube.com/watch?v=5tvmMX8r_OM&amp;ab_channel=AlexanderAmini">corso introduttivo</a></strong> del MIT 
+(© Alexander Amini and Ava Soleimany). Questo corso (MIT 6.S191) ha anche un sito di supporto: <a href="http://introtodeeplearning.com">http://introtodeeplearning.com</a> a differenza 
+di Python Engineer viene pero’ usato TensorFlow. Io preferisco l’approccio di Pytorch, che quindi uso in queste note (in futuro magari aggiugnero’ anche TensorFlow).</p>
 
 <p>In alcuni casi ho preso direttamente i codici di Patrick Loeber (forniti nei link alle sue lezioni), ma nella maggior parte dei casi li ho riscritti (sempre seguendo il video), quindi potrebbero esserci delle piccole differenze. Questo e’ anche dovuto al fatto che questi codici sono pensati per girare all’interno di un notebook, mentre Python Engineer usa Vstudio Code.  Per esempio, quando Patrick vuole mostrare alcuni grafici tramite Matplotlib deve lanciare dei comandi che non servono qui. 
 Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il motivo era una mia errata comprensione dei  video che dava luogo a degli errori non facilmente notabili,  nonostante questo segno questi errori (tra i commenti) perche’ sono utili esempi di cosa si puo’ sbagliare.</p>
@@ -263,7 +270,7 @@ Piu’ di una volta mi e’ capitato avere dei problemi con i codici. Spesso il 
   </li>
 </ol>
 
-<p>Queste note sono pensate per potere essere navigate tramite un indice interattivo. 
+<p>Queste note sono pensate per potere essere navigate tramite un indice interattivo su un Jupyter Notebook. 
 Nel Jupyter Notebook dove sono state scritte ho ottenuto l’indice tramite: <code class="language-plaintext highlighter-rouge">jupyter-navbar.</code> 
 Ho semplicemente scaricato lo zip da https://github.com/shoval/jupyter-navbar e (dopo avere decompresso) 
 ho fatto girare da Babun con python2.7 il file setup.py (questo perche’ lo sto facendo girare in Windows 10). 
@@ -309,7 +316,7 @@ preso le informazioni.</p>
 
 <p>Altri appunt utili possono essere trovati <strong><a href="https://atcold.github.io/pytorch-Deep-Learning/en/week11/11-1/">qui</a></strong></p>
 
-<p>Altro <strong><a href="https://www.cs.toronto.edu/~lczhang/360/">corso</a>* molto interessante (da cui Python Engineer ha preso spunto, per esempio per l’</strong>autoencoder**.</p>
+<p>Altro <strong><a href="https://www.cs.toronto.edu/~lczhang/360/">corso</a></strong> molto interessante (da cui Python Engineer ha preso spunto, per esempio per l’<strong>autoencoder</strong>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>

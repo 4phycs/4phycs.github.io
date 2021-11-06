@@ -4,6 +4,7 @@ categories: italiano
 tags: [Paolo, MapReduce, Calcolo Parallelo]
 maths: 1
 comments_id: 19
+date: 2021-08-10T00:00:00.000Z
 bigimg:
 ---
 

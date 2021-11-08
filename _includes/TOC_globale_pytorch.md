@@ -1,7 +1,7 @@
--                                    **[Indice degli argomenti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
--                                      **[Introduzione e fonti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
- -                                 **[Lingo - Gergo utilizzato]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
--                                        **[Tensori in Pytorch]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.
+&nbsp;1.1.                                    **[Indice degli argomenti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.  
+&nbsp;1.2.                                      **[Introduzione e fonti]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.  
+&nbsp;1.6.                                  **[Lingo - Gergo utilizzato]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.  
+&nbsp;2.                                        **[Tensori in Pytorch]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-1.md %})**.  
 - **[Grafo Computazionale e Calcolo dei Gradienti con Autograd]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-2.md %})**.
 -                              **[Backpropagation introduzione]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-2.md %})**.
 -                                          **[Loss e optimizer]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-3.md %})**.
@@ -20,3 +20,7 @@
 -                                         **[Pytorch Lightning]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-8.md %})**.
 -                                              **[LR Scheduler]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-8.md %})**.
 -                                               **[Autoencoder]({{ site.baseurl }}{% link _posts/Pytorch/2021-10-15-Pytorch-9.md %})**.
+
+
+
+

@@ -19,10 +19,10 @@ I was the assistant professor for the **[Parallel Computing](https://www.unimib.
 department of computer science 
 [DISCO](https://www.disco.unimib.it/it) at [University of Milan-Bicocca](http://www.unimib.it), 
  from 2015 to 2021.
-I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-MPI-18-19.md %})**
-, **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2020-02-09-OpenMP-18-19.md %})**, 
-**[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2020-05-26-Cuda.md %})**
- and  the theory behind **[Map Reduce]({% link _posts/Paolo/2020-05-27-mapReduce.md %})**.  The languages of these lessons are C/C++ and some Python 
+I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-MPI.md %})**
+, **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-OpenMP.md %})**, 
+**[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-Cuda.md %})**
+ and  the theory behind **[Map Reduce]({% link _posts/Paolo/2000-01-01-mapReduce.md %})**.  The languages of these lessons are C/C++ and some Python 
 (but in any case my first love is FORTRAN).
 
 

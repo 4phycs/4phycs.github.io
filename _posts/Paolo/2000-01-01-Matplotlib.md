@@ -16,13 +16,11 @@ date: 2021-11-07T00:00:00.000Z
 # Matplotlib
 
 Queste sono le mie (Paolo Avogadro) note, basate su questo 
-**[video](https://www.youtube.com/watch?v=wB9C0Mz9gSo&ab_channel=DerekBanas)** di Derek Banas, miei test e considerazioni.
-Qualunque errore e' esclusivamente dovuto ad una mia erronea interpretazione dei comandi. Lo scopo delle note non e' quello di
-presentare esempi perfettamente funzionanti, ma serve a me come nota per meglio ricordare come si usano i comandi di Matplotlib
-e ricordarmi il modello mentale che mi aiuta a trovare soluzioni grafiche. La versione originale di queste note ha la forma di un Jupyter Notebook
+**[video](https://www.youtube.com/watch?v=wB9C0Mz9gSo&ab_channel=DerekBanas)** di Derek Banas. Oltre agli esempi suggeriti aggiungo dei miei test e considerazioni.
+Qualunque errore e' esclusivamente dovuto ad una mia erronea interpretazione dei comandi. Lo scopo di queste note non e' di
+presentare esempi perfettamente funzionanti, ma serve a me come spunto per ricordare i comandi di Matplotlib, e il modello mentale che io ho sul pacchetto.
+ La versione originale di queste note ha la forma di un Jupyter Notebook
 e quindi possono esserci dei riferimenti ai notebook all'interno del testo
-
-
 
 Cerco di ricostruire gli esempi presentati e fare delle piccole varianti per capire meglio. Queste note suppongono che ci sia una certa conoscenza di base di come fare i grafici al computer, per esempio partendo da **Gnuplot**.
 

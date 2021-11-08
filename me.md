@@ -9,7 +9,8 @@ published: true
 `Hello world`, my name is `Paolo`   (**[CV]({{ site.baseurl }}/assets/PA55_13Dec2020.pdf)**).
 
 I am a consultant.
-I have been working as a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). I keep on loving these topics and I keep on creating new research about  computer and data science (although I don't have so much time).
+I have been working as a researcher of `computer and data science` at [ID&ALab](http://www.idea.disco.unimib.it/). 
+I keep on loving and creating new research about computer and data science (although I don't have so much time).
 My main focus is on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
 in this  **[article](https://rdcu.be/b2K1c)** we defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
@@ -26,7 +27,7 @@ I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/Paolo/200
 (but in any case my first love is FORTRAN).
 
 
-I am part of the team which has developed the [Pollicina project](https://www.progettopollicina.eu/)
+I was part of the team which has developed the [Pollicina project](https://www.progettopollicina.eu/)
 for creating cultural paths within the flipped learning pedagogical approach.
 
 I am (slowly) adding some of my codes on [GitHub](https://github.com/4phycs).
@@ -34,8 +35,6 @@ I am (slowly) adding some of my codes on [GitHub](https://github.com/4phycs).
 I like physics.
 
 I like math.
-
-If you like math check the [Mathologer](https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg).
 
 I like learning new languages: English, Spanish, Japanese and French.
 

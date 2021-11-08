@@ -1,5 +1,5 @@
 ---
-title: 'Matplotlib'
+title: 'Matplotlib - appunti'
 categories: italiano
 tags:
   - Paolo

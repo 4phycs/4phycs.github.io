@@ -105,8 +105,8 @@
 <loc>http://localhost:4000/tags</loc>
 </url>
 <url>
-<loc>http://localhost:4000/assets/PA55_13Dec2020.pdf</loc>
-<lastmod>2020-12-14T11:20:15+01:00</lastmod>
+<loc>http://localhost:4000/assets/PA59_02_Nov2021.pdf</loc>
+<lastmod>2021-11-11T10:40:56+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/cuda_35.pdf</loc>
@@ -147,6 +147,10 @@
 <url>
 <loc>http://localhost:4000/assets/openMP_40_noPause.pdf</loc>
 <lastmod>2021-10-08T13:18:02+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/pubblicazioni-nov2021.pdf</loc>
+<lastmod>2021-11-11T10:40:44+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/trad30.pdf</loc>

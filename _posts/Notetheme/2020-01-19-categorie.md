@@ -1,5 +1,5 @@
 ---
-title: Prova slug italiano
+title: Trucchi per Pages
 categories: italiano
 tags:
   - Paolo
@@ -52,6 +52,9 @@ $$
 - item 6
 </div>
 
+
+Sito dove con buone informazioni riguardo al `frontmatter` dei post:
+https://chriskyfung.github.io/amp-affiliately-jekyll-theme/front-matter-guide/`:
 
 
 

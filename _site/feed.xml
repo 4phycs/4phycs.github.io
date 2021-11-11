@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-11T11:26:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Seaborn - appunti</title><link href="http://localhost:4000/Seaborn" rel="alternate" type="text/html" title="Seaborn - appunti" /><published>2021-11-08T01:00:00+01:00</published><updated>2021-11-08T01:00:00+01:00</updated><id>http://localhost:4000/Seaborn</id><content type="html" xml:base="http://localhost:4000/Seaborn">&lt;h1 id=&quot;seaborn&quot;&gt;Seaborn:&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-11T16:53:36+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Seaborn - appunti</title><link href="http://localhost:4000/Seaborn" rel="alternate" type="text/html" title="Seaborn - appunti" /><published>2021-11-08T01:00:00+01:00</published><updated>2021-11-08T01:00:00+01:00</updated><id>http://localhost:4000/Seaborn</id><content type="html" xml:base="http://localhost:4000/Seaborn">&lt;h1 id=&quot;seaborn&quot;&gt;Seaborn:&lt;/h1&gt;
 &lt;p&gt;Questi appunti contengono esempi, commenti e grafici basati sul bel &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6GUZXDef2U0&amp;amp;ab_channel=DerekBanas&quot;&gt;video&lt;/a&gt;&lt;/strong&gt; di Derek Banas di
  &lt;a href=&quot;https://www.simplilearn.com/&quot;&gt;Simplilearn&lt;/a&gt;.&lt;/p&gt;
 
@@ -3091,29 +3091,27 @@ c
 &lt;h2 id=&quot;indice-globale-degli-argomenti-nei-post&quot;&gt;Indice globale degli argomenti nei post:&lt;/h2&gt;
 
 &lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;introduzione-a-queste-note&quot;&gt;Introduzione a queste note&lt;/h2&gt;
 
@@ -3530,31 +3528,30 @@ Cuda e' disponibile!!
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;recurrent-neural-network&quot;&gt;Recurrent Neural Network&lt;/h1&gt;
 
@@ -4203,31 +4200,30 @@ accuracy =97.46
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;chainrule-e-autograd&quot;&gt;ChainRule e Autograd&lt;/h1&gt;
 &lt;p&gt;Il pacchetto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Autograd&lt;/code&gt; fornisce differenziazione automatica per le operazioni (funzioni) sui tensori:&lt;br /&gt;
@@ -4702,31 +4698,30 @@ epoch 41: w = 1.997, loss = 0.00006770
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;loss-e-optimizer-di-pytorch&quot;&gt;LOSS e OPTIMIZER di PyTorch&lt;/h1&gt;
 &lt;p&gt;Qqui vediamo qualche esempio di:&lt;/p&gt;
@@ -5533,31 +5528,30 @@ ma si deve passare da torch.nn.functional:&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;feed-forward-neural-network&quot;&gt;Feed Forward Neural Network&lt;/h1&gt;
 &lt;p&gt;Questo e’ il primo esempio di rete neurale funzionante. Nota che qui NON vengono fatti i passaggi preliminari per conoscere la struttura del datset, per vedere se le classi sono bilanciate, o per fare delle trasformazioni. L’ipotesi di partenza e’ che il dataset sia ok.&lt;/p&gt;
@@ -6163,31 +6157,30 @@ accuracy =86.55
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;convolutional-neural-network&quot;&gt;Convolutional Neural Network&lt;/h1&gt;
 
@@ -7186,37 +7179,35 @@ devi rinominare la dir  dove vengono salvati i dati per ogni run diverso. In que
       &lt;li&gt;&lt;a href=&quot;#salvare-modelli-da-gpu&quot; id=&quot;markdown-toc-salvare-modelli-da-gpu&quot;&gt;Salvare modelli da GPU&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#creare-e-deployare-un-modello-pytorch-con-flask&quot; id=&quot;markdown-toc-creare-e-deployare-un-modello-pytorch-con-flask&quot;&gt;Creare e deployare un modello pytorch con Flask&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;io-saving-and-loading-models&quot;&gt;I/O Saving and Loading Models&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=9L9jEOwRrCg&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=17&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video-lezione&lt;/a&gt;&lt;/strong&gt; 
@@ -7447,10 +7438,7 @@ argomento di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;
                       
                       
                       
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;creare-e-deployare-un-modello-pytorch-con-flask&quot;&gt;Creare e deployare un modello pytorch con Flask&lt;/h1&gt;
-&lt;p&gt;questo lo salto per ora.&lt;/p&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">Pytorch 8 Lightning</title><link href="http://localhost:4000/Pytorch-8" rel="alternate" type="text/html" title="Pytorch 8 Lightning" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-8</id><content type="html" xml:base="http://localhost:4000/Pytorch-8">&lt;div id=&quot;toc&quot;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">Pytorch 8 Lightning</title><link href="http://localhost:4000/Pytorch-8" rel="alternate" type="text/html" title="Pytorch 8 Lightning" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-8</id><content type="html" xml:base="http://localhost:4000/Pytorch-8">&lt;div id=&quot;toc&quot;&gt;
   &lt;div class=&quot;toc-title&quot;&gt;
     &lt;i class=&quot;material-icons mat-icon&quot;&gt;toc&lt;/i&gt;&lt;span&gt;In this post&lt;/span&gt;
   &lt;/div&gt;
@@ -7463,35 +7451,33 @@ argomento di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:
- 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.6.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Grafo Computazionale e Calcolo dei Gradienti con Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation introduzione&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
+
+&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
+ 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;pytorch-lightning&quot;&gt;PyTorch Lightning&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;[Video-lezione]
-(https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&amp;amp;ab_channel=PythonEngineer)&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video-lezione&lt;/a&gt;&lt;/strong&gt;
 di Python Engineer.&lt;/p&gt;
 
 &lt;p&gt;PyTorch Lightning  e’ un wrapper per velocizzare la scrittura di reti neurali, con Pytorch.&lt;/p&gt;
@@ -7681,7 +7667,7 @@ Tempo training+test=  12.651966094970703
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;lr-scheduler&quot;&gt;LR Scheduler&lt;/h1&gt;
-&lt;p&gt;url di riferimento: https://www.youtube.com/watch?v=81NJgoR5RfY&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=22&amp;amp;ab_channel=PythonEngineer&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=81NJgoR5RfY&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=22&amp;amp;ab_channel=PythonEngineer&quot;&gt;video&lt;/a&gt;&lt;/strong&gt; di riferimento di Python Engineer.&lt;/p&gt;
 
 &lt;p&gt;Vediamo come sfruttare le funzioni di Pytorch che automaticamente modificano il learning rate per ottenere dei risultati ottimali.&lt;/p&gt;
 

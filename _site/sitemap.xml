@@ -65,10 +65,6 @@
 <lastmod>2021-10-15T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/Pytorch-1</loc>
-<lastmod>2021-10-17T00:00:00+02:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/Pytorch-7</loc>
 <lastmod>2021-10-17T00:00:00+02:00</lastmod>
 </url>
@@ -79,6 +75,10 @@
 <url>
 <loc>http://localhost:4000/Seaborn</loc>
 <lastmod>2021-11-08T01:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Pytorch-1</loc>
+<lastmod>2021-11-12T01:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about</loc>

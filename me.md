@@ -15,10 +15,10 @@ I was a researcher of `computer and data science` at **[ID&ALab](http://www.idea
 (**[Univeristy of Milan-Bicocca](http://www.unimib.it)**). 
 I keep on loving and creating new research about computer and data science (although I don't have so much time).
 My main focus is on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
-in this  **[article](https://rdcu.be/b2K1c)** (published on **[KAIS](https://www.springer.com/journal/10115))** we defined a new 
+in this  **[article](https://rdcu.be/b2K1c)** (published on **[KAIS](https://www.springer.com/journal/10115)** journal)  we defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
 unsupervised `machine learning`). More recently, we built the **[fastest algorithm for discord detection](https://arxiv.org/abs/2101.10698)** 
- in time series, soon to appear in **[Applied Intelligence](https://www.springer.com/journal/10489)**.
+ in time series, soon to appear in **[Applied Intelligence](https://www.springer.com/journal/10489)** journal.
 
 
 I was the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 
@@ -34,9 +34,9 @@ I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/Paolo/200
 I was part of the team which has developed the **[Pollicina project](https://www.progettopollicina.eu/)**
 a social LMS for creating cultural paths within the flipped learning pedagogical approach.
 
-I am (slowly) adding some of my codes on [GitHub](https://github.com/4phycs).
+I am (slowly) adding some of my codes on **[GitHub](https://github.com/4phycs)**.
 
-I like physics. I worked as a physicist for 3 years at **[RIKEN](https://www.riken.jp/en/)** and 1.5 years at **[Texas A&M-Commerce](https://www.tamuc.edu/)**
+I like physics. I worked as a physicist for 3 years at **[RIKEN](https://www.riken.jp/en/)** in Japan, and 1.5 years at **[Texas A&M-Commerce](https://www.tamuc.edu/)** university in the USA.
 
 I like math.
 

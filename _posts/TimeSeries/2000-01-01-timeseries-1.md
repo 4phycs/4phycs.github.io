@@ -1,5 +1,5 @@
 ---
-title: Time series anomalies
+title: Time series analysis 1
 published: false
 maths: 1
 tags: 
@@ -9,8 +9,14 @@ categories: English
 toc: 1
 date: 2021-11-12
 ---
-# Time series anomaly detection
+# Time series analysis 1: introduction 
 
+This is going to be the first post regarding time series analysis. This post contains:
+- An inttroduction regarding time series 
+- The terminology and the initial definitions that will be used in all the other posts.
+- The Table of contents of all the posts regarding time series analysis
+
+## Introduction to time series
 A time series is just a collection of ordered points, like this:
 
 3.4   7.2   5.2  2.5   5.3   7.1  0.4  ...
@@ -77,16 +83,16 @@ In time series an observation is related to a sequence of the time series. What 
 all the sets of 10 successive points (we can see later that an observation is related to a sequence but it is not necessarily the sequence itself). 
 How many sequences of length s are there in a time series containing N points? it is very easy: N-s+1. You can see it simply by the fact
 that at the tail of the time series, in the last 9 points you cannot have sequences. 
+  It is about time to introduce a few definitions that will help during the rest of this brief discussion:
 
 ## Terminology
 
 - The `length` of the `time series` is denoted with the capital $N$.
-  It is about time to introduce a few definitions that will help during the rest of this brief discussion:
-- The length of a `sequence` is denoted with the lowercase letter $s$.
 - We will denote the `points` of the time series as $p_j$ where $j \in [1,N]$ defines the order of the observation, for example $p_1$
   is the first point observed, $p_{100}$ is the 100th point observed and so on.
 - A `sequence` is a series points one after the other. For example thit is a sequence of 4 points: $p_{10}, p_{11},
   p_{12}, p_{13}$. We denote the sequence by the time of its first point, for example, the above sequence is $10$, and its length $s=4$ 
+- The length of a `sequence` is denoted with the lowercase letter $s$. If a sequence contains 10 points, then $s=10$.
 - The `distance` between two sequences (sequence $l$ and sequence $m$ in this case) is just the Euclidean distance:
  $$ 
  \displaystyle
@@ -94,11 +100,13 @@ that at the tail of the time series, in the last 9 points you cannot have sequen
  $$
 When are two sequences similar to each other? Simply when the distance between them is small. At contrary when two sequences have a very high euclidean distance
 one can say that the two sequences are very different.
-- You can calculate the distance among all the couples of sequences. Just imagine a matrix with N rows and columns. The
-  distance between sequence $i$ and sequence $j$ is in the entry $M_{ij} = d(i,j)$. Clearly this takes $N^2$ distance calculations.
+- You can calculate the distance among all the couples of sequences. Just imagine a matrix with N rows and N columns. We
+  instert the value of the distance between sequence $i$ and sequence $j$ is in the entry $M_{ij} = d(i,j)$. Clearly this takes $N^2$ distance calculations.
 Some of these distances are rather useless: for example we know that the distance of a sequence with itself is 0. In some other cases no calculation is needed:
 the distance is a symmetric function $M_{i,j}= M_{j,i}$.
-- The nearest neighbor of a sequence is denoted with  nnd
+- The `nearest neighbor` of sequence $j$ is a sequence denoted with $ngh(j)$
+- The `nearest neighbor distance` of sequence j is denoted with  $nnd(j) = d\left(\frac{}{} j, ngh(j) \right)$. This might seem a bit convoluted
+  but it is easy: the nearest neighbor distance of sequence $j$ is just the distance between $j$ and its nearest neighbor $ngh(j)$
 
 
 

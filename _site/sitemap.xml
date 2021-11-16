@@ -77,6 +77,10 @@
 <lastmod>2021-11-08T01:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/timeseries-1</loc>
+<lastmod>2021-11-12T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/Pytorch-1</loc>
 <lastmod>2021-11-12T01:00:00+01:00</lastmod>
 </url>

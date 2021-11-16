@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-14T17:16:30+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-11-12T01:00:00+01:00</published><updated>2021-11-12T01:00:00+01:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-16T13:14:58+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-11-12T01:00:00+01:00</published><updated>2021-11-12T01:00:00+01:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
   &lt;div class=&quot;toc-title&quot;&gt;
     &lt;i class=&quot;material-icons mat-icon&quot;&gt;toc&lt;/i&gt;&lt;span&gt;In this post&lt;/span&gt;
   &lt;/div&gt;
@@ -458,7 +458,122 @@ Cuda e' disponibile!!
 &lt;h2 id=&quot;tensori-avanzato&quot;&gt;Tensori avanzato&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;un tensore puo’ essere &lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/questions/26998223/what-is-the-difference-between-contiguous-and-non-contiguous-arrays/26999092#26999092&quot;&gt;contiguous&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">Seaborn - appunti</title><link href="http://localhost:4000/Seaborn" rel="alternate" type="text/html" title="Seaborn - appunti" /><published>2021-11-08T01:00:00+01:00</published><updated>2021-11-08T01:00:00+01:00</updated><id>http://localhost:4000/Seaborn</id><content type="html" xml:base="http://localhost:4000/Seaborn">&lt;h1 id=&quot;seaborn&quot;&gt;Seaborn:&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">Time series analysis 1</title><link href="http://localhost:4000/timeseries-1" rel="alternate" type="text/html" title="Time series analysis 1" /><published>2021-11-12T00:00:00+01:00</published><updated>2021-11-12T00:00:00+01:00</updated><id>http://localhost:4000/timeseries-1</id><content type="html" xml:base="http://localhost:4000/timeseries-1">&lt;h1 id=&quot;time-series-analysis-1-introduction&quot;&gt;Time series analysis 1: introduction&lt;/h1&gt;
+
+&lt;p&gt;This is going to be the first post regarding time series analysis. This post contains:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;An inttroduction regarding time series&lt;/li&gt;
+  &lt;li&gt;The terminology and the initial definitions that will be used in all the other posts.&lt;/li&gt;
+  &lt;li&gt;The Table of contents of all the posts regarding time series analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction-to-time-series&quot;&gt;Introduction to time series&lt;/h2&gt;
+&lt;p&gt;A time series is just a collection of ordered points, like this:&lt;/p&gt;
+
+&lt;p&gt;3.4   7.2   5.2  2.5   5.3   7.1  0.4  …&lt;/p&gt;
+
+&lt;p&gt;Sometimes there is a timestamp associated to each point but it is 
+not necessary. 
+Often times one expects the time interval between two points to be constant in time, however it
+is not so rare to find gaps between points.&lt;/p&gt;
+
+&lt;p&gt;2014-Mar-29 18:02:24.250        29.25&lt;br /&gt;
+2014-Mar-29 18:02:40.250        28.05&lt;br /&gt;
+2014-Mar-29 18:02:56.250        27.897&lt;br /&gt;
+2014-Mar-29 18:03:12.250        24.717&lt;br /&gt;
+2014-Mar-29 18:03:44.250        21.364&lt;br /&gt;
+2014-Mar-29 18:04:00.250        27.179&lt;br /&gt;
+2014-Mar-29 18:04:16.250        28&lt;br /&gt;
+2014-Mar-29 18:04:32.250        26.825&lt;br /&gt;
+2014-Mar-29 18:04:48.254        26.675&lt;br /&gt;
+2014-Mar-29 18:05:04.250        26.43&lt;/p&gt;
+
+&lt;p&gt;I am going to detail here some solutions regarding time series
+that suppose the abasence of gaps between the points. I am also going to suppose that the time series is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;univariate&lt;/code&gt;. 
+What does it mean? Simply speaking, imagine that you have a sensor that detects the temperature of a room
+every 10 s. This gives rise to a univariate time series. If there is also a second sensor that determines 
+the temperature at a different place in the room at each time interval you have a multi-variate time series (bi-variate in this case).
+You can have as many as “sensors” as you wish.&lt;/p&gt;
+
+&lt;p&gt;In the example above, the sensor is going to give rise to about 3 million points in one year 
+(I like to remember that the number of seconds of one year is about $\pi \cdot 10^7$ s).&lt;/p&gt;
+
+&lt;p&gt;What can you do of all these points?
+If you open them in a graph (for example with Matplotlib or Gnuplot) you can hardly understand anything.
+You need to zoom the graph in a particular position in order to understand what is going on. This is a problem. You do not know in advance where are the “interesting” spots of the time series and you need 
+some guidance to find them.&lt;/p&gt;
+
+&lt;p&gt;Let’s now take into account that time series often times present a certain degree of repetitivity.&lt;/p&gt;
+
+&lt;p&gt;You can see this “boringness” of time series in many ways, some of them are extremely interesing from the
+algortmic point of view.
+In some cases, this repetitivity has a simple reason. Let’s go back to the temperature
+sensor we introduced earlier. We know that the temprature might be linked to the time of the day. During the night it might fall, while during the day it might increase (although AC units are thought to diminish these variations…).&lt;/p&gt;
+
+&lt;p&gt;Let’s consider another example, your heart rate. The beats are similar to each other. They are not identical
+to each other but indeed they are similar.
+The fact that heart beat are similar is why a doctor &lt;strong&gt;can&lt;/strong&gt; read a cardiogram. If there was no “repetition” the doctor would have
+to examine each spot of the graph, and there would be no clear time scale. It would be 
+essentially impossible to understand what is going on. The doctor can check for strange beats, 
+simply because most of them exibit a normal behavior.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Anomaly&lt;/code&gt; stems from &lt;strong&gt;normality&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It might seem an obvious statement, but it becomes essentially useless to search for anomalies in an environment where there is no normal behavior. Think of a time series composed of points produced with 
+a pseudo-random generator. You could probably measure average quantities and treat the single points as samples from a distribution but 
+there would be no “structure”.&lt;/p&gt;
+
+&lt;p&gt;An anomaly is an observation that differs substantially from the others. This is essentially the “definition” of 
+anomaly you can find in resarch articles on the subject. It is estremely vague. 
+However it tells us that anomaly detection is specific form of machine learning where one perfoms classification. There are 
+just two classes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the normal observations:     this should be by far the most common class&lt;/li&gt;
+  &lt;li&gt;the anomalous observations: very few examples (if any) of this class should be known&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In time series an observation is related to a sequence of the time series. What is a sequence? a set of successive points. For example
+all the sets of 10 successive points (we can see later that an observation is related to a sequence but it is not necessarily the sequence itself). 
+How many sequences of length s are there in a time series containing N points? it is very easy: N-s+1. You can see it simply by the fact
+that at the tail of the time series, in the last 9 points you cannot have sequences. 
+  It is about time to introduce a few definitions that will help during the rest of this brief discussion:&lt;/p&gt;
+
+&lt;h2 id=&quot;terminology&quot;&gt;Terminology&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;length&lt;/code&gt; of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;time series&lt;/code&gt; is denoted with the capital $N$.&lt;/li&gt;
+  &lt;li&gt;We will denote the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;points&lt;/code&gt; of the time series as $p_j$ where $j \in [1,N]$ defines the order of the observation, for example $p_1$
+is the first point observed, $p_{100}$ is the 100th point observed and so on.&lt;/li&gt;
+  &lt;li&gt;A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sequence&lt;/code&gt; is a series points one after the other. For example thit is a sequence of 4 points: $p_{10}, p_{11},
+p_{12}, p_{13}$. We denote the sequence by the time of its first point, for example, the above sequence is $10$, and its length $s=4$&lt;/li&gt;
+  &lt;li&gt;The length of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sequence&lt;/code&gt; is denoted with the lowercase letter $s$. If a sequence contains 10 points, then $s=10$.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distance&lt;/code&gt; between two sequences (sequence $l$ and sequence $m$ in this case) is just the Euclidean distance:
+ &lt;script type=&quot;math/tex&quot;&gt;\displaystyle
+ d(l,m) = \sqrt{ \sum_{k=0}^{s-1} \left( p_{l+k}  - p_{m+k}  \right)^2}&lt;/script&gt;
+When are two sequences similar to each other? Simply when the distance between them is small. At contrary when two sequences have a very high euclidean distance
+one can say that the two sequences are very different.&lt;/li&gt;
+  &lt;li&gt;You can calculate the distance among all the couples of sequences. Just imagine a matrix with N rows and N columns. We
+instert the value of the distance between sequence $i$ and sequence $j$ is in the entry $M_{ij} = d(i,j)$. Clearly this takes $N^2$ distance calculations.
+Some of these distances are rather useless: for example we know that the distance of a sequence with itself is 0. In some other cases no calculation is needed:
+the distance is a symmetric function $M_{i,j}= M_{j,i}$.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nearest neighbor&lt;/code&gt; of sequence $j$ is a sequence denoted with $ngh(j)$&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nearest neighbor distance&lt;/code&gt; of sequence j is denoted with  $nnd(j) = d\left(\frac{}{} j, ngh(j) \right)$. This might seem a bit convoluted
+but it is easy: the nearest neighbor distance of sequence $j$ is just the distance between $j$ and its nearest neighbor $ngh(j)$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;discord&quot;&gt;Discord&lt;/h2&gt;
+&lt;p&gt;If I see the set of all possible sequences as vectors in space, I can consider that the isolated points, 
+those that are fare away from all the others could be considered as anomalies.&lt;/p&gt;
+
+&lt;p&gt;This idea was first formalized in the &lt;a href=&quot;&quot;&gt;this article&lt;/a&gt;.
+Take all the sequences and consider their nearest neighbor, i.e. the other function of the time series where there is the minimum distance.&lt;/p&gt;
+
+&lt;p&gt;In order to have normality one should define some form of similarity. A very intuitive definition is given by the&lt;/p&gt;
+
+&lt;p&gt;Let’s consider a very famous definition of anomaly: discord. 
+A discord is the sequence&lt;/p&gt;
+
+&lt;p&gt;Enter text in &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;. Use the toolbar above, or click the &lt;strong&gt;?&lt;/strong&gt; button for formatting help.&lt;/p&gt;</content><author><name></name></author><category term="Machine Learning" /><category term="Time series" /><summary type="html">Time series analysis 1: introduction</summary></entry><entry><title type="html">Seaborn - appunti</title><link href="http://localhost:4000/Seaborn" rel="alternate" type="text/html" title="Seaborn - appunti" /><published>2021-11-08T01:00:00+01:00</published><updated>2021-11-08T01:00:00+01:00</updated><id>http://localhost:4000/Seaborn</id><content type="html" xml:base="http://localhost:4000/Seaborn">&lt;h1 id=&quot;seaborn&quot;&gt;Seaborn:&lt;/h1&gt;
 &lt;p&gt;Questi appunti contengono esempi, commenti e grafici basati sul bel &lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6GUZXDef2U0&amp;amp;ab_channel=DerekBanas&quot;&gt;video&lt;/a&gt;&lt;/strong&gt; di Derek Banas di
  &lt;a href=&quot;https://www.simplilearn.com/&quot;&gt;Simplilearn&lt;/a&gt;.&lt;/p&gt;
 
@@ -7438,247 +7553,4 @@ argomento di &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;
                       
                       
                       
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry><entry><title type="html">Pytorch 8 Lightning</title><link href="http://localhost:4000/Pytorch-8" rel="alternate" type="text/html" title="Pytorch 8 Lightning" /><published>2021-10-15T00:00:00+02:00</published><updated>2021-10-15T00:00:00+02:00</updated><id>http://localhost:4000/Pytorch-8</id><content type="html" xml:base="http://localhost:4000/Pytorch-8">&lt;div id=&quot;toc&quot;&gt;
-  &lt;div class=&quot;toc-title&quot;&gt;
-    &lt;i class=&quot;material-icons mat-icon&quot;&gt;toc&lt;/i&gt;&lt;span&gt;In this post&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;full&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#pytorch-lightning&quot; id=&quot;markdown-toc-pytorch-lightning&quot;&gt;PyTorch Lightning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#lr-scheduler&quot; id=&quot;markdown-toc-lr-scheduler&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Indice Globale degli argomenti tra i vari post:&lt;/p&gt;
-
-&lt;p&gt; 1.1.                                    &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Indice degli argomenti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Introduzione e fonti&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Lingo - Gergo utilizzato&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 1.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-1&quot;&gt;Tensori in Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.1.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Chainrule e Autograd&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 2.2.                                           &lt;strong&gt;&lt;a href=&quot;/Pytorch-2&quot;&gt;Backpropagation&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Loss e optimizer&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.2.                                        &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Modelli di Pytorch&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.3.                                      &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset e Dataloader&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.4.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Dataset Transforms&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.5.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Softmax e Cross-Entropy Loss&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 3.6.                                       &lt;strong&gt;&lt;a href=&quot;/Pytorch-3&quot;&gt;Activation Function&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 4.1.                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-4&quot;&gt;Feed Forward Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 5.1.                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Convolutional Neural Network&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 5.2.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Transfer Learning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 5.3.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-5&quot;&gt;Tensorboard&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 6.1.                              &lt;strong&gt;&lt;a href=&quot;/Pytorch-6&quot;&gt;I/O Saving and Loading Models&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 7.1.                                  &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;Recurrent Neural Networks&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 7.2.                                            &lt;strong&gt;&lt;a href=&quot;/Pytorch-7&quot;&gt;RNN, GRU e LSTM&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 8.1.                                          &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;Pytorch Lightning&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 8.2.                                               &lt;strong&gt;&lt;a href=&quot;/Pytorch-8&quot;&gt;LR Scheduler&lt;/a&gt;&lt;/strong&gt;.&lt;br /&gt;
- 9.1.                                                &lt;strong&gt;&lt;a href=&quot;/Pytorch-9&quot;&gt;Autoencoder&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;pytorch-lightning&quot;&gt;PyTorch Lightning&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Hgg8Xy6IRig&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=21&amp;amp;ab_channel=PythonEngineer&quot;&gt;Video-lezione&lt;/a&gt;&lt;/strong&gt;
-di Python Engineer.&lt;/p&gt;
-
-&lt;p&gt;PyTorch Lightning  e’ un wrapper per velocizzare la scrittura di reti neurali, con Pytorch.&lt;/p&gt;
-
-&lt;p&gt;Sito di Pytorch Lightning
-https://www.pytorchlightning.ai/&lt;/p&gt;
-
-&lt;p&gt;Per istallarlo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda install pytorch-lightning -c conda-forge&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Non&lt;/strong&gt; e’ piu’ necessario:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;model.train() (ovvero settare il modello  in  training mode)&lt;/li&gt;
-  &lt;li&gt;model.eval()  (ovvero settare il modello  in  evaluation mode)&lt;/li&gt;
-  &lt;li&gt;definire una &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;device&lt;/code&gt; e fare model.to(device)  si puo’ “sconnettere” la GPU facilmente&lt;/li&gt;
-  &lt;li&gt;optimizer.zero_grad()&lt;/li&gt;
-  &lt;li&gt;loss.backwards()&lt;/li&gt;
-  &lt;li&gt;optimizer.step()&lt;/li&gt;
-  &lt;li&gt;with torch.nograd()&lt;/li&gt;
-  &lt;li&gt;x= x.detach&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;stampa consigli e aiuti!&lt;/li&gt;
-  &lt;li&gt;supporto Tensorboard: viene costruito un folder chiamato &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lightning_logs&lt;/code&gt;.
-Per usare tensorboard &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tensorboard  --logdir lightning_logs&lt;/code&gt;  (e’ il nome della dir creata in automatico, nel video fa un errore e scrive log_dir)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A questo punto per fare inspecting del training, creiamo un altro dict.&lt;/p&gt;
-
-&lt;p&gt;Usiamo il codice del tutorial 13 e lo modifichiamo per PyTorch Lightning.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Suggerimenti&lt;/code&gt;:
--suggerisce di usare il metodo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;validation_epoch_end()&lt;/code&gt; per accumulare statistiche. Nota che nel video Loeber copia i metodi dal sito e li modifica per l’occasione. Questo metodo viene poi piazzato all’interno del modello&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Domande&lt;/code&gt;:
-mi viene GPU present = True, used False, devo accendere l’uso della GPU. Si va nel metodo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Trainer&lt;/code&gt; e si mette: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trainer=Trainer(gpus=1, max_epochs=num_epochs, fast_dev_run =True)&lt;/code&gt;. Ok ho controllato e ora la GPU e’ presente e usata… ma il tempo di esecuzione praticamente non cambia!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Si puo’ usare anche una TPU e anche un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distributed backend&lt;/code&gt; una DDP&lt;/li&gt;
-  &lt;li&gt;Si puo’ passare a precisione 16 bit&lt;/li&gt;
-  &lt;li&gt;in Trainer si puo’ mettere anche il karg: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto_lr_find =True&lt;/code&gt; per il learning rate&lt;/li&gt;
-  &lt;li&gt;in Trainer si puo’ mettere anche il karg: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deterministic =True&lt;/code&gt; per riprodurre esattamente i risultati&lt;/li&gt;
-  &lt;li&gt;in Trainer si puo’ mettere anche il karg: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gradient_clip_val =0.3&lt;/code&gt; (un numero tra 0 e 1 per fare clipping dei gradienti)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Problemi&lt;/code&gt;:&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;nel video si vede la loss che scende in basso a dx mentre per me e’ un NAN. Ok il problema era che non facevo “ritornare” nulla dal metodo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;training_step&lt;/code&gt; che invece deve restituire un dict della forma {‘loss’:loss}, che viene preso direttamente dal PL e mostrato nella barra sotto&lt;/li&gt;
-  &lt;li&gt;non vedo apparire la fase di validazione con una barra che si riempie (nel video c’e’)&lt;/li&gt;
-  &lt;li&gt;mi da il seguente warning: UserWarning: The {log:dict keyword} was deprecated in 0.9.1 and will be removed in 1.0.0
-Please use self.log(…) inside the lightningModule instead.
-#log on a step or aggregate epoch metric to the logger and/or progress bar (inside LightningModule)
-self.log(‘train_loss’, loss, on_step=True, on_epoch=True, prog_bar=True)
-warnings.warn(*args, **kwargs)&lt;/li&gt;
-  &lt;li&gt;In tensor borad non riesco a trovare train_loss (e’ uno scalare ma non lo trovo)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch.nn&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torchvision&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torchvision.transforms&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;time&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch.nn.functional&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;F&lt;/span&gt; 
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pytorch_lightning&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pl&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# PL
-&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pytorch_lightning&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Trainer&lt;/span&gt; 
-
-&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# device config
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'cuda'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cuda&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'cpu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-
-&lt;span class=&quot;c1&quot;&gt;# Hyper parametri 
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;#  =784 sono le dimensioni delle immagini
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hidden_size&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;#  scelto da me
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_classes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#  devo classificare immagini di numeri
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num_epochs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;#  quanti giri completi vengono fatti
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#  questo non so come sia stato scelto
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;learning_rate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#  piccolo
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#train_dataset = torchvision.datasets.MNIST(root= './data/', train= True, transform =transforms.ToTensor(), download = True)
-#test_dataset = torchvision.datasets.MNIST(root= './data/', train= False, transform =transforms.ToTensor(), download = False) # ho gia' scaricato tutto con il train_datast
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#train_loader = torch.utils.data.DataLoader(dataset= train_dataset, batch_size = batch_size, shuffle=True)
-#test_loader = torch.utils.data.DataLoader (dataset=  test_dataset, batch_size = batch_size, shuffle=False)
-&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;############  MODELLO ####################
-&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;#class NeuralNet(nn.Module):             #vecchi
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LitNeuralNet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LightningModule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# nome scelto da noi, pl.LightningModule e' la versione super di nn.Module    
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hidden_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LitNeuralNet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hidden_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ReLU&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Linear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hidden_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-       
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;forward&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# x e' l'input.
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# 
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;relu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;out&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;# 
-&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;training_step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# PL non uso piu' i loop!!!! 
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#x,y = batch           # unpack
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;batch&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# PL unpack
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;images&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reshape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# non e' piu' necessairo to(device)
-&lt;/span&gt;        
-        &lt;span class=&quot;c1&quot;&gt;#y_hats = self(x)     # ????
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;outputs&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# PL questo e' il forward pass! usiamo self perche' usiamo direttamente questo modulo
-&lt;/span&gt;        
-        &lt;span class=&quot;c1&quot;&gt;#loss = F.cross_entropy(y_hat, y)
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cross_entropy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;outputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        
-        &lt;span class=&quot;n&quot;&gt;tensorboard_logs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'train_loss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# devo metterlo anche nel validatio_epoch_end
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'loss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'log'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensorboard_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# PL i nomi delle chiavi sono FISSI: e' log non Log
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#return {'loss': loss}
-&lt;/span&gt;    
-    
-    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;configure_optimizers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# PL ma il nome e' fissato da PL? penso di si'
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#optimizer = torch.optim.Adam(self.parameters(), lr = learning_rate)  # non ho capito se serve o no...   
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Adam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#  PL self e' l'istanza del modello
-&lt;/span&gt;    
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;train_dataloader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#dataset = MNIST(os.getcwd(), train=True, download=True, transform =transforms.ToTensor())
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#loader = DataLoader (dataset, batch_size= 32, num_workers=1, shuffle=True)   #lui ha messo num_workers = 4
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;train_dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torchvision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MNIST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./data/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ToTensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;download&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;train_loader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataLoader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_workers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shuffle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_loader&lt;/span&gt;
-    
-    &lt;span class=&quot;c1&quot;&gt;# il nome deve essere questo!
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;val_dataloader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;val_dataset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torchvision&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;datasets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MNIST&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'./data/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transforms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ToTensor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;download&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ho gia' scaricato tutto con il train_datast
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;val_loader&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;utils&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataLoader&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_dataset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_workers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shuffle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_loader&lt;/span&gt;    
-    
-    
-    &lt;span class=&quot;c1&quot;&gt;# questo viene eseguito dopo ogni epoch di validazione
-&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;validation_epoch_end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;avg_loss&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;torch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'val_loss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-     
-        &lt;span class=&quot;n&quot;&gt;tensorboard_logs&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tavg_val_loss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# PL per ora non lo guardiamo
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tavg_val_loss'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;avg_loss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'log'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tensorboard_logs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#return {'val_loss': avg_loss}    
-&lt;/span&gt;    
-
-&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#trainer = Trainer(max_epochs = num_epochs, fast_dev_run = False)  # PL Trainer e' importato da PL
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Trainer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gpus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_epochs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_epochs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fast_dev_run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# PL Trainer e' importato da PL
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LitNeuralNet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hidden_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_classes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;# PL istanzio il modello  
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;                                                &lt;span class=&quot;c1&quot;&gt;# faccio il training sul modello
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Tempo training+test= &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    
-    
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;GPU available: True, used: True
-TPU available: None, using: 0 TPU cores
-
-  | Name | Type   | Params
---------------------------------
-0 | l1   | Linear | 392 K 
-1 | relu | ReLU   | 0     
-2 | l2   | Linear | 5.0 K 
---------------------------------
-397 K     Trainable params
-0         Non-trainable params
-397 K     Total params
-1.590     Total estimated model params size (MB)
-
-
-
-HBox(children=(HTML(value='Training'), FloatProgress(value=1.0, bar_style='info', layout=Layout(flex='2'), max…
-
-
-
-Tempo training+test=  12.651966094970703
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;lr-scheduler&quot;&gt;LR Scheduler&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=81NJgoR5RfY&amp;amp;list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&amp;amp;index=22&amp;amp;ab_channel=PythonEngineer&quot;&gt;video&lt;/a&gt;&lt;/strong&gt; di riferimento di Python Engineer.&lt;/p&gt;
-
-&lt;p&gt;Vediamo come sfruttare le funzioni di Pytorch che automaticamente modificano il learning rate per ottenere dei risultati ottimali.&lt;/p&gt;
-
-&lt;p&gt;Spesso (intuitivamente) si vuole diminuire il &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Learning Rate&lt;/code&gt;. La logica a mio avviso e’ la seguente, quando mi avvicino al minimo se non diminuisco il LR rischio di saltare da una parte all’altra del minimo stesso.&lt;/p&gt;
-
-&lt;p&gt;Per questo si usa uno scheduler.
-Onestamente non mi pare ultra necessario, uno puo’ costruire delle funzioni custom che facciano la cosa ogni volta.  Anzi se uso una funzione che non ho scritto io c’e’ la possibilita’ che io non controlli perfertamente.&lt;/p&gt;
-
-&lt;p&gt;Una interessante e’ che si riduce solo se una certa metrica ha raggiunto un plateau.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Osservazioni&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;in python // e’ floor division.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Python" /><category term="DeepLearning" /><category term="Neural Nets" /><category term="Cuda" /><summary type="html">tocIn this post</summary></entry></feed>

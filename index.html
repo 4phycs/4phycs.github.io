@@ -33,6 +33,7 @@ published: true
 
 
 
+
 <!--   Qui sotto per avere thumbnail --> 
 <!-- https://truongtx.me/2013/01/05/thumbnail-post-list-for-jekyll-bootstrap   -->
 <!-- fine thumbnail -->
@@ -41,9 +42,10 @@ published: true
   <div class="thi-columns">
     <ul class="tag-post">
     {% for post in paginator.posts %}
-    {% if post.thumbnail %}
-	<img src="{{ post.thumbnail }}" align="right" height="25" />    <!-- questo mette il thumbnail --> 
-    {% endif %}
+   <!-- qui sotto per mettere il thumbnail --> 
+    <!-- {% if post.thumbnail %}
+	<img src="{{ post.thumbnail }}" align="right" height="25" />   
+    {% endif %} -->
       <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
         <li>
           {{ post.title }} <small class="post-date">{{post.date | date: "%d/%m/%Y"}}</small>

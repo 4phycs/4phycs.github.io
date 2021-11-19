@@ -24,10 +24,10 @@ unsupervised `machine learning`). More recently, we built the **[fastest algorit
 I was the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 
 **[department of computer science](https://www.disco.unimib.it/it)** at **[University of Milan-Bicocca](http://www.unimib.it)**, 
  from 2015 to 2021.
-I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-MPI.md %})**
-, **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-OpenMP.md %})**, 
-**[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-Cuda.md %})**
- and  the theory behind **[Map Reduce]({% link _posts/Paolo/2000-01-01-mapReduce.md %})**.  The languages of these lessons are C/C++ and some Python 
+I introduceed to the students **[MPI]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-MPI.md %})**
+, **[OpenMP]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-OpenMP.md %})**, 
+**[CUDA]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-Cuda.md %})**
+ and  the theory behind **[Map Reduce]({% link _posts/CalcoloParallelo/2000-01-01-mapReduce.md %})**.  The languages of these lessons are C/C++ and some Python 
 (but in any case my first love is FORTRAN).
 
 I was part of the team which has developed the **[Pollicina project](https://www.progettopollicina.eu/)**

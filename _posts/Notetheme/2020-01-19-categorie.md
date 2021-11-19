@@ -2,7 +2,6 @@
 title: Trucchi per Pages
 categories: italiano
 tags:
-  - Paolo
   - theme
 maths: 1
 comments_id: 11

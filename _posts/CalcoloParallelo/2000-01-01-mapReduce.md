@@ -1,7 +1,7 @@
 ---
 title: MapReduce, Calcolo Parallelo, UNIMIB 
 categories: italiano
-tags: [Paolo, MapReduce, Calcolo Parallelo]
+tags: [MapReduce, Calcolo Parallelo]
 maths: 1
 comments_id: 19
 date: 2021-08-10T00:00:00.000Z
@@ -29,9 +29,9 @@ originali.
 
 A chi e' rivolto `MapReduce`? 
 
-Una premessa: questa e' l'ultima parte del corso, prima introduco **[MPI]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-MPI.md %})**,
- poi **[OpenMP]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-OpenMP.md %})** 
-e **[CUDA]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-Cuda.md %})**
+Una premessa: questa e' l'ultima parte del corso, prima introduco **[MPI]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-MPI.md %})**,
+ poi **[OpenMP]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-OpenMP.md %})** 
+e **[CUDA]({{ site.baseurl }}{% link _posts/CalcoloParallelo/2000-01-01-Cuda.md %})**
 , infine passo  HADOOP/MapReduce.
 
 I primi 3 argomenti sono pertinenti per chi e' interessato a fare High Performance Computing. Richiedono di imparare 

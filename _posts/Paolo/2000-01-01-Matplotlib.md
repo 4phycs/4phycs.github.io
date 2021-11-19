@@ -2,7 +2,7 @@
 title: 'Matplotlib - appunti'
 categories: italiano
 tags:
-  - Paolo
+  - Grafici
   - Python
 maths: 1
 comments_id: 25

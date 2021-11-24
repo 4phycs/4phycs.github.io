@@ -10,17 +10,19 @@ bigimg: null
 published: true
 toc: 1
 date: 2021-11-07T00:00:00.000Z
+related_ok: 1
 ---
 
 
 # Matplotlib
 
-Queste sono le mie (Paolo Avogadro) note, basate su questo 
-**[video](https://www.youtube.com/watch?v=wB9C0Mz9gSo&ab_channel=DerekBanas)** di Derek Banas. Oltre agli esempi suggeriti aggiungo dei miei test e considerazioni.
+Queste sono le mie (Paolo Avogadro) note basate sul 
+**[video](https://www.youtube.com/watch?v=wB9C0Mz9gSo&ab_channel=DerekBanas)** di Derek Banas riguardo a **[Matplotlib](https://matplotlib.org/)**. Oltre agli esempi suggeriti aggiungo dei miei test e considerazioni.
 Qualunque errore e' esclusivamente dovuto ad una mia erronea interpretazione dei comandi. Lo scopo di queste note non e' di
 presentare esempi perfettamente funzionanti, ma serve a me come spunto per ricordare i comandi di Matplotlib, e il modello mentale che io ho sul pacchetto.
  La versione originale di queste note ha la forma di un Jupyter Notebook
-e quindi possono esserci dei riferimenti ai notebook all'interno del testo
+e quindi possono esserci dei riferimenti ai notebook all'interno del testo.
+Dopo avere imparato Matplotlib puo' essere interessante impararare ad usare **[Seaborn]({{ site.baseurl }}{% link _posts/Paolo/2000-01-01-Seaborn.md %})**.
 
 Cerco di ricostruire gli esempi presentati e fare delle piccole varianti per capire meglio. Queste note suppongono che ci sia una certa conoscenza di base di come fare i grafici al computer, per esempio partendo da **Gnuplot**.
 

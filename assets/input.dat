@@ -1,0 +1,16 @@
+25        eXl,         elementi for each letter
+5         lung_parole,  number of letters for word
+4         num_simboli,  size of the alphabet  
+6         Nd,           number of discords you want for each present_queue
+-1        N,            number of points for each present queue (-1 takes the whole time series)
+1         nmax,         number of present_queues to be analyzed
+1000      number of elements in coda_discord
+60000     Tmax          distance (points) before obsolescence
+0         nnei          fossil parameter do not change 
+100       nbin          numero di bins for the statistics regarding the symbolic sequences
+T         Znorm         z-normalizzazione T= True, F= False
+altro     algorithm name: altro (HST), brute (brute force), ...  
+
+
+
+

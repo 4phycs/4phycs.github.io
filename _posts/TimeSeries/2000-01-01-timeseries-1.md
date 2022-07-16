@@ -11,20 +11,20 @@ date: 2021-11-12
 ---
 # Time series analysis 1: introduction 
 
-This is going to be the first post regarding time series analysis. This post contains:
-- An inttroduction regarding time series 
+I have been working on time series analysis for a while and I am going to dedicate a few posts
+on this subject. This first post contains:
+- An introduction regarding time series 
 - The terminology and the initial definitions that will be used in all the other posts.
 - The Table of contents of all the posts regarding time series analysis
 
 ## Introduction to time series
-A time series is just a collection of ordered points, like this:
+A time series is just an ordered collection of points, like this:
 
 3.4   7.2   5.2  2.5   5.3   7.1  0.4  ...
 
-Sometimes there is a timestamp associated to each point but it is 
-not necessary. 
+Sometimes the points have a timestamp, but it is not necessary. 
 Often times one expects the time interval between two points to be constant in time, however it
-is not so rare to find gaps between points. 
+is not so rare to find gaps between points, like in this example:
 
 2014-Mar-29 18:02:24.250        29.25  
 2014-Mar-29 18:02:40.250        28.05  
@@ -37,20 +37,28 @@ is not so rare to find gaps between points.
 2014-Mar-29 18:04:48.254        26.675  
 2014-Mar-29 18:05:04.250        26.43  
 
-I am going to detail here some solutions regarding time series
-that suppose the abasence of gaps between the points. I am also going to suppose that the time series is `univariate`. 
-What does it mean? Simply speaking, imagine that you have a sensor that detects the temperature of a room
-every 10 s. This gives rise to a univariate time series. If there is also a second sensor that determines 
-the temperature at a different place in the room at each time interval you have a multi-variate time series (bi-variate in this case).
+If you take the time difference between the first and  the second point you get 16 s.
+Sixteen seconds pass also between the second and the third point, however between the 4th
+ and the 5th point there are 32 s. Most likely the sensor skipped one measurement between the 
+4th and the 5th point.
+
+At the beginning I am going to study only time series where the points are equispaced in time.
+I am also going to suppose that the time series is `univariate`. 
+What does it mean? Simply speaking, imagine that you have a sensor that detects the temperature
+ of a room every 10 s. This gives rise to a univariate time series. If there is also a 
+second sensor that determines the temperature at a different place in the room
+ you have a multi-variate time series (bi-variate in this case).
 You can have as many as "sensors" as you wish.
 
 In the example above, the sensor is going to give rise to about 3 million points in one year 
 (I like to remember that the number of seconds of one year is about $\pi \cdot 10^7$ s). 
 
 What can you do of all these points?
-If you open them in a graph (for example with Matplotlib or Gnuplot) you can hardly understand anything.
-You need to zoom the graph in a particular position in order to understand what is going on. This is a problem. You do not know in advance where are the "interesting" spots of the time series and you need 
-some guidance to find them. 
+If you open them in a graph (for example with Matplotlib or Gnuplot) you can hardly 
+understand anything.
+You need to zoom in the graph at a particular position in order to understand what is going on.
+ This is a problem. You do not know in advance where are the "interesting" spots of the 
+time series and you need some guidance to find them. 
 
 Let's now take into account that time series often times present a certain degree of repetitivity. 
 
@@ -61,20 +69,22 @@ sensor we introduced earlier. We know that the temprature might be linked to the
 
 Let's consider another example, your heart rate. The beats are similar to each other. They are not identical
 to each other but indeed they are similar.
-The fact that heart beat are similar is why a doctor **can** read a cardiogram. If there was no "repetition" the doctor would have
+The fact that the heart beats are similar to each other is why a doctor **can** read a cardiogram. 
+If there was no "repetition" the doctor would have
 to examine each spot of the graph, and there would be no clear time scale. It would be 
 essentially impossible to understand what is going on. The doctor can check for strange beats, 
-simply because most of them exibit a normal behavior. 
+simply because most of them exibit a `normal behavior`. 
 
 `Anomaly` stems from **normality**. 
 
-It might seem an obvious statement, but it becomes essentially useless to search for anomalies in an environment where there is no normal behavior. Think of a time series composed of points produced with 
+It might seem an obvious statement, but it becomes essentially useless to search for 
+anomalies in an environment where there is no normal behavior. Think of a time series composed of points produced with 
 a pseudo-random generator. You could probably measure average quantities and treat the single points as samples from a distribution but 
 there would be no "structure".
 
-An anomaly is an observation that differs substantially from the others. This is essentially the "definition" of 
-anomaly you can find in resarch articles on the subject. It is estremely vague. 
-However it tells us that anomaly detection is specific form of machine learning where one perfoms classification. There are 
+`An anomaly is an observation that differs substantially from the others`. This is  (almost verbatim) the "definition" of 
+anomaly you can find in resarch articles on the subject. As you can notice It is estremely vague. 
+However it tells us that anomaly detection is specific form of `machine learning` called `classification`. In this case there are 
 just two classes:
 - the normal observations:     this should be by far the most common class
 - the anomalous observations: very few examples (if any) of this class should be known

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
+  <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="/assets/res/banner.png" />
+
+  
+
+  <title>
+    
+      HST | 4Phycs
+    
+  </title>
+
+  
+
+  <!-- page's cover -->
+  
+    <meta property="og:image" content="http://localhost:4000/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/res/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="stylesheet" href="/assets/css/thi_scss.css">
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/post.css">
+    
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+  
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="HST" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="HOT SAX Time (HST): a fast algorithm for discord search." />
+<meta property="og:description" content="HOT SAX Time (HST): a fast algorithm for discord search." />
+<link rel="canonical" href="http://localhost:4000/HST" />
+<meta property="og:url" content="http://localhost:4000/HST" />
+<meta property="og:site_name" content="4Phycs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-16T00:00:00+02:00" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"headline":"HST","dateModified":"2022-07-16T00:00:00+02:00","datePublished":"2022-07-16T00:00:00+02:00","description":"HOT SAX Time (HST): a fast algorithm for discord search.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/HST"},"@type":"BlogPosting","url":"http://localhost:4000/HST","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+  
+    <nav class="top-nav light-blue darken-4">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a class="page-title font-title" href="/">4Phycs</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/categories">Ita Eng</a></li>
+        <li><a href="/tags">Tags</a></li>
+        <li><a href="/me">Me</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="/">
+          <img style="display:inherit;" class="circle z-depth-2" src="/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">Paolo Avogadro</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="http://"></a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="/search" method="get">
+      <input class="search-sidebar" type="search" name="q"  placeholder="search something?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      In this post
+    </div>
+    <ol id="toc-sidebar">
+  <li><a href="#hot-sax-time-hst-a-fast-algorithm-for-discord-search">HOT SAX Time (HST): a fast algorithm for discord search.</a></li>
+  <li><a href="#disclaimer">Disclaimer</a></li>
+  <li><a href="#compiling-the-code">Compiling the Code</a></li>
+  <li><a href="#the-input-file">The input file</a></li>
+  <li><a href="#run-a-discord-search">Run a discord search.</a></li>
+</ol>
+
+  </div>
+</div>
+  
+</header>
+<main>
+  <div class="container">
+    <div id="post-info">
+      <h3>HST</h3>
+      <span>
+        Posted on
+        <span style="display: initial;" class="cat-class">16/07/2022</span>,
+        in
+        
+          
+          
+            <a class="cat-class cat-commas" href="/categories#english">English</a>.
+          
+        
+        <span class="reading-time" title="Estimated read time">
+  
+  
+  <font size="2"> Reading time: 8 mins </font>
+  
+</span>
+
+      </span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="row thi-post">
+      <div class="col s12">
+        <h1 id="hot-sax-time-hst-a-fast-algorithm-for-discord-search">HOT SAX Time (HST): a fast algorithm for discord search.</h1>
+
+<p>HST is a fast algorithm that calculates anomalies (discords) in time series.
+It is a form of unsupervised machine learning.</p>
+
+<p>Download here the HST code called: <strong><a href="/assets/onlineHS147_clean.f90">onlineHS147_clean.f90</a></strong>.</p>
+
+<p>Download here the file that controls the parameters of the search, called: <strong><a href="/assets/input.dat">input.dat</a></strong>.</p>
+
+<p>Download here a file with a ECG time series (with more than 500k points) used in the article: <strong><a href="/assets/300_signal1.txt">300_signal1.txt</a></strong> (you should be able to find it at the
+Rare Rule Anomaly webpage too).</p>
+
+<p>We first released the article explaining <strong><a href="https://arxiv.org/abs/2101.10698">HST</a></strong> on the ArXive in 2021.
+and recently it was published also in <strong><a href="https://link.springer.com/article/10.1007/s10489-021-02897-z">Applied Intelligence</a></strong>
+journal.</p>
+
+<p>What is a Discord? It is a specific kind of anomaly, from an intuitive point of view a discord is a sequence whose 
+nearest neighbor sequence has the highest distance.</p>
+
+<p>Just imagine that there is a town and you want to find the anomalous house.
+A good idea is to find that house that is most isolated from the others. In particular the one whose nearest 
+neighbor is far away. You can find a more detailed explanation of what is a discord in our
+paper (where there are also the references to the original article that defined Discords for time series 
+and a fast algorithm to find them: HOT SAX).</p>
+
+<h1 id="disclaimer">Disclaimer</h1>
+<p><strong>WARNING</strong>: this code comes with no warranty, it might create problems and damages to your computer. Please use it 
+at your own risk. The main problem that I had was due to the creation of large support files 
+like those creating the approximate matrix profile (a file that is not necessary for finding the discords
+but I used them during my researches). This version of the code has also other minor bugs.</p>
+
+<p>Notice that the present version of the code does not build the file with all the approximate NNDs since this takes space and time.
+Another point is that, just reading the time series might take time. For example it takes 2-3
+ s to read a 8M point time series. Keep this in mind when you compare the performance of the search. 
+Fortran unformatted files are much faster to read and they take much less space (approx 1/3). However the present version
+of the code does not read unformatted Fortran files.</p>
+
+<h1 id="compiling-the-code">Compiling the Code</h1>
+<p>The present code is written in Fortran. Be aware that it contains a lot of subroutines no longer in use, it should be
+cleaned better. It is a rather old version and I know it contains a few bugs, but they should be minor.
+You need a Fortran compiler  (for example, I suggest Gfortran since it is free). 
+You can find a list of links for compilers at the <strong><a href="https://fortran-lang.org/">Fortran webpage</a></strong> (including the Gfortran).</p>
+
+<p>Here I give you the instruction on how to compile the code using as a reference the gfortan compiler.
+I will suppose that you are using a Linux distribution.
+You should go to the folder where there is the code (It should be onlineHS147_clean.f90, but I might insert
+other versions of the code in the future), open a terminal and write:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">gfortran -O3 onlineHS147_clean.f90 -o onlineHS147_clean.x
+</span></code></pre></div></div>
+
+<p>The result of the compilation is a bunch of support files and the new executable: online147_clean.x</p>
+
+<h1 id="the-input-file">The input file</h1>
+<p>At this you need to configure the discord search with the <strong>input.dat</strong> file:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">25        eXl,         elementi for each letter
+5         lung_parole,  number of letters for word
+4         num_simboli,  size of the alphabet  
+6         Nd,           number of discords you want for each present_queue
+-1        N,            number of points for each present queue (-1 takes the whole time series)
+1         nmax,         number of present_queues to be analyzed
+1000      number of elements in coda_discord
+60000     Tmax          distance (points) before obsolescence
+0         nnei          fossil parameter do not change 
+100       nbin          numero di bins for the statistics regarding the symbolic sequences
+T         Znorm         z-normalizzazione T= True, F= False
+altro     algorithm name: altro (HST), brute (brute force), ...  
+</span></code></pre></div></div>
+
+<p>HST allows you to search for the discord of length <em>m</em> within the time series.
+You do not enter directly <em>m</em> in this input file, but rather you need to adjust the 
+eXl and lung_parole parameters so that their product is equal to the <em>m</em> you need.
+This is due to the fact that HST is derived from HOT SAX, so you should enter the Symbolic Aggregate Approximation 
+parameters, that turn each sequence into a symbolic seuquence.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">m = eXl x lung_parole
+</span></code></pre></div></div>
+<p>This is a limitation, since you cannot search for sequences that have a length that is a prime number
+since it has to be the product of two integers (&gt;2).
+For example, if you need m =300 you can pick:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">eXl = 75
+lung_parole = 4
+</span></code></pre></div></div>
+
+<p>It is rather safe to keep num_simboli = 3, 4 or 5.</p>
+
+<p><em>Nd</em> is the number of discords that you need, you could enter 1, 2, 3,…. AS long as <em>m x Nd « N</em> 
+it is going to be ok.</p>
+
+<p><strong>nmax</strong> is used to simulate an online analysis on a batch file. It essentially divides the batch in nmax pieces.</p>
+
+<p>The number of elements in coda discord is the size of the batches in the case of online searches.</p>
+
+<p><strong>Tmax</strong> is the obsolescence parameter (also used for online analysis)</p>
+
+<p><strong>nnei</strong> is a fossil of old implementations, it should do nothing, in any case it is better to not change it.</p>
+
+<p><strong>nbin</strong> is a parameter that is used for the statistics on the symbolic sequences, it is better to not change it.</p>
+
+<p><strong>Znorm</strong> tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance F</p>
+
+<p>The last parameter to be changed is the algorithm name. The name of the HST algorithm in the code is ‘altro’ 
+(it means other in Italian, it was a derivation of HOT SAX, and I never changed it)</p>
+
+<p>For example, the input.dat file shown above works fine when searching for 6 discords of length 125 in a time series
+of unknown length using the HST algorithm, considering Z-norm distances:</p>
+
+<h1 id="run-a-discord-search">Run a discord search.</h1>
+<p>The code is expected to read and process files where the points of a time series one on top of the other
+in a txt like file, as for example the file <strong>chfdbchf15_1.csv</strong> begins in this way:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">-0.215
+-0.24
+-0.24
+-0.225
+-0.225
+-0.2
+-0.23
+-0.28
+-0.365
+-0.41
+-0.455
+-0.5
+
+</span><span class="c">...
+</span></code></pre></div></div>
+
+<p>In order to run the search you just need the executable file (and its support files created at compilation time)
+to be in the same folder where there is the input.dat file. 
+Let’s suppose that the time series is in a file called <em>300_signal1.txt</em> (in the same folder),
+you open a terminal in it, and you type:</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">time ./onlineHS147_clean.x 300_signal1.txt
+</span></code></pre></div></div>
+
+<p>By using the command <em>time</em> at the end of the execution you will get information regarding the execution time.</p>
+
+<p>HST will first display a some information regarding the search and it will start processing and writing
+information files in the same folder (and in two sub-folders it creates).</p>
+
+<p>At the end of the execution it will display the first discord and its distance from the nearest neighbor.
+You can find the remaining discords in the file that begins with <em>anomalieTrovate_…</em>. The file name contains
+some information regarding the run, inside there is the position of the anomaly and the distance with the nearest neighbor.</p>
+
+<p>Take into account that most codes count from 0, while for me the first sequence is at position 1, so there might
+be 1 point difference between my results and those of other discord codes.</p>
+
+<p>Example of a run (sorry the explanation is in Italian):</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">lunghezza sequenze da analizzare  (lung_parole x eXl)  =         125
+ numero di punti per lettera                     (eXl)  =          25
+ num. lettere della sequenza simbolica   (lung_parole)  =           5
+ grandezza alfabeto PAA                  (num_simboli)  =           4
+ Numero di possibili cluster: (num_simboli^lung_parole) =        1024
+ Lunghezza della present queue                     (N)  =      536976
+ Numero di discord cercati per coda               (Nd)  =           6
+ Numero di passi prima dell'obsolescenza        (Tmax)  =       60000
+ Numero di cluster vicini dove ricercare        (nnei)  =           0
+ Numero bin della statistica seq simb           (nbin)  =         100
+ Usa Z-normalization?                           (Znorm) = T
+ Usa seme random?                       (useRandomSeed) = T
+ Usa breakpoint Gaussiani?            (gaussBreakpoints)= F
+ Metodo risparmia memoria?            (risparmiaMemoria)= T
+ Multi SAX?                                      (musax)= F
+
+  algoritmo:        altro - (SOD non hanno senso)
+
+  eseguibile:        ./onlineHS147_clean.x
+
+  file analizzato:   300_signal1.txt
+
+ Pre riscaldamento   536726.00000000000     
+ In pulisci          563628.00000000000     
+  Percentuale Completamento                                1   534758.00000000000     
+           3   536785.00000000000     
+97%( 1)            2   537603.00000000000     
+           6   535760.00000000000     
+           8   536635.00000000000     
+          10   535130.00000000000     
+          99   728597.00000000000     
+97%( 2)            9   536611.00000000000     
+          17   539073.00000000000     
+          21   539236.00000000000     
+          22   536782.00000000000     
+          60   548933.00000000000     
+97%( 3)           19   536589.00000000000     
+          28   538722.00000000000     
+          36   535607.00000000000     
+          44   638288.00000000000     
+          49   537219.00000000000     
+         126   715451.00000000000     
+97%( 4)           61   537133.00000000000     
+          65   535747.00000000000     
+          67   538952.00000000000     
+          68   535054.00000000000     
+          75   538918.00000000000     
+97%( 5)           77   536836.00000000000     
+          86   537931.00000000000     
+          91   539489.00000000000     
+          97   536377.00000000000     
+97%( 6) 
+  Entropia di Shannon    5.0499323517087751     
+ 
+  Chiamate a distanza      16095022.0
+  primo Discord        =       441745 ,  nnd=   12.380154963862225     
+
+real	0m15.730s
+user	0m14.833s
+sys	0m0.410s
+
+</span></code></pre></div></div>
+
+
+      </div>
+    </div>
+
+    <div class="tag-list">
+      
+      
+      
+      <a class="tag-chip" href="/tags#machine-learning_cap"><div class="chip z-depth-1">Machine Learning</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#time-series_cap"><div class="chip z-depth-1">Time series</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#anomaly-detection_cap"><div class="chip z-depth-1">Anomaly Detection</div></a>
+      
+    </div>
+    
+    		
+ 
+  </div>
+</main>
+
+	<script src="/assets/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      //duration of the top scrolling animation (in ms)
+      scroll_top_duration = 700,
+      //grab the "back to top" link
+      $back_to_top = $('.cd-top');
+
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+      // if( $(this).scrollTop() > offset_opacity ) { 
+      //  $back_to_top.addClass('cd-fade-out');
+      // }
+    });
+
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
+    });
+
+  });
+</script>
+<style type="text/css">
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #bbb url(/images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+</style>
+
+<a href="#0" class="cd-top">Top</a>
+	<footer class="page-footer light-blue accent-4">  
+  <div class="footer-copyright">
+    <div class="container text-white">
+     <a href="">4Phycs</a> &#xA9; 2022 Inherited from <a href="https://shawnteoh.github.io/matjek/">MatJeck</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+
+  
+    <script src="/assets/js/post.js"></script>
+  
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+  (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script src="/assets/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158698892-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158698892-1');
+</script>
+
+</body>
+</html>

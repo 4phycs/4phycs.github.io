@@ -167,15 +167,15 @@ It is a form of unsupervised machine learning.</p>
 <p>Download here a file with a ECG time series (with more than 500k points) used in the article: <strong><a href="/assets/300_signal1.txt">300_signal1.txt</a></strong> (you should be able to find it at the
 Rare Rule Anomaly webpage too).</p>
 
-<p>We first released the article explaining <strong><a href="https://arxiv.org/abs/2101.10698">HST</a></strong> on the ArXive in 2021.
-and recently it was published also in <strong><a href="https://link.springer.com/article/10.1007/s10489-021-02897-z">Applied Intelligence</a></strong>
+<p>We first released the article explaining <strong><a href="https://arxiv.org/abs/2101.10698">HST</a></strong> on the ArXive in 2021,
+recently it also appeared in <strong><a href="https://link.springer.com/article/10.1007/s10489-021-02897-z">Applied Intelligence</a></strong>
 journal.</p>
 
-<p>What is a Discord? It is a specific kind of anomaly, from an intuitive point of view a discord is a sequence whose 
+<p>What is a Discord? It is a specific kind of anomaly, from an intuitive point of view, a discord is a sequence whose 
 nearest neighbor sequence has the highest distance.</p>
 
 <p>Just imagine that there is a town and you want to find the anomalous house.
-A good idea is to find that house that is most isolated from the others. In particular the one whose nearest 
+A good idea is to find the most isolated house. That can be translated in the house whose nearest 
 neighbor is far away. You can find a more detailed explanation of what is a discord in our
 paper (where there are also the references to the original article that defined Discords for time series 
 and a fast algorithm to find them: HOT SAX).</p>
@@ -183,23 +183,22 @@ and a fast algorithm to find them: HOT SAX).</p>
 <h1 id="disclaimer">Disclaimer</h1>
 <p><strong>WARNING</strong>: this code comes with no warranty, it might create problems and damages to your computer. Please use it 
 at your own risk. The main problem that I had was due to the creation of large support files 
-like those creating the approximate matrix profile (a file that is not necessary for finding the discords
-but I used them during my researches). This version of the code has also other minor bugs.</p>
+like those creating the approximate matrix profile.  This version of the code has also other minor bugs.</p>
 
 <p>Notice that the present version of the code does not build the file with all the approximate NNDs since this takes space and time.
-Another point is that, just reading the time series might take time. For example it takes 2-3
- s to read a 8M point time series. Keep this in mind when you compare the performance of the search. 
+When tating into account the execution time, you should be aware of the fact that, just reading the time series might take time. For example it takes 2-3
+ s to read a 8M point time series. Keep this in mind when you compare the performance of the search with other codes. 
 Fortran unformatted files are much faster to read and they take much less space (approx 1/3). However the present version
 of the code does not read unformatted Fortran files.</p>
 
 <h1 id="compiling-the-code">Compiling the Code</h1>
-<p>The present code is written in Fortran. Be aware that it contains a lot of subroutines no longer in use, it should be
+<p>The present code is written in Fortran. Be aware that it contains a lot of subroutines no longer in use, the code should be
 cleaned better. It is a rather old version and I know it contains a few bugs, but they should be minor.
-You need a Fortran compiler  (for example, I suggest Gfortran since it is free). 
-You can find a list of links for compilers at the <strong><a href="https://fortran-lang.org/">Fortran webpage</a></strong> (including the Gfortran).</p>
+You need a Fortran compiler  (for example, I usually use Gfortran, since it creates quick codes and it is free). 
+You can find a list of links for Fortran compilers at the <strong><a href="https://fortran-lang.org/">Fortran webpage</a></strong> (including the Gfortran).</p>
 
 <p>Here I give you the instruction on how to compile the code using as a reference the gfortan compiler.
-I will suppose that you are using a Linux distribution.
+I will suppose that you are using a <strong>Linux distribution</strong> to compile and run the code.
 You should go to the folder where there is the code (It should be onlineHS147_clean.f90, but I might insert
 other versions of the code in the future), open a terminal and write:</p>
 
@@ -209,7 +208,7 @@ other versions of the code in the future), open a terminal and write:</p>
 <p>The result of the compilation is a bunch of support files and the new executable: online147_clean.x</p>
 
 <h1 id="the-input-file">The input file</h1>
-<p>At this you need to configure the discord search with the <strong>input.dat</strong> file:</p>
+<p>At this point you need to configure the discord search with the <strong>input.dat</strong> file:</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">25        eXl,         elementi for each letter
 5         lung_parole,  number of letters for word
@@ -225,7 +224,7 @@ T         Znorm         z-normalizzazione T= True, F= False
 altro     algorithm name: altro (HST), brute (brute force), ...  
 </span></code></pre></div></div>
 
-<p>HST allows you to search for the discord of length <em>m</em> within the time series.
+<p>HST allows you to search for the discord of length <em>m</em> within the time series (where <em>m</em> is the number of points of the sequence)
 You do not enter directly <em>m</em> in this input file, but rather you need to adjust the 
 eXl and lung_parole parameters so that their product is equal to the <em>m</em> you need.
 This is due to the fact that HST is derived from HOT SAX, so you should enter the Symbolic Aggregate Approximation 
@@ -233,17 +232,17 @@ parameters, that turn each sequence into a symbolic seuquence.</p>
 
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">m = eXl x lung_parole
 </span></code></pre></div></div>
-<p>This is a limitation, since you cannot search for sequences that have a length that is a prime number
+<p>This is a limitation: you cannot search for sequences that have a length that is a prime number
 since it has to be the product of two integers (&gt;2).
-For example, if you need m =300 you can pick:</p>
+For example, you cannot find discords of lenght 43 with this implementation of the code; while if you need <em>m</em> =300 you can pick:</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">eXl = 75
 lung_parole = 4
 </span></code></pre></div></div>
 
-<p>It is rather safe to keep num_simboli = 3, 4 or 5.</p>
+<p>It is rather safe to keep <strong>num_simboli</strong> = 3, 4 or 5.</p>
 
-<p><em>Nd</em> is the number of discords that you need, you could enter 1, 2, 3,…. AS long as <em>m x Nd « N</em> 
-it is going to be ok.</p>
+<p><strong>Nd</strong> is the number of discords that you need, you could enter 1, 2, 3,…. As long as <em>m x Nd « N</em> 
+the calculation should complete succesfully.</p>
 
 <p><strong>nmax</strong> is used to simulate an online analysis on a batch file. It essentially divides the batch in nmax pieces.</p>
 
@@ -257,15 +256,15 @@ it is going to be ok.</p>
 
 <p><strong>Znorm</strong> tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance F</p>
 
-<p>The last parameter to be changed is the algorithm name. The name of the HST algorithm in the code is ‘altro’ 
-(it means other in Italian, it was a derivation of HOT SAX, and I never changed it)</p>
+<p>The last parameter to be changed is the algorithm name. Curiosly when you want to run the HST algorithm, you should write ‘altro’ 
+(it means <em>other</em> in Italian,  HST was a derivation of HOT SAX, and I never changed this name)</p>
 
 <p>For example, the input.dat file shown above works fine when searching for 6 discords of length 125 in a time series
 of unknown length using the HST algorithm, considering Z-norm distances:</p>
 
 <h1 id="run-a-discord-search">Run a discord search.</h1>
 <p>The code is expected to read and process files where the points of a time series one on top of the other
-in a txt like file, as for example the file <strong>chfdbchf15_1.csv</strong> begins in this way:</p>
+in a txt like file. A file that can be processed by HST could look like this:</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">-0.215
 -0.24
 -0.24
@@ -289,7 +288,7 @@ you open a terminal in it, and you type:</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">time ./onlineHS147_clean.x 300_signal1.txt
 </span></code></pre></div></div>
 
-<p>By using the command <em>time</em> at the end of the execution you will get information regarding the execution time.</p>
+<p>By using the command <em>time</em> at the end of the execution, you will get information regarding the execution time.</p>
 
 <p>HST will first display a some information regarding the search and it will start processing and writing
 information files in the same folder (and in two sub-folders it creates).</p>
@@ -298,12 +297,12 @@ information files in the same folder (and in two sub-folders it creates).</p>
 You can find the remaining discords in the file that begins with <em>anomalieTrovate_…</em>. The file name contains
 some information regarding the run, inside there is the position of the anomaly and the distance with the nearest neighbor.</p>
 
-<p>Take into account that most codes count from 0, while for me the first sequence is at position 1, so there might
+<p>Take into account that in computer science the first sequence is usually associated with position 0, while for me the first sequence is at position 1, so there might
 be 1 point difference between my results and those of other discord codes.</p>
 
-<p>Example of a run (sorry the explanation is in Italian):</p>
+<p>Here is an example of a run (sorry the comments displayed by HST are is in Italian):</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">lunghezza sequenze da analizzare  (lung_parole x eXl)  =         125
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go"> lunghezza sequenze da analizzare  (lung_parole x eXl)  =         125
  numero di punti per lettera                     (eXl)  =          25
  num. lettere della sequenza simbolica   (lung_parole)  =           5
  grandezza alfabeto PAA                  (num_simboli)  =           4
@@ -385,6 +384,229 @@ sys	0m0.410s
       <a class="tag-chip" href="/tags#anomaly-detection_cap"><div class="chip z-depth-1">Anomaly Detection</div></a>
       
     </div>
+    
+          <style type="text/css">
+.related-posts{
+  border: 3px dotted #2e87e7;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 10px 0 10px;
+}
+.related-posts span{
+  font-size: 130%;
+  font-weight: 500;
+  color: #2e87e7;
+}
+.related-posts ul{
+  margin-top: 5px!important;
+}
+.thi-icon{
+  float: left;
+  line-height: inherit;
+  margin-right: 5px;
+  margin-left: 2px;
+  color: #2e87e7;
+}
+</style>
+
+<div class="related-posts">
+  <i class="material-icons thi-icon">grade</i><span>You might also like ...</span>
+  
+  <ul>
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+        
+
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Pytorch-1">
+                Pytorch 1 Inizio, Tensori
+            </a>
+            <small>12 Nov 2021</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Seaborn">
+                Seaborn - appunti
+            </a>
+            <small>08 Nov 2021</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Matplotlib">
+                Matplotlib - appunti
+            </a>
+            <small>07 Nov 2021</small>
+          </li>
+        
+      
+        
+
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+          
+          <li>
+            <a href="/Pytorch-7">
+                Pytorch 7 Recurrent Neural Network
+            </a>
+            <small>17 Oct 2021</small>
+          </li>
+        
+      
+        
+          
+    
+  </ul>
+</div>
+
     
     		
  

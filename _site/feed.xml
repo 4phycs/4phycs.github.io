@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-16T17:53:22+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">HST</title><link href="http://localhost:4000/HST" rel="alternate" type="text/html" title="HST" /><published>2022-07-16T00:00:00+02:00</published><updated>2022-07-16T00:00:00+02:00</updated><id>http://localhost:4000/HST</id><content type="html" xml:base="http://localhost:4000/HST">&lt;h1 id=&quot;hot-sax-time-hst-a-fast-algorithm-for-discord-search&quot;&gt;HOT SAX Time (HST): a fast algorithm for discord search.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-16T22:58:26+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">HST</title><link href="http://localhost:4000/HST" rel="alternate" type="text/html" title="HST" /><published>2022-07-16T00:00:00+02:00</published><updated>2022-07-16T00:00:00+02:00</updated><id>http://localhost:4000/HST</id><content type="html" xml:base="http://localhost:4000/HST">&lt;h1 id=&quot;hot-sax-time-hst-a-fast-algorithm-for-discord-search&quot;&gt;HOT SAX Time (HST): a fast algorithm for discord search.&lt;/h1&gt;
 
 &lt;p&gt;HST is a fast algorithm that calculates anomalies (discords) in time series.
 It is a form of unsupervised machine learning.&lt;/p&gt;
@@ -10,15 +10,15 @@ It is a form of unsupervised machine learning.&lt;/p&gt;
 &lt;p&gt;Download here a file with a ECG time series (with more than 500k points) used in the article: &lt;strong&gt;&lt;a href=&quot;/assets/300_signal1.txt&quot;&gt;300_signal1.txt&lt;/a&gt;&lt;/strong&gt; (you should be able to find it at the
 Rare Rule Anomaly webpage too).&lt;/p&gt;
 
-&lt;p&gt;We first released the article explaining &lt;strong&gt;&lt;a href=&quot;https://arxiv.org/abs/2101.10698&quot;&gt;HST&lt;/a&gt;&lt;/strong&gt; on the ArXive in 2021.
-and recently it was published also in &lt;strong&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10489-021-02897-z&quot;&gt;Applied Intelligence&lt;/a&gt;&lt;/strong&gt;
+&lt;p&gt;We first released the article explaining &lt;strong&gt;&lt;a href=&quot;https://arxiv.org/abs/2101.10698&quot;&gt;HST&lt;/a&gt;&lt;/strong&gt; on the ArXive in 2021,
+recently it also appeared in &lt;strong&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10489-021-02897-z&quot;&gt;Applied Intelligence&lt;/a&gt;&lt;/strong&gt;
 journal.&lt;/p&gt;
 
-&lt;p&gt;What is a Discord? It is a specific kind of anomaly, from an intuitive point of view a discord is a sequence whose 
+&lt;p&gt;What is a Discord? It is a specific kind of anomaly, from an intuitive point of view, a discord is a sequence whose 
 nearest neighbor sequence has the highest distance.&lt;/p&gt;
 
 &lt;p&gt;Just imagine that there is a town and you want to find the anomalous house.
-A good idea is to find that house that is most isolated from the others. In particular the one whose nearest 
+A good idea is to find the most isolated house. That can be translated in the house whose nearest 
 neighbor is far away. You can find a more detailed explanation of what is a discord in our
 paper (where there are also the references to the original article that defined Discords for time series 
 and a fast algorithm to find them: HOT SAX).&lt;/p&gt;
@@ -26,23 +26,22 @@ and a fast algorithm to find them: HOT SAX).&lt;/p&gt;
 &lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;: this code comes with no warranty, it might create problems and damages to your computer. Please use it 
 at your own risk. The main problem that I had was due to the creation of large support files 
-like those creating the approximate matrix profile (a file that is not necessary for finding the discords
-but I used them during my researches). This version of the code has also other minor bugs.&lt;/p&gt;
+like those creating the approximate matrix profile.  This version of the code has also other minor bugs.&lt;/p&gt;
 
 &lt;p&gt;Notice that the present version of the code does not build the file with all the approximate NNDs since this takes space and time.
-Another point is that, just reading the time series might take time. For example it takes 2-3
- s to read a 8M point time series. Keep this in mind when you compare the performance of the search. 
+When tating into account the execution time, you should be aware of the fact that, just reading the time series might take time. For example it takes 2-3
+ s to read a 8M point time series. Keep this in mind when you compare the performance of the search with other codes. 
 Fortran unformatted files are much faster to read and they take much less space (approx 1/3). However the present version
 of the code does not read unformatted Fortran files.&lt;/p&gt;
 
 &lt;h1 id=&quot;compiling-the-code&quot;&gt;Compiling the Code&lt;/h1&gt;
-&lt;p&gt;The present code is written in Fortran. Be aware that it contains a lot of subroutines no longer in use, it should be
+&lt;p&gt;The present code is written in Fortran. Be aware that it contains a lot of subroutines no longer in use, the code should be
 cleaned better. It is a rather old version and I know it contains a few bugs, but they should be minor.
-You need a Fortran compiler  (for example, I suggest Gfortran since it is free). 
-You can find a list of links for compilers at the &lt;strong&gt;&lt;a href=&quot;https://fortran-lang.org/&quot;&gt;Fortran webpage&lt;/a&gt;&lt;/strong&gt; (including the Gfortran).&lt;/p&gt;
+You need a Fortran compiler  (for example, I usually use Gfortran, since it creates quick codes and it is free). 
+You can find a list of links for Fortran compilers at the &lt;strong&gt;&lt;a href=&quot;https://fortran-lang.org/&quot;&gt;Fortran webpage&lt;/a&gt;&lt;/strong&gt; (including the Gfortran).&lt;/p&gt;
 
 &lt;p&gt;Here I give you the instruction on how to compile the code using as a reference the gfortan compiler.
-I will suppose that you are using a Linux distribution.
+I will suppose that you are using a &lt;strong&gt;Linux distribution&lt;/strong&gt; to compile and run the code.
 You should go to the folder where there is the code (It should be onlineHS147_clean.f90, but I might insert
 other versions of the code in the future), open a terminal and write:&lt;/p&gt;
 
@@ -52,7 +51,7 @@ other versions of the code in the future), open a terminal and write:&lt;/p&gt;
 &lt;p&gt;The result of the compilation is a bunch of support files and the new executable: online147_clean.x&lt;/p&gt;
 
 &lt;h1 id=&quot;the-input-file&quot;&gt;The input file&lt;/h1&gt;
-&lt;p&gt;At this you need to configure the discord search with the &lt;strong&gt;input.dat&lt;/strong&gt; file:&lt;/p&gt;
+&lt;p&gt;At this point you need to configure the discord search with the &lt;strong&gt;input.dat&lt;/strong&gt; file:&lt;/p&gt;
 
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;25        eXl,         elementi for each letter
 5         lung_parole,  number of letters for word
@@ -68,7 +67,7 @@ T         Znorm         z-normalizzazione T= True, F= False
 altro     algorithm name: altro (HST), brute (brute force), ...  
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;HST allows you to search for the discord of length &lt;em&gt;m&lt;/em&gt; within the time series.
+&lt;p&gt;HST allows you to search for the discord of length &lt;em&gt;m&lt;/em&gt; within the time series (where &lt;em&gt;m&lt;/em&gt; is the number of points of the sequence)
 You do not enter directly &lt;em&gt;m&lt;/em&gt; in this input file, but rather you need to adjust the 
 eXl and lung_parole parameters so that their product is equal to the &lt;em&gt;m&lt;/em&gt; you need.
 This is due to the fact that HST is derived from HOT SAX, so you should enter the Symbolic Aggregate Approximation 
@@ -76,17 +75,17 @@ parameters, that turn each sequence into a symbolic seuquence.&lt;/p&gt;
 
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;m = eXl x lung_parole
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This is a limitation, since you cannot search for sequences that have a length that is a prime number
+&lt;p&gt;This is a limitation: you cannot search for sequences that have a length that is a prime number
 since it has to be the product of two integers (&amp;gt;2).
-For example, if you need m =300 you can pick:&lt;/p&gt;
+For example, you cannot find discords of lenght 43 with this implementation of the code; while if you need &lt;em&gt;m&lt;/em&gt; =300 you can pick:&lt;/p&gt;
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;eXl = 75
 lung_parole = 4
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;It is rather safe to keep num_simboli = 3, 4 or 5.&lt;/p&gt;
+&lt;p&gt;It is rather safe to keep &lt;strong&gt;num_simboli&lt;/strong&gt; = 3, 4 or 5.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Nd&lt;/em&gt; is the number of discords that you need, you could enter 1, 2, 3,…. AS long as &lt;em&gt;m x Nd « N&lt;/em&gt; 
-it is going to be ok.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nd&lt;/strong&gt; is the number of discords that you need, you could enter 1, 2, 3,…. As long as &lt;em&gt;m x Nd « N&lt;/em&gt; 
+the calculation should complete succesfully.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;nmax&lt;/strong&gt; is used to simulate an online analysis on a batch file. It essentially divides the batch in nmax pieces.&lt;/p&gt;
 
@@ -100,15 +99,15 @@ it is going to be ok.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Znorm&lt;/strong&gt; tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance F&lt;/p&gt;
 
-&lt;p&gt;The last parameter to be changed is the algorithm name. The name of the HST algorithm in the code is ‘altro’ 
-(it means other in Italian, it was a derivation of HOT SAX, and I never changed it)&lt;/p&gt;
+&lt;p&gt;The last parameter to be changed is the algorithm name. Curiosly when you want to run the HST algorithm, you should write ‘altro’ 
+(it means &lt;em&gt;other&lt;/em&gt; in Italian,  HST was a derivation of HOT SAX, and I never changed this name)&lt;/p&gt;
 
 &lt;p&gt;For example, the input.dat file shown above works fine when searching for 6 discords of length 125 in a time series
 of unknown length using the HST algorithm, considering Z-norm distances:&lt;/p&gt;
 
 &lt;h1 id=&quot;run-a-discord-search&quot;&gt;Run a discord search.&lt;/h1&gt;
 &lt;p&gt;The code is expected to read and process files where the points of a time series one on top of the other
-in a txt like file, as for example the file &lt;strong&gt;chfdbchf15_1.csv&lt;/strong&gt; begins in this way:&lt;/p&gt;
+in a txt like file. A file that can be processed by HST could look like this:&lt;/p&gt;
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;-0.215
 -0.24
 -0.24
@@ -132,7 +131,7 @@ you open a terminal in it, and you type:&lt;/p&gt;
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;time ./onlineHS147_clean.x 300_signal1.txt
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;By using the command &lt;em&gt;time&lt;/em&gt; at the end of the execution you will get information regarding the execution time.&lt;/p&gt;
+&lt;p&gt;By using the command &lt;em&gt;time&lt;/em&gt; at the end of the execution, you will get information regarding the execution time.&lt;/p&gt;
 
 &lt;p&gt;HST will first display a some information regarding the search and it will start processing and writing
 information files in the same folder (and in two sub-folders it creates).&lt;/p&gt;
@@ -141,12 +140,12 @@ information files in the same folder (and in two sub-folders it creates).&lt;/p&
 You can find the remaining discords in the file that begins with &lt;em&gt;anomalieTrovate_…&lt;/em&gt;. The file name contains
 some information regarding the run, inside there is the position of the anomaly and the distance with the nearest neighbor.&lt;/p&gt;
 
-&lt;p&gt;Take into account that most codes count from 0, while for me the first sequence is at position 1, so there might
+&lt;p&gt;Take into account that in computer science the first sequence is usually associated with position 0, while for me the first sequence is at position 1, so there might
 be 1 point difference between my results and those of other discord codes.&lt;/p&gt;
 
-&lt;p&gt;Example of a run (sorry the explanation is in Italian):&lt;/p&gt;
+&lt;p&gt;Here is an example of a run (sorry the comments displayed by HST are is in Italian):&lt;/p&gt;
 
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;lunghezza sequenze da analizzare  (lung_parole x eXl)  =         125
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt; lunghezza sequenze da analizzare  (lung_parole x eXl)  =         125
  numero di punti per lettera                     (eXl)  =          25
  num. lettere della sequenza simbolica   (lung_parole)  =           5
  grandezza alfabeto PAA                  (num_simboli)  =           4

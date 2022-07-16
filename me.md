@@ -17,8 +17,11 @@ I keep on loving and creating new research about computer and data science (alth
 My main focus is on time series. I am developing new concepts and algorithms for `anomaly detection`. For example,
 in this  **[article](https://rdcu.be/b2K1c)** (published on **[KAIS](https://www.springer.com/journal/10115)** journal)  we defined a new 
 indicator which extends the concept of *discord*, for online analysis (a form of
-unsupervised `machine learning`). More recently, we built the **[fastest algorithm for discord detection](https://arxiv.org/abs/2101.10698)** 
- in time series, soon to appear in **[Applied Intelligence](https://www.springer.com/journal/10489)** journal.
+unsupervised `machine learning`). More recently, we built a super fast algorithm for discord detection in time series called 
+**[HST]({{ site.baseurl }}{% link _posts/TimeSeries/2000-01-01-HST.md %})**, now published in
+**[Applied Intelligence](https://link.springer.com/article/10.1007/s10489-021-02897-z)**
+journal.
+
 
 
 I was the assistant professor for the **[Parallel Computing](https://www.unimib.it/ugov/degreecourse/212291)** course  at the 

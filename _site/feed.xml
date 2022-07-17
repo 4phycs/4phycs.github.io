@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-16T22:58:26+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">HST</title><link href="http://localhost:4000/HST" rel="alternate" type="text/html" title="HST" /><published>2022-07-16T00:00:00+02:00</published><updated>2022-07-16T00:00:00+02:00</updated><id>http://localhost:4000/HST</id><content type="html" xml:base="http://localhost:4000/HST">&lt;h1 id=&quot;hot-sax-time-hst-a-fast-algorithm-for-discord-search&quot;&gt;HOT SAX Time (HST): a fast algorithm for discord search.&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-17T14:30:58+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">4Phycs</title><subtitle>my ideas and notes, and useful stuff.</subtitle><entry><title type="html">HST a fast code for anomaly detection in time series</title><link href="http://localhost:4000/HST" rel="alternate" type="text/html" title="HST a fast code for anomaly detection in time series" /><published>2022-07-16T00:00:00+02:00</published><updated>2022-07-16T00:00:00+02:00</updated><id>http://localhost:4000/HST</id><content type="html" xml:base="http://localhost:4000/HST">&lt;h1 id=&quot;hot-sax-time-hst-a-fast-algorithm-for-discord-search&quot;&gt;HOT SAX Time (HST): a fast algorithm for discord search.&lt;/h1&gt;
 
 &lt;p&gt;HST is a fast algorithm that calculates anomalies (discords) in time series.
 It is a form of unsupervised machine learning.&lt;/p&gt;
@@ -12,7 +12,9 @@ Rare Rule Anomaly webpage too).&lt;/p&gt;
 
 &lt;p&gt;We first released the article explaining &lt;strong&gt;&lt;a href=&quot;https://arxiv.org/abs/2101.10698&quot;&gt;HST&lt;/a&gt;&lt;/strong&gt; on the ArXive in 2021,
 recently it also appeared in &lt;strong&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10489-021-02897-z&quot;&gt;Applied Intelligence&lt;/a&gt;&lt;/strong&gt;
-journal.&lt;/p&gt;
+journal. Please, if you use the code, cite the article as described at the bottom of the &lt;a href=&quot;https://link.springer.com/article/10.1007/s10489-021-02897-z&quot;&gt;webpage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Avogadro, P., Dominoni, M.A. A fast algorithm for complex discord searches in time series: HOT SAX Time. Appl Intell 52, 10060–10081 (2022). https://doi.org/10.1007/s10489-021-02897-z&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;What is a Discord? It is a specific kind of anomaly, from an intuitive point of view, a discord is a sequence whose 
 nearest neighbor sequence has the highest distance.&lt;/p&gt;
@@ -21,7 +23,14 @@ nearest neighbor sequence has the highest distance.&lt;/p&gt;
 A good idea is to find the most isolated house. That can be translated in the house whose nearest 
 neighbor is far away. You can find a more detailed explanation of what is a discord in our
 paper (where there are also the references to the original article that defined Discords for time series 
-and a fast algorithm to find them: HOT SAX).&lt;/p&gt;
+and a fast algorithm to find them: &lt;a href=&quot;https://dl.acm.org/doi/10.1109/ICDM.2005.79&quot;&gt;HOT SAX&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Performance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;HST can be up to 100 times faster than its “parent” algorithm HOT SAX. The computational time is approximately proportional to the 
+number of discords searched and to the size of the time series. HST returns exact discords (it is &lt;strong&gt;not&lt;/strong&gt; an approximate algorithm), but it 
+follows a heuristic subject to randomization. For this reason the computational times change slightly for each run. You can expect variations of the runtime of about 10-20% from one run to the other. 
+Most of the time is spent by calculating distances among sequences.&lt;/p&gt;
 
 &lt;h1 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;WARNING&lt;/strong&gt;: this code comes with no warranty, it might create problems and damages to your computer. Please use it 
@@ -53,8 +62,8 @@ other versions of the code in the future), open a terminal and write:&lt;/p&gt;
 &lt;h1 id=&quot;the-input-file&quot;&gt;The input file&lt;/h1&gt;
 &lt;p&gt;At this point you need to configure the discord search with the &lt;strong&gt;input.dat&lt;/strong&gt; file:&lt;/p&gt;
 
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;25        eXl,         elementi for each letter
-5         lung_parole,  number of letters for word
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;25        eXl,          points for each letter
+5         lung_parole,  number of letters for Symbolic sequence
 4         num_simboli,  size of the alphabet  
 6         Nd,           number of discords you want for each present_queue
 -1        N,            number of points for each present queue (-1 takes the whole time series)
@@ -69,7 +78,7 @@ altro     algorithm name: altro (HST), brute (brute force), ...
 
 &lt;p&gt;HST allows you to search for the discord of length &lt;em&gt;m&lt;/em&gt; within the time series (where &lt;em&gt;m&lt;/em&gt; is the number of points of the sequence)
 You do not enter directly &lt;em&gt;m&lt;/em&gt; in this input file, but rather you need to adjust the 
-eXl and lung_parole parameters so that their product is equal to the &lt;em&gt;m&lt;/em&gt; you need.
+&lt;strong&gt;eXl&lt;/strong&gt; and &lt;strong&gt;lung_parole&lt;/strong&gt; parameters so that their product is equal to the &lt;em&gt;m&lt;/em&gt; you need.
 This is due to the fact that HST is derived from HOT SAX, so you should enter the Symbolic Aggregate Approximation 
 parameters, that turn each sequence into a symbolic seuquence.&lt;/p&gt;
 
@@ -97,7 +106,7 @@ the calculation should complete succesfully.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;nbin&lt;/strong&gt; is a parameter that is used for the statistics on the symbolic sequences, it is better to not change it.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Znorm&lt;/strong&gt; tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance F&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Znorm&lt;/strong&gt; tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance (when its value is F)&lt;/p&gt;
 
 &lt;p&gt;The last parameter to be changed is the algorithm name. Curiosly when you want to run the HST algorithm, you should write ‘altro’ 
 (it means &lt;em&gt;other&lt;/em&gt; in Italian,  HST was a derivation of HOT SAX, and I never changed this name)&lt;/p&gt;
@@ -131,7 +140,7 @@ you open a terminal in it, and you type:&lt;/p&gt;
 &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;time ./onlineHS147_clean.x 300_signal1.txt
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;By using the command &lt;em&gt;time&lt;/em&gt; at the end of the execution, you will get information regarding the execution time.&lt;/p&gt;
+&lt;p&gt;By using the command &lt;em&gt;time&lt;/em&gt;, you will get information regarding the execution time.&lt;/p&gt;
 
 &lt;p&gt;HST will first display a some information regarding the search and it will start processing and writing
 information files in the same folder (and in two sub-folders it creates).&lt;/p&gt;
@@ -206,7 +215,7 @@ real	0m15.730s
 user	0m14.833s
 sys	0m0.410s
 
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Machine Learning" /><category term="Time series" /><category term="Anomaly Detection" /><summary type="html">HOT SAX Time (HST): a fast algorithm for discord search.</summary></entry><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-11-12T01:00:00+01:00</published><updated>2021-11-12T01:00:00+01:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="Machine Learning" /><category term="Time series" /><category term="Anomaly Detection" /><category term="Fortran" /><summary type="html">HOT SAX Time (HST): a fast algorithm for discord search.</summary></entry><entry><title type="html">Pytorch 1 Inizio, Tensori</title><link href="http://localhost:4000/Pytorch-1" rel="alternate" type="text/html" title="Pytorch 1 Inizio, Tensori" /><published>2021-11-12T01:00:00+01:00</published><updated>2021-11-12T01:00:00+01:00</updated><id>http://localhost:4000/Pytorch-1</id><content type="html" xml:base="http://localhost:4000/Pytorch-1">&lt;div id=&quot;toc&quot;&gt;
   &lt;div class=&quot;toc-title&quot;&gt;
     &lt;i class=&quot;material-icons mat-icon&quot;&gt;toc&lt;/i&gt;&lt;span&gt;In this post&lt;/span&gt;
   &lt;/div&gt;

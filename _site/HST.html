@@ -12,7 +12,7 @@
 
   <title>
     
-      HST | 4Phycs
+      HST a fast code for anomaly detection in time series | 4Phycs
     
   </title>
 
@@ -56,7 +56,7 @@
   
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="HST" />
+<meta property="og:title" content="HST a fast code for anomaly detection in time series" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="HOT SAX Time (HST): a fast algorithm for discord search." />
 <meta property="og:description" content="HOT SAX Time (HST): a fast algorithm for discord search." />
@@ -67,7 +67,7 @@
 <meta property="article:published_time" content="2022-07-16T00:00:00+02:00" />
 <meta name="google-site-verification" content="" />
 <script type="application/ld+json">
-{"headline":"HST","dateModified":"2022-07-16T00:00:00+02:00","datePublished":"2022-07-16T00:00:00+02:00","description":"HOT SAX Time (HST): a fast algorithm for discord search.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/HST"},"@type":"BlogPosting","url":"http://localhost:4000/HST","@context":"https://schema.org"}</script>
+{"headline":"HST a fast code for anomaly detection in time series","dateModified":"2022-07-16T00:00:00+02:00","datePublished":"2022-07-16T00:00:00+02:00","description":"HOT SAX Time (HST): a fast algorithm for discord search.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/HST"},"@type":"BlogPosting","url":"http://localhost:4000/HST","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -131,7 +131,7 @@
 <main>
   <div class="container">
     <div id="post-info">
-      <h3>HST</h3>
+      <h3>HST a fast code for anomaly detection in time series</h3>
       <span>
         Posted on
         <span style="display: initial;" class="cat-class">16/07/2022</span>,
@@ -145,7 +145,7 @@
         <span class="reading-time" title="Estimated read time">
   
   
-  <font size="2"> Reading time: 8 mins </font>
+  <font size="2"> Reading time: 9 mins </font>
   
 </span>
 
@@ -169,7 +169,9 @@ Rare Rule Anomaly webpage too).</p>
 
 <p>We first released the article explaining <strong><a href="https://arxiv.org/abs/2101.10698">HST</a></strong> on the ArXive in 2021,
 recently it also appeared in <strong><a href="https://link.springer.com/article/10.1007/s10489-021-02897-z">Applied Intelligence</a></strong>
-journal.</p>
+journal. Please, if you use the code, cite the article as described at the bottom of the <a href="https://link.springer.com/article/10.1007/s10489-021-02897-z">webpage</a>.</p>
+
+<p><strong>Avogadro, P., Dominoni, M.A. A fast algorithm for complex discord searches in time series: HOT SAX Time. Appl Intell 52, 10060–10081 (2022). https://doi.org/10.1007/s10489-021-02897-z</strong></p>
 
 <p>What is a Discord? It is a specific kind of anomaly, from an intuitive point of view, a discord is a sequence whose 
 nearest neighbor sequence has the highest distance.</p>
@@ -178,7 +180,14 @@ nearest neighbor sequence has the highest distance.</p>
 A good idea is to find the most isolated house. That can be translated in the house whose nearest 
 neighbor is far away. You can find a more detailed explanation of what is a discord in our
 paper (where there are also the references to the original article that defined Discords for time series 
-and a fast algorithm to find them: HOT SAX).</p>
+and a fast algorithm to find them: <a href="https://dl.acm.org/doi/10.1109/ICDM.2005.79">HOT SAX</a>.</p>
+
+<p><strong>Performance</strong></p>
+
+<p>HST can be up to 100 times faster than its “parent” algorithm HOT SAX. The computational time is approximately proportional to the 
+number of discords searched and to the size of the time series. HST returns exact discords (it is <strong>not</strong> an approximate algorithm), but it 
+follows a heuristic subject to randomization. For this reason the computational times change slightly for each run. You can expect variations of the runtime of about 10-20% from one run to the other. 
+Most of the time is spent by calculating distances among sequences.</p>
 
 <h1 id="disclaimer">Disclaimer</h1>
 <p><strong>WARNING</strong>: this code comes with no warranty, it might create problems and damages to your computer. Please use it 
@@ -210,8 +219,8 @@ other versions of the code in the future), open a terminal and write:</p>
 <h1 id="the-input-file">The input file</h1>
 <p>At this point you need to configure the discord search with the <strong>input.dat</strong> file:</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">25        eXl,         elementi for each letter
-5         lung_parole,  number of letters for word
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">25        eXl,          points for each letter
+5         lung_parole,  number of letters for Symbolic sequence
 4         num_simboli,  size of the alphabet  
 6         Nd,           number of discords you want for each present_queue
 -1        N,            number of points for each present queue (-1 takes the whole time series)
@@ -226,7 +235,7 @@ altro     algorithm name: altro (HST), brute (brute force), ...
 
 <p>HST allows you to search for the discord of length <em>m</em> within the time series (where <em>m</em> is the number of points of the sequence)
 You do not enter directly <em>m</em> in this input file, but rather you need to adjust the 
-eXl and lung_parole parameters so that their product is equal to the <em>m</em> you need.
+<strong>eXl</strong> and <strong>lung_parole</strong> parameters so that their product is equal to the <em>m</em> you need.
 This is due to the fact that HST is derived from HOT SAX, so you should enter the Symbolic Aggregate Approximation 
 parameters, that turn each sequence into a symbolic seuquence.</p>
 
@@ -254,7 +263,7 @@ the calculation should complete succesfully.</p>
 
 <p><strong>nbin</strong> is a parameter that is used for the statistics on the symbolic sequences, it is better to not change it.</p>
 
-<p><strong>Znorm</strong> tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance F</p>
+<p><strong>Znorm</strong> tells the computer to calculate the Z-normalized Euclidean distance (if T ) or the regular Euclidean distance (when its value is F)</p>
 
 <p>The last parameter to be changed is the algorithm name. Curiosly when you want to run the HST algorithm, you should write ‘altro’ 
 (it means <em>other</em> in Italian,  HST was a derivation of HOT SAX, and I never changed this name)</p>
@@ -288,7 +297,7 @@ you open a terminal in it, and you type:</p>
 <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">time ./onlineHS147_clean.x 300_signal1.txt
 </span></code></pre></div></div>
 
-<p>By using the command <em>time</em> at the end of the execution, you will get information regarding the execution time.</p>
+<p>By using the command <em>time</em>, you will get information regarding the execution time.</p>
 
 <p>HST will first display a some information regarding the search and it will start processing and writing
 information files in the same folder (and in two sub-folders it creates).</p>
@@ -382,6 +391,10 @@ sys	0m0.410s
       
       
       <a class="tag-chip" href="/tags#anomaly-detection_cap"><div class="chip z-depth-1">Anomaly Detection</div></a>
+      
+      
+      
+      <a class="tag-chip" href="/tags#fortran_cap"><div class="chip z-depth-1">Fortran</div></a>
       
     </div>
     

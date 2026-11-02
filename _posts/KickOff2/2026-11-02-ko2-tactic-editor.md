@@ -1,7 +1,13 @@
 ---
-layout: page
+layout: post
 title: Kick Off 2 Tactic Editor
 published: true
+categories: English
+tags:
+  - Kick Off 2
+  - Amiga
+  - Retro gaming
+date: 2026-11-02
 ---
 
 **Kick Off 2** on Amiga was a source of great fun for many people. Player Manager's tactic editor added a great deal of depth, turning matches into a balanced mix of skill and strategy.
@@ -34,7 +40,3 @@ The exe isn't digitally signed, so Windows may warn you the first time. If so, c
 Instructions, the changelog and the license are on the **[GitHub page](https://github.com/4phycs/Release_KO2_Tactic_Editor)**.
 
 No game disks are included. This is an unofficial fan project, not affiliated with or endorsed by the authors or rights holders of Kick Off 2 or Player Manager.
-
-<div class="thi-signature">
-    {{ site.user.name }}
-</div>
